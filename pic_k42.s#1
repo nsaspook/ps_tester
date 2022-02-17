@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -11623,6 +11637,77 @@ oeiwcsnts1.omron.com/.. D20G6K0100.pdf</description>
 <text x="-12.7" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
 <text x="-12.7" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
 </package>
+<package name="KK-156-5" urn="urn:adsk.eagle:footprint:8078405/1" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 5 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604050_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="9.75" y1="4.95" x2="7.95" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="7.95" y1="4.95" x2="-7.925" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-7.925" y1="4.95" x2="-9.725" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-9.725" y1="4.95" x2="-9.725" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="-9.725" y1="-4.825" x2="9.75" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="9.75" y1="-4.825" x2="9.75" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-7.925" y1="2.525" x2="7.95" y2="2.525" width="0.2032" layer="21"/>
+<wire x1="7.95" y1="2.525" x2="7.95" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-7.925" y1="2.525" x2="-7.925" y2="4.95" width="0.2032" layer="21"/>
+<pad name="1" x="-7.92" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="2" x="-3.96" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="3" x="0" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="4" x="3.96" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="5" x="7.92" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<text x="-10.42" y="-4.445" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="11.69" y="-4.445" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="KK-156-16" urn="urn:adsk.eagle:footprint:8078415/1" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 16 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604160_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="31.53" y1="4.95" x2="29.73" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="29.73" y1="4.95" x2="-29.705" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-29.705" y1="4.95" x2="-31.505" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-31.505" y1="4.95" x2="-31.505" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="-31.505" y1="-4.825" x2="31.53" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="31.53" y1="-4.825" x2="31.53" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-29.705" y1="2.525" x2="29.73" y2="2.525" width="0.2032" layer="21"/>
+<wire x1="29.73" y1="2.525" x2="29.73" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-29.705" y1="2.525" x2="-29.705" y2="4.95" width="0.2032" layer="21"/>
+<pad name="1" x="-29.7" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="2" x="-25.74" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="3" x="-21.78" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="4" x="-17.82" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="5" x="-13.86" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="6" x="-9.9" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="7" x="-5.94" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="8" x="-1.98" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="9" x="1.98" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="10" x="5.94" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="11" x="9.9" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="12" x="13.86" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="13" x="17.82" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="14" x="21.78" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="15" x="25.74" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="16" x="29.7" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<text x="-32.2" y="-4.445" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="33.47" y="-4.445" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+<package name="KK-156-8" urn="urn:adsk.eagle:footprint:8078408/1" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 8 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604080_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<wire x1="15.69" y1="4.95" x2="13.89" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="13.89" y1="4.95" x2="-13.865" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-13.865" y1="4.95" x2="-15.665" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-15.665" y1="4.95" x2="-15.665" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="-15.665" y1="-4.825" x2="15.69" y2="-4.825" width="0.2032" layer="21"/>
+<wire x1="15.69" y1="-4.825" x2="15.69" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-13.865" y1="2.525" x2="13.89" y2="2.525" width="0.2032" layer="21"/>
+<wire x1="13.89" y1="2.525" x2="13.89" y2="4.95" width="0.2032" layer="21"/>
+<wire x1="-13.865" y1="2.525" x2="-13.865" y2="4.95" width="0.2032" layer="21"/>
+<pad name="1" x="-13.86" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="2" x="-9.9" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="3" x="-5.94" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="4" x="-1.98" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="5" x="1.98" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="6" x="5.94" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="7" x="9.9" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<pad name="8" x="13.86" y="0" drill="1.7" diameter="2.1844" shape="long" rot="R90"/>
+<text x="-16.36" y="-4.445" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="17.63" y="-4.445" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="22-23-2101" urn="urn:adsk.eagle:package:8078641/1" type="box" library_version="3">
@@ -11631,22 +11716,40 @@ oeiwcsnts1.omron.com/.. D20G6K0100.pdf</description>
 <packageinstance name="22-23-2101"/>
 </packageinstances>
 </package3d>
+<package3d name="KK-156-5" urn="urn:adsk.eagle:package:8078807/1" type="box" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 5 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604050_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-5"/>
+</packageinstances>
+</package3d>
+<package3d name="KK-156-16" urn="urn:adsk.eagle:package:8078825/1" type="box" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 16 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604160_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-16"/>
+</packageinstances>
+</package3d>
+<package3d name="KK-156-8" urn="urn:adsk.eagle:package:8078814/1" type="box" library_version="5">
+<description>&lt;b&gt;KK® 396 Header, Vertical, Friction Lock, 8 Circuits, Tin (Sn) Plating&lt;/b&gt;&lt;p&gt;&lt;a href =http://www.molex.com/pdm_docs/sd/026604080_sd.pdf&gt;Datasheet &lt;/a&gt;</description>
+<packageinstances>
+<packageinstance name="KK-156-8"/>
+</packageinstances>
+</package3d>
 </packages3d>
 <symbols>
-<symbol name="MV" urn="urn:adsk.eagle:symbol:8078125/1" library_version="3">
+<symbol name="MV" urn="urn:adsk.eagle:symbol:6783/2" library_version="5">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
-<symbol name="M" urn="urn:adsk.eagle:symbol:8078124/1" library_version="3">
+<symbol name="M" urn="urn:adsk.eagle:symbol:6785/2" library_version="5">
 <wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
 <text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
 <pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="22-23-2101" urn="urn:adsk.eagle:component:8078966/1" prefix="X" library_version="3">
+<deviceset name="22-23-2101" urn="urn:adsk.eagle:component:8078966/3" prefix="X" library_version="5">
 <description>.100" (2.54mm) Center Header - 10 Pin</description>
 <gates>
 <gate name="-1" symbol="MV" x="0" y="10.16" addlevel="always" swaplevel="1"/>
@@ -11683,6 +11786,137 @@ oeiwcsnts1.omron.com/.. D20G6K0100.pdf</description>
 <attribute name="MPN" value="22-23-2101" constant="no"/>
 <attribute name="OC_FARNELL" value="1756828" constant="no"/>
 <attribute name="OC_NEWARK" value="94C0765" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KK-156-5" urn="urn:adsk.eagle:component:8079131/3" prefix="X" uservalue="yes" library_version="5">
+<description>&lt;b&gt;KK 156 HEADER&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="-10.16" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="KK-156-5">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078807/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KK-156-16" urn="urn:adsk.eagle:component:8079145/3" prefix="X" uservalue="yes" library_version="5">
+<description>&lt;b&gt;KK 156 HEADER&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="-10.16" addlevel="always" swaplevel="1"/>
+<gate name="-6" symbol="M" x="0" y="-12.7" addlevel="always" swaplevel="1"/>
+<gate name="-7" symbol="M" x="0" y="-15.24" addlevel="always" swaplevel="1"/>
+<gate name="-8" symbol="M" x="0" y="-17.78" addlevel="always" swaplevel="1"/>
+<gate name="-9" symbol="M" x="0" y="-20.32" addlevel="always" swaplevel="1"/>
+<gate name="-10" symbol="M" x="0" y="-22.86" addlevel="always" swaplevel="1"/>
+<gate name="-11" symbol="M" x="0" y="-25.4" addlevel="always" swaplevel="1"/>
+<gate name="-12" symbol="M" x="0" y="-27.94" addlevel="always" swaplevel="1"/>
+<gate name="-13" symbol="M" x="0" y="-30.48" addlevel="always" swaplevel="1"/>
+<gate name="-14" symbol="M" x="0" y="-33.02" addlevel="always" swaplevel="1"/>
+<gate name="-15" symbol="M" x="0" y="-35.56" addlevel="always" swaplevel="1"/>
+<gate name="-16" symbol="M" x="0" y="-38.1" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="KK-156-16">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-10" pin="S" pad="10"/>
+<connect gate="-11" pin="S" pad="11"/>
+<connect gate="-12" pin="S" pad="12"/>
+<connect gate="-13" pin="S" pad="13"/>
+<connect gate="-14" pin="S" pad="14"/>
+<connect gate="-15" pin="S" pad="15"/>
+<connect gate="-16" pin="S" pad="16"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+<connect gate="-6" pin="S" pad="6"/>
+<connect gate="-7" pin="S" pad="7"/>
+<connect gate="-8" pin="S" pad="8"/>
+<connect gate="-9" pin="S" pad="9"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078825/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KK-156-8" urn="urn:adsk.eagle:component:8079134/3" prefix="X" uservalue="yes" library_version="5">
+<description>&lt;b&gt;KK 156 HEADER&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com/pdm_docs/sd/026604100_sd.pdf</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="0" addlevel="always" swaplevel="1"/>
+<gate name="-2" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
+<gate name="-3" symbol="M" x="0" y="-5.08" addlevel="always" swaplevel="1"/>
+<gate name="-4" symbol="M" x="0" y="-7.62" addlevel="always" swaplevel="1"/>
+<gate name="-5" symbol="M" x="0" y="-10.16" addlevel="always" swaplevel="1"/>
+<gate name="-6" symbol="M" x="0" y="-12.7" addlevel="always" swaplevel="1"/>
+<gate name="-7" symbol="M" x="0" y="-15.24" addlevel="always" swaplevel="1"/>
+<gate name="-8" symbol="M" x="0" y="-17.78" addlevel="always" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="KK-156-8">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+<connect gate="-5" pin="S" pad="5"/>
+<connect gate="-6" pin="S" pad="6"/>
+<connect gate="-7" pin="S" pad="7"/>
+<connect gate="-8" pin="S" pad="8"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8078814/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="MF" value="MOLEX" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+<attribute name="POPULARITY" value="0" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -15650,7 +15884,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="VDD1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VSS1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
-<part name="VDD2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VSS2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VDD3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VDD4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
@@ -15714,11 +15947,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VSS13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VDD9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="VDD5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VSS7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
@@ -15726,8 +15957,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="VSS17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
-<part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="0"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="0"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -15763,6 +15992,14 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VSS16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="F1" library="polyfuse-smd_10" deviceset="?" device="1206L" technology="050"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="ZENER-DIODE" device="DO34-7" package3d_urn="urn:adsk.eagle:package:43364/1" value="5.6v"/>
+<part name="X8" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="KK-156-5" device="" package3d_urn="urn:adsk.eagle:package:8078807/1" value="J3"/>
+<part name="X9" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="KK-156-16" device="" package3d_urn="urn:adsk.eagle:package:8078825/1" value="J2"/>
+<part name="X10" library="con-molex" library_urn="urn:adsk.eagle:library:165" deviceset="KK-156-8" device="" package3d_urn="urn:adsk.eagle:package:8078814/1" value="J1"/>
+<part name="VDD11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
+<part name="VSS18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="VDD12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
+<part name="VSS35" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 </parts>
 <sheets>
 <sheet>
@@ -15798,9 +16035,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="VSS1" gate="G$1" x="50.8" y="-20.32" smashed="yes">
 <attribute name="VALUE" x="48.26" y="-25.4" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="VDD2" gate="G$1" x="58.42" y="-22.86" smashed="yes" rot="R90">
-<attribute name="VALUE" x="60.96" y="-25.4" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VSS2" gate="G$1" x="55.88" y="-30.48" smashed="yes" rot="R270">
 <attribute name="VALUE" x="50.8" y="-27.94" size="1.778" layer="96"/>
@@ -16147,9 +16381,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="GND1" gate="1" x="132.08" y="-2.54" smashed="yes">
 <attribute name="VALUE" x="129.54" y="-5.08" size="1.778" layer="96"/>
 </instance>
-<instance part="GND2" gate="1" x="-99.06" y="53.34" smashed="yes">
-<attribute name="VALUE" x="-101.6" y="50.8" size="1.778" layer="96"/>
-</instance>
 <instance part="P+1" gate="VCC" x="134.62" y="-10.16" smashed="yes" rot="R270">
 <attribute name="VALUE" x="132.08" y="-7.62" size="1.778" layer="96"/>
 </instance>
@@ -16158,9 +16389,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="P+3" gate="VCC" x="-91.44" y="81.28" smashed="yes" rot="R90">
 <attribute name="VALUE" x="-88.9" y="78.74" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="P+4" gate="VCC" x="-96.52" y="71.12" smashed="yes">
-<attribute name="VALUE" x="-99.06" y="68.58" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="VDD5" gate="G$1" x="-116.84" y="66.04" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-114.3" y="68.58" size="1.778" layer="96" rot="R270"/>
@@ -16186,14 +16414,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="R7" gate="G$1" x="-116.84" y="40.64" smashed="yes" rot="R90">
 <attribute name="NAME" x="-118.3386" y="36.83" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-113.538" y="36.83" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="R8" gate="G$1" x="-106.68" y="68.58" smashed="yes" rot="R180">
-<attribute name="NAME" x="-102.87" y="67.0814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-102.87" y="71.882" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="R9" gate="G$1" x="-106.68" y="55.88" smashed="yes" rot="R180">
-<attribute name="NAME" x="-105.41" y="54.3814" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="-102.87" y="59.182" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C7" gate="G$1" x="-83.82" y="68.58" smashed="yes" rot="R90">
 <attribute name="NAME" x="-84.455" y="69.596" size="1.778" layer="95" rot="R90"/>
@@ -16316,6 +16536,112 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="NAME" x="-9.525" y="-47.498" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-4.191" y="-47.498" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="X8" gate="-1" x="-170.18" y="55.88" smashed="yes">
+<attribute name="NAME" x="-167.64" y="55.118" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-170.942" y="57.277" size="1.778" layer="96"/>
+</instance>
+<instance part="X8" gate="-2" x="-170.18" y="53.34" smashed="yes">
+<attribute name="NAME" x="-167.64" y="52.578" size="1.524" layer="95"/>
+</instance>
+<instance part="X8" gate="-3" x="-170.18" y="50.8" smashed="yes">
+<attribute name="NAME" x="-167.64" y="50.038" size="1.524" layer="95"/>
+</instance>
+<instance part="X8" gate="-4" x="-170.18" y="48.26" smashed="yes">
+<attribute name="NAME" x="-167.64" y="47.498" size="1.524" layer="95"/>
+</instance>
+<instance part="X8" gate="-5" x="-170.18" y="45.72" smashed="yes">
+<attribute name="NAME" x="-167.64" y="44.958" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-1" x="-167.64" y="25.4" smashed="yes">
+<attribute name="NAME" x="-165.1" y="24.638" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-168.402" y="26.797" size="1.778" layer="96"/>
+</instance>
+<instance part="X9" gate="-2" x="-167.64" y="22.86" smashed="yes">
+<attribute name="NAME" x="-165.1" y="22.098" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-3" x="-167.64" y="20.32" smashed="yes">
+<attribute name="NAME" x="-165.1" y="19.558" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-4" x="-167.64" y="17.78" smashed="yes">
+<attribute name="NAME" x="-165.1" y="17.018" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-5" x="-167.64" y="15.24" smashed="yes">
+<attribute name="NAME" x="-165.1" y="14.478" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-6" x="-167.64" y="12.7" smashed="yes">
+<attribute name="NAME" x="-165.1" y="11.938" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-7" x="-167.64" y="10.16" smashed="yes">
+<attribute name="NAME" x="-165.1" y="9.398" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-8" x="-167.64" y="7.62" smashed="yes">
+<attribute name="NAME" x="-165.1" y="6.858" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-9" x="-167.64" y="5.08" smashed="yes">
+<attribute name="NAME" x="-165.1" y="4.318" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-10" x="-167.64" y="2.54" smashed="yes">
+<attribute name="NAME" x="-165.1" y="1.778" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-11" x="-167.64" y="0" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-0.762" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-12" x="-167.64" y="-2.54" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-3.302" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-13" x="-167.64" y="-5.08" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-5.842" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-14" x="-167.64" y="-7.62" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-8.382" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-15" x="-167.64" y="-10.16" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-10.922" size="1.524" layer="95"/>
+</instance>
+<instance part="X9" gate="-16" x="-167.64" y="-12.7" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-13.462" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-1" x="-167.64" y="-27.94" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-28.702" size="1.524" layer="95"/>
+<attribute name="VALUE" x="-168.402" y="-26.543" size="1.778" layer="96"/>
+</instance>
+<instance part="X10" gate="-2" x="-167.64" y="-30.48" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-31.242" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-3" x="-167.64" y="-33.02" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-33.782" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-4" x="-167.64" y="-35.56" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-36.322" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-5" x="-167.64" y="-38.1" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-38.862" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-6" x="-167.64" y="-40.64" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-41.402" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-7" x="-167.64" y="-43.18" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-43.942" size="1.524" layer="95"/>
+</instance>
+<instance part="X10" gate="-8" x="-167.64" y="-45.72" smashed="yes">
+<attribute name="NAME" x="-165.1" y="-46.482" size="1.524" layer="95"/>
+</instance>
+<instance part="VDD11" gate="G$1" x="-177.8" y="-27.94" smashed="yes">
+<attribute name="VALUE" x="-180.34" y="-30.48" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VSS18" gate="G$1" x="-177.8" y="-35.56" smashed="yes">
+<attribute name="VALUE" x="-180.34" y="-40.64" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VDD12" gate="G$1" x="-180.34" y="58.42" smashed="yes">
+<attribute name="VALUE" x="-182.88" y="55.88" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="VSS35" gate="G$1" x="-177.8" y="43.18" smashed="yes">
+<attribute name="VALUE" x="-180.34" y="38.1" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="TP3" gate="G$1" x="-7.62" y="-38.1" smashed="yes">
+<attribute name="NAME" x="-8.89" y="-36.83" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="-6.35" y="-39.37" size="1.778" layer="97"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -16335,13 +16661,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="VDD1" gate="G$1" pin="VDD"/>
 <wire x1="48.26" y1="-10.16" x2="48.26" y2="0" width="0.1524" layer="91"/>
 <junction x="48.26" y="-10.16"/>
-</segment>
-<segment>
-<pinref part="SV1" gate="1" pin="2"/>
-<wire x1="60.96" y1="-50.8" x2="60.96" y2="-22.86" width="0.1524" layer="91"/>
-<pinref part="VDD2" gate="G$1" pin="VDD"/>
-<junction x="60.96" y="-50.8"/>
-<junction x="60.96" y="-22.86"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VDD_1"/>
@@ -16414,11 +16733,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="VDD5" gate="G$1" pin="VDD"/>
-<pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="-116.84" y1="68.58" x2="-111.76" y2="68.58" width="0.3048" layer="91"/>
 <junction x="-116.84" y="68.58"/>
 <pinref part="JMP3" gate="-0R" pin="1"/>
-<junction x="-111.76" y="68.58"/>
 </segment>
 <segment>
 <pinref part="VDD6" gate="G$1" pin="VDD"/>
@@ -16429,6 +16746,19 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="TP2" gate="G$1" pin="TP"/>
 <pinref part="VDD10" gate="G$1" pin="VDD"/>
 <wire x1="-106.68" y1="-45.72" x2="-106.68" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="X10" gate="-2" pin="S"/>
+<pinref part="VDD11" gate="G$1" pin="VDD"/>
+<wire x1="-170.18" y1="-30.48" x2="-177.8" y2="-30.48" width="0.1524" layer="91"/>
+<junction x="-170.18" y="-30.48"/>
+<junction x="-177.8" y="-30.48"/>
+</segment>
+<segment>
+<wire x1="-172.72" y1="55.88" x2="-180.34" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-1" pin="S"/>
+<pinref part="VDD12" gate="G$1" pin="VDD"/>
+<junction x="-172.72" y="55.88"/>
 </segment>
 </net>
 <net name="VSS" class="1">
@@ -16577,11 +16907,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <pinref part="VSS7" gate="G$1" pin="VSS"/>
-<pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="-116.84" y1="55.88" x2="-111.76" y2="55.88" width="0.3048" layer="91"/>
 <junction x="-116.84" y="55.88"/>
 <pinref part="JMP2" gate="-0R" pin="1"/>
-<junction x="-111.76" y="55.88"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -16633,6 +16961,25 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="VSS16" gate="G$1" pin="VSS"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <junction x="-7.62" y="-48.26"/>
+</segment>
+<segment>
+<pinref part="X10" gate="-3" pin="S"/>
+<pinref part="VSS18" gate="G$1" pin="VSS"/>
+<wire x1="-170.18" y1="-33.02" x2="-175.26" y2="-33.02" width="0.1524" layer="91"/>
+<pinref part="X10" gate="-5" pin="S"/>
+<wire x1="-175.26" y1="-33.02" x2="-177.8" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="-170.18" y1="-38.1" x2="-175.26" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="-175.26" y1="-38.1" x2="-175.26" y2="-33.02" width="0.1524" layer="91"/>
+<junction x="-175.26" y="-33.02"/>
+<junction x="-170.18" y="-33.02"/>
+<junction x="-170.18" y="-38.1"/>
+<junction x="-177.8" y="-33.02"/>
+</segment>
+<segment>
+<wire x1="-172.72" y1="45.72" x2="-177.8" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-5" pin="S"/>
+<pinref part="VSS35" gate="G$1" pin="VSS"/>
+<junction x="-172.72" y="45.72"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -17050,6 +17397,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="76.2" y="48.26"/>
 <junction x="83.82" y="25.4"/>
 </segment>
+<segment>
+<wire x1="-177.8" y1="48.26" x2="-172.72" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-4" pin="S"/>
+<junction x="-172.72" y="48.26"/>
+<label x="-198.12" y="48.26" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$36" class="0">
 <segment>
@@ -17059,6 +17412,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="76.2" y1="27.94" x2="83.82" y2="27.94" width="0.1524" layer="91"/>
 <junction x="76.2" y="45.72"/>
 <junction x="83.82" y="27.94"/>
+</segment>
+<segment>
+<wire x1="-190.5" y1="53.34" x2="-172.72" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-2" pin="S"/>
+<label x="-198.12" y="53.34" size="1.778" layer="95"/>
+<junction x="-172.72" y="53.34"/>
 </segment>
 </net>
 <net name="N$37" class="0">
@@ -17071,6 +17430,18 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="81.28" y1="33.02" x2="83.82" y2="33.02" width="0.1524" layer="91"/>
 <junction x="83.82" y="33.02"/>
 <junction x="66.04" y="17.78"/>
+</segment>
+<segment>
+<wire x1="-185.42" y1="2.54" x2="-170.18" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-10" pin="S"/>
+<junction x="-170.18" y="2.54"/>
+<label x="-193.04" y="2.54" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-185.42" y1="5.08" x2="-170.18" y2="5.08" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-9" pin="S"/>
+<junction x="-170.18" y="5.08"/>
+<label x="-193.04" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -17085,6 +17456,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="83.82" y="35.56"/>
 <junction x="63.5" y="17.78"/>
 </segment>
+<segment>
+<wire x1="-170.18" y1="17.78" x2="-185.42" y2="17.78" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-4" pin="S"/>
+<junction x="-170.18" y="17.78"/>
+<label x="-193.04" y="17.78" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$39" class="0">
 <segment>
@@ -17094,6 +17471,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="X5" gate="-10" pin="S"/>
 <junction x="83.82" y="12.7"/>
 <junction x="60.96" y="17.78"/>
+</segment>
+<segment>
+<wire x1="-193.04" y1="20.32" x2="-170.18" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="X9" gate="-3" pin="S"/>
+<junction x="-170.18" y="20.32"/>
+<label x="-193.04" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -17109,6 +17492,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="76.2" y1="22.86" x2="83.82" y2="22.86" width="0.1524" layer="91"/>
 <junction x="83.82" y="22.86"/>
 <junction x="76.2" y="66.04"/>
+</segment>
+<segment>
+<wire x1="-180.34" y1="50.8" x2="-172.72" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="X8" gate="-3" pin="S"/>
+<junction x="-172.72" y="50.8"/>
+<label x="-198.12" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -17433,13 +17822,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-81.28" y="81.28"/>
 </segment>
 <segment>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="-99.06" y1="55.88" x2="-101.6" y2="55.88" width="0.3048" layer="91"/>
-<junction x="-101.6" y="55.88"/>
-<junction x="-99.06" y="55.88"/>
-</segment>
-<segment>
 <pinref part="C7" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <junction x="-78.74" y="68.58"/>
@@ -17466,13 +17848,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="C21" gate="G$1" pin="1"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 <junction x="-88.9" y="81.28"/>
-</segment>
-<segment>
-<pinref part="P+4" gate="VCC" pin="VCC"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="-96.52" y1="68.58" x2="-101.6" y2="68.58" width="0.3048" layer="91"/>
-<junction x="-101.6" y="68.58"/>
-<junction x="-96.52" y="68.58"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
@@ -17643,7 +18018,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="63.5" y="-50.8"/>
 </segment>
 </net>
-<net name="N$71" class="0">
+<net name="FUSED_VDD" class="0">
 <segment>
 <pinref part="C11" gate="G$1" pin="1"/>
 <pinref part="C12" gate="G$1" pin="1"/>
@@ -17657,11 +18032,45 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-30.48" y="-40.64"/>
 <pinref part="D1" gate="G$1" pin="C"/>
 <junction x="-7.62" y="-43.18"/>
+<label x="-10.16" y="-38.1" size="1.778" layer="95" rot="R180"/>
+<pinref part="TP3" gate="G$1" pin="TP"/>
+<junction x="-7.62" y="-40.64"/>
+</segment>
+<segment>
+<wire x1="60.96" y1="-50.8" x2="60.96" y2="-40.64" width="0.1524" layer="91"/>
+<pinref part="SV1" gate="1" pin="2"/>
+<junction x="60.96" y="-50.8"/>
+<label x="60.96" y="-38.1" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="101,1,-170.18,25.4,X9-1,S,,,,"/>
+<approved hash="101,1,-170.18,22.86,X9-2,S,,,,"/>
+<approved hash="101,1,-170.18,15.24,X9-5,S,,,,"/>
+<approved hash="101,1,-170.18,12.7,X9-6,S,,,,"/>
+<approved hash="101,1,-170.18,10.16,X9-7,S,,,,"/>
+<approved hash="101,1,-170.18,7.62,X9-8,S,,,,"/>
+<approved hash="101,1,-170.18,0,X9-11,S,,,,"/>
+<approved hash="101,1,-170.18,-2.54,X9-12,S,,,,"/>
+<approved hash="101,1,-170.18,-5.08,X9-13,S,,,,"/>
+<approved hash="101,1,-170.18,-7.62,X9-14,S,,,,"/>
+<approved hash="101,1,-170.18,-10.16,X9-15,S,,,,"/>
+<approved hash="101,1,-170.18,-12.7,X9-16,S,,,,"/>
+<approved hash="101,1,-170.18,-27.94,X10-1,S,,,,"/>
+<approved hash="101,1,-170.18,-35.56,X10-4,S,,,,"/>
+<approved hash="101,1,-170.18,-40.64,X10-6,S,,,,"/>
+<approved hash="101,1,-170.18,-43.18,X10-7,S,,,,"/>
+<approved hash="101,1,-170.18,-45.72,X10-8,S,,,,"/>
+<approved hash="115,1,66.04,16.51,N$37,,,,,"/>
+<approved hash="115,1,76.2,36.83,N$36,,,,,"/>
+<approved hash="115,1,60.96,15.24,N$39,,,,,"/>
+<approved hash="115,1,63.5,11.43,N$38,,,,,"/>
+<approved hash="115,1,87.63,66.04,N$40,,,,,"/>
+<approved hash="115,1,77.47,48.26,N$35,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>

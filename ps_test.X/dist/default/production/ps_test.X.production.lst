@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.35 build 20211206165544 
-                                                                                               Tue Feb 15 13:25:35 2022
+                                                                                               Wed Feb 16 19:33:22 2022
 
 Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9 
      1                           	processor	18F57K42
@@ -170,8 +170,8 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
    156  0000                     _ADCON0bits	set	16120
    157  0000                     _LATFbits	set	16319
    158  0000                     _LATDbits	set	16317
-   159  0000                     _T5CONbits	set	16282
-   160  0000                     _LATEbits	set	16318
+   159  0000                     _LATEbits	set	16318
+   160  0000                     _T5CONbits	set	16282
    161  0000                     _IVTLOCKbits	set	16340
    162  0000                     _GIE	set	130711
    163  0000                     _IPR3bits	set	14723
@@ -3516,7 +3516,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   3265                           
   3266                           ;disp_led.c: 3: void display_led(DISPLAY_TYPES led);disp_led.c: 4: {;disp_led.c: 5:  swi
       +                          tch (led) {
-  3267  0026CE  D02D               	goto	l2853
+  3267  0026CE  D02D               	goto	l2857
   3268  0026D0                     l810:
   3269  0026D0  98BD               	bcf	189,4,c	;volatile
   3270                           
@@ -3613,7 +3613,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   3361                           ;disp_led.c: 62:   do { LATFbits.LATF7 = 0; } while(0);
   3362  002726  9EBF               	bcf	191,7,c	;volatile
   3363  002728  0012               	return	
-  3364  00272A                     l2853:
+  3364  00272A                     l2857:
   3365  00272A  5010               	movf	display_led@led^0,w,c
   3366  00272C  6E0E               	movwf	??_display_led^0,c
   3367  00272E  6A0F               	clrf	(??_display_led+1)^0,c
@@ -4582,7 +4582,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   4225 ;;		line 179 in file "mcc_generated_files/tmr5.c"
   4226 ;; Parameters:    Size  Location     Type
   4227 ;;  InterruptHan    3   13[COMRAM] PTR FTN()void 
-  4228 ;;		 -> TMR5_DefaultInterruptHandler(1), Timers_Isr(1), 
+  4228 ;;		 -> Timers_Isr(1), TMR5_DefaultInterruptHandler(1), 
   4229 ;; Auto vars:     Size  Location     Type
   4230 ;;		None
   4231 ;; Return value:  Size  Location     Type
@@ -4614,8 +4614,8 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   4247 ;; This function calls:
   4248 ;;		Nothing
   4249 ;; This function is called by:
-  4250 ;;		_main
-  4251 ;;		_TMR5_Initialize
+  4250 ;;		_TMR5_Initialize
+  4251 ;;		_main
   4252 ;; This function uses a non-reentrant model
   4253 ;;
   4254                           
@@ -6745,14 +6745,14 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6126  002BF8  116D               	iorwf	(_TMR5_InterruptHandler+1)& (0+255),w,b
   6127  002BFA  116E               	iorwf	(_TMR5_InterruptHandler+2)& (0+255),w,b
   6128  002BFC  B4D8               	btfsc	status,2,c
-  6129  002BFE  D00C               	goto	i2u154_49
+  6129  002BFE  D00C               	goto	i2u147_49
   6130                           
   6131                           ; BSR set to: 0
   6132                           ;mcc_generated_files/tmr5.c: 173:     {;mcc_generated_files/tmr5.c: 174:         TMR5_In
       +                          terruptHandler();
-  6133  002C00  D801               	call	i2u154_48
-  6134  002C02  D00A               	goto	i2u154_49
-  6135  002C04                     i2u154_48:
+  6133  002C00  D801               	call	i2u147_48
+  6134  002C02  D00A               	goto	i2u147_49
+  6135  002C04                     i2u147_48:
   6136  002C04  0005               	push	
   6137  002C06  6EFA               	movwf	pclath,c
   6138  002C08  516C               	movf	_TMR5_InterruptHandler& (0+255),w,b
@@ -6763,7 +6763,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6143  002C12  6EFF               	movwf	tosu,c
   6144  002C14  50FA               	movf	pclath,w,c
   6145  002C16  0012               	return		;indir
-  6146  002C18                     i2u154_49:
+  6146  002C18                     i2u147_49:
   6147  002C18  0060  F037  FFFB   	movff	??_TMR5_ISR+1,pclatu
   6148  002C1E  0060  F033  FFFA   	movff	??_TMR5_ISR,pclath
   6149  002C24  0011               	retfie		f
@@ -6878,7 +6878,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6238  002CBE  6E0B               	movwf	(Timers_Isr@i+1)^0,c
   6239  002CC0  0E00               	movlw	0
   6240  002CC2  6E0A               	movwf	Timers_Isr@i^0,c
-  6241  002CC4                     i2l2887:
+  6241  002CC4                     i2l2891:
   6242                           
   6243                           ; BSR set to: 0
   6244                           ;timers.c: 48:   if (tickCount[i] != 0) {
@@ -6891,7 +6891,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6251  002CD0  50DE               	movf	postinc2,w,c
   6252  002CD2  10DE               	iorwf	postinc2,w,c
   6253  002CD4  B4D8               	btfsc	status,2,c
-  6254  002CD6  D009               	goto	i2l2891
+  6254  002CD6  D009               	goto	i2l2895
   6255                           
   6256                           ; BSR set to: 0
   6257                           ;timers.c: 49:    tickCount[i]--;
@@ -6904,7 +6904,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6264  002CE4  06DE               	decf	postinc2,f,c
   6265  002CE6  0E00               	movlw	0
   6266  002CE8  5ADD               	subwfb	postdec2,f,c
-  6267  002CEA                     i2l2891:
+  6267  002CEA                     i2l2895:
   6268                           
   6269                           ; BSR set to: 0
   6270                           ;timers.c: 51:  }
@@ -6913,15 +6913,15 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6273                           
   6274                           ; BSR set to: 0
   6275  002CEE  BE0B               	btfsc	(Timers_Isr@i+1)^0,7,c
-  6276  002CF0  D7E9               	goto	i2l2887
+  6276  002CF0  D7E9               	goto	i2l2891
   6277  002CF2  500B               	movf	(Timers_Isr@i+1)^0,w,c
-  6278  002CF4  E105               	bnz	i2u139_40
+  6278  002CF4  E105               	bnz	i2u140_40
   6279  002CF6  0E06               	movlw	6
   6280  002CF8  5C0A               	subwf	Timers_Isr@i^0,w,c
   6281  002CFA  B0D8               	btfsc	status,0,c
   6282  002CFC  0012               	return	
-  6283  002CFE  D7E2               	goto	i2l2887
-  6284  002D00                     i2u139_40:
+  6283  002CFE  D7E2               	goto	i2l2891
+  6284  002D00                     i2u140_40:
   6285                           
   6286                           ; BSR set to: 0
   6287  002D00  0012               	return		;funcret
@@ -6980,7 +6980,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6329                           ; BSR set to: 0
   6330                           ;incstack = 0
   6331  003076  A49A               	btfss	154,2,c	;volatile
-  6332  003078  D009               	goto	i2l774
+  6332  003078  D009               	goto	i2l687
   6333                           
   6334                           ; BSR set to: 57
   6335                           ;mcc_generated_files/tmr5.c: 131:     {;mcc_generated_files/tmr5.c: 133:         T5CONbi
@@ -6998,7 +6998,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
   6346                           
   6347                           ;mcc_generated_files/tmr5.c: 141:     }
   6348  00308A  0012               	return	
-  6349  00308C                     i2l774:
+  6349  00308C                     i2l687:
   6350                           
   6351                           ; BSR set to: 57
   6352                           ;mcc_generated_files/tmr5.c: 143:     {;mcc_generated_files/tmr5.c: 145:         TMR5H =
@@ -7586,10 +7586,10 @@ Pointer List with Targets:
     f...buffer	PTR unsigned char  size(2) Largest target is 0
 
     TMR5_SetInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> TMR5_DefaultInterruptHandler(), Timers_Isr(), 
+		 -> Timers_Isr(), TMR5_DefaultInterruptHandler(), 
 
     TMR5_InterruptHandler	PTR FTN()void  size(3) Largest target is 1
-		 -> TMR5_DefaultInterruptHandler(), Timers_Isr(), Absolute function(), 
+		 -> Timers_Isr(), TMR5_DefaultInterruptHandler(), Absolute function(), 
 
     UART1_SetTxInterruptHandler@InterruptHandler	PTR FTN()void  size(3) Largest target is 1
 		 -> UART1_Transmit_ISR(), 
@@ -8900,7 +8900,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.35 build 20211206165544 
-Symbol Table                                                                                   Tue Feb 15 13:25:35 2022
+Symbol Table                                                                                   Wed Feb 16 19:33:22 2022
 
             __end_of_TMR5_SetInterruptHandler 31C0                                  ?_display_led 0001  
                          ___wmul@multiplicand 0010                             ??_TMR5_WriteTimer 000A  
@@ -8943,8 +8943,8 @@ Symbol Table                                                                    
                         _ADCC_StartConversion 314E                                          l2559 2476  
                                         l3295 2556                                          l3287 2526  
                                         l3279 2504                                          l2497 2E3A  
-                                        l3299 2570                                          l2853 272A  
-                                        ?_pad 0020                                          STR_1 2001  
+                                        l3299 2570                                          ?_pad 0020  
+                                        l2857 272A                                          STR_1 2001  
                                         u1010 2E36                                          u1110 24A8  
                                         u1205 2D78                                          u1206 2D7A  
                                         u1240 31CA                                          _LATA 003FBA  
@@ -8994,7 +8994,7 @@ Symbol Table                                                                    
                                        _U1TXB 003DEA                                         i2l422 2E74  
                       __end_of_DAC1_SetOutput 31EC                                         _T6TMR 003F92  
                                        i2l606 2FD0                                         _T6RST 003F97  
-                         ??_UART1_rx_vect_isr 0006                                         i2l774 308C  
+                         ??_UART1_rx_vect_isr 0006                                         i2l687 308C  
                                        _OSCEN 0039DD                                  vfpfcnvrt@fmt 003B  
                                 vfpfcnvrt@llu 00BA                                         _TMR5H 003F99  
                                        _TMR5L 003F98                                         _TRISA 003FC2  
@@ -9058,9 +9058,9 @@ Symbol Table                                                                    
                                       _ODCONF 003A92                                        i2l2827 2FCC  
                                       i2l2589 3070                                        i2l2847 2AEE  
                                       _INLVLA 003A44                                        _INLVLB 003A54  
-                                      i2l2891 2CEA                                        _INLVLC 003A64  
+                                      i2l2891 2CC4                                        _INLVLC 003A64  
                                       _INLVLD 003A74                                        _INLVLE 003A84  
-                                      _INLVLF 003A94                                        i2l2887 2CC4  
+                                      _INLVLF 003A94                                        i2l2895 2CEA  
                                       _OSCFRQ 0039DF                         _UART1_SetErrorHandler 3196  
                   ??_ADCC_GetConversionResult 0010                       DAC1_SetOutput@inputData 000E  
                                 vfprintf@cfmt 0044                                        ___wmul 3002  
@@ -9183,13 +9183,13 @@ Symbol Table                                                                    
                                     _IVTBASEH 003FD6                                      _IVTBASEL 003FD5  
                                     _IVTBASEU 003FD7                                      i2u122_40 3108  
                                     i2u122_46 310A                 ??_UART1_SetRxInterruptHandler 0011  
-                                    i2u131_48 2A7C                                      i2u131_49 2A92  
-                                    i2u141_40 2E66                                      i2u133_48 2AAC  
-                                    i2u133_49 2AC2                                      i2u135_48 2AD8  
-                                    i2u143_48 2EA0                                      i2u127_48 30EC  
-                                    i2u143_49 2EB4                                      i2u145_48 2EE0  
-                                    i2u145_49 2EF4                                      i2u139_40 2D00  
-                                    i2u154_48 2C04                                      i2u154_49 2C18  
+                                    i2u140_40 2D00                                      i2u131_48 2A7C  
+                                    i2u131_49 2A92                                      i2u141_40 2E66  
+                                    i2u133_48 2AAC                                      i2u133_49 2AC2  
+                                    i2u135_48 2AD8                                      i2u143_48 2EA0  
+                                    i2u127_48 30EC                                      i2u143_49 2EB4  
+                                    i2u145_48 2EE0                                      i2u145_49 2EF4  
+                                    i2u147_48 2C04                                      i2u147_49 2C18  
                                    _puts$2249 0022                                      _PIR8bits 0039A8  
                                     _PIR9bits 0039A9                    ??_TMR6_SetInterruptHandler 0011  
                                  ??_Led_Blink 0001                    __end_of_UART1_Transmit_ISR 2FD6  

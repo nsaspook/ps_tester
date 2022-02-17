@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57K42 ]
 [d frameptr 16353 ]
-"113 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/adcc.c
+"113 /root/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [e E15967 . `uc
 channel_ANA0 0
 channel_ANA1 1
@@ -13,7 +13,7 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"97 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"97 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [e E15965 . `uc
 TMR6_ROP_STARTS_TMRON 0
 TMR6_ROP_STARTS_TMRON_ERSHIGH 1
@@ -65,7 +65,7 @@ TMR6_UART1_TX_EDGE 22
 TMR6_UART2_RX_EDGE 23
 TMR6_UART2_TX_EDGE 24
 ]
-"83 /fred/k42_e220_ps_test/ps_test.X/main.c
+"83 /root/ps_tester/ps_test.X/main.c
 [e E16303 . `uc
 channel_ANA0 0
 channel_ANA1 1
@@ -91,7 +91,7 @@ oo30_g 10
 oo30_r 11
 oooff 12
 ]
-"33 /fred/k42_e220_ps_test/ps_test.X/timers.c
+"33 /root/ps_tester/ps_test.X/timers.c
 [e E15965 APP_TIMERS `uc
 TMR_INTERNAL 0
 TMR_T1 1
@@ -101,7 +101,7 @@ TMR_T4 4
 TMR_DISPLAY 5
 TMR_COUNT 6
 ]
-"3 /fred/k42_e220_ps_test/ps_test.X/disp_led.c
+"3 /root/ps_tester/ps_test.X/disp_led.c
 [e E16493 . `uc
 oo00_off 0
 oo00_g 1
@@ -171,13 +171,13 @@ oooff 12
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /opt/microchip/xc8/v2.35/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"3 /fred/k42_e220_ps_test/ps_test.X/disp_led.c
+"3 /root/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
-"55 /fred/k42_e220_ps_test/ps_test.X/main.c
+"55 /root/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 "64
 [v _main main `(v  1 e 1 0 ]
-"62 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/adcc.c
+"62 /root/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 "113
 [v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
@@ -185,23 +185,23 @@ oooff 12
 [v _ADCC_IsConversionDone ADCC_IsConversionDone `(a  1 e 1 0 ]
 "131
 [v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
-"58 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/dac1.c
+"58 /root/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 "66
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
-"52 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /root/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "78
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
-"50 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/mcc.c
+"50 /root/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "63
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "81
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /root/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"65 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr5.c
+"65 /root/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 "128
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
@@ -211,7 +211,7 @@ oooff 12
 [v _TMR5_SetInterruptHandler TMR5_SetInterruptHandler `(v  1 e 1 0 ]
 "183
 [v _TMR5_DefaultInterruptHandler TMR5_DefaultInterruptHandler `(v  1 e 1 0 ]
-"65 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"65 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "109
 [v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
@@ -231,7 +231,7 @@ oooff 12
 [v _TMR6_SetInterruptHandler TMR6_SetInterruptHandler `(v  1 e 1 0 ]
 "198
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"87 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.c
+"87 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 "180
 [v _UART1_Read UART1_Read `(uc  1 e 1 0 ]
@@ -265,13 +265,13 @@ oooff 12
 [v _UART1_SetRxInterruptHandler UART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 "333
 [v _UART1_SetTxInterruptHandler UART1_SetTxInterruptHandler `(v  1 e 1 0 ]
-"11 /fred/k42_e220_ps_test/ps_test.X/timers.c
+"11 /root/ps_tester/ps_test.X/timers.c
 [v _StartTimer StartTimer `(v  1 e 1 0 ]
 "19
 [v _TimerDone TimerDone `(a  1 e 1 0 ]
 "44
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
-"518 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.h
+"518 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.h
 [v _UART1_RxInterruptHandler UART1_RxInterruptHandler `*.38(v  1 e 3 0 ]
 "536
 [v _UART1_TxInterruptHandler UART1_TxInterruptHandler `*.38(v  1 e 3 0 ]
@@ -322,13 +322,13 @@ oooff 12
 "3534
 [u S966 . 1 `S957 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES966  1 e 1 @14739 ]
-[s S1344 . 1 `uc 1 . 1 0 :6:0 
+[s S1204 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TMR5IE 1 0 :1:6 
 `uc 1 TMR5GIE 1 0 :1:7 
 ]
 "3817
-[u S1348 . 1 `S1344 1 . 1 0 ]
-[v _PIE8bits PIE8bits `VES1348  1 e 1 @14744 ]
+[u S1208 . 1 `S1204 1 . 1 0 ]
+[v _PIE8bits PIE8bits `VES1208  1 e 1 @14744 ]
 [s S540 . 1 `uc 1 TMR6IE 1 0 :1:0 
 `uc 1 CCP3IE 1 0 :1:1 
 `uc 1 CWG3IE 1 0 :1:2 
@@ -337,13 +337,13 @@ oooff 12
 "3845
 [u S545 . 1 `S540 1 . 1 0 ]
 [v _PIE9bits PIE9bits `VES545  1 e 1 @14745 ]
-[s S1333 . 1 `uc 1 . 1 0 :6:0 
+[s S1193 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TMR5IF 1 0 :1:6 
 `uc 1 TMR5GIF 1 0 :1:7 
 ]
 "4382
-[u S1337 . 1 `S1333 1 . 1 0 ]
-[v _PIR8bits PIR8bits `VES1337  1 e 1 @14760 ]
+[u S1197 . 1 `S1193 1 . 1 0 ]
+[v _PIR8bits PIR8bits `VES1197  1 e 1 @14760 ]
 [s S527 . 1 `uc 1 TMR6IF 1 0 :1:0 
 `uc 1 CCP3IF 1 0 :1:1 
 `uc 1 CWG3IF 1 0 :1:2 
@@ -626,14 +626,14 @@ oooff 12
 [v _TMR5H TMR5H `VEuc  1 e 1 @16281 ]
 "41210
 [v _T5CON T5CON `VEuc  1 e 1 @16282 ]
-[s S1362 . 1 `uc 1 ON 1 0 :1:0 
+[s S1226 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 NOT_SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "41246
-[s S1368 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S1232 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 T5RD16 1 0 :1:1 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -641,19 +641,19 @@ oooff 12
 `uc 1 T5CKPS1 1 0 :1:5 
 ]
 "41246
-[s S1375 . 1 `uc 1 . 1 0 :4:0 
+[s S1239 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
 "41246
-[s S1379 . 1 `uc 1 . 1 0 :1:0 
+[s S1243 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 ]
 "41246
-[u S1382 . 1 `S1362 1 . 1 0 `S1368 1 . 1 0 `S1375 1 . 1 0 `S1379 1 . 1 0 ]
+[u S1246 . 1 `S1226 1 . 1 0 `S1232 1 . 1 0 `S1239 1 . 1 0 `S1243 1 . 1 0 ]
 "41246
 "41246
-[v _T5CONbits T5CONbits `VES1382  1 e 1 @16282 ]
+[v _T5CONbits T5CONbits `VES1246  1 e 1 @16282 ]
 "41400
 [v _T5GCON T5GCON `VEuc  1 e 1 @16283 ]
 "41614
@@ -694,20 +694,20 @@ oooff 12
 [v _LATDbits LATDbits `VES1543  1 e 1 @16317 ]
 "45978
 [v _LATE LATE `VEuc  1 e 1 @16318 ]
-[s S1189 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S1375 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "45995
-[s S1193 . 1 `uc 1 LE0 1 0 :1:0 
+[s S1379 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
 "45995
-[u S1197 . 1 `S1189 1 . 1 0 `S1193 1 . 1 0 ]
+[u S1383 . 1 `S1375 1 . 1 0 `S1379 1 . 1 0 ]
 "45995
 "45995
-[v _LATEbits LATEbits `VES1197  1 e 1 @16318 ]
+[v _LATEbits LATEbits `VES1383  1 e 1 @16318 ]
 "46030
 [v _LATF LATF `VEuc  1 e 1 @16319 ]
 [s S1565 . 1 `uc 1 LATF0 1 0 :1:0 
@@ -782,20 +782,20 @@ oooff 12
 [v _GIE GIE `VEb  1 e 0 @130711 ]
 "54794
 [v _PLLR PLLR `VEb  1 e 0 @118496 ]
-"49 /fred/k42_e220_ps_test/ps_test.X/main.c
+"49 /root/ps_tester/ps_test.X/main.c
 [v _ana0 ana0 `us  1 e 2 0 ]
 [v _ana1 ana1 `us  1 e 2 0 ]
 "50
 [v _disp_tick disp_tick `VEa  1 e 1 0 ]
 "51
 [v _buff1 buff1 `[128]uc  1 e 128 0 ]
-"58 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr5.c
+"58 /root/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _timer5ReloadVal timer5ReloadVal `VEus  1 e 2 0 ]
 "59
 [v _TMR5_InterruptHandler TMR5_InterruptHandler `*.38(v  1 e 3 0 ]
-"59 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"59 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_InterruptHandler TMR6_InterruptHandler `*.38(v  1 e 3 0 ]
-"64 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.c
+"64 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _uart1TxHead uart1TxHead `VEuc  1 s 1 uart1TxHead ]
 "65
 [v _uart1TxTail uart1TxTail `VEuc  1 s 1 uart1TxTail ]
@@ -827,9 +827,9 @@ oooff 12
 [v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
 "81
 [v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
-"6 /fred/k42_e220_ps_test/ps_test.X/timers.c
+"6 /root/ps_tester/ps_test.X/timers.c
 [v _tickCount tickCount `VE[6]us  1 e 12 0 ]
-"64 /fred/k42_e220_ps_test/ps_test.X/main.c
+"64 /root/ps_tester/ps_test.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "66
@@ -994,7 +994,7 @@ oooff 12
 [v fputc@fp fp `*.39S2065  1 p 2 17 ]
 "24
 } 0
-"230 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.c
+"230 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
@@ -1011,7 +1011,7 @@ oooff 12
 [v UART1_Write@txData txData `uc  1 a 1 13 ]
 "223
 } 0
-"3 /fred/k42_e220_ps_test/ps_test.X/disp_led.c
+"3 /root/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
 {
 [v display_led@led led `E16493  1 a 1 wreg ]
@@ -1019,12 +1019,12 @@ oooff 12
 [v display_led@led led `E16493  1 a 1 15 ]
 "66
 } 0
-"50 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/mcc.c
+"50 /root/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "61
 } 0
-"87 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.c
+"87 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 {
 "159
@@ -1059,7 +1059,7 @@ oooff 12
 [v UART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 13 ]
 "325
 } 0
-"65 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"65 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 {
 "95
@@ -1070,7 +1070,7 @@ oooff 12
 [v TMR6_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 13 ]
 "196
 } 0
-"65 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr5.c
+"65 /root/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 {
 "98
@@ -1081,39 +1081,39 @@ oooff 12
 [v TMR5_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 13 ]
 "181
 } 0
-"81 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/mcc.c
+"81 /root/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "99
 } 0
-"55 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /root/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "146
 } 0
-"63 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/mcc.c
+"63 /root/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"52 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /root/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 [v INTERRUPT_Initialize@state state `a  1 a 1 13 ]
 "76
 } 0
-"58 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/dac1.c
+"58 /root/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 {
 "64
 } 0
-"62 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/adcc.c
+"62 /root/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
 "111
 } 0
-"66 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/dac1.c
+"66 /root/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
 {
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 wreg ]
@@ -1122,7 +1122,7 @@ oooff 12
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 13 ]
 "69
 } 0
-"113 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/adcc.c
+"113 /root/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
 {
 [v ADCC_StartConversion@channel channel `E15967  1 a 1 wreg ]
@@ -1141,7 +1141,7 @@ oooff 12
 {
 "135
 } 0
-"166 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"166 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_ISR TMR6_ISR `IIH(v  1 e 1 0 ]
 {
 "168
@@ -1153,22 +1153,22 @@ oooff 12
 {
 "192
 } 0
-"55 /fred/k42_e220_ps_test/ps_test.X/main.c
+"55 /root/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 {
 "59
 } 0
-"198 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr6.c
+"198 /root/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "201
 } 0
-"78 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/interrupt_manager.c
+"78 /root/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
 {
 "80
 } 0
-"235 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/uart1.c
+"235 /root/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_tx_vect_isr UART1_tx_vect_isr `IIH(v  1 e 1 0 ]
 {
 "241
@@ -1206,7 +1206,7 @@ oooff 12
 {
 "305
 } 0
-"165 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr5.c
+"165 /root/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_ISR TMR5_ISR `IIH(v  1 e 1 0 ]
 {
 "176
@@ -1216,14 +1216,14 @@ oooff 12
 {
 "186
 } 0
-"44 /fred/k42_e220_ps_test/ps_test.X/timers.c
+"44 /root/ps_tester/ps_test.X/timers.c
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
 {
 "47
 [v Timers_Isr@i i `i  1 a 2 9 ]
 "52
 } 0
-"128 /fred/k42_e220_ps_test/ps_test.X/mcc_generated_files/tmr5.c
+"128 /root/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
 {
 [v TMR5_WriteTimer@timerVal timerVal `us  1 p 2 7 ]
