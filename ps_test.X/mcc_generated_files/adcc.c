@@ -50,10 +50,12 @@
 
 #include <xc.h>
 #include "adcc.h"
+#include "interrupt_manager.h"
 
 /**
   Section: ADCC Module Variables
 */
+void (*ADCC_ADI_InterruptHandler)(void);
 
 /**
   Section: ADCC Module APIs
@@ -100,13 +102,19 @@ void ADCC_Initialize(void)
     ADSTAT = 0x00;
     // ADNREF VSS; ADPREF external; 
     ADREF = 0x02;
-    // ADACT disabled; 
-    ADACT = 0x00;
+    // ADACT TMR5; 
+    ADACT = 0x07;
     // ADCS FOSC/2; 
     ADCLK = 0x00;
     // ADGO stop; ADFM right; ADON enabled; ADCS Frc; ADCONT disabled; 
     ADCON0 = 0x94;
     
+    // Clear the ADC interrupt flag
+    PIR1bits.ADIF = 0;
+    // Enabling ADCC interrupt.
+    PIE1bits.ADIE = 1;
+
+    ADCC_SetADIInterruptHandler(ADCC_DefaultInterruptHandler);
 
 }
 
@@ -296,7 +304,23 @@ uint8_t ADCC_GetConversionStageStatus(void)
     return ADSTATbits.ADSTAT;
 }
 
+void __interrupt(irq(AD),base(8)) ADCC_ISR()
+{
+    // Clear the ADCC interrupt flag
+    PIR1bits.ADIF = 0;
 
+    if (ADCC_ADI_InterruptHandler)
+            ADCC_ADI_InterruptHandler();
+}
+
+void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
+    ADCC_ADI_InterruptHandler = InterruptHandler;
+}
+
+void ADCC_DefaultInterruptHandler(void){
+    // add your ADCC interrupt custom code
+    // or set custom function using ADCC_SetADIInterruptHandler() or ADCC_SetADTIInterruptHandler()
+}
 /**
  End of File
 */

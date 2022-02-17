@@ -2366,16 +2366,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;timers.c: 42: }
 [e :UE 2204 ]
 }
-"44
-[; ;timers.c: 44: void Timers_Isr(void)
+"48
+[; ;timers.c: 48: void Timers_Isr(void)
 [v _Timers_Isr `(v ~T0 @X0 1 ef ]
-"45
-[; ;timers.c: 45: {
+"49
+[; ;timers.c: 49: {
 {
 [e :U _Timers_Isr ]
 [f ]
-"47
-[; ;timers.c: 47:  for (int i = 0; i < TMR_COUNT; i++) {
+"51
+[; ;timers.c: 51:  for (int i = 0; i < TMR_COUNT; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -2383,25 +2383,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2210  ]
 [e :U 2209 ]
 {
-"48
-[; ;timers.c: 48:   if (tickCount[i] != 0) {
+"52
+[; ;timers.c: 52:   if (tickCount[i] != 0) {
 [e $ ! != -> *U + &U _tickCount * -> -> _i `ui `ux -> -> # *U &U _tickCount `ui `ux `ui -> -> 0 `i `ui 2212  ]
 {
-"49
-[; ;timers.c: 49:    tickCount[i]--;
+"53
+[; ;timers.c: 53:    tickCount[i]--;
 [e -- *U + &U _tickCount * -> -> _i `ui `ux -> -> # *U &U _tickCount `ui `ux -> -> 1 `i `us ]
-"50
-[; ;timers.c: 50:   }
+"54
+[; ;timers.c: 54:   }
 }
 [e :U 2212 ]
-"51
-[; ;timers.c: 51:  }
+"55
+[; ;timers.c: 55:  }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> . `E15965 6 `i 2209  ]
 [e :U 2210 ]
 }
-"52
-[; ;timers.c: 52: }
+"56
+[; ;timers.c: 56: }
 [e :UE 2208 ]
 }

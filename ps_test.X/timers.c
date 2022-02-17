@@ -41,6 +41,10 @@ void WaitMs(const uint16_t numMilliseconds)
 	} //Enter idle mode to reduce power while waiting
 } //(timer interrupt will wake part from idle)
 
+/*
+ * update the software timers
+ * TMR5 interrupt
+ */
 void Timers_Isr(void)
 {
 	//Decrement each software timer

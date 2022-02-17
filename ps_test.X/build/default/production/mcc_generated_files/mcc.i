@@ -27065,7 +27065,7 @@ unsigned char __t3rd16on(void);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 466 "mcc_generated_files/pin_manager.h"
+# 486 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -27232,31 +27232,6 @@ char *tempnam(const char *, const char *);
 void INTERRUPT_Initialize (void);
 # 55 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/tmr5.h" 1
-# 100 "mcc_generated_files/tmr5.h"
-void TMR5_Initialize(void);
-# 129 "mcc_generated_files/tmr5.h"
-void TMR5_StartTimer(void);
-# 161 "mcc_generated_files/tmr5.h"
-void TMR5_StopTimer(void);
-# 196 "mcc_generated_files/tmr5.h"
-uint16_t TMR5_ReadTimer(void);
-# 235 "mcc_generated_files/tmr5.h"
-void TMR5_WriteTimer(uint16_t timerVal);
-# 271 "mcc_generated_files/tmr5.h"
-void TMR5_Reload(void);
-# 310 "mcc_generated_files/tmr5.h"
-void TMR5_StartSinglePulseAcquisition(void);
-# 349 "mcc_generated_files/tmr5.h"
-uint8_t TMR5_CheckGateValueStatus(void);
-# 368 "mcc_generated_files/tmr5.h"
- void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
-# 386 "mcc_generated_files/tmr5.h"
-extern void (*TMR5_InterruptHandler)(void);
-# 404 "mcc_generated_files/tmr5.h"
-void TMR5_DefaultInterruptHandler(void);
-# 56 "mcc_generated_files/mcc.h" 2
-
 # 1 "mcc_generated_files/adcc.h" 1
 # 72 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
@@ -27327,6 +27302,35 @@ _Bool ADCC_HasErrorCrossedUpperThreshold(void);
 _Bool ADCC_HasErrorCrossedLowerThreshold(void);
 # 829 "mcc_generated_files/adcc.h"
 uint8_t ADCC_GetConversionStageStatus(void);
+# 846 "mcc_generated_files/adcc.h"
+void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
+# 866 "mcc_generated_files/adcc.h"
+void ADCC_DefaultInterruptHandler(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/tmr5.h" 1
+# 100 "mcc_generated_files/tmr5.h"
+void TMR5_Initialize(void);
+# 129 "mcc_generated_files/tmr5.h"
+void TMR5_StartTimer(void);
+# 161 "mcc_generated_files/tmr5.h"
+void TMR5_StopTimer(void);
+# 196 "mcc_generated_files/tmr5.h"
+uint16_t TMR5_ReadTimer(void);
+# 235 "mcc_generated_files/tmr5.h"
+void TMR5_WriteTimer(uint16_t timerVal);
+# 271 "mcc_generated_files/tmr5.h"
+void TMR5_Reload(void);
+# 310 "mcc_generated_files/tmr5.h"
+void TMR5_StartSinglePulseAcquisition(void);
+# 349 "mcc_generated_files/tmr5.h"
+uint8_t TMR5_CheckGateValueStatus(void);
+# 368 "mcc_generated_files/tmr5.h"
+ void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
+# 386 "mcc_generated_files/tmr5.h"
+extern void (*TMR5_InterruptHandler)(void);
+# 404 "mcc_generated_files/tmr5.h"
+void TMR5_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr6.h" 1

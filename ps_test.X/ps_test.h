@@ -12,10 +12,15 @@
 extern "C" {
 #endif
 
+
+
 #include <stdio.h>
 #include "mcc_generated_files/mcc.h"
 #include "timers.h"
 #include "disp_led.h"
+#include "mcc_generated_files/adcc.h"
+
+#define MAX_ADC_CHAN	2
 
 #ifdef	__cplusplus
 }

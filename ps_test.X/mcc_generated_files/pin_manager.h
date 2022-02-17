@@ -169,6 +169,26 @@
 #define HVON_OUT_RA5_SetAnalogMode()      do { ANSELAbits.ANSELA5 = 1; } while(0)
 #define HVON_OUT_RA5_SetDigitalMode()     do { ANSELAbits.ANSELA5 = 0; } while(0)
 
+// get/set OVERLOAD aliases
+#define OVERLOAD_TRIS                 TRISAbits.TRISA6
+#define OVERLOAD_LAT                  LATAbits.LATA6
+#define OVERLOAD_PORT                 PORTAbits.RA6
+#define OVERLOAD_WPU                  WPUAbits.WPUA6
+#define OVERLOAD_OD                   ODCONAbits.ODCA6
+#define OVERLOAD_ANS                  ANSELAbits.ANSELA6
+#define OVERLOAD_SetHigh()            do { LATAbits.LATA6 = 1; } while(0)
+#define OVERLOAD_SetLow()             do { LATAbits.LATA6 = 0; } while(0)
+#define OVERLOAD_Toggle()             do { LATAbits.LATA6 = ~LATAbits.LATA6; } while(0)
+#define OVERLOAD_GetValue()           PORTAbits.RA6
+#define OVERLOAD_SetDigitalInput()    do { TRISAbits.TRISA6 = 1; } while(0)
+#define OVERLOAD_SetDigitalOutput()   do { TRISAbits.TRISA6 = 0; } while(0)
+#define OVERLOAD_SetPullup()          do { WPUAbits.WPUA6 = 1; } while(0)
+#define OVERLOAD_ResetPullup()        do { WPUAbits.WPUA6 = 0; } while(0)
+#define OVERLOAD_SetPushPull()        do { ODCONAbits.ODCA6 = 0; } while(0)
+#define OVERLOAD_SetOpenDrain()       do { ODCONAbits.ODCA6 = 1; } while(0)
+#define OVERLOAD_SetAnalogMode()      do { ANSELAbits.ANSELA6 = 1; } while(0)
+#define OVERLOAD_SetDigitalMode()     do { ANSELAbits.ANSELA6 = 0; } while(0)
+
 // get/set MODESW_RB0 aliases
 #define MODESW_RB0_TRIS                 TRISBbits.TRISB0
 #define MODESW_RB0_LAT                  LATBbits.LATB0

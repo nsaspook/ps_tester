@@ -2456,8 +2456,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 84:     ANSELF = 0x0F;
 [e = _ANSELF -> -> 15 `i `uc ]
 "85
-[; ;mcc_generated_files/pin_manager.c: 85:     ANSELA = 0xCF;
-[e = _ANSELA -> -> 207 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 85:     ANSELA = 0x8F;
+[e = _ANSELA -> -> 143 `i `uc ]
 "90
 [; ;mcc_generated_files/pin_manager.c: 90:     WPUD = 0x00;
 [e = _WPUD -> -> 0 `i `uc ]
@@ -2471,8 +2471,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 93:     WPUB = 0x01;
 [e = _WPUB -> -> 1 `i `uc ]
 "94
-[; ;mcc_generated_files/pin_manager.c: 94:     WPUA = 0x10;
-[e = _WPUA -> -> 16 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 94:     WPUA = 0x50;
+[e = _WPUA -> -> 80 `i `uc ]
 "95
 [; ;mcc_generated_files/pin_manager.c: 95:     WPUC = 0x00;
 [e = _WPUC -> -> 0 `i `uc ]

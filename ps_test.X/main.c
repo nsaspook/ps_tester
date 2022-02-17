@@ -46,16 +46,46 @@
 
 #include "ps_test.h"
 
-adc_result_t ana0, ana1;
-volatile bool disp_tick = false;
+volatile adc_result_t ana[MAX_ADC_CHAN];
+volatile bool disp_tick = false, adc_tick = false;
+volatile uint8_t adc_chan = 0;
 char buff1[128];
 
 void display_led(DISPLAY_TYPES led);
 
+/*
+ * 1/4 second trigger interrupt
+ * TMR6
+ * 
+ * Blink LED and set flag
+ */
 void Led_Blink(void)
 {
 	LED_E0_Toggle();
+	/*
+	 * xmit serial data flag
+	 */
 	disp_tick = true;
+}
+
+/*
+ * ADC conversion complete interrupt routine
+ * conversion start triggered by TMR5 interrupt
+ * 
+ * move conversion data into program data array
+ * set flag
+ */
+void Adc_Isr(void)
+{
+	ana[adc_chan] = ADCC_GetConversionResult();
+	if (adc_chan++ >= MAX_ADC_CHAN) {
+		adc_chan = 0;
+	}
+	ADPCH = adc_chan;
+	/*
+	 * adc value valid flag
+	 */
+	adc_tick = true;
 }
 
 /*
@@ -69,6 +99,8 @@ void main(void)
 
 	TMR6_SetInterruptHandler(Led_Blink);
 	TMR5_SetInterruptHandler(Timers_Isr);
+	ADCC_SetADIInterruptHandler(Adc_Isr);
+	ADPCH = adc_chan;
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();
@@ -79,52 +111,43 @@ void main(void)
 	DAC1_SetOutput(dac_v);
 
 	while (true) {
-		// Add your application code
-		ADCC_StartConversion(channel_ANA0);
-		do {
-		} while (!ADCC_IsConversionDone());
-		ana0 = ADCC_GetConversionResult();
-
-		ADCC_StartConversion(channel_ANA1);
-		do {
-		} while (!ADCC_IsConversionDone());
-		ana1 = ADCC_GetConversionResult();
-
-		if (ana0 < 900) {
-			display_led(oo00_off);
-			display_led(oo30_off);
-		} else {
-			if (ana0 > 2500) {
-				display_led(oo00_g);
-				display_led(oo30_g);
+		if (adc_tick) {
+			if (ana[0] < 900) {
+				display_led(oo00_off);
+				display_led(oo30_off);
 			} else {
-				display_led(oo00_r);
-				display_led(oo30_r);
+				if (ana[0] > 2500) {
+					display_led(oo00_g);
+					display_led(oo30_g);
+				} else {
+					display_led(oo00_r);
+					display_led(oo30_r);
+				}
 			}
-		}
 
-		if (ana1 < 900) {
-			display_led(oo10_off);
-			display_led(oo20_off);
-		} else {
-			if (ana1 > 2500) {
-				display_led(oo10_g);
-				display_led(oo20_g);
+			if (ana[1] < 900) {
+				display_led(oo10_off);
+				display_led(oo20_off);
 			} else {
-				display_led(oo10_r);
-				display_led(oo20_r);
+				if (ana[1] > 2500) {
+					display_led(oo10_g);
+					display_led(oo20_g);
+				} else {
+					display_led(oo10_r);
+					display_led(oo20_r);
+				}
 			}
-		}
+			adc_tick = false;
 
-		if (disp_tick) {
-			sprintf(buff1, "E220 %4u %4u \r\n", ana0, ana1);
-			puts(buff1);
-			DAC1_SetOutput(++dac_v);
-			disp_tick = false;
+			if (disp_tick) {
+				sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
+				puts(buff1);
+				DAC1_SetOutput(++dac_v);
+				disp_tick = false;
+			}
 		}
 	}
 }
-
 
 /**
  End of File

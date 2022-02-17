@@ -27132,8 +27132,27 @@ _Bool ADCC_HasErrorCrossedUpperThreshold(void);
 _Bool ADCC_HasErrorCrossedLowerThreshold(void);
 # 829 "mcc_generated_files/adcc.h"
 uint8_t ADCC_GetConversionStageStatus(void);
+# 846 "mcc_generated_files/adcc.h"
+void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
+# 866 "mcc_generated_files/adcc.h"
+void ADCC_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/adcc.c" 2
-# 62 "mcc_generated_files/adcc.c"
+
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 109 "mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
+# 53 "mcc_generated_files/adcc.c" 2
+
+
+
+
+
+void (*ADCC_ADI_InterruptHandler)(void);
+
+
+
+
+
 void ADCC_Initialize(void)
 {
 
@@ -27176,12 +27195,18 @@ void ADCC_Initialize(void)
 
     ADREF = 0x02;
 
-    ADACT = 0x00;
+    ADACT = 0x07;
 
     ADCLK = 0x00;
 
     ADCON0 = 0x94;
 
+
+    PIR1bits.ADIF = 0;
+
+    PIE1bits.ADIE = 1;
+
+    ADCC_SetADIInterruptHandler(ADCC_DefaultInterruptHandler);
 
 }
 
@@ -27369,4 +27394,22 @@ uint8_t ADCC_GetConversionStageStatus(void)
 {
 
     return ADSTATbits.ADSTAT;
+}
+
+void __attribute__((picinterrupt(("irq(AD),base(8)")))) ADCC_ISR()
+{
+
+    PIR1bits.ADIF = 0;
+
+    if (ADCC_ADI_InterruptHandler)
+            ADCC_ADI_InterruptHandler();
+}
+
+void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
+    ADCC_ADI_InterruptHandler = InterruptHandler;
+}
+
+void ADCC_DefaultInterruptHandler(void){
+
+
 }
