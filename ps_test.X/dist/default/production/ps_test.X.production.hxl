@@ -12,20 +12,20 @@
   0h - 3h		(dist/default/production/ps_test.X.production.hex)
   8h - B1h		(dist/default/production/ps_test.X.production.hex)
   2000h - 2014h		(dist/default/production/ps_test.X.production.hex)
-  2016h - 2E8Dh		(dist/default/production/ps_test.X.production.hex)
-  2E90h - 2ECDh		(dist/default/production/ps_test.X.production.hex)
-  2ED0h - 2F0Dh		(dist/default/production/ps_test.X.production.hex)
-  2F10h - 3273h		(dist/default/production/ps_test.X.production.hex)
+  2016h - 2E91h		(dist/default/production/ps_test.X.production.hex)
+  2E94h - 2ED1h		(dist/default/production/ps_test.X.production.hex)
+  2ED4h - 2F11h		(dist/default/production/ps_test.X.production.hex)
+  2F14h - 3277h		(dist/default/production/ps_test.X.production.hex)
   200000h - 20000Fh		(dist/default/production/ps_test.X.production.hex)
   300000h - 300009h		(dist/default/production/ps_test.X.production.hex)
  Unused ranges:
   4h - 7h
   B2h - 1FFFh
   2015h - 2015h
-  2E8Eh - 2E8Fh
-  2ECEh - 2ECFh
-  2F0Eh - 2F0Fh
-  3274h - 1FFFFFh
+  2E92h - 2E93h
+  2ED2h - 2ED3h
+  2F12h - 2F13h
+  3278h - 1FFFFFh
   200010h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -280,16 +280,16 @@
 00002E50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002E60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002E70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002E80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
-00002E90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002E80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002E90 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002EC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
-00002ED0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002EC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002ED0 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002EF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002F00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
-00002F10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002F10 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002F20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002F30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002F40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -343,7 +343,7 @@
 00003240 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003250 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003260 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003270 | H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- -- -- --
+00003270 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------

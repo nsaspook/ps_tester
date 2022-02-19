@@ -26,6 +26,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 ./mcc_generated_files/mcc.h
 [; ;./mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
+[s S2064 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2064 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
+"45882
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45882:     struct {
+[s S2065 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2065 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
+"45871
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45871: typedef union {
+[u S2063 `S2064 1 `S2065 1 ]
+[n S2063 . . . ]
+"45893
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45893: extern volatile LATDbits_t LATDbits __attribute__((address(0x3FBD)));
+[v _LATDbits `VS2063 ~T0 @X0 0 e@16317 ]
 [v F16423 `(v ~T0 @X0 0 tf ]
 "847 ./mcc_generated_files/tmr6.h
 [; ;./mcc_generated_files/tmr6.h: 847:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
@@ -59,8 +74,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "129 ./mcc_generated_files/dac1.h
 [; ;./mcc_generated_files/dac1.h: 129: void DAC1_SetOutput(uint8_t inputData);
 [v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
-"116 main.c
-[; ;main.c: 116:     display_led(oo00_off);
+"118 main.c
+[; ;main.c: 118:     display_led(oo00_off);
 [c E16498 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
 [n E16498 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
 "54
@@ -2422,158 +2437,172 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 98:  SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 "100
-[; ;main.c: 100:  TMR6_SetInterruptHandler(Led_Blink);
-[e ( _TMR6_SetInterruptHandler (1 &U _Led_Blink ]
-"101
-[; ;main.c: 101:  TMR5_SetInterruptHandler(Timers_Isr);
-[e ( _TMR5_SetInterruptHandler (1 &U _Timers_Isr ]
-"102
-[; ;main.c: 102:  ADCC_SetADIInterruptHandler(Adc_Isr);
-[e ( _ADCC_SetADIInterruptHandler (1 &U _Adc_Isr ]
-"103
-[; ;main.c: 103:  ADPCH = adc_chan;
-[e = _ADPCH _adc_chan ]
-"106
-[; ;main.c: 106:  (INTCON0bits.GIEH = 1);
-[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
-"111
-[; ;main.c: 111:  DAC1_SetOutput(dac_v);
-[e ( _DAC1_SetOutput (1 _dac_v ]
-"113
-[; ;main.c: 113:  while (1) {
+[; ;main.c: 100:  do { LATDbits.LATD1 = 0; } while(0);
+[e :U 2214 ]
+{
+[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
+}
 [e :U 2213 ]
+"101
+[; ;main.c: 101:  do { LATEbits.LATE2 = 0; } while(0);
+[e :U 2217 ]
 {
-"114
-[; ;main.c: 114:   if (adc_tick) {
-[e $ ! != -> _adc_tick `i -> 0 `i 2215  ]
-{
+[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
+}
+[e :U 2216 ]
+"102
+[; ;main.c: 102:  TMR6_SetInterruptHandler(Led_Blink);
+[e ( _TMR6_SetInterruptHandler (1 &U _Led_Blink ]
+"103
+[; ;main.c: 103:  TMR5_SetInterruptHandler(Timers_Isr);
+[e ( _TMR5_SetInterruptHandler (1 &U _Timers_Isr ]
+"104
+[; ;main.c: 104:  ADCC_SetADIInterruptHandler(Adc_Isr);
+[e ( _ADCC_SetADIInterruptHandler (1 &U _Adc_Isr ]
+"105
+[; ;main.c: 105:  ADPCH = adc_chan;
+[e = _ADPCH _adc_chan ]
+"108
+[; ;main.c: 108:  (INTCON0bits.GIEH = 1);
+[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
+"113
+[; ;main.c: 113:  DAC1_SetOutput(dac_v);
+[e ( _DAC1_SetOutput (1 _dac_v ]
 "115
-[; ;main.c: 115:    if (ana[0] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2216  ]
+[; ;main.c: 115:  while (1) {
+[e :U 2219 ]
 {
 "116
-[; ;main.c: 116:     display_led(oo00_off);
-[e ( _display_led (1 . `E16498 0 ]
+[; ;main.c: 116:   if (adc_tick) {
+[e $ ! != -> _adc_tick `i -> 0 `i 2221  ]
+{
 "117
-[; ;main.c: 117:     display_led(oo30_off);
-[e ( _display_led (1 . `E16498 9 ]
+[; ;main.c: 117:    if (ana[0] < 900) {
+[e $ ! < -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2222  ]
+{
 "118
-[; ;main.c: 118:    } else {
-}
-[e $U 2217  ]
-[e :U 2216 ]
-{
+[; ;main.c: 118:     display_led(oo00_off);
+[e ( _display_led (1 . `E16498 0 ]
 "119
-[; ;main.c: 119:     if (ana[0] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2218  ]
-{
+[; ;main.c: 119:     display_led(oo30_off);
+[e ( _display_led (1 . `E16498 9 ]
 "120
-[; ;main.c: 120:      display_led(oo00_g);
-[e ( _display_led (1 . `E16498 1 ]
-"121
-[; ;main.c: 121:      display_led(oo30_g);
-[e ( _display_led (1 . `E16498 10 ]
-"122
-[; ;main.c: 122:     } else {
-}
-[e $U 2219  ]
-[e :U 2218 ]
-{
-"123
-[; ;main.c: 123:      display_led(oo00_r);
-[e ( _display_led (1 . `E16498 2 ]
-"124
-[; ;main.c: 124:      display_led(oo30_r);
-[e ( _display_led (1 . `E16498 11 ]
-"125
-[; ;main.c: 125:     }
-}
-[e :U 2219 ]
-"126
-[; ;main.c: 126:    }
-}
-[e :U 2217 ]
-"128
-[; ;main.c: 128:    if (ana[1] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2220  ]
-{
-"129
-[; ;main.c: 129:     display_led(oo10_off);
-[e ( _display_led (1 . `E16498 3 ]
-"130
-[; ;main.c: 130:     display_led(oo20_off);
-[e ( _display_led (1 . `E16498 6 ]
-"131
-[; ;main.c: 131:    } else {
-}
-[e $U 2221  ]
-[e :U 2220 ]
-{
-"132
-[; ;main.c: 132:     if (ana[1] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2222  ]
-{
-"133
-[; ;main.c: 133:      display_led(oo10_g);
-[e ( _display_led (1 . `E16498 4 ]
-"134
-[; ;main.c: 134:      display_led(oo20_g);
-[e ( _display_led (1 . `E16498 7 ]
-"135
-[; ;main.c: 135:     } else {
+[; ;main.c: 120:    } else {
 }
 [e $U 2223  ]
 [e :U 2222 ]
 {
-"136
-[; ;main.c: 136:      display_led(oo10_r);
-[e ( _display_led (1 . `E16498 5 ]
-"137
-[; ;main.c: 137:      display_led(oo20_r);
-[e ( _display_led (1 . `E16498 8 ]
-"138
-[; ;main.c: 138:     }
+"121
+[; ;main.c: 121:     if (ana[0] > 2500) {
+[e $ ! > -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2224  ]
+{
+"122
+[; ;main.c: 122:      display_led(oo00_g);
+[e ( _display_led (1 . `E16498 1 ]
+"123
+[; ;main.c: 123:      display_led(oo30_g);
+[e ( _display_led (1 . `E16498 10 ]
+"124
+[; ;main.c: 124:     } else {
+}
+[e $U 2225  ]
+[e :U 2224 ]
+{
+"125
+[; ;main.c: 125:      display_led(oo00_r);
+[e ( _display_led (1 . `E16498 2 ]
+"126
+[; ;main.c: 126:      display_led(oo30_r);
+[e ( _display_led (1 . `E16498 11 ]
+"127
+[; ;main.c: 127:     }
+}
+[e :U 2225 ]
+"128
+[; ;main.c: 128:    }
 }
 [e :U 2223 ]
+"130
+[; ;main.c: 130:    if (ana[1] < 900) {
+[e $ ! < -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2226  ]
+{
+"131
+[; ;main.c: 131:     display_led(oo10_off);
+[e ( _display_led (1 . `E16498 3 ]
+"132
+[; ;main.c: 132:     display_led(oo20_off);
+[e ( _display_led (1 . `E16498 6 ]
+"133
+[; ;main.c: 133:    } else {
+}
+[e $U 2227  ]
+[e :U 2226 ]
+{
+"134
+[; ;main.c: 134:     if (ana[1] > 2500) {
+[e $ ! > -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2228  ]
+{
+"135
+[; ;main.c: 135:      display_led(oo10_g);
+[e ( _display_led (1 . `E16498 4 ]
+"136
+[; ;main.c: 136:      display_led(oo20_g);
+[e ( _display_led (1 . `E16498 7 ]
+"137
+[; ;main.c: 137:     } else {
+}
+[e $U 2229  ]
+[e :U 2228 ]
+{
+"138
+[; ;main.c: 138:      display_led(oo10_r);
+[e ( _display_led (1 . `E16498 5 ]
 "139
-[; ;main.c: 139:    }
+[; ;main.c: 139:      display_led(oo20_r);
+[e ( _display_led (1 . `E16498 8 ]
+"140
+[; ;main.c: 140:     }
+}
+[e :U 2229 ]
+"141
+[; ;main.c: 141:    }
+}
+[e :U 2227 ]
+"142
+[; ;main.c: 142:    adc_tick = 0;
+[e = _adc_tick -> -> 0 `i `a ]
+"144
+[; ;main.c: 144:    if (disp_tick) {
+[e $ ! != -> _disp_tick `i -> 0 `i 2230  ]
+{
+"145
+[; ;main.c: 145:     sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
+[e ( _sprintf (1 , , (. , &U _buff1 :s 1C -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui ]
+"146
+[; ;main.c: 146:     puts(buff1);
+[e ( _puts (1 -> &U _buff1 `*Cuc ]
+"147
+[; ;main.c: 147:     DAC1_SetOutput(++dac_v);
+[e ( _DAC1_SetOutput (1 =+ _dac_v -> -> 1 `i `uc ]
+"148
+[; ;main.c: 148:     disp_tick = 0;
+[e = _disp_tick -> -> 0 `i `a ]
+"149
+[; ;main.c: 149:    }
+}
+[e :U 2230 ]
+"150
+[; ;main.c: 150:   }
 }
 [e :U 2221 ]
-"140
-[; ;main.c: 140:    adc_tick = 0;
-[e = _adc_tick -> -> 0 `i `a ]
-"142
-[; ;main.c: 142:    if (disp_tick) {
-[e $ ! != -> _disp_tick `i -> 0 `i 2224  ]
-{
-"143
-[; ;main.c: 143:     sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
-[e ( _sprintf (1 , , (. , &U _buff1 :s 1C -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui ]
-"144
-[; ;main.c: 144:     puts(buff1);
-[e ( _puts (1 -> &U _buff1 `*Cuc ]
-"145
-[; ;main.c: 145:     DAC1_SetOutput(++dac_v);
-[e ( _DAC1_SetOutput (1 =+ _dac_v -> -> 1 `i `uc ]
-"146
-[; ;main.c: 146:     disp_tick = 0;
-[e = _disp_tick -> -> 0 `i `a ]
-"147
-[; ;main.c: 147:    }
+"151
+[; ;main.c: 151:  }
 }
-[e :U 2224 ]
-"148
-[; ;main.c: 148:   }
-}
-[e :U 2215 ]
-"149
-[; ;main.c: 149:  }
-}
-[e :U 2212 ]
-[e $U 2213  ]
-[e :U 2214 ]
-"150
-[; ;main.c: 150: }
+[e :U 2218 ]
+[e $U 2219  ]
+[e :U 2220 ]
+"152
+[; ;main.c: 152: }
 [e :UE 2211 ]
 }
 [p f _sprintf 8422400 ]

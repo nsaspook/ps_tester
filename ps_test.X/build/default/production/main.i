@@ -27738,6 +27738,8 @@ void main(void)
 
  SYSTEM_Initialize();
 
+ do { LATDbits.LATD1 = 0; } while(0);
+ do { LATEbits.LATE2 = 0; } while(0);
  TMR6_SetInterruptHandler(Led_Blink);
  TMR5_SetInterruptHandler(Timers_Isr);
  ADCC_SetADIInterruptHandler(Adc_Isr);

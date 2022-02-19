@@ -61,7 +61,7 @@ void display_led(DISPLAY_TYPES led);
  */
 void Led_Blink(void)
 {
-	LED_E0_Toggle();
+	LED_RESET_Toggle();
 	/*
 	 * xmit serial data flag
 	 */
@@ -97,6 +97,8 @@ void main(void)
 	// Initialize the device
 	SYSTEM_Initialize();
 
+	LED_MODE_SetLow();
+	LED_DB_SetLow();
 	TMR6_SetInterruptHandler(Led_Blink);
 	TMR5_SetInterruptHandler(Timers_Isr);
 	ADCC_SetADIInterruptHandler(Adc_Isr);
