@@ -58,6 +58,7 @@ void SYSTEM_Initialize(void)
     DAC1_Initialize();
     TMR5_Initialize();
     UART1_Initialize();
+    SPI1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

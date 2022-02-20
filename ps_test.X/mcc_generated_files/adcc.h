@@ -90,6 +90,10 @@ typedef enum
 {
     channel_ANA0 =  0x0,
     channel_ANA1 =  0x1,
+    channel_ANB2 =  0xA,
+    channel_ANB3 =  0xB,
+    channel_ANB4 =  0xC,
+    channel_ANB5 =  0xD,
     channel_VSS =  0x3B,
     channel_Temp =  0x3C,
     channel_DAC1 =  0x3D,
