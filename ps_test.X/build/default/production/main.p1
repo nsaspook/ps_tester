@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16468 `(v ~T0 @X0 0 tf ]
-[v F16470 `(v ~T0 @X0 0 tf ]
+[v F16472 `(v ~T0 @X0 0 tf ]
+[v F16474 `(v ~T0 @X0 0 tf ]
 "45984 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45984:     struct {
 [s S2067 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -16,15 +16,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45995
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45995: extern volatile LATEbits_t LATEbits __attribute__((address(0x3FBE)));
 [v _LATEbits `VS2066 ~T0 @X0 0 e@16318 ]
-"223 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 223: adc_result_t ADCC_GetConversionResult(void);
+"227 ./mcc_generated_files/adcc.h
+[; ;./mcc_generated_files/adcc.h: 227: adc_result_t ADCC_GetConversionResult(void);
 [v _ADCC_GetConversionResult `(us ~T0 @X0 0 ef ]
 "31189 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 31189: extern volatile unsigned char ADPCH __attribute__((address(0x3EF1)));
 [v _ADPCH `Vuc ~T0 @X0 0 e@16113 ]
 [p mainexit ]
-"75 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 75: void SYSTEM_Initialize(void);
+"76 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
@@ -41,21 +41,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45893
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45893: extern volatile LATDbits_t LATDbits __attribute__((address(0x3FBD)));
 [v _LATDbits `VS2063 ~T0 @X0 0 e@16317 ]
-[v F16423 `(v ~T0 @X0 0 tf ]
+[v F16427 `(v ~T0 @X0 0 tf ]
 "847 ./mcc_generated_files/tmr6.h
 [; ;./mcc_generated_files/tmr6.h: 847:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16423 ]
-[v F16346 `(v ~T0 @X0 0 tf ]
+[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16427 ]
+[v F16350 `(v ~T0 @X0 0 tf ]
 "368 ./mcc_generated_files/tmr5.h
 [; ;./mcc_generated_files/tmr5.h: 368:  void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR5_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16346 ]
+[v _TMR5_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16350 ]
 "27 ./timers.h
 [; ;./timers.h: 27: void Timers_Isr(void);
 [v _Timers_Isr `(v ~T0 @X0 0 ef ]
-[v F16332 `(v ~T0 @X0 0 tf ]
-"846 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 846: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16332 ]
+[v F16336 `(v ~T0 @X0 0 tf ]
+"850 ./mcc_generated_files/adcc.h
+[; ;./mcc_generated_files/adcc.h: 850: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
+[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16336 ]
 "46838 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46838:     struct {
 [s S2097 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -76,11 +76,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
 "118 main.c
 [; ;main.c: 118:     display_led(oo00_off);
-[c E16498 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E16498 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
+[c E16523 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
+[n E16523 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
 "54
 [; ;main.c: 54: void display_led(DISPLAY_TYPES led);
-[v _display_led `(v ~T0 @X0 0 ef1`E16498 ]
+[v _display_led `(v ~T0 @X0 0 ef1`E16523 ]
 "109 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
 [; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
@@ -2340,10 +2340,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 03FFFh ;# ">
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F16468 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F16472 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F16470 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F16474 ~T0 @X0 1 e ]
 "49 main.c
 [; ;main.c: 49: volatile adc_result_t ana[2];
 [v _ana `Vus ~T0 @X0 -> 2 `i e ]
@@ -2482,10 +2482,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "118
 [; ;main.c: 118:     display_led(oo00_off);
-[e ( _display_led (1 . `E16498 0 ]
+[e ( _display_led (1 . `E16523 0 ]
 "119
 [; ;main.c: 119:     display_led(oo30_off);
-[e ( _display_led (1 . `E16498 9 ]
+[e ( _display_led (1 . `E16523 9 ]
 "120
 [; ;main.c: 120:    } else {
 }
@@ -2498,10 +2498,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "122
 [; ;main.c: 122:      display_led(oo00_g);
-[e ( _display_led (1 . `E16498 1 ]
+[e ( _display_led (1 . `E16523 1 ]
 "123
 [; ;main.c: 123:      display_led(oo30_g);
-[e ( _display_led (1 . `E16498 10 ]
+[e ( _display_led (1 . `E16523 10 ]
 "124
 [; ;main.c: 124:     } else {
 }
@@ -2510,10 +2510,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "125
 [; ;main.c: 125:      display_led(oo00_r);
-[e ( _display_led (1 . `E16498 2 ]
+[e ( _display_led (1 . `E16523 2 ]
 "126
 [; ;main.c: 126:      display_led(oo30_r);
-[e ( _display_led (1 . `E16498 11 ]
+[e ( _display_led (1 . `E16523 11 ]
 "127
 [; ;main.c: 127:     }
 }
@@ -2528,10 +2528,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "131
 [; ;main.c: 131:     display_led(oo10_off);
-[e ( _display_led (1 . `E16498 3 ]
+[e ( _display_led (1 . `E16523 3 ]
 "132
 [; ;main.c: 132:     display_led(oo20_off);
-[e ( _display_led (1 . `E16498 6 ]
+[e ( _display_led (1 . `E16523 6 ]
 "133
 [; ;main.c: 133:    } else {
 }
@@ -2544,10 +2544,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "135
 [; ;main.c: 135:      display_led(oo10_g);
-[e ( _display_led (1 . `E16498 4 ]
+[e ( _display_led (1 . `E16523 4 ]
 "136
 [; ;main.c: 136:      display_led(oo20_g);
-[e ( _display_led (1 . `E16498 7 ]
+[e ( _display_led (1 . `E16523 7 ]
 "137
 [; ;main.c: 137:     } else {
 }
@@ -2556,10 +2556,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "138
 [; ;main.c: 138:      display_led(oo10_r);
-[e ( _display_led (1 . `E16498 5 ]
+[e ( _display_led (1 . `E16523 5 ]
 "139
 [; ;main.c: 139:      display_led(oo20_r);
-[e ( _display_led (1 . `E16498 8 ]
+[e ( _display_led (1 . `E16523 8 ]
 "140
 [; ;main.c: 140:     }
 }

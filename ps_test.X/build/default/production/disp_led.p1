@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16468 `(v ~T0 @X0 0 tf ]
-[v F16470 `(v ~T0 @X0 0 tf ]
+[v F16472 `(v ~T0 @X0 0 tf ]
+[v F16474 `(v ~T0 @X0 0 tf ]
 "3 disp_led.c
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[c E16498 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E16498 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
+[c E16523 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
+[n E16523 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
 "45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
 [s S2064 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2284,20 +2284,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 03FFFh ;# ">
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F16468 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F16472 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F16470 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F16474 ~T0 @X0 1 e ]
 "3 disp_led.c
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[v _display_led `(v ~T0 @X0 1 ef1`E16498 ]
+[v _display_led `(v ~T0 @X0 1 ef1`E16523 ]
 "4
 [; ;disp_led.c: 4: {
 {
 [e :U _display_led ]
 "3
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[v _led `E16498 ~T0 @X0 1 r1 ]
+[v _led `E16523 ~T0 @X0 1 r1 ]
 "4
 [; ;disp_led.c: 4: {
 [f ]
@@ -2612,18 +2612,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2206  ]
 [e :U 2207 ]
-[e [\ -> _led `ui , $ -> . `E16498 0 `ui 2208
- , $ -> . `E16498 2 `ui 2215
- , $ -> . `E16498 1 `ui 2222
- , $ -> . `E16498 3 `ui 2229
- , $ -> . `E16498 5 `ui 2236
- , $ -> . `E16498 4 `ui 2243
- , $ -> . `E16498 6 `ui 2250
- , $ -> . `E16498 8 `ui 2257
- , $ -> . `E16498 7 `ui 2264
- , $ -> . `E16498 9 `ui 2271
- , $ -> . `E16498 11 `ui 2278
- , $ -> . `E16498 10 `ui 2285
+[e [\ -> _led `ui , $ -> . `E16523 0 `ui 2208
+ , $ -> . `E16523 2 `ui 2215
+ , $ -> . `E16523 1 `ui 2222
+ , $ -> . `E16523 3 `ui 2229
+ , $ -> . `E16523 5 `ui 2236
+ , $ -> . `E16523 4 `ui 2243
+ , $ -> . `E16523 6 `ui 2250
+ , $ -> . `E16523 8 `ui 2257
+ , $ -> . `E16523 7 `ui 2264
+ , $ -> . `E16523 9 `ui 2271
+ , $ -> . `E16523 11 `ui 2278
+ , $ -> . `E16523 10 `ui 2285
  2292 ]
 [e :U 2206 ]
 "66

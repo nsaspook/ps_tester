@@ -10,5 +10,6 @@ mcc_generated_files/tmr5.h  \
 mcc_generated_files/tmr6.h  \
 mcc_generated_files/dac1.h  \
 mcc_generated_files/uart1.h  \
+mcc_generated_files/spi1.h  \
 timers.h  \
 disp_led.h 
