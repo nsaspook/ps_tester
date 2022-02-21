@@ -11,11 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXfpJaGk.o
-idloc IDLOC 5 200000 200000 10 1 1
-init CODE 0 AE AE 4 1 2
-reset_vec CODE 0 0 0 4 1 2
-config CONFIG 4 300000 300000 A 1 1
 $dist/default/production/ps_test.X.production.o
 ivt0x8 CODE 0 8 8 A6 1 2
 cinit CODE 0 2D6A 2D6A 42 1 2
@@ -87,6 +82,11 @@ bssBANK1 BANK1 1 100 100 C0 1 1
 bssBANK2 BANK2 1 200 200 80 1 1
 smallconst SMALLCONST 0 2000 2000 1A 1 2
 bssCOMRAM COMRAM 1 38 38 14 1 1
+config CONFIG 4 300000 300000 A 1 1
+$/tmp/xcXAhJkGp.o
+idloc IDLOC 5 200000 200000 10 1 1
+init CODE 0 AE AE 4 1 2
+reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -787,42 +787,42 @@ $dist/default/production/ps_test.X.production.o
 25DE text0 CODE >146:/fred/ps_tester/ps_test.X/main.c
 25EA text0 CODE >147:/fred/ps_tester/ps_test.X/main.c
 25F4 text0 CODE >148:/fred/ps_tester/ps_test.X/main.c
-2D6A cinit CODE >18595:/tmp/xcXANJomo.s
-2D6A cinit CODE >18597:/tmp/xcXANJomo.s
-2D6A cinit CODE >18600:/tmp/xcXANJomo.s
-2D6A cinit CODE >18697:/tmp/xcXANJomo.s
-2D6E cinit CODE >18698:/tmp/xcXANJomo.s
-2D70 cinit CODE >18699:/tmp/xcXANJomo.s
-2D70 cinit CODE >18700:/tmp/xcXANJomo.s
-2D72 cinit CODE >18701:/tmp/xcXANJomo.s
-2D74 cinit CODE >18702:/tmp/xcXANJomo.s
-2D76 cinit CODE >18705:/tmp/xcXANJomo.s
-2D7A cinit CODE >18706:/tmp/xcXANJomo.s
-2D7C cinit CODE >18707:/tmp/xcXANJomo.s
-2D7C cinit CODE >18708:/tmp/xcXANJomo.s
-2D7E cinit CODE >18709:/tmp/xcXANJomo.s
-2D80 cinit CODE >18710:/tmp/xcXANJomo.s
-2D82 cinit CODE >18713:/tmp/xcXANJomo.s
-2D86 cinit CODE >18714:/tmp/xcXANJomo.s
-2D88 cinit CODE >18715:/tmp/xcXANJomo.s
-2D88 cinit CODE >18716:/tmp/xcXANJomo.s
-2D8A cinit CODE >18717:/tmp/xcXANJomo.s
-2D8C cinit CODE >18718:/tmp/xcXANJomo.s
-2D8E cinit CODE >18721:/tmp/xcXANJomo.s
-2D92 cinit CODE >18722:/tmp/xcXANJomo.s
-2D94 cinit CODE >18723:/tmp/xcXANJomo.s
-2D94 cinit CODE >18724:/tmp/xcXANJomo.s
-2D96 cinit CODE >18725:/tmp/xcXANJomo.s
-2D98 cinit CODE >18726:/tmp/xcXANJomo.s
-2D9A cinit CODE >18734:/tmp/xcXANJomo.s
-2D9C cinit CODE >18735:/tmp/xcXANJomo.s
-2D9E cinit CODE >18736:/tmp/xcXANJomo.s
-2DA0 cinit CODE >18737:/tmp/xcXANJomo.s
-2DA2 cinit CODE >18738:/tmp/xcXANJomo.s
-2DA4 cinit CODE >18739:/tmp/xcXANJomo.s
-2DA6 cinit CODE >18745:/tmp/xcXANJomo.s
-2DA6 cinit CODE >18747:/tmp/xcXANJomo.s
-2DA8 cinit CODE >18748:/tmp/xcXANJomo.s
+2D6A cinit CODE >18595:/tmp/xcXMebaaH.s
+2D6A cinit CODE >18597:/tmp/xcXMebaaH.s
+2D6A cinit CODE >18600:/tmp/xcXMebaaH.s
+2D6A cinit CODE >18697:/tmp/xcXMebaaH.s
+2D6E cinit CODE >18698:/tmp/xcXMebaaH.s
+2D70 cinit CODE >18699:/tmp/xcXMebaaH.s
+2D70 cinit CODE >18700:/tmp/xcXMebaaH.s
+2D72 cinit CODE >18701:/tmp/xcXMebaaH.s
+2D74 cinit CODE >18702:/tmp/xcXMebaaH.s
+2D76 cinit CODE >18705:/tmp/xcXMebaaH.s
+2D7A cinit CODE >18706:/tmp/xcXMebaaH.s
+2D7C cinit CODE >18707:/tmp/xcXMebaaH.s
+2D7C cinit CODE >18708:/tmp/xcXMebaaH.s
+2D7E cinit CODE >18709:/tmp/xcXMebaaH.s
+2D80 cinit CODE >18710:/tmp/xcXMebaaH.s
+2D82 cinit CODE >18713:/tmp/xcXMebaaH.s
+2D86 cinit CODE >18714:/tmp/xcXMebaaH.s
+2D88 cinit CODE >18715:/tmp/xcXMebaaH.s
+2D88 cinit CODE >18716:/tmp/xcXMebaaH.s
+2D8A cinit CODE >18717:/tmp/xcXMebaaH.s
+2D8C cinit CODE >18718:/tmp/xcXMebaaH.s
+2D8E cinit CODE >18721:/tmp/xcXMebaaH.s
+2D92 cinit CODE >18722:/tmp/xcXMebaaH.s
+2D94 cinit CODE >18723:/tmp/xcXMebaaH.s
+2D94 cinit CODE >18724:/tmp/xcXMebaaH.s
+2D96 cinit CODE >18725:/tmp/xcXMebaaH.s
+2D98 cinit CODE >18726:/tmp/xcXMebaaH.s
+2D9A cinit CODE >18734:/tmp/xcXMebaaH.s
+2D9C cinit CODE >18735:/tmp/xcXMebaaH.s
+2D9E cinit CODE >18736:/tmp/xcXMebaaH.s
+2DA0 cinit CODE >18737:/tmp/xcXMebaaH.s
+2DA2 cinit CODE >18738:/tmp/xcXMebaaH.s
+2DA4 cinit CODE >18739:/tmp/xcXMebaaH.s
+2DA6 cinit CODE >18745:/tmp/xcXMebaaH.s
+2DA6 cinit CODE >18747:/tmp/xcXMebaaH.s
+2DA8 cinit CODE >18748:/tmp/xcXMebaaH.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -843,7 +843,7 @@ __Hspace_1 280 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/ps_test.X.production.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXfpJaGk.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXAhJkGp.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/ps_test.X.production.o
 __end_of_UART1_SetFramingErrorHandler 3244 0 CODE 0 text24 dist/default/production/ps_test.X.production.o
 __end_of_UART1_SetOverrunErrorHandler 3236 0 CODE 0 text23 dist/default/production/ps_test.X.production.o
@@ -876,7 +876,7 @@ _WPUC 3A61 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUD 3A71 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUE 3A81 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUF 3A91 0 ABS 0 - dist/default/production/ps_test.X.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXfpJaGk.o
+___sp 0 0 STACK 2 stack /tmp/xcXAhJkGp.o
 _atoi 23AE 0 CODE 0 text9 dist/default/production/ps_test.X.production.o
 _dbuf 8A 0 BANK0 1 bssBANK0 dist/default/production/ps_test.X.production.o
 _main 24E0 0 CODE 0 text0 dist/default/production/ps_test.X.production.o
@@ -888,7 +888,7 @@ __end_of_Default_ISR 32AA 0 CODE 0 text47 dist/default/production/ps_test.X.prod
 pad@i 2C 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 pad@p 29 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 pad@w 2E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
-start AE 0 CODE 0 init /tmp/xcXfpJaGk.o
+start AE 0 CODE 0 init /tmp/xcXAhJkGp.o
 _uart1TxBufferRemaining 49 0 COMRAM 1 bssCOMRAM dist/default/production/ps_test.X.production.o
 TMR5_WriteTimer@timerVal F 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/ps_test.X.production.o
@@ -909,11 +909,11 @@ utoa@i BF 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@n B7 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@p B3 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@w B5 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
-__accesstop 60 0 ABS 0 - /tmp/xcXfpJaGk.o
-intlevel0 0 0 CODE 0 text /tmp/xcXfpJaGk.o
-intlevel1 0 0 CODE 0 text /tmp/xcXfpJaGk.o
-intlevel2 0 0 CODE 0 text /tmp/xcXfpJaGk.o
-intlevel3 0 0 CODE 0 text /tmp/xcXfpJaGk.o
+__accesstop 60 0 ABS 0 - /tmp/xcXAhJkGp.o
+intlevel0 0 0 CODE 0 text /tmp/xcXAhJkGp.o
+intlevel1 0 0 CODE 0 text /tmp/xcXAhJkGp.o
+intlevel2 0 0 CODE 0 text /tmp/xcXAhJkGp.o
+intlevel3 0 0 CODE 0 text /tmp/xcXAhJkGp.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/ps_test.X.production.o
 UART1_SetTxInterruptHandler@InterruptHandler 15 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 __end_of_ADCC_DefaultInterruptHandler 32A4 0 CODE 0 text40 dist/default/production/ps_test.X.production.o
@@ -960,8 +960,8 @@ _ANSELC 3A60 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _ANSELD 3A70 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _ANSELE 3A80 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _ANSELF 3A90 0 ABS 0 - dist/default/production/ps_test.X.production.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXfpJaGk.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXfpJaGk.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXAhJkGp.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXAhJkGp.o
 __end_of_UART1_rx_vect_isr 2F6A 0 CODE 0 text50 dist/default/production/ps_test.X.production.o
 __end_of___wmul 30CC 0 CODE 0 text12 dist/default/production/ps_test.X.production.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/ps_test.X.production.o
@@ -1038,7 +1038,7 @@ _U1CON1 3DF3 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _U1CON2 3DF4 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _U1FIFO 3DF7 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _UART1_Transmit_ISR 3048 0 CODE 0 text49 dist/default/production/ps_test.X.production.o
-isa$xinst 0 0 ABS 0 - /tmp/xcXfpJaGk.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXAhJkGp.o
 fputc@fp 19 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 fputs@fp 22 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 _UART1_rx_vect_isr 2F2C 0 CODE 0 text50 dist/default/production/ps_test.X.production.o
@@ -1098,7 +1098,7 @@ __Hbank31 0 0 ABS 0 bank31 dist/default/production/ps_test.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/ps_test.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production/ps_test.X.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production/ps_test.X.production.o
-__smallconst 2000 0 SMALLCONST 0 smallconst /tmp/xcXfpJaGk.o
+__smallconst 2000 0 SMALLCONST 0 smallconst /tmp/xcXAhJkGp.o
 __end_of_sprintf 2E6C 0 CODE 0 text1 dist/default/production/ps_test.X.production.o
 __Hcomram 0 0 ABS 0 comram dist/default/production/ps_test.X.production.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/production/ps_test.X.production.o
@@ -1377,10 +1377,10 @@ UART1_SetRxInterruptHandler@InterruptHandler 15 0 COMRAM 1 cstackCOMRAM dist/def
 _Default_ISR 32A8 0 CODE 0 text47 dist/default/production/ps_test.X.production.o
 _strlen 311A 0 CODE 0 text6 dist/default/production/ps_test.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/ps_test.X.production.o
-isa$std 1 0 ABS 0 - /tmp/xcXfpJaGk.o
+isa$std 1 0 ABS 0 - /tmp/xcXAhJkGp.o
 __end_of_UART1_Write 2FA6 0 CODE 0 text17 dist/default/production/ps_test.X.production.o
-stackhi 0 0 ABS 0 - /tmp/xcXfpJaGk.o
-stacklo 0 0 ABS 0 - /tmp/xcXfpJaGk.o
+stackhi 0 0 ABS 0 - /tmp/xcXAhJkGp.o
+stacklo 0 0 ABS 0 - /tmp/xcXAhJkGp.o
 __end_of_Timers_Isr 2D26 0 CODE 0 text58 dist/default/production/ps_test.X.production.o
 _OSCCON1 39D9 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _OSCCON3 39DB 0 ABS 0 - dist/default/production/ps_test.X.production.o
@@ -1502,7 +1502,7 @@ __Ltext57 0 0 ABS 0 text57 dist/default/production/ps_test.X.production.o
 __Ltext58 0 0 ABS 0 text58 dist/default/production/ps_test.X.production.o
 __Ltext59 0 0 ABS 0 text59 dist/default/production/ps_test.X.production.o
 __Ltext60 0 0 ABS 0 text60 dist/default/production/ps_test.X.production.o
-__ramtop 2000 0 RAM 0 ramtop /tmp/xcXfpJaGk.o
+__ramtop 2000 0 RAM 0 ramtop /tmp/xcXAhJkGp.o
 _sprintf 2E2E 0 CODE 0 text1 dist/default/production/ps_test.X.production.o
 TMR6_ISR@CountCallBack 88 0 BANK0 1 bssBANK0 dist/default/production/ps_test.X.production.o
 _vfprintf 2C96 0 CODE 0 text2 dist/default/production/ps_test.X.production.o
@@ -1523,8 +1523,8 @@ _SLRCONC 3A63 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCOND 3A73 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCONE 3A83 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCONF 3A93 0 ABS 0 - dist/default/production/ps_test.X.production.o
-___heap_hi 0 0 ABS 0 - /tmp/xcXfpJaGk.o
-___heap_lo 0 0 ABS 0 - /tmp/xcXfpJaGk.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXAhJkGp.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXAhJkGp.o
 _ADCC_DefaultInterruptHandler 32A2 0 CODE 0 text40 dist/default/production/ps_test.X.production.o
 ___param_bank 0 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/ps_test.X.production.o
