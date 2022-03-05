@@ -1,114 +1,73 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17063 `(v ~T0 @X0 0 tf ]
-[v F17065 `(v ~T0 @X0 0 tf ]
-"45984 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45984:     struct {
-[s S2065 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2065 . LATE0 LATE1 LATE2 ]
-"45989
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45989:     struct {
-[s S2066 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2066 . LE0 LE1 LE2 ]
-"45983
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45983: typedef union {
-[u S2064 `S2065 1 `S2066 1 ]
-[n S2064 . . . ]
-"45995
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45995: extern volatile LATEbits_t LATEbits __attribute__((address(0x3FBE)));
-[v _LATEbits `VS2064 ~T0 @X0 0 e@16318 ]
-"227 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 227: adc_result_t ADCC_GetConversionResult(void);
-[v _ADCC_GetConversionResult `(us ~T0 @X0 0 ef ]
-"31189 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 31189: extern volatile unsigned char ADPCH __attribute__((address(0x3EF1)));
-[v _ADPCH `Vuc ~T0 @X0 0 e@16113 ]
-"102 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
-[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 102: int puts(const char *);
-[v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
-[p mainexit ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
-[s S2062 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2062 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"45882
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45882:     struct {
-[s S2063 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2063 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"45871
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45871: typedef union {
-[u S2061 `S2062 1 `S2063 1 ]
-[n S2061 . . . ]
-"45893
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45893: extern volatile LATDbits_t LATDbits __attribute__((address(0x3FBD)));
-[v _LATDbits `VS2061 ~T0 @X0 0 e@16317 ]
-[v F17018 `(v ~T0 @X0 0 tf ]
-"847 ./mcc_generated_files/tmr6.h
-[; ;./mcc_generated_files/tmr6.h: 847:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17018 ]
-[v F16886 `(v ~T0 @X0 0 tf ]
-"368 ./mcc_generated_files/tmr5.h
-[; ;./mcc_generated_files/tmr5.h: 368:  void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR5_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16886 ]
-"27 ./timers.h
-[; ;./timers.h: 27: void Timers_Isr(void);
-[v _Timers_Isr `(v ~T0 @X0 0 ef ]
-[v F16943 `(v ~T0 @X0 0 tf ]
-"850 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 850: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16943 ]
-"67 ./scdm.h
-[; ;./scdm.h: 67:  void scmd_init(void);
-[v _scmd_init `(v ~T0 @X0 0 ef ]
-"46838 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46838:     struct {
-[s S2095 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2095 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
-"46847
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46847:     struct {
-[s S2096 :7 `uc 1 :1 `uc 1 ]
-[n S2096 . . GIEH ]
-"46837
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46837: typedef union {
-[u S2094 `S2095 1 `S2096 1 ]
-[n S2094 . . . ]
-"46852
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46852: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x3FD2)));
-[v _INTCON0bits `VS2094 ~T0 @X0 0 e@16338 ]
-"129 ./mcc_generated_files/dac1.h
-[; ;./mcc_generated_files/dac1.h: 129: void DAC1_SetOutput(uint8_t inputData);
-[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
-"141 main.c
-[; ;main.c: 141:     display_led(oo00_off);
-[c E17114 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E17114 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
-"57
-[; ;main.c: 57: void display_led(DISPLAY_TYPES led);
-[v _display_led `(v ~T0 @X0 0 ef1`E17114 ]
-"109 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
-[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-[v F17136 `(v ~T0 @X0 0 tf1`*v ]
-"24 ./scdm.h
-[; ;./scdm.h: 24:  typedef struct _t_cmd {
-[s S2206 `*Cuc 1 `*F17136 1 ]
-[n S2206 _t_cmd cmd fh ]
-"29
-[; ;./scdm.h: 29:  typedef struct _t_cli_ctx {
-[s S2207 `*S2206 1 `uc -> 128 `i `uc 1 ]
-[n S2207 _t_cli_ctx cmds cmd cpos ]
-"68
-[; ;./scdm.h: 68:  void cli_read(t_cli_ctx *);
-[v _cli_read `(v ~T0 @X0 0 ef1`*S2207 ]
-"54 main.c
-[; ;main.c: 54: extern t_cli_ctx cli_ctx;
-[v _cli_ctx `S2207 ~T0 @X0 0 e ]
-"44 main.c
-[p n 520 ]
-"45
-[p n 1498  ]
+"50 mcc_generated_files/spi1.c
+[; ;mcc_generated_files/spi1.c: 50: typedef struct {
+[s S2203 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
+[n S2203 . con0 con1 con2 baud operation ]
+"22930 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22930: extern volatile unsigned char SPI1CON0 __attribute__((address(0x3D14)));
+[v _SPI1CON0 `Vuc ~T0 @X0 0 e@15636 ]
+"22996
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22996: extern volatile unsigned char SPI1CON1 __attribute__((address(0x3D15)));
+[v _SPI1CON1 `Vuc ~T0 @X0 0 e@15637 ]
+"23098
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 23098: extern volatile unsigned char SPI1CON2 __attribute__((address(0x3D16)));
+[v _SPI1CON2 `Vuc ~T0 @X0 0 e@15638 ]
+"23552
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 23552: extern volatile unsigned char SPI1CLK __attribute__((address(0x3D1C)));
+[v _SPI1CLK `Vuc ~T0 @X0 0 e@15644 ]
+"23298
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 23298: extern volatile unsigned char SPI1BAUD __attribute__((address(0x3D19)));
+[v _SPI1BAUD `Vuc ~T0 @X0 0 e@15641 ]
+"46272
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46272:     struct {
+[s S2077 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2077 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"46271
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46271: typedef union {
+[u S2076 `S2077 1 ]
+[n S2076 . . ]
+"46283
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46283: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x3FC4)));
+[v _TRISCbits `VS2076 ~T0 @X0 0 e@16324 ]
+"79 mcc_generated_files/spi1.c
+[; ;mcc_generated_files/spi1.c: 79: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
+[c E355 0 .. ]
+[n E355 . SPI1_DEFAULT  ]
+"22936 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22936:     struct {
+[s S998 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S998 . BMODE MST LSBF . EN ]
+"22943
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22943:     struct {
+[s S999 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
+[n S999 . SPI1BMODE SPI1MST SPI1LSBF . SPI1SPIEN ]
+"22935
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22935: typedef union {
+[u S997 `S998 1 `S999 1 ]
+[n S997 . . . ]
+"22951
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22951: extern volatile SPI1CON0bits_t SPI1CON0bits __attribute__((address(0x3D14)));
+[v _SPI1CON0bits `VS997 ~T0 @X0 0 e@15636 ]
+"22890
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22890: extern volatile unsigned char SPI1TCNTL __attribute__((address(0x3D12)));
+[v _SPI1TCNTL `Vuc ~T0 @X0 0 e@15634 ]
+"22813
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22813: extern volatile unsigned char SPI1TXB __attribute__((address(0x3D11)));
+[v _SPI1TXB `Vuc ~T0 @X0 0 e@15633 ]
+"4026
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 4026:     struct {
+[s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S178 . DMA1SCNTIF DMA1DCNTIF DMA1ORIF DMA1AIF SPI1RXIF SPI1TXIF SPI1IF I2C1RXIF ]
+"4025
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 4025: typedef union {
+[u S177 `S178 1 ]
+[n S177 . . ]
+"4037
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 4037: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x39A2)));
+[v _PIR2bits `VS177 ~T0 @X0 0 e@14754 ]
+"22743
+[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 22743: extern volatile unsigned char SPI1RXB __attribute__((address(0x3D10)));
+[v _SPI1RXB `Vuc ~T0 @X0 0 e@15632 ]
 "251 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 251: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2356,352 +2315,321 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48272
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 48272: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-"518 ./mcc_generated_files/uart1.h
-[; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17063 ~T0 @X0 1 e ]
-"536
-[; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17065 ~T0 @X0 1 e ]
-"50 main.c
-[; ;main.c: 50: volatile adc_result_t ana[2];
-[v _ana `Vus ~T0 @X0 -> 2 `i e ]
-"51
-[; ;main.c: 51: volatile _Bool disp_tick = 0, adc_tick = 0;
-[v _disp_tick `Va ~T0 @X0 1 e ]
-[i _disp_tick
--> -> 0 `i `a
-]
-[v _adc_tick `Va ~T0 @X0 1 e ]
-[i _adc_tick
--> -> 0 `i `a
-]
-"52
-[; ;main.c: 52: volatile uint8_t adc_chan = 0;
-[v _adc_chan `Vuc ~T0 @X0 1 e ]
-[i _adc_chan
+"60 mcc_generated_files/spi1.c
+[; ;mcc_generated_files/spi1.c: 60: static const spi1_configuration_t spi1_configuration[] = {
+[v _spi1_configuration `CS2203 ~T0 @X0 -> -> 1 `i `ux s ]
+[i _spi1_configuration
+:U ..
+:U ..
+-> -> 2 `i `uc
+-> -> 64 `i `uc
 -> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+..
+..
 ]
-"53
-[; ;main.c: 53: char buff1[128];
-[v _buff1 `uc ~T0 @X0 -> 128 `i e ]
-"55
-[; ;main.c: 55: const char *build_date = "Mar  4 2022", *build_time = "22:00:47";
-[v _build_date `*Cuc ~T0 @X0 1 e ]
-[i _build_date
-:s 1C
-]
-[v _build_time `*Cuc ~T0 @X0 1 e ]
-[i _build_time
-:s 2C
-]
+"64
+[; ;mcc_generated_files/spi1.c: 64: void SPI1_Initialize(void)
+[v _SPI1_Initialize `(v ~T0 @X0 1 ef ]
 "65
-[; ;main.c: 65: void Led_Blink(void)
-[v _Led_Blink `(v ~T0 @X0 1 ef ]
-"66
-[; ;main.c: 66: {
+[; ;mcc_generated_files/spi1.c: 65: {
 {
-[e :U _Led_Blink ]
+[e :U _SPI1_Initialize ]
 [f ]
 "67
-[; ;main.c: 67:  do { LATEbits.LATE0 = ~LATEbits.LATE0; } while(0);
-[e :U 2211 ]
-{
-[e = . . _LATEbits 0 0 -> ~ -> . . _LATEbits 0 0 `i `uc ]
-}
-[e :U 2210 ]
+[; ;mcc_generated_files/spi1.c: 67:     SPI1CON0 = 0x02;
+[e = _SPI1CON0 -> -> 2 `i `uc ]
+"69
+[; ;mcc_generated_files/spi1.c: 69:     SPI1CON1 = 0x40;
+[e = _SPI1CON1 -> -> 64 `i `uc ]
 "71
-[; ;main.c: 71:  disp_tick = 1;
-[e = _disp_tick -> -> 1 `i `a ]
-"72
-[; ;main.c: 72: }
+[; ;mcc_generated_files/spi1.c: 71:     SPI1CON2 = 0x00;
+[e = _SPI1CON2 -> -> 0 `i `uc ]
+"73
+[; ;mcc_generated_files/spi1.c: 73:     SPI1CLK = 0x00;
+[e = _SPI1CLK -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/spi1.c: 75:     SPI1BAUD = 0x08;
+[e = _SPI1BAUD -> -> 8 `i `uc ]
+"76
+[; ;mcc_generated_files/spi1.c: 76:     TRISCbits.TRISC3 = 0;
+[e = . . _TRISCbits 0 3 -> -> 0 `i `uc ]
+"77
+[; ;mcc_generated_files/spi1.c: 77: }
+[e :UE 2204 ]
+}
+"79
+[; ;mcc_generated_files/spi1.c: 79: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
+[v _SPI1_Open `(a ~T0 @X0 1 ef1`E355 ]
+"80
+[; ;mcc_generated_files/spi1.c: 80: {
+{
+[e :U _SPI1_Open ]
+"79
+[; ;mcc_generated_files/spi1.c: 79: _Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
+[v _spi1UniqueConfiguration `E355 ~T0 @X0 1 r1 ]
+"80
+[; ;mcc_generated_files/spi1.c: 80: {
+[f ]
+"81
+[; ;mcc_generated_files/spi1.c: 81:     if(!SPI1CON0bits.EN)
+[e $ ! ! != -> . . _SPI1CON0bits 0 4 `i -> 0 `i 2206  ]
+"82
+[; ;mcc_generated_files/spi1.c: 82:     {
+{
+"83
+[; ;mcc_generated_files/spi1.c: 83:         SPI1CON0 = spi1_configuration[spi1UniqueConfiguration].con0;
+[e = _SPI1CON0 . *U + &U _spi1_configuration * -> _spi1UniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 0 ]
+"84
+[; ;mcc_generated_files/spi1.c: 84:         SPI1CON1 = spi1_configuration[spi1UniqueConfiguration].con1;
+[e = _SPI1CON1 . *U + &U _spi1_configuration * -> _spi1UniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 1 ]
+"85
+[; ;mcc_generated_files/spi1.c: 85:         SPI1CON2 = spi1_configuration[spi1UniqueConfiguration].con2 | (0x1 | 0x2);
+[e = _SPI1CON2 -> | -> . *U + &U _spi1_configuration * -> _spi1UniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 2 `i | -> 1 `i -> 2 `i `uc ]
+"86
+[; ;mcc_generated_files/spi1.c: 86:         SPI1CLK = 0x00;
+[e = _SPI1CLK -> -> 0 `i `uc ]
+"87
+[; ;mcc_generated_files/spi1.c: 87:         SPI1BAUD = spi1_configuration[spi1UniqueConfiguration].baud;
+[e = _SPI1BAUD . *U + &U _spi1_configuration * -> _spi1UniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 3 ]
+"88
+[; ;mcc_generated_files/spi1.c: 88:         TRISCbits.TRISC3 = spi1_configuration[spi1UniqueConfiguration].operation;
+[e = . . _TRISCbits 0 3 . *U + &U _spi1_configuration * -> _spi1UniqueConfiguration `ux -> -> # *U &U _spi1_configuration `ui `ux 4 ]
+"89
+[; ;mcc_generated_files/spi1.c: 89:         SPI1CON0bits.EN = 1;
+[e = . . _SPI1CON0bits 0 4 -> -> 1 `i `uc ]
+"90
+[; ;mcc_generated_files/spi1.c: 90:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 2205  ]
+"91
+[; ;mcc_generated_files/spi1.c: 91:     }
+}
+[e :U 2206 ]
+"92
+[; ;mcc_generated_files/spi1.c: 92:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 2205  ]
+"93
+[; ;mcc_generated_files/spi1.c: 93: }
+[e :UE 2205 ]
+}
+"95
+[; ;mcc_generated_files/spi1.c: 95: void SPI1_Close(void)
+[v _SPI1_Close `(v ~T0 @X0 1 ef ]
+"96
+[; ;mcc_generated_files/spi1.c: 96: {
+{
+[e :U _SPI1_Close ]
+[f ]
+"97
+[; ;mcc_generated_files/spi1.c: 97:     SPI1CON0bits.EN = 0;
+[e = . . _SPI1CON0bits 0 4 -> -> 0 `i `uc ]
+"98
+[; ;mcc_generated_files/spi1.c: 98: }
+[e :UE 2207 ]
+}
+"100
+[; ;mcc_generated_files/spi1.c: 100: uint8_t SPI1_ExchangeByte(uint8_t data)
+[v _SPI1_ExchangeByte `(uc ~T0 @X0 1 ef1`uc ]
+"101
+[; ;mcc_generated_files/spi1.c: 101: {
+{
+[e :U _SPI1_ExchangeByte ]
+"100
+[; ;mcc_generated_files/spi1.c: 100: uint8_t SPI1_ExchangeByte(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"101
+[; ;mcc_generated_files/spi1.c: 101: {
+[f ]
+"102
+[; ;mcc_generated_files/spi1.c: 102:     SPI1TCNTL = 1;
+[e = _SPI1TCNTL -> -> 1 `i `uc ]
+"103
+[; ;mcc_generated_files/spi1.c: 103:     SPI1TXB = data;
+[e = _SPI1TXB _data ]
+"104
+[; ;mcc_generated_files/spi1.c: 104:     while(!PIR2bits.SPI1RXIF);
+[e $U 2209  ]
+[e :U 2210 ]
+[e :U 2209 ]
+[e $ ! != -> . . _PIR2bits 0 4 `i -> 0 `i 2210  ]
+[e :U 2211 ]
+"105
+[; ;mcc_generated_files/spi1.c: 105:     return SPI1RXB;
+[e ) _SPI1RXB ]
+[e $UE 2208  ]
+"106
+[; ;mcc_generated_files/spi1.c: 106: }
 [e :UE 2208 ]
 }
-"81
-[; ;main.c: 81: void Adc_Isr(void)
-[v _Adc_Isr `(v ~T0 @X0 1 ef ]
-"82
-[; ;main.c: 82: {
+"108
+[; ;mcc_generated_files/spi1.c: 108: void SPI1_ExchangeBlock(void *block, size_t blockSize)
+[v _SPI1_ExchangeBlock `(v ~T0 @X0 1 ef2`*v`ui ]
+"109
+[; ;mcc_generated_files/spi1.c: 109: {
 {
-[e :U _Adc_Isr ]
+[e :U _SPI1_ExchangeBlock ]
+"108
+[; ;mcc_generated_files/spi1.c: 108: void SPI1_ExchangeBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"109
+[; ;mcc_generated_files/spi1.c: 109: {
 [f ]
-"83
-[; ;main.c: 83:  ana[adc_chan] = ADCC_GetConversionResult();
-[e = *U + &U _ana * -> _adc_chan `ux -> -> # *U &U _ana `ui `ux ( _ADCC_GetConversionResult ..  ]
-"84
-[; ;main.c: 84:  if (adc_chan++ >= 2) {
-[e $ ! >= -> ++ _adc_chan -> -> 1 `i `Vuc `i -> 2 `i 2213  ]
+"110
+[; ;mcc_generated_files/spi1.c: 110:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"111
+[; ;mcc_generated_files/spi1.c: 111:     while(blockSize--)
+[e $U 2213  ]
+[e :U 2214 ]
+"112
+[; ;mcc_generated_files/spi1.c: 112:     {
 {
-"85
-[; ;main.c: 85:   adc_chan = 0;
-[e = _adc_chan -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:  }
+"113
+[; ;mcc_generated_files/spi1.c: 113:         SPI1TCNTL = 1;
+[e = _SPI1TCNTL -> -> 1 `i `uc ]
+"114
+[; ;mcc_generated_files/spi1.c: 114:         SPI1TXB = *data;
+[e = _SPI1TXB *U _data ]
+"115
+[; ;mcc_generated_files/spi1.c: 115:         while(!PIR2bits.SPI1RXIF);
+[e $U 2216  ]
+[e :U 2217 ]
+[e :U 2216 ]
+[e $ ! != -> . . _PIR2bits 0 4 `i -> 0 `i 2217  ]
+[e :U 2218 ]
+"116
+[; ;mcc_generated_files/spi1.c: 116:         *data++ = SPI1RXB;
+[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x _SPI1RXB ]
+"117
+[; ;mcc_generated_files/spi1.c: 117:     }
 }
 [e :U 2213 ]
-"87
-[; ;main.c: 87:  ADPCH = adc_chan;
-[e = _ADPCH _adc_chan ]
-"91
-[; ;main.c: 91:  adc_tick = 1;
-[e = _adc_tick -> -> 1 `i `a ]
-"92
-[; ;main.c: 92: }
+"111
+[; ;mcc_generated_files/spi1.c: 111:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 2214  ]
+[e :U 2215 ]
+"118
+[; ;mcc_generated_files/spi1.c: 118: }
 [e :UE 2212 ]
 }
-"94
-[; ;main.c: 94: void fh_hw(void *a_data)
-[v _fh_hw `(v ~T0 @X0 1 ef1`*v ]
-"95
-[; ;main.c: 95: {
-{
-[e :U _fh_hw ]
-"94
-[; ;main.c: 94: void fh_hw(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"95
-[; ;main.c: 95: {
-[f ]
-"96
-[; ;main.c: 96:  puts((const char *) a_data);
-[e ( _puts (1 -> _a_data `*Cuc ]
-"97
-[; ;main.c: 97: }
-[e :UE 2214 ]
-}
-"99
-[; ;main.c: 99: void fh_hi(void *a_data)
-[v _fh_hi `(v ~T0 @X0 1 ef1`*v ]
-"100
-[; ;main.c: 100: {
-{
-[e :U _fh_hi ]
-"99
-[; ;main.c: 99: void fh_hi(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"100
-[; ;main.c: 100: {
-[f ]
-"101
-[; ;main.c: 101:  puts(" hi      ");
-[e ( _puts (1 :s 3C ]
-"102
-[; ;main.c: 102: }
-[e :UE 2215 ]
-}
-"104
-[; ;main.c: 104: void fh_ho(void *a_data)
-[v _fh_ho `(v ~T0 @X0 1 ef1`*v ]
-"105
-[; ;main.c: 105: {
-{
-[e :U _fh_ho ]
-"104
-[; ;main.c: 104: void fh_ho(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"105
-[; ;main.c: 105: {
-[f ]
-"106
-[; ;main.c: 106:  puts(" ho      ");
-[e ( _puts (1 :s 4C ]
-"107
-[; ;main.c: 107: }
-[e :UE 2216 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"112
-[; ;main.c: 112: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"113
-[; ;main.c: 113: {
-{
-[e :U _main ]
-[f ]
-"114
-[; ;main.c: 114:  uint8_t dac_v = 1;
-[v _dac_v `uc ~T0 @X0 1 a ]
-[e = _dac_v -> -> 1 `i `uc ]
-"116
-[; ;main.c: 116:  SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"118
-[; ;main.c: 118:  do { LATDbits.LATD1 = 0; } while(0);
-[e :U 2220 ]
-{
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 2219 ]
-"119
-[; ;main.c: 119:  do { LATEbits.LATE2 = 0; } while(0);
-[e :U 2223 ]
-{
-[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 2222 ]
-"120
-[; ;main.c: 120:  TMR6_SetInterruptHandler(Led_Blink);
-[e ( _TMR6_SetInterruptHandler (1 &U _Led_Blink ]
 "121
-[; ;main.c: 121:  TMR5_SetInterruptHandler(Timers_Isr);
-[e ( _TMR5_SetInterruptHandler (1 &U _Timers_Isr ]
+[; ;mcc_generated_files/spi1.c: 121: void SPI1_WriteBlock(void *block, size_t blockSize)
+[v _SPI1_WriteBlock `(v ~T0 @X0 1 ef2`*v`ui ]
 "122
-[; ;main.c: 122:  ADCC_SetADIInterruptHandler(Adc_Isr);
-[e ( _ADCC_SetADIInterruptHandler (1 &U _Adc_Isr ]
+[; ;mcc_generated_files/spi1.c: 122: {
+{
+[e :U _SPI1_WriteBlock ]
+"121
+[; ;mcc_generated_files/spi1.c: 121: void SPI1_WriteBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"122
+[; ;mcc_generated_files/spi1.c: 122: {
+[f ]
 "123
-[; ;main.c: 123:  ADPCH = adc_chan;
-[e = _ADPCH _adc_chan ]
+[; ;mcc_generated_files/spi1.c: 123:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"124
+[; ;mcc_generated_files/spi1.c: 124:     while(blockSize--)
+[e $U 2220  ]
+[e :U 2221 ]
+"125
+[; ;mcc_generated_files/spi1.c: 125:     {
+{
+"126
+[; ;mcc_generated_files/spi1.c: 126:         SPI1_ExchangeByte(*data++);
+[e ( _SPI1_ExchangeByte (1 *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ]
+"127
+[; ;mcc_generated_files/spi1.c: 127:     }
+}
+[e :U 2220 ]
+"124
+[; ;mcc_generated_files/spi1.c: 124:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 2221  ]
+[e :U 2222 ]
 "128
-[; ;main.c: 128:  scmd_init();
-[e ( _scmd_init ..  ]
+[; ;mcc_generated_files/spi1.c: 128: }
+[e :UE 2219 ]
+}
+"130
+[; ;mcc_generated_files/spi1.c: 130: void SPI1_ReadBlock(void *block, size_t blockSize)
+[v _SPI1_ReadBlock `(v ~T0 @X0 1 ef2`*v`ui ]
 "131
-[; ;main.c: 131:  (INTCON0bits.GIEH = 1);
-[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
-"136
-[; ;main.c: 136:  DAC1_SetOutput(dac_v);
-[e ( _DAC1_SetOutput (1 _dac_v ]
-"138
-[; ;main.c: 138:  while (1) {
+[; ;mcc_generated_files/spi1.c: 131: {
+{
+[e :U _SPI1_ReadBlock ]
+"130
+[; ;mcc_generated_files/spi1.c: 130: void SPI1_ReadBlock(void *block, size_t blockSize)
+[v _block `*v ~T0 @X0 1 r1 ]
+[v _blockSize `ui ~T0 @X0 1 r2 ]
+"131
+[; ;mcc_generated_files/spi1.c: 131: {
+[f ]
+"132
+[; ;mcc_generated_files/spi1.c: 132:     uint8_t *data = block;
+[v _data `*uc ~T0 @X0 1 a ]
+[e = _data -> _block `*uc ]
+"133
+[; ;mcc_generated_files/spi1.c: 133:     while(blockSize--)
+[e $U 2224  ]
 [e :U 2225 ]
+"134
+[; ;mcc_generated_files/spi1.c: 134:     {
 {
-"139
-[; ;main.c: 139:   if (adc_tick) {
-[e $ ! != -> _adc_tick `i -> 0 `i 2227  ]
-{
-"140
-[; ;main.c: 140:    if (ana[0] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2228  ]
-{
-"141
-[; ;main.c: 141:     display_led(oo00_off);
-[e ( _display_led (1 . `E17114 0 ]
-"142
-[; ;main.c: 142:     display_led(oo30_off);
-[e ( _display_led (1 . `E17114 9 ]
-"143
-[; ;main.c: 143:    } else {
-}
-[e $U 2229  ]
-[e :U 2228 ]
-{
-"144
-[; ;main.c: 144:     if (ana[0] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2230  ]
-{
-"145
-[; ;main.c: 145:      display_led(oo00_g);
-[e ( _display_led (1 . `E17114 1 ]
-"146
-[; ;main.c: 146:      display_led(oo30_g);
-[e ( _display_led (1 . `E17114 10 ]
-"147
-[; ;main.c: 147:     } else {
-}
-[e $U 2231  ]
-[e :U 2230 ]
-{
-"148
-[; ;main.c: 148:      display_led(oo00_r);
-[e ( _display_led (1 . `E17114 2 ]
-"149
-[; ;main.c: 149:      display_led(oo30_r);
-[e ( _display_led (1 . `E17114 11 ]
-"150
-[; ;main.c: 150:     }
-}
-[e :U 2231 ]
-"151
-[; ;main.c: 151:    }
-}
-[e :U 2229 ]
-"153
-[; ;main.c: 153:    if (ana[1] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2232  ]
-{
-"154
-[; ;main.c: 154:     display_led(oo10_off);
-[e ( _display_led (1 . `E17114 3 ]
-"155
-[; ;main.c: 155:     display_led(oo20_off);
-[e ( _display_led (1 . `E17114 6 ]
-"156
-[; ;main.c: 156:    } else {
-}
-[e $U 2233  ]
-[e :U 2232 ]
-{
-"157
-[; ;main.c: 157:     if (ana[1] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2234  ]
-{
-"158
-[; ;main.c: 158:      display_led(oo10_g);
-[e ( _display_led (1 . `E17114 4 ]
-"159
-[; ;main.c: 159:      display_led(oo20_g);
-[e ( _display_led (1 . `E17114 7 ]
-"160
-[; ;main.c: 160:     } else {
-}
-[e $U 2235  ]
-[e :U 2234 ]
-{
-"161
-[; ;main.c: 161:      display_led(oo10_r);
-[e ( _display_led (1 . `E17114 5 ]
-"162
-[; ;main.c: 162:      display_led(oo20_r);
-[e ( _display_led (1 . `E17114 8 ]
-"163
-[; ;main.c: 163:     }
-}
-[e :U 2235 ]
-"164
-[; ;main.c: 164:    }
-}
-[e :U 2233 ]
-"165
-[; ;main.c: 165:    adc_tick = 0;
-[e = _adc_tick -> -> 0 `i `a ]
-"167
-[; ;main.c: 167:    if (disp_tick) {
-[e $ ! != -> _disp_tick `i -> 0 `i 2236  ]
-{
-"168
-[; ;main.c: 168:     sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
-[e ( _sprintf (1 , , (. , &U _buff1 :s 5C -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui ]
-"169
-[; ;main.c: 169:     puts(buff1);
-[e ( _puts (1 -> &U _buff1 `*Cuc ]
-"170
-[; ;main.c: 170:     DAC1_SetOutput(++dac_v);
-[e ( _DAC1_SetOutput (1 =+ _dac_v -> -> 1 `i `uc ]
-"174
-[; ;main.c: 174:     cli_read(&cli_ctx);
-[e ( _cli_read (1 &U _cli_ctx ]
-"175
-[; ;main.c: 175:     disp_tick = 0;
-[e = _disp_tick -> -> 0 `i `a ]
-"176
-[; ;main.c: 176:    }
-}
-[e :U 2236 ]
-"177
-[; ;main.c: 177:   }
-}
-[e :U 2227 ]
-"178
-[; ;main.c: 178:  }
+"135
+[; ;mcc_generated_files/spi1.c: 135:         *data++ = SPI1_ExchangeByte(0);
+[e = *U ++ _data * -> -> 1 `i `x -> -> # *U _data `i `x ( _SPI1_ExchangeByte (1 -> -> 0 `i `uc ]
+"136
+[; ;mcc_generated_files/spi1.c: 136:     }
 }
 [e :U 2224 ]
-[e $U 2225  ]
+"133
+[; ;mcc_generated_files/spi1.c: 133:     while(blockSize--)
+[e $ != -- _blockSize -> -> 1 `i `ui -> -> 0 `i `ui 2225  ]
 [e :U 2226 ]
-"179
-[; ;main.c: 179: }
-[e :UE 2217 ]
+"137
+[; ;mcc_generated_files/spi1.c: 137: }
+[e :UE 2223 ]
 }
-[p f _sprintf 8422400 ]
-[a 2C 50 50 58 48 48 58 52 55 0 ]
-[a 1C 77 97 114 32 32 52 32 50 48 50 50 0 ]
-[a 4C 32 104 111 32 32 32 32 32 32 0 ]
-[a 3C 32 104 105 32 32 32 32 32 32 0 ]
-[a 5C 80 83 58 32 86 61 37 52 117 32 73 61 37 52 117 32 13 10 0 ]
+"139
+[; ;mcc_generated_files/spi1.c: 139: void SPI1_WriteByte(uint8_t byte)
+[v _SPI1_WriteByte `(v ~T0 @X0 1 ef1`uc ]
+"140
+[; ;mcc_generated_files/spi1.c: 140: {
+{
+[e :U _SPI1_WriteByte ]
+"139
+[; ;mcc_generated_files/spi1.c: 139: void SPI1_WriteByte(uint8_t byte)
+[v _byte `uc ~T0 @X0 1 r1 ]
+"140
+[; ;mcc_generated_files/spi1.c: 140: {
+[f ]
+"141
+[; ;mcc_generated_files/spi1.c: 141:     SPI1TXB = byte;
+[e = _SPI1TXB _byte ]
+"142
+[; ;mcc_generated_files/spi1.c: 142: }
+[e :UE 2227 ]
+}
+"144
+[; ;mcc_generated_files/spi1.c: 144: uint8_t SPI1_ReadByte(void)
+[v _SPI1_ReadByte `(uc ~T0 @X0 1 ef ]
+"145
+[; ;mcc_generated_files/spi1.c: 145: {
+{
+[e :U _SPI1_ReadByte ]
+[f ]
+"146
+[; ;mcc_generated_files/spi1.c: 146:     return SPI1RXB;
+[e ) _SPI1RXB ]
+[e $UE 2228  ]
+"147
+[; ;mcc_generated_files/spi1.c: 147: }
+[e :UE 2228 ]
+}

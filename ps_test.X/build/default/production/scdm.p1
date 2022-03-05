@@ -1,95 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [v F17063 `(v ~T0 @X0 0 tf ]
 [v F17065 `(v ~T0 @X0 0 tf ]
-"45984 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45984:     struct {
-[s S2065 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2065 . LATE0 LATE1 LATE2 ]
-"45989
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45989:     struct {
-[s S2066 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2066 . LE0 LE1 LE2 ]
-"45983
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45983: typedef union {
-[u S2064 `S2065 1 `S2066 1 ]
-[n S2064 . . . ]
-"45995
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45995: extern volatile LATEbits_t LATEbits __attribute__((address(0x3FBE)));
-[v _LATEbits `VS2064 ~T0 @X0 0 e@16318 ]
-"227 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 227: adc_result_t ADCC_GetConversionResult(void);
-[v _ADCC_GetConversionResult `(us ~T0 @X0 0 ef ]
-"31189 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 31189: extern volatile unsigned char ADPCH __attribute__((address(0x3EF1)));
-[v _ADPCH `Vuc ~T0 @X0 0 e@16113 ]
-"102 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
-[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 102: int puts(const char *);
-[v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
-[p mainexit ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
-[s S2062 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2062 . LATD0 LATD1 LATD2 LATD3 LATD4 LATD5 LATD6 LATD7 ]
-"45882
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45882:     struct {
-[s S2063 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2063 . LD0 LD1 LD2 LD3 LD4 LD5 LD6 LD7 ]
-"45871
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45871: typedef union {
-[u S2061 `S2062 1 `S2063 1 ]
-[n S2061 . . . ]
-"45893
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45893: extern volatile LATDbits_t LATDbits __attribute__((address(0x3FBD)));
-[v _LATDbits `VS2061 ~T0 @X0 0 e@16317 ]
-[v F17018 `(v ~T0 @X0 0 tf ]
-"847 ./mcc_generated_files/tmr6.h
-[; ;./mcc_generated_files/tmr6.h: 847:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17018 ]
-[v F16886 `(v ~T0 @X0 0 tf ]
-"368 ./mcc_generated_files/tmr5.h
-[; ;./mcc_generated_files/tmr5.h: 368:  void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR5_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16886 ]
-"27 ./timers.h
-[; ;./timers.h: 27: void Timers_Isr(void);
-[v _Timers_Isr `(v ~T0 @X0 0 ef ]
-[v F16943 `(v ~T0 @X0 0 tf ]
-"850 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 850: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16943 ]
-"67 ./scdm.h
-[; ;./scdm.h: 67:  void scmd_init(void);
-[v _scmd_init `(v ~T0 @X0 0 ef ]
-"46838 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46838:     struct {
-[s S2095 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2095 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
-"46847
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46847:     struct {
-[s S2096 :7 `uc 1 :1 `uc 1 ]
-[n S2096 . . GIEH ]
-"46837
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46837: typedef union {
-[u S2094 `S2095 1 `S2096 1 ]
-[n S2094 . . . ]
-"46852
-[; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46852: extern volatile INTCON0bits_t INTCON0bits __attribute__((address(0x3FD2)));
-[v _INTCON0bits `VS2094 ~T0 @X0 0 e@16338 ]
-"129 ./mcc_generated_files/dac1.h
-[; ;./mcc_generated_files/dac1.h: 129: void DAC1_SetOutput(uint8_t inputData);
-[v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
-"141 main.c
-[; ;main.c: 141:     display_led(oo00_off);
-[c E17114 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E17114 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
-"57
-[; ;main.c: 57: void display_led(DISPLAY_TYPES led);
-[v _display_led `(v ~T0 @X0 0 ef1`E17114 ]
-"109 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
-[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
 [v F17136 `(v ~T0 @X0 0 tf1`*v ]
 "24 ./scdm.h
 [; ;./scdm.h: 24:  typedef struct _t_cmd {
@@ -99,16 +10,47 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./scdm.h: 29:  typedef struct _t_cli_ctx {
 [s S2207 `*S2206 1 `uc -> 128 `i `uc 1 ]
 [n S2207 _t_cli_ctx cmds cmd cpos ]
-"68
-[; ;./scdm.h: 68:  void cli_read(t_cli_ctx *);
-[v _cli_read `(v ~T0 @X0 0 ef1`*S2207 ]
-"54 main.c
-[; ;main.c: 54: extern t_cli_ctx cli_ctx;
-[v _cli_ctx `S2207 ~T0 @X0 0 e ]
-"44 main.c
-[p n 520 ]
-"45
-[p n 1498  ]
+"6 scdm.c
+[; ;scdm.c: 6: uint8_t res = E_CMD_OK;
+[c E17144 0 1 2 3 .. ]
+[n E17144 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
+"60 ./scdm.h
+[; ;./scdm.h: 60:  void fh_hw(void *a_data);
+[v _fh_hw `(v ~T0 @X0 0 ef1`*v ]
+"61
+[; ;./scdm.h: 61:  void fh_hi(void *a_data);
+[v _fh_hi `(v ~T0 @X0 0 ef1`*v ]
+"62
+[; ;./scdm.h: 62:  void fh_ho(void *a_data);
+[v _fh_ho `(v ~T0 @X0 0 ef1`*v ]
+[v F17169 `(v ~T0 @X0 0 tf1`*v ]
+"29 /opt/microchip/xc8/v2.35/pic/include/c99/string.h
+[; ;/opt/microchip/xc8/v2.35/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"109 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
+[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"26 ./ps_test.h
+[; ;./ps_test.h: 26: extern const char *build_date, *build_time;
+[v _build_date `*Cuc ~T0 @X0 0 e ]
+[v _build_time `*Cuc ~T0 @X0 0 e ]
+"102 /opt/microchip/xc8/v2.35/pic/include/c99/stdio.h
+[; ;/opt/microchip/xc8/v2.35/pic/include/c99/stdio.h: 102: int puts(const char *);
+[v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
+"164 ./mcc_generated_files/uart1.h
+[; ;./mcc_generated_files/uart1.h: 164: _Bool UART1_is_rx_ready(void);
+[v _UART1_is_rx_ready `(a ~T0 @X0 0 ef ]
+"356
+[; ;./mcc_generated_files/uart1.h: 356: uint8_t UART1_Read(void);
+[v _UART1_Read `(uc ~T0 @X0 0 ef ]
+"54 /opt/microchip/xc8/v2.35/pic/include/c99/string.h
+[; ;/opt/microchip/xc8/v2.35/pic/include/c99/string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
+"40
+[; ;/opt/microchip/xc8/v2.35/pic/include/c99/string.h: 40: int strncmp (const char *, const char *, size_t);
+[v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
+[v F17188 `(v ~T0 @X0 0 tf1`*v ]
+[v F17196 `(v ~T0 @X0 0 tf1`*v ]
 "251 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 251: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2362,346 +2304,388 @@ Version 4.0 HI-TECH Software Intermediate Code
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
 [v _UART1_TxInterruptHandler `*F17065 ~T0 @X0 1 e ]
-"50 main.c
-[; ;main.c: 50: volatile adc_result_t ana[2];
-[v _ana `Vus ~T0 @X0 -> 2 `i e ]
-"51
-[; ;main.c: 51: volatile _Bool disp_tick = 0, adc_tick = 0;
-[v _disp_tick `Va ~T0 @X0 1 e ]
-[i _disp_tick
--> -> 0 `i `a
+"4 scdm.c
+[; ;scdm.c: 4: const char cmdm[] = "\r\n Command processor V0.1\r\n";
+[v _cmdm `Cuc ~T0 @X0 -> 28 `i e ]
+[i _cmdm
+:U ..
+-> 13 `c
+-> 10 `c
+-> 32 `c
+-> 67 `c
+-> 111 `c
+-> 109 `c
+-> 109 `c
+-> 97 `c
+-> 110 `c
+-> 100 `c
+-> 32 `c
+-> 112 `c
+-> 114 `c
+-> 111 `c
+-> 99 `c
+-> 101 `c
+-> 115 `c
+-> 115 `c
+-> 111 `c
+-> 114 `c
+-> 32 `c
+-> 86 `c
+-> 48 `c
+-> 46 `c
+-> 49 `c
+-> 13 `c
+-> 10 `c
+-> 0 `c
+..
 ]
-[v _adc_tick `Va ~T0 @X0 1 e ]
-[i _adc_tick
--> -> 0 `i `a
+"5
+[; ;scdm.c: 5: t_cli_ctx cli_ctx;
+[v _cli_ctx `S2207 ~T0 @X0 1 e ]
+"6
+[; ;scdm.c: 6: uint8_t res = E_CMD_OK;
+[v _res `uc ~T0 @X0 1 e ]
+[i _res
+-> . `E17144 0 `uc
 ]
-"52
-[; ;main.c: 52: volatile uint8_t adc_chan = 0;
-[v _adc_chan `Vuc ~T0 @X0 1 e ]
-[i _adc_chan
--> -> 0 `i `uc
-]
-"53
-[; ;main.c: 53: char buff1[128];
-[v _buff1 `uc ~T0 @X0 -> 128 `i e ]
-"55
-[; ;main.c: 55: const char *build_date = "Mar  4 2022", *build_time = "22:00:47";
-[v _build_date `*Cuc ~T0 @X0 1 e ]
-[i _build_date
+"11
+[; ;scdm.c: 11: static t_cmd g_cmds[] = {
+[v _g_cmds `S2206 ~T0 @X0 -> 4 `i s ]
+[i _g_cmds
+:U ..
+:U ..
 :s 1C
-]
-[v _build_time `*Cuc ~T0 @X0 1 e ]
-[i _build_time
+&U _fh_hw
+..
+:U ..
 :s 2C
+&U _fh_hi
+..
+:U ..
+:s 3C
+&U _fh_ho
+..
+:U ..
+-> -> 0 `i `*Cuc
+-> -> 0 `i `*F17169
+..
+..
 ]
-"65
-[; ;main.c: 65: void Led_Blink(void)
-[v _Led_Blink `(v ~T0 @X0 1 ef ]
-"66
-[; ;main.c: 66: {
+"20
+[; ;scdm.c: 20: static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
+[v _cli_init `(v ~T0 @X0 1 sf2`*S2207`*S2206 ]
+"21
+[; ;scdm.c: 21: {
 {
-[e :U _Led_Blink ]
+[e :U _cli_init ]
+"20
+[; ;scdm.c: 20: static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
+[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
+[v _a_cmds `*S2206 ~T0 @X0 1 r2 ]
+"21
+[; ;scdm.c: 21: {
 [f ]
-"67
-[; ;main.c: 67:  do { LATEbits.LATE0 = ~LATEbits.LATE0; } while(0);
-[e :U 2211 ]
-{
-[e = . . _LATEbits 0 0 -> ~ -> . . _LATEbits 0 0 `i `uc ]
-}
-[e :U 2210 ]
-"71
-[; ;main.c: 71:  disp_tick = 1;
-[e = _disp_tick -> -> 1 `i `a ]
-"72
-[; ;main.c: 72: }
+"22
+[; ;scdm.c: 22:  memset(a_ctx, 0x00, sizeof(t_cli_ctx));
+[e ( _memset (3 , , -> _a_ctx `*v -> 0 `i -> # `S2207 `ui ]
+"23
+[; ;scdm.c: 23:  a_ctx->cmds = a_cmds;
+[e = . *U _a_ctx 0 _a_cmds ]
+"27
+[; ;scdm.c: 27:  sprintf(a_ctx->cmd, "\r\n Ps Tester %s %s\r\n", build_date, build_time);
+[e ( _sprintf (1 , , (. , &U . *U _a_ctx 1 :s 4C _build_date _build_time ]
+"28
+[; ;scdm.c: 28:  puts(a_ctx->cmd);
+[e ( _puts (1 -> &U . *U _a_ctx 1 `*Cuc ]
+"29
+[; ;scdm.c: 29:  puts(cmdm);
+[e ( _puts (1 &U _cmdm ]
+"30
+[; ;scdm.c: 30: }
 [e :UE 2208 ]
 }
-"81
-[; ;main.c: 81: void Adc_Isr(void)
-[v _Adc_Isr `(v ~T0 @X0 1 ef ]
-"82
-[; ;main.c: 82: {
+"32
+[; ;scdm.c: 32: void scmd_init(void)
+[v _scmd_init `(v ~T0 @X0 1 ef ]
+"33
+[; ;scdm.c: 33: {
 {
-[e :U _Adc_Isr ]
+[e :U _scmd_init ]
 [f ]
-"83
-[; ;main.c: 83:  ana[adc_chan] = ADCC_GetConversionResult();
-[e = *U + &U _ana * -> _adc_chan `ux -> -> # *U &U _ana `ui `ux ( _ADCC_GetConversionResult ..  ]
-"84
-[; ;main.c: 84:  if (adc_chan++ >= 2) {
-[e $ ! >= -> ++ _adc_chan -> -> 1 `i `Vuc `i -> 2 `i 2213  ]
-{
-"85
-[; ;main.c: 85:   adc_chan = 0;
-[e = _adc_chan -> -> 0 `i `uc ]
-"86
-[; ;main.c: 86:  }
+"34
+[; ;scdm.c: 34:  cli_init(&cli_ctx, g_cmds);
+[e ( _cli_init (2 , &U _cli_ctx &U _g_cmds ]
+"35
+[; ;scdm.c: 35: }
+[e :UE 2209 ]
 }
-[e :U 2213 ]
-"87
-[; ;main.c: 87:  ADPCH = adc_chan;
-[e = _ADPCH _adc_chan ]
-"91
-[; ;main.c: 91:  adc_tick = 1;
-[e = _adc_tick -> -> 1 `i `a ]
-"92
-[; ;main.c: 92: }
-[e :UE 2212 ]
-}
-"94
-[; ;main.c: 94: void fh_hw(void *a_data)
-[v _fh_hw `(v ~T0 @X0 1 ef1`*v ]
-"95
-[; ;main.c: 95: {
+"37
+[; ;scdm.c: 37: uint8_t linux_getc(uint8_t *a_data)
+[v _linux_getc `(uc ~T0 @X0 1 ef1`*uc ]
+"38
+[; ;scdm.c: 38: {
 {
-[e :U _fh_hw ]
-"94
-[; ;main.c: 94: void fh_hw(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"95
-[; ;main.c: 95: {
+[e :U _linux_getc ]
+"37
+[; ;scdm.c: 37: uint8_t linux_getc(uint8_t *a_data)
+[v _a_data `*uc ~T0 @X0 1 r1 ]
+"38
+[; ;scdm.c: 38: {
 [f ]
-"96
-[; ;main.c: 96:  puts((const char *) a_data);
-[e ( _puts (1 -> _a_data `*Cuc ]
-"97
-[; ;main.c: 97: }
+"39
+[; ;scdm.c: 39:  if (UART1_is_rx_ready()) {
+[e $ ! != -> ( _UART1_is_rx_ready ..  `i -> 0 `i 2211  ]
+{
+"40
+[; ;scdm.c: 40:   a_data[0] = UART1_Read();
+[e = *U + _a_data * -> -> 0 `i `x -> -> # *U _a_data `i `x ( _UART1_Read ..  ]
+"41
+[; ;scdm.c: 41:   return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 2210  ]
+"42
+[; ;scdm.c: 42:  } else {
+}
+[e $U 2212  ]
+[e :U 2211 ]
+{
+"43
+[; ;scdm.c: 43:   return 0;
+[e ) -> -> 0 `i `uc ]
+[e $UE 2210  ]
+"44
+[; ;scdm.c: 44:  }
+}
+[e :U 2212 ]
+"45
+[; ;scdm.c: 45: }
+[e :UE 2210 ]
+}
+"47
+[; ;scdm.c: 47: uint8_t linux_putc(uint8_t *data, uint8_t a_len)
+[v _linux_putc `(uc ~T0 @X0 1 ef2`*uc`uc ]
+"48
+[; ;scdm.c: 48: {
+{
+[e :U _linux_putc ]
+"47
+[; ;scdm.c: 47: uint8_t linux_putc(uint8_t *data, uint8_t a_len)
+[v _data `*uc ~T0 @X0 1 r1 ]
+[v _a_len `uc ~T0 @X0 1 r2 ]
+"48
+[; ;scdm.c: 48: {
+[f ]
+"49
+[; ;scdm.c: 49:  puts((const char *) data);
+[e ( _puts (1 -> _data `*Cuc ]
+"50
+[; ;scdm.c: 50:  return 1;
+[e ) -> -> 1 `i `uc ]
+[e $UE 2213  ]
+"51
+[; ;scdm.c: 51: }
+[e :UE 2213 ]
+}
+"53
+[; ;scdm.c: 53: static uint8_t _cli_interpret_cmd(t_cli_ctx *a_ctx)
+[v __cli_interpret_cmd `(uc ~T0 @X0 1 sf1`*S2207 ]
+"54
+[; ;scdm.c: 54: {
+{
+[e :U __cli_interpret_cmd ]
+"53
+[; ;scdm.c: 53: static uint8_t _cli_interpret_cmd(t_cli_ctx *a_ctx)
+[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
+"54
+[; ;scdm.c: 54: {
+[f ]
+"55
+[; ;scdm.c: 55:  uint8_t i = 0;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+"56
+[; ;scdm.c: 56:  uint8_t ret = E_CMD_OK;
+[v _ret `uc ~T0 @X0 1 a ]
+[e = _ret -> . `E17144 0 `uc ]
+"58
+[; ;scdm.c: 58:  if (!strlen(a_ctx->cmd)) {
+[e $ ! ! != ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 0 `i `ui 2215  ]
+{
+"59
+[; ;scdm.c: 59:   return E_CMD_EMPTY;
+[e ) -> . `E17144 3 `uc ]
+[e $UE 2214  ]
+"60
+[; ;scdm.c: 60:  }
+}
+[e :U 2215 ]
+"62
+[; ;scdm.c: 62:  if (strlen(a_ctx->cmd) < 2) {
+[e $ ! < ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 2 `i `ui 2216  ]
+{
+"63
+[; ;scdm.c: 63:   return E_CMD_TOO_SHORT;
+[e ) -> . `E17144 2 `uc ]
+[e $UE 2214  ]
+"64
+[; ;scdm.c: 64:  }
+}
+[e :U 2216 ]
+"66
+[; ;scdm.c: 66:  while (a_ctx->cmds[i].fh) {
+[e $U 2217  ]
+[e :U 2218 ]
+{
+"67
+[; ;scdm.c: 67:   if (!strncmp(a_ctx->cmds[i].cmd, a_ctx->cmd, strlen(a_ctx->cmds[i].cmd))) {
+[e $ ! ! != ( _strncmp (3 , , . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> &U . *U _a_ctx 1 `*Cuc ( _strlen (1 . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> 0 `i 2220  ]
+{
+"69
+[; ;scdm.c: 69:    a_ctx->cmds[i].fh((void *) a_ctx);
+[e ( *U . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 (1 -> _a_ctx `*v ]
+"70
+[; ;scdm.c: 70:    break;
+[e $U 2219  ]
+"71
+[; ;scdm.c: 71:   }
+}
+[e :U 2220 ]
+"72
+[; ;scdm.c: 72:   i++;
+[e ++ _i -> -> 1 `i `uc ]
+"73
+[; ;scdm.c: 73:  }
+}
+[e :U 2217 ]
+"66
+[; ;scdm.c: 66:  while (a_ctx->cmds[i].fh) {
+[e $ != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17188 2218  ]
+[e :U 2219 ]
+"75
+[; ;scdm.c: 75:  if (!a_ctx->cmds[i].fh) {
+[e $ ! ! != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17196 2221  ]
+{
+"76
+[; ;scdm.c: 76:   ret = E_CMD_NOT_FOUND;
+[e = _ret -> . `E17144 1 `uc ]
+"77
+[; ;scdm.c: 77:  }
+}
+[e :U 2221 ]
+"79
+[; ;scdm.c: 79:  return ret;
+[e ) _ret ]
+[e $UE 2214  ]
+"80
+[; ;scdm.c: 80: }
 [e :UE 2214 ]
 }
-"99
-[; ;main.c: 99: void fh_hi(void *a_data)
-[v _fh_hi `(v ~T0 @X0 1 ef1`*v ]
-"100
-[; ;main.c: 100: {
+"82
+[; ;scdm.c: 82: void cli_read(t_cli_ctx *a_ctx)
+[v _cli_read `(v ~T0 @X0 1 ef1`*S2207 ]
+"83
+[; ;scdm.c: 83: {
 {
-[e :U _fh_hi ]
-"99
-[; ;main.c: 99: void fh_hi(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"100
-[; ;main.c: 100: {
+[e :U _cli_read ]
+"82
+[; ;scdm.c: 82: void cli_read(t_cli_ctx *a_ctx)
+[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
+"83
+[; ;scdm.c: 83: {
 [f ]
-"101
-[; ;main.c: 101:  puts(" hi      ");
-[e ( _puts (1 :s 3C ]
-"102
-[; ;main.c: 102: }
-[e :UE 2215 ]
-}
-"104
-[; ;main.c: 104: void fh_ho(void *a_data)
-[v _fh_ho `(v ~T0 @X0 1 ef1`*v ]
-"105
-[; ;main.c: 105: {
+"84
+[; ;scdm.c: 84:  uint8_t i = 0x00;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+"87
+[; ;scdm.c: 87:  if (!linux_getc(&i)) {
+[e $ ! ! != -> ( _linux_getc (1 &U _i `i -> 0 `i 2223  ]
 {
-[e :U _fh_ho ]
-"104
-[; ;main.c: 104: void fh_ho(void *a_data)
-[v _a_data `*v ~T0 @X0 1 r1 ]
-"105
-[; ;main.c: 105: {
-[f ]
-"106
-[; ;main.c: 106:  puts(" ho      ");
-[e ( _puts (1 :s 4C ]
-"107
-[; ;main.c: 107: }
-[e :UE 2216 ]
+"88
+[; ;scdm.c: 88:   return;
+[e $UE 2222  ]
+"89
+[; ;scdm.c: 89:  }
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"112
-[; ;main.c: 112: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"113
-[; ;main.c: 113: {
-{
-[e :U _main ]
-[f ]
-"114
-[; ;main.c: 114:  uint8_t dac_v = 1;
-[v _dac_v `uc ~T0 @X0 1 a ]
-[e = _dac_v -> -> 1 `i `uc ]
-"116
-[; ;main.c: 116:  SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"118
-[; ;main.c: 118:  do { LATDbits.LATD1 = 0; } while(0);
-[e :U 2220 ]
-{
-[e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
-}
-[e :U 2219 ]
-"119
-[; ;main.c: 119:  do { LATEbits.LATE2 = 0; } while(0);
 [e :U 2223 ]
+"92
+[; ;scdm.c: 92:  switch (i) {
+[e $U 2225  ]
 {
-[e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 2222 ]
-"120
-[; ;main.c: 120:  TMR6_SetInterruptHandler(Led_Blink);
-[e ( _TMR6_SetInterruptHandler (1 &U _Led_Blink ]
-"121
-[; ;main.c: 121:  TMR5_SetInterruptHandler(Timers_Isr);
-[e ( _TMR5_SetInterruptHandler (1 &U _Timers_Isr ]
-"122
-[; ;main.c: 122:  ADCC_SetADIInterruptHandler(Adc_Isr);
-[e ( _ADCC_SetADIInterruptHandler (1 &U _Adc_Isr ]
-"123
-[; ;main.c: 123:  ADPCH = adc_chan;
-[e = _ADPCH _adc_chan ]
-"128
-[; ;main.c: 128:  scmd_init();
-[e ( _scmd_init ..  ]
-"131
-[; ;main.c: 131:  (INTCON0bits.GIEH = 1);
-[e = . . _INTCON0bits 1 1 -> -> 1 `i `uc ]
-"136
-[; ;main.c: 136:  DAC1_SetOutput(dac_v);
-[e ( _DAC1_SetOutput (1 _dac_v ]
-"138
-[; ;main.c: 138:  while (1) {
-[e :U 2225 ]
-{
-"139
-[; ;main.c: 139:   if (adc_tick) {
-[e $ ! != -> _adc_tick `i -> 0 `i 2227  ]
-{
-"140
-[; ;main.c: 140:    if (ana[0] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2228  ]
-{
-"141
-[; ;main.c: 141:     display_led(oo00_off);
-[e ( _display_led (1 . `E17114 0 ]
-"142
-[; ;main.c: 142:     display_led(oo30_off);
-[e ( _display_led (1 . `E17114 9 ]
-"143
-[; ;main.c: 143:    } else {
-}
-[e $U 2229  ]
+"93
+[; ;scdm.c: 93:  case 0x7f:
+[e :U 2226 ]
+"94
+[; ;scdm.c: 94:  case 0x7e:
+[e :U 2227 ]
+"95
+[; ;scdm.c: 95:   break;
+[e $U 2224  ]
+"96
+[; ;scdm.c: 96:  case 0x1b:
 [e :U 2228 ]
-{
-"144
-[; ;main.c: 144:     if (ana[0] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2230  ]
-{
-"145
-[; ;main.c: 145:      display_led(oo00_g);
-[e ( _display_led (1 . `E17114 1 ]
-"146
-[; ;main.c: 146:      display_led(oo30_g);
-[e ( _display_led (1 . `E17114 10 ]
-"147
-[; ;main.c: 147:     } else {
-}
-[e $U 2231  ]
+"97
+[; ;scdm.c: 97:   break;
+[e $U 2224  ]
+"98
+[; ;scdm.c: 98:  case '\r':
+[e :U 2229 ]
+"99
+[; ;scdm.c: 99:   a_ctx->cmd[(((a_ctx->cpos) < (128 - 1)) ? (a_ctx->cpos + 1) : (a_ctx->cpos))] = '\0';
+[e = *U + &U . *U _a_ctx 1 * -> -> ? < -> . *U _a_ctx 2 `i - -> 128 `i -> 1 `i : + -> . *U _a_ctx 2 `i -> 1 `i -> . *U _a_ctx 2 `i `ui `ux -> -> # *U &U . *U _a_ctx 1 `ui `ux -> -> 0 `ui `uc ]
+"100
+[; ;scdm.c: 100:   linux_putc((unsigned char *) "\r\n", 2);
+[e ( _linux_putc (2 , -> :s 5C `*uc -> -> 2 `i `uc ]
+"101
+[; ;scdm.c: 101:   res = _cli_interpret_cmd(a_ctx);
+[e = _res ( __cli_interpret_cmd (1 _a_ctx ]
+"102
+[; ;scdm.c: 102:   a_ctx->cpos = 0;
+[e = . *U _a_ctx 2 -> -> 0 `i `uc ]
+"103
+[; ;scdm.c: 103:   memset(a_ctx->cmd, 0x00, 128);
+[e ( _memset (3 , , -> &U . *U _a_ctx 1 `*v -> 0 `i -> -> 128 `i `ui ]
+"104
+[; ;scdm.c: 104:   break;
+[e $U 2224  ]
+"105
+[; ;scdm.c: 105:  default:
 [e :U 2230 ]
+"107
+[; ;scdm.c: 107:   if (a_ctx->cpos < (128 - 1)) {
+[e $ ! < -> . *U _a_ctx 2 `i - -> 128 `i -> 1 `i 2231  ]
 {
-"148
-[; ;main.c: 148:      display_led(oo00_r);
-[e ( _display_led (1 . `E17114 2 ]
-"149
-[; ;main.c: 149:      display_led(oo30_r);
-[e ( _display_led (1 . `E17114 11 ]
-"150
-[; ;main.c: 150:     }
+"108
+[; ;scdm.c: 108:    a_ctx->cmd[a_ctx->cpos++] = i;
+[e = *U + &U . *U _a_ctx 1 * -> ++ . *U _a_ctx 2 -> -> 1 `i `uc `ux -> -> # *U &U . *U _a_ctx 1 `ui `ux -> _i `uc ]
+"109
+[; ;scdm.c: 109:    linux_putc(&i, 1);
+[e ( _linux_putc (2 , &U _i -> -> 1 `i `uc ]
+"110
+[; ;scdm.c: 110:   }
 }
 [e :U 2231 ]
-"151
-[; ;main.c: 151:    }
+"111
+[; ;scdm.c: 111:   break;
+[e $U 2224  ]
+"112
+[; ;scdm.c: 112:  }
 }
-[e :U 2229 ]
-"153
-[; ;main.c: 153:    if (ana[1] < 900) {
-[e $ ! < -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 900 `i `ui 2232  ]
-{
-"154
-[; ;main.c: 154:     display_led(oo10_off);
-[e ( _display_led (1 . `E17114 3 ]
-"155
-[; ;main.c: 155:     display_led(oo20_off);
-[e ( _display_led (1 . `E17114 6 ]
-"156
-[; ;main.c: 156:    } else {
-}
-[e $U 2233  ]
-[e :U 2232 ]
-{
-"157
-[; ;main.c: 157:     if (ana[1] > 2500) {
-[e $ ! > -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> -> 2500 `i `ui 2234  ]
-{
-"158
-[; ;main.c: 158:      display_led(oo10_g);
-[e ( _display_led (1 . `E17114 4 ]
-"159
-[; ;main.c: 159:      display_led(oo20_g);
-[e ( _display_led (1 . `E17114 7 ]
-"160
-[; ;main.c: 160:     } else {
-}
-[e $U 2235  ]
-[e :U 2234 ]
-{
-"161
-[; ;main.c: 161:      display_led(oo10_r);
-[e ( _display_led (1 . `E17114 5 ]
-"162
-[; ;main.c: 162:      display_led(oo20_r);
-[e ( _display_led (1 . `E17114 8 ]
-"163
-[; ;main.c: 163:     }
-}
-[e :U 2235 ]
-"164
-[; ;main.c: 164:    }
-}
-[e :U 2233 ]
-"165
-[; ;main.c: 165:    adc_tick = 0;
-[e = _adc_tick -> -> 0 `i `a ]
-"167
-[; ;main.c: 167:    if (disp_tick) {
-[e $ ! != -> _disp_tick `i -> 0 `i 2236  ]
-{
-"168
-[; ;main.c: 168:     sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
-[e ( _sprintf (1 , , (. , &U _buff1 :s 5C -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui ]
-"169
-[; ;main.c: 169:     puts(buff1);
-[e ( _puts (1 -> &U _buff1 `*Cuc ]
-"170
-[; ;main.c: 170:     DAC1_SetOutput(++dac_v);
-[e ( _DAC1_SetOutput (1 =+ _dac_v -> -> 1 `i `uc ]
-"174
-[; ;main.c: 174:     cli_read(&cli_ctx);
-[e ( _cli_read (1 &U _cli_ctx ]
-"175
-[; ;main.c: 175:     disp_tick = 0;
-[e = _disp_tick -> -> 0 `i `a ]
-"176
-[; ;main.c: 176:    }
-}
-[e :U 2236 ]
-"177
-[; ;main.c: 177:   }
-}
-[e :U 2227 ]
-"178
-[; ;main.c: 178:  }
-}
+[e $U 2224  ]
+[e :U 2225 ]
+[e [\ -> _i `i , $ -> 127 `i 2226
+ , $ -> 126 `i 2227
+ , $ -> 27 `i 2228
+ , $ -> -> 13 `ui `i 2229
+ 2230 ]
 [e :U 2224 ]
-[e $U 2225  ]
-[e :U 2226 ]
-"179
-[; ;main.c: 179: }
-[e :UE 2217 ]
+"113
+[; ;scdm.c: 113: }
+[e :UE 2222 ]
 }
-[p f _sprintf 8422400 ]
-[a 2C 50 50 58 48 48 58 52 55 0 ]
-[a 1C 77 97 114 32 32 52 32 50 48 50 50 0 ]
-[a 4C 32 104 111 32 32 32 32 32 32 0 ]
-[a 3C 32 104 105 32 32 32 32 32 32 0 ]
-[a 5C 80 83 58 32 86 61 37 52 117 32 73 61 37 52 117 32 13 10 0 ]
+[p f _sprintf 8650752 ]
+[a 1C 104 119 0 ]
+[a 3C 104 111 0 ]
+[a 2C 104 105 0 ]
+[a 4C 13 10 32 80 115 32 84 101 115 116 101 114 32 37 115 32 37 115 13 10 0 ]
+[a 5C 13 10 0 ]

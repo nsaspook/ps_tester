@@ -841,7 +841,54 @@ static int pad(FILE *fp, char *buf, int p)
 
     return (int)(strlen(buf) + (size_t)w);
 }
-# 615 "/opt/microchip/xc8/v2.35/pic/sources/c99/common/doprnt.c"
+# 568 "/opt/microchip/xc8/v2.35/pic/sources/c99/common/doprnt.c"
+static int stoa(FILE *fp, char *s)
+{
+    char *cp, nuls[] = "(null)";
+    int i, l, p, w;
+
+
+    cp = s;
+    if (!cp) {
+        cp = nuls;
+    }
+
+
+    l = (int)strlen(cp);
+    p = prec;
+    l = (!(p < 0) && (p < l)) ? p : l;
+    p = l;
+    w = width;
+
+
+    if (!(flags & (1 << 0))) {
+        while (l < w) {
+            fputc(' ', fp);
+            ++l;
+        }
+    }
+
+
+    i = 0;
+    while (i < p) {
+        fputc(*cp, fp);
+        ++cp;
+        ++i;
+    }
+
+
+    if (flags & (1 << 0)) {
+        while (l < w) {
+            fputc(' ', fp);
+            ++l;
+        }
+    }
+
+    return l;
+}
+
+
+
 static int utoa(FILE *fp, unsigned long long d)
 {
     int i, p, w;
@@ -898,6 +945,14 @@ static int vfpfcnvrt(FILE *fp, char *fmt[], va_list ap)
             while ((0 && isdigit((*fmt)[0]), ((unsigned)((*fmt)[0])-'0') < 10)) {
                 ++*fmt;
             }
+        }
+# 1171 "/opt/microchip/xc8/v2.35/pic/sources/c99/common/doprnt.c"
+        if (*fmt[0] == 's' || !strncmp(*fmt, "lls", ((sizeof("lls")/sizeof("lls"[0]))-1))) {
+
+   *fmt += *fmt[0] == 's' ? 1 : ((sizeof("lls")/sizeof("lls"[0]))-1);
+            cp = (*(char * *)__va_arg(*(char * **)ap, (char *)0));
+
+            return stoa(fp, cp);
         }
 # 1204 "/opt/microchip/xc8/v2.35/pic/sources/c99/common/doprnt.c"
         if (*fmt[0] == 'u') {

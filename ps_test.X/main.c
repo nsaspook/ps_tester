@@ -45,11 +45,14 @@
 #pragma warning disable 1498 
 
 #include "ps_test.h"
+#include "scdm.h"
 
 volatile adc_result_t ana[MAX_ADC_CHAN];
 volatile bool disp_tick = false, adc_tick = false;
 volatile uint8_t adc_chan = 0;
 char buff1[128];
+extern t_cli_ctx cli_ctx; // command buffer 
+const char *build_date = __DATE__, *build_time = __TIME__;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -88,6 +91,21 @@ void Adc_Isr(void)
 	adc_tick = true;
 }
 
+void fh_hw(void *a_data)
+{
+	puts((const char *) a_data);
+}
+
+void fh_hi(void *a_data)
+{
+	puts(" hi      ");
+}
+
+void fh_ho(void *a_data)
+{
+	puts(" ho      ");
+}
+
 /*
 			 Main application
  */
@@ -103,6 +121,11 @@ void main(void)
 	TMR5_SetInterruptHandler(Timers_Isr);
 	ADCC_SetADIInterruptHandler(Adc_Isr);
 	ADPCH = adc_chan;
+
+	/*
+	 * init serial command parser on USART
+	 */
+	scmd_init();
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();
@@ -145,6 +168,10 @@ void main(void)
 				sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
 				puts(buff1);
 				DAC1_SetOutput(++dac_v);
+				/*
+				 * read serial port for command data
+				 */
+				cli_read(&cli_ctx);
 				disp_tick = false;
 			}
 		}
