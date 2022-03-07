@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.35 build 20211206165544 
-                                                                                               Fri Mar  4 22:03:47 2022
+                                                                                               Sun Mar  6 16:39:12 2022
 
 Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9 
      1                           	processor	18F57K42
@@ -444,7 +444,7 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
    430  00204C  72                 	db	114	;'r'
    431  00204D  20                 	db	32
    432  00204E  20                 	db	32
-   433  00204F  34                 	db	52	;'4'
+   433  00204F  36                 	db	54	;'6'
    434  002050  20                 	db	32
    435  002051  32                 	db	50	;'2'
    436  002052  30                 	db	48	;'0'
@@ -480,13 +480,13 @@ Microchip MPLAB XC8 C Compiler v2.35 (Free license) build 20211206165544 Og9
    466  00206A                     STR_2:
    467                           
    468                           ; BSR set to: 0
-   469  00206A  32                 	db	50	;'2'
-   470  00206B  32                 	db	50	;'2'
+   469  00206A  31                 	db	49	;'1'
+   470  00206B  36                 	db	54	;'6'
    471  00206C  3A                 	db	58	;':'
-   472  00206D  30                 	db	48	;'0'
-   473  00206E  30                 	db	48	;'0'
+   472  00206D  33                 	db	51	;'3'
+   473  00206E  39                 	db	57	;'9'
    474  00206F  3A                 	db	58	;':'
-   475  002070  34                 	db	52	;'4'
+   475  002070  30                 	db	48	;'0'
    476  002071  37                 	db	55	;'7'
    477  002072  00                 	db	0
    478  002073                     STR_11:
@@ -11970,7 +11970,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.35 build 20211206165544 
-Symbol Table                                                                                   Fri Mar  4 22:03:47 2022
+Symbol Table                                                                                   Sun Mar  6 16:39:12 2022
 
             __end_of_TMR5_SetInterruptHandler 3C3C                                  ?_display_led 0001  
                          ___wmul@multiplicand 0017                             ??_TMR5_WriteTimer 0011  

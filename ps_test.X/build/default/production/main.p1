@@ -2385,7 +2385,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53: char buff1[128];
 [v _buff1 `uc ~T0 @X0 -> 128 `i e ]
 "55
-[; ;main.c: 55: const char *build_date = "Mar  4 2022", *build_time = "22:00:47";
+[; ;main.c: 55: const char *build_date = "Mar  6 2022", *build_time = "16:39:07";
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -2700,8 +2700,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2217 ]
 }
 [p f _sprintf 8422400 ]
-[a 2C 50 50 58 48 48 58 52 55 0 ]
-[a 1C 77 97 114 32 32 52 32 50 48 50 50 0 ]
+[a 2C 49 54 58 51 57 58 48 55 0 ]
+[a 1C 77 97 114 32 32 54 32 50 48 50 50 0 ]
 [a 4C 32 104 111 32 32 32 32 32 32 0 ]
 [a 3C 32 104 105 32 32 32 32 32 32 0 ]
 [a 5C 80 83 58 32 86 61 37 52 117 32 73 61 37 52 117 32 13 10 0 ]

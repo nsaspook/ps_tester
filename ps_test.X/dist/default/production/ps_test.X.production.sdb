@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57K42 ]
 [d frameptr 16353 ]
-"121 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"121 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [e E15967 . `uc
 channel_ANA0 0
 channel_ANA1 1
@@ -17,7 +17,7 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"97 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"97 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [e E15965 . `uc
 TMR6_ROP_STARTS_TMRON 0
 TMR6_ROP_STARTS_TMRON_ERSHIGH 1
@@ -69,11 +69,11 @@ TMR6_UART1_TX_EDGE 22
 TMR6_UART2_RX_EDGE 23
 TMR6_UART2_TX_EDGE 24
 ]
-"79 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"79 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [e E355 . `uc
 SPI1_DEFAULT 0
 ]
-"141 /public/ps_tester/ps_test.X/main.c
+"141 /fred/ps_tester/ps_test.X/main.c
 [e E17114 . `uc
 oo00_off 0
 oo00_g 1
@@ -89,7 +89,7 @@ oo30_g 10
 oo30_r 11
 oooff 12
 ]
-"33 /public/ps_tester/ps_test.X/timers.c
+"33 /fred/ps_tester/ps_test.X/timers.c
 [e E15965 APP_TIMERS `uc
 TMR_INTERNAL 0
 TMR_T1 1
@@ -99,7 +99,7 @@ TMR_T4 4
 TMR_DISPLAY 5
 TMR_COUNT 6
 ]
-"3 /public/ps_tester/ps_test.X/disp_led.c
+"3 /fred/ps_tester/ps_test.X/disp_led.c
 [e E17116 . `uc
 oo00_off 0
 oo00_g 1
@@ -115,7 +115,7 @@ oo30_g 10
 oo30_r 11
 oooff 12
 ]
-"6 /public/ps_tester/ps_test.X/scdm.c
+"6 /fred/ps_tester/ps_test.X/scdm.c
 [e E17144 _t_cmd_status `uc
 E_CMD_OK 0
 E_CMD_NOT_FOUND 1
@@ -182,9 +182,9 @@ E_CMD_EMPTY 3
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /opt/microchip/xc8/v2.35/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"3 /public/ps_tester/ps_test.X/disp_led.c
+"3 /fred/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
-"65 /public/ps_tester/ps_test.X/main.c
+"65 /fred/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 "81
 [v _Adc_Isr Adc_Isr `(v  1 e 1 0 ]
@@ -196,7 +196,7 @@ E_CMD_EMPTY 3
 [v _fh_ho fh_ho `(v  1 e 1 0 ]
 "112
 [v _main main `(v  1 e 1 0 ]
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 "139
 [v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
@@ -206,27 +206,27 @@ E_CMD_EMPTY 3
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
 "320
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
-"58 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"58 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 "66
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
-"52 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "79
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
-"50 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"50 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "64
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "82
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 /public/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /fred/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 "100
 [v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
-"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 "128
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
@@ -236,7 +236,7 @@ E_CMD_EMPTY 3
 [v _TMR5_SetInterruptHandler TMR5_SetInterruptHandler `(v  1 e 1 0 ]
 "183
 [v _TMR5_DefaultInterruptHandler TMR5_DefaultInterruptHandler `(v  1 e 1 0 ]
-"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "109
 [v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
@@ -256,7 +256,7 @@ E_CMD_EMPTY 3
 [v _TMR6_SetInterruptHandler TMR6_SetInterruptHandler `(v  1 e 1 0 ]
 "198
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"87 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"87 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 "161
 [v _UART1_is_rx_ready UART1_is_rx_ready `(a  1 e 1 0 ]
@@ -292,7 +292,7 @@ E_CMD_EMPTY 3
 [v _UART1_SetRxInterruptHandler UART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 "333
 [v _UART1_SetTxInterruptHandler UART1_SetTxInterruptHandler `(v  1 e 1 0 ]
-"20 /public/ps_tester/ps_test.X/scdm.c
+"20 /fred/ps_tester/ps_test.X/scdm.c
 [v _cli_init cli_init `(v  1 s 1 cli_init ]
 "32
 [v _scmd_init scmd_init `(v  1 e 1 0 ]
@@ -304,13 +304,13 @@ E_CMD_EMPTY 3
 [v __cli_interpret_cmd _cli_interpret_cmd `(uc  1 s 1 _cli_interpret_cmd ]
 "82
 [v _cli_read cli_read `(v  1 e 1 0 ]
-"11 /public/ps_tester/ps_test.X/timers.c
+"11 /fred/ps_tester/ps_test.X/timers.c
 [v _StartTimer StartTimer `(v  1 e 1 0 ]
 "19
 [v _TimerDone TimerDone `(a  1 e 1 0 ]
 "48
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
-"518 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.h
+"518 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.h
 [v _UART1_RxInterruptHandler UART1_RxInterruptHandler `*.38(v  1 e 3 0 ]
 "536
 [v _UART1_TxInterruptHandler UART1_TxInterruptHandler `*.38(v  1 e 3 0 ]
@@ -878,7 +878,7 @@ E_CMD_EMPTY 3
 [v _GIE GIE `VEb  1 e 0 @130711 ]
 "54794
 [v _PLLR PLLR `VEb  1 e 0 @118496 ]
-"50 /public/ps_tester/ps_test.X/main.c
+"50 /fred/ps_tester/ps_test.X/main.c
 [v _ana ana `VE[2]us  1 e 4 0 ]
 "51
 [v _disp_tick disp_tick `VEa  1 e 1 0 ]
@@ -887,15 +887,15 @@ E_CMD_EMPTY 3
 [v _adc_chan adc_chan `VEuc  1 e 1 0 ]
 "53
 [v _buff1 buff1 `[128]uc  1 e 128 0 ]
-"58 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"58 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_ADI_InterruptHandler ADCC_ADI_InterruptHandler `*.38(v  1 e 3 0 ]
-"58 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"58 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _timer5ReloadVal timer5ReloadVal `VEus  1 e 2 0 ]
 "59
 [v _TMR5_InterruptHandler TMR5_InterruptHandler `*.38(v  1 e 3 0 ]
-"59 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"59 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_InterruptHandler TMR6_InterruptHandler `*.38(v  1 e 3 0 ]
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _uart1TxHead uart1TxHead `VEuc  1 s 1 uart1TxHead ]
 "65
 [v _uart1TxTail uart1TxTail `VEuc  1 s 1 uart1TxTail ]
@@ -927,7 +927,7 @@ E_CMD_EMPTY 3
 [v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
 "81
 [v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
-"4 /public/ps_tester/ps_test.X/scdm.c
+"4 /fred/ps_tester/ps_test.X/scdm.c
 [v _cmdm cmdm `C[28]uc  1 e 28 0 ]
 [s S1757 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
 "5
@@ -937,16 +937,16 @@ E_CMD_EMPTY 3
 [v _res res `uc  1 e 1 0 ]
 "11
 [v _g_cmds g_cmds `[4]S1757  1 s 16 g_cmds ]
-"6 /public/ps_tester/ps_test.X/timers.c
+"6 /fred/ps_tester/ps_test.X/timers.c
 [v _tickCount tickCount `VE[6]us  1 e 12 0 ]
-"112 /public/ps_tester/ps_test.X/main.c
+"112 /fred/ps_tester/ps_test.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "114
 [v main@dac_v dac_v `uc  1 a 1 54 ]
 "179
 } 0
-"32 /public/ps_tester/ps_test.X/scdm.c
+"32 /fred/ps_tester/ps_test.X/scdm.c
 [v _scmd_init scmd_init `(v  1 e 1 0 ]
 {
 "35
@@ -1103,7 +1103,7 @@ E_CMD_EMPTY 3
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 22 ]
 "53
 } 0
-"3 /public/ps_tester/ps_test.X/disp_led.c
+"3 /fred/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
 {
 [v display_led@led led `E17116  1 a 1 wreg ]
@@ -1111,7 +1111,7 @@ E_CMD_EMPTY 3
 [v display_led@led led `E17116  1 a 1 22 ]
 "66
 } 0
-"82 /public/ps_tester/ps_test.X/scdm.c
+"82 /fred/ps_tester/ps_test.X/scdm.c
 [v _cli_read cli_read `(v  1 e 1 0 ]
 {
 "84
@@ -1135,7 +1135,7 @@ E_CMD_EMPTY 3
 [v memset@n n `ui  1 p 2 24 ]
 "90
 } 0
-"47 /public/ps_tester/ps_test.X/scdm.c
+"47 /fred/ps_tester/ps_test.X/scdm.c
 [v _linux_putc linux_putc `(uc  1 e 1 0 ]
 {
 [v linux_putc@data data `*.34uc  1 p 2 43 ]
@@ -1148,7 +1148,7 @@ E_CMD_EMPTY 3
 [v linux_getc@a_data a_data `*.30uc  1 p 1 21 ]
 "45
 } 0
-"161 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"161 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_is_rx_ready UART1_is_rx_ready `(a  1 e 1 0 ]
 {
 "164
@@ -1160,7 +1160,7 @@ E_CMD_EMPTY 3
 [v UART1_Read@readValue readValue `uc  1 a 1 20 ]
 "200
 } 0
-"53 /public/ps_tester/ps_test.X/scdm.c
+"53 /fred/ps_tester/ps_test.X/scdm.c
 [v __cli_interpret_cmd _cli_interpret_cmd `(uc  1 s 1 _cli_interpret_cmd ]
 {
 "55
@@ -1194,7 +1194,7 @@ E_CMD_EMPTY 3
 [v strlen@s s `*.34Cuc  1 p 2 20 ]
 "12
 } 0
-"104 /public/ps_tester/ps_test.X/main.c
+"104 /fred/ps_tester/ps_test.X/main.c
 [v _fh_ho fh_ho `(v  1 e 1 0 ]
 {
 [v fh_ho@a_data a_data `*.39v  1 p 2 43 ]
@@ -1240,7 +1240,7 @@ E_CMD_EMPTY 3
 [v fputc@fp fp `*.39S2481  1 p 2 24 ]
 "24
 } 0
-"230 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"230 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
@@ -1257,12 +1257,12 @@ E_CMD_EMPTY 3
 [v UART1_Write@txData txData `uc  1 a 1 20 ]
 "223
 } 0
-"50 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"50 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "62
 } 0
-"87 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"87 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 {
 "159
@@ -1297,7 +1297,7 @@ E_CMD_EMPTY 3
 [v UART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 20 ]
 "325
 } 0
-"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 {
 "95
@@ -1308,7 +1308,7 @@ E_CMD_EMPTY 3
 [v TMR6_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "196
 } 0
-"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 {
 "98
@@ -1319,39 +1319,39 @@ E_CMD_EMPTY 3
 [v TMR5_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "181
 } 0
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"82 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"82 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
 "100
 } 0
-"55 /public/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /fred/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "150
 } 0
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"52 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 [v INTERRUPT_Initialize@state state `a  1 a 1 20 ]
 "77
 } 0
-"58 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"58 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 {
 "64
 } 0
-"64 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"64 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
 "119
@@ -1362,7 +1362,7 @@ E_CMD_EMPTY 3
 [v ADCC_SetADIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "318
 } 0
-"66 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"66 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
 {
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 wreg ]
@@ -1371,7 +1371,7 @@ E_CMD_EMPTY 3
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 20 ]
 "69
 } 0
-"307 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"307 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_ISR ADCC_ISR `IIH(v  1 e 1 0 ]
 {
 "314
@@ -1381,17 +1381,17 @@ E_CMD_EMPTY 3
 {
 "323
 } 0
-"81 /public/ps_tester/ps_test.X/main.c
+"81 /fred/ps_tester/ps_test.X/main.c
 [v _Adc_Isr Adc_Isr `(v  1 e 1 0 ]
 {
 "92
 } 0
-"139 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"139 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
 {
 "143
 } 0
-"166 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"166 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_ISR TMR6_ISR `IIH(v  1 e 1 0 ]
 {
 "168
@@ -1403,22 +1403,22 @@ E_CMD_EMPTY 3
 {
 "192
 } 0
-"65 /public/ps_tester/ps_test.X/main.c
+"65 /fred/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 {
 "72
 } 0
-"198 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"198 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "201
 } 0
-"79 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"79 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
 {
 "81
 } 0
-"235 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"235 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_tx_vect_isr UART1_tx_vect_isr `IIH(v  1 e 1 0 ]
 {
 "241
@@ -1456,7 +1456,7 @@ E_CMD_EMPTY 3
 {
 "305
 } 0
-"165 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"165 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_ISR TMR5_ISR `IIH(v  1 e 1 0 ]
 {
 "176
@@ -1466,14 +1466,14 @@ E_CMD_EMPTY 3
 {
 "186
 } 0
-"48 /public/ps_tester/ps_test.X/timers.c
+"48 /fred/ps_tester/ps_test.X/timers.c
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
 {
 "51
 [v Timers_Isr@i i `i  1 a 2 16 ]
 "56
 } 0
-"128 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"128 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
 {
 [v TMR5_WriteTimer@timerVal timerVal `us  1 p 2 14 ]
