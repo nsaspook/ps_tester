@@ -10,9 +10,9 @@ uint8_t res = E_CMD_OK;
  */
 static t_cmd g_cmds[] = {
 
-	{ "hw", fh_hw},
-	{ "hi", fh_hi},
-	{ "ho", fh_ho},
+	{ "pr", fh_pr},
+	{ "ps", fh_ps},
+	{ "po", fh_po},
 	// null command terminator
 	{ 0x00, 0x00}
 };

@@ -64,12 +64,13 @@ void display_led(DISPLAY_TYPES led);
  * 
  * Blink LED and set flag
  */
-void Led_Blink(void) {
-    LED_RESET_Toggle();
-    /*
-     * xmit serial data flag
-     */
-    disp_tick = true;
+void Led_Blink(void)
+{
+	LED_RESET_Toggle();
+	/*
+	 * xmit serial data flag
+	 */
+	disp_tick = true;
 }
 
 /*
@@ -79,143 +80,158 @@ void Led_Blink(void) {
  * move conversion data into program data array
  * set flag
  */
-void Adc_Isr(void) {
-    ana[adc_chan] = ADCC_GetConversionResult();
-    if (adc_chan++ >= MAX_ADC_CHAN) {
-        adc_chan = 0;
-    }
-    ADPCH = adc_chan;
-    /*
-     * adc value valid flag
-     */
-    adc_tick = true;
-}
-
-void fh_hw(void *a_data) {
-    puts((const char *) a_data);
-}
-
-void fh_hi(void *a_data) {
-    puts(" hi      ");
-}
-
-void fh_ho(void *a_data) {
-    puts(" ho      ");
+void Adc_Isr(void)
+{
+	ana[adc_chan] = ADCC_GetConversionResult();
+	if (adc_chan++ >= MAX_ADC_CHAN) {
+		adc_chan = 0;
+	}
+	ADPCH = adc_chan;
+	/*
+	 * adc value valid flag
+	 */
+	adc_tick = true;
 }
 
 /*
-             Main application
+ * Serial command functions
  */
-void main(void) {
-    uint8_t dac_v = 0, mode_sw = 0;
-    // Initialize the device
-    SYSTEM_Initialize();
+void fh_pr(void *a_data)
+{
+	puts((const char *) a_data);
+	puts("\r\n Ramp to 1000VDC ON \r\n");
+	mode = roll_mode;
+}
 
-    LED_MODE_SetLow();
-    LED_DB_SetLow();
-    TMR6_SetInterruptHandler(Led_Blink);
-    TMR5_SetInterruptHandler(Timers_Isr);
-    ADCC_SetADIInterruptHandler(Adc_Isr);
-    ADPCH = adc_chan;
+void fh_ps(void *a_data)
+{
+	puts("\r\n Steady 1000VDC ON \r\n");
+	mode = static_mode;
+}
 
-    /*
-     * init serial command parser on USART
-     */
-    scmd_init();
+void fh_po(void *a_data)
+{
+	puts("\r\n Voltage OFF \r\n");
+	mode = off_mode;
+}
 
-    // Enable high priority global interrupts
-    INTERRUPT_GlobalInterruptHighEnable();
+/*
+	     Main application
+ */
+void main(void)
+{
+	uint8_t dac_v = 0, mode_sw = 0;
+	// Initialize the device
+	SYSTEM_Initialize();
 
-    // Enable low priority global interrupts.
-    //INTERRUPT_GlobalInterruptLowEnable();
+	LED_MODE_SetLow();
+	LED_DB_SetLow();
+	TMR6_SetInterruptHandler(Led_Blink);
+	TMR5_SetInterruptHandler(Timers_Isr);
+	ADCC_SetADIInterruptHandler(Adc_Isr);
+	ADPCH = adc_chan;
 
-    DAC1_SetOutput(dac_v);
+	/*
+	 * init serial command parser on USART
+	 */
+	scmd_init();
 
-    while (true) {
-        if (adc_tick) {
-            if (ana[0] < 900) {
-                display_led(oo00_off);
-            } else {
-                if (ana[0] > 1800) {
-                    display_led(oo00_g);
-                } else {
-                    display_led(oo00_r);
-                }
-            }
+	// Enable high priority global interrupts
+	INTERRUPT_GlobalInterruptHighEnable();
 
-            if (ana[1] < 50) {
-                display_led(oo10_off);
-            } else {
-                if (ana[1] > 150) {
-                    display_led(oo10_g);
-                } else {
-                    display_led(oo10_r);
-                }
-            }
-            adc_tick = false;
+	// Enable low priority global interrupts.
+	//INTERRUPT_GlobalInterruptLowEnable();
 
-            if (!OVERLOAD_GetValue()) {
-                display_led(oo30_r);
-            } else {
-                display_led(oo30_off);
-            }
+	DAC1_SetOutput(dac_v);
+
+	while (true) {
+		if (adc_tick) {
+			if (ana[0] < 900) {
+				display_led(oo00_off);
+			} else {
+				if (ana[0] > 1800) {
+					display_led(oo00_g);
+				} else {
+					display_led(oo00_r);
+				}
+			}
+
+			if (ana[1] < 50) {
+				display_led(oo10_off);
+			} else {
+				if (ana[1] > 150) {
+					display_led(oo10_g);
+				} else {
+					display_led(oo10_r);
+				}
+			}
+			adc_tick = false;
+
+			if (!OVERLOAD_GetValue()) {
+				display_led(oo30_r);
+			} else {
+				display_led(oo30_off);
+			}
 
 
-            if (!HVON_IN_RA4_GetValue()) {
-                display_led(oo20_g);
-            } else {
-                display_led(oo20_off);
-            }
+			if (!HVON_IN_RA4_GetValue()) {
+				display_led(oo20_g);
+			} else {
+				display_led(oo20_off);
+			}
 
-            if (disp_tick) {
-                vval = (double) ana[0] * V_SCALE;
-                ival = (double) ana[1] * I_SCALE;
-                printf(" PS Test %1u: DAC OUT=%2u, Supply ReadBack %4u V=%+5.1fV %4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
+			if (disp_tick) {
+				vval = (double) ana[0] * V_SCALE;
+				ival = (double) ana[1] * I_SCALE;
+				printf(" PS Test %1u: DAC OUT=%2u, Supply ReadBack %4u V=%+5.1fV %4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
 
-                switch (mode) {
-                    case roll_mode:
-                        if (dac_v > ROLL_MAX) {
-                            dac_v = 0;
-                        }
-                        DAC1_SetOutput(++dac_v);
-                        LED_MODE_SetHigh();
-                        HVON_OUT_RA5_SetLow();
-                        break;
-                    case static_mode:
-                        dac_v = STATIC_PS;
-                        DAC1_SetOutput(dac_v);
-                        LED_MODE_SetHigh();
-                        HVON_OUT_RA5_SetLow();
-                        break;
-                    case off_mode:
-                    default:
-                        mode = off_mode;
-                        dac_v = 0;
-                        DAC1_SetOutput(dac_v);
-                        LED_MODE_SetLow();
-                        HVON_OUT_RA5_SetHigh();
-                        break;
-                }
+				/*
+				 * mode switch state machine
+				 */
+				switch (mode) {
+				case roll_mode: // sawtooth voltage ramp
+					if (dac_v > ROLL_MAX) {
+						dac_v = 0;
+					}
+					DAC1_SetOutput(++dac_v);
+					LED_MODE_SetHigh();
+					HVON_OUT_RA5_SetLow();
+					break;
+				case static_mode: // 1000 vdc unloaded
+					dac_v = STATIC_PS;
+					DAC1_SetOutput(dac_v);
+					LED_MODE_SetHigh();
+					HVON_OUT_RA5_SetLow();
+					break;
+				case off_mode: // voltage shutdown
+				default:
+					mode = off_mode;
+					dac_v = 0;
+					DAC1_SetOutput(dac_v);
+					LED_MODE_SetLow();
+					HVON_OUT_RA5_SetHigh();
+					break;
+				}
 
-                /*
-                 * read serial port for command data
-                 * check mode switch
-                 */
-                cli_read(&cli_ctx);
-                disp_tick = false;
-                if (!MODESW_RB0_GetValue()) {
-                    if (++mode_sw > 4) {
-                        mode++;
-                        mode_sw = 0;
-                        LED_DB_SetHigh();
-                    }
-                } else {
-                    mode_sw = 0;
-                    LED_DB_SetLow();
-                }
-            }
-        }
-    }
+				/*
+				 * read serial port for command data
+				 * check mode switch
+				 */
+				cli_read(&cli_ctx);
+				disp_tick = false;
+				if (!MODESW_RB0_GetValue()) {
+					if (++mode_sw > 4) {
+						mode++;
+						mode_sw = 0;
+						LED_DB_SetHigh();
+					}
+				} else {
+					mode_sw = 0;
+					LED_DB_SetLow();
+				}
+			}
+		}
+	}
 }
 
 /**

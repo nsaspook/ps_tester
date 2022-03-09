@@ -15,14 +15,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [c E17149 0 1 2 3 .. ]
 [n E17149 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
 "60 ./scdm.h
-[; ;./scdm.h: 60:  void fh_hw(void *a_data);
-[v _fh_hw `(v ~T0 @X0 0 ef1`*v ]
+[; ;./scdm.h: 60:  void fh_pr(void *a_data);
+[v _fh_pr `(v ~T0 @X0 0 ef1`*v ]
 "61
-[; ;./scdm.h: 61:  void fh_hi(void *a_data);
-[v _fh_hi `(v ~T0 @X0 0 ef1`*v ]
+[; ;./scdm.h: 61:  void fh_ps(void *a_data);
+[v _fh_ps `(v ~T0 @X0 0 ef1`*v ]
 "62
-[; ;./scdm.h: 62:  void fh_ho(void *a_data);
-[v _fh_ho `(v ~T0 @X0 0 ef1`*v ]
+[; ;./scdm.h: 62:  void fh_po(void *a_data);
+[v _fh_po `(v ~T0 @X0 0 ef1`*v ]
 [v F17174 `(v ~T0 @X0 0 tf1`*v ]
 "29 /opt/microchip/xc8/v2.36/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
@@ -2355,15 +2355,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 :s 1C
-&U _fh_hw
+&U _fh_pr
 ..
 :U ..
 :s 2C
-&U _fh_hi
+&U _fh_ps
 ..
 :U ..
 :s 3C
-&U _fh_ho
+&U _fh_po
 ..
 :U ..
 -> -> 0 `i `*Cuc
@@ -2684,8 +2684,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2222 ]
 }
 [p f _sprintf 8650752 ]
-[a 1C 104 119 0 ]
-[a 3C 104 111 0 ]
-[a 2C 104 105 0 ]
+[a 2C 112 115 0 ]
+[a 1C 112 114 0 ]
+[a 3C 112 111 0 ]
 [a 4C 13 10 32 80 115 32 84 101 115 116 101 114 32 37 115 32 37 115 13 10 0 ]
 [a 5C 13 10 0 ]

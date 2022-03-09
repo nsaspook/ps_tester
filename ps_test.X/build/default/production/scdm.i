@@ -28164,9 +28164,9 @@ void display_led(DISPLAY_TYPES);
 
 
 
- void fh_hw(void *a_data);
- void fh_hi(void *a_data);
- void fh_ho(void *a_data);
+ void fh_pr(void *a_data);
+ void fh_ps(void *a_data);
+ void fh_po(void *a_data);
 
 
 
@@ -28184,9 +28184,9 @@ uint8_t res = E_CMD_OK;
 
 static t_cmd g_cmds[] = {
 
- { "hw", fh_hw},
- { "hi", fh_hi},
- { "ho", fh_ho},
+ { "pr", fh_pr},
+ { "ps", fh_ps},
+ { "po", fh_po},
 
  { 0x00, 0x00}
 };
