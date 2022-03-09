@@ -2494,11 +2494,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/uart1.c: 122:     U1CON2 = 0x00;
 [e = _U1CON2 -> -> 0 `i `uc ]
 "125
-[; ;mcc_generated_files/uart1.c: 125:     U1BRGL = 0x15;
-[e = _U1BRGL -> -> 21 `i `uc ]
+[; ;mcc_generated_files/uart1.c: 125:     U1BRGL = 0x8A;
+[e = _U1BRGL -> -> 138 `i `uc ]
 "128
-[; ;mcc_generated_files/uart1.c: 128:     U1BRGH = 0x01;
-[e = _U1BRGH -> -> 1 `i `uc ]
+[; ;mcc_generated_files/uart1.c: 128:     U1BRGH = 0x00;
+[e = _U1BRGH -> -> 0 `i `uc ]
 "131
 [; ;mcc_generated_files/uart1.c: 131:     U1FIFO = 0x00;
 [e = _U1FIFO -> -> 0 `i `uc ]

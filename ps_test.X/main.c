@@ -50,9 +50,11 @@
 volatile adc_result_t ana[MAX_ADC_CHAN];
 volatile bool disp_tick = false, adc_tick = false;
 volatile uint8_t adc_chan = 0;
-char buff1[128];
+char buff1[255];
 extern t_cli_ctx cli_ctx; // command buffer 
 const char *build_date = __DATE__, *build_time = __TIME__;
+MODE_TYPES mode = roll_mode;
+double vval = 0.0, ival = 0.0;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -111,7 +113,7 @@ void fh_ho(void *a_data)
  */
 void main(void)
 {
-	uint8_t dac_v = 1;
+	uint8_t dac_v = 0, mode_sw = 0;
 	// Initialize the device
 	SYSTEM_Initialize();
 
@@ -141,7 +143,7 @@ void main(void)
 				display_led(oo00_off);
 				display_led(oo30_off);
 			} else {
-				if (ana[0] > 2500) {
+				if (ana[0] > 1800) {
 					display_led(oo00_g);
 					display_led(oo30_g);
 				} else {
@@ -150,11 +152,11 @@ void main(void)
 				}
 			}
 
-			if (ana[1] < 900) {
+			if (ana[1] < 50) {
 				display_led(oo10_off);
 				display_led(oo20_off);
 			} else {
-				if (ana[1] > 2500) {
+				if (ana[1] > 150) {
 					display_led(oo10_g);
 					display_led(oo20_g);
 				} else {
@@ -165,14 +167,47 @@ void main(void)
 			adc_tick = false;
 
 			if (disp_tick) {
-				sprintf(buff1, "PS: V=%4u I=%4u \r\n", ana[0], ana[1]);
-				puts(buff1);
-				DAC1_SetOutput(++dac_v);
+				vval = (double) ana[0] * V_SCALE;
+				ival = (double) ana[1] * I_SCALE;
+				printf(" PS Test %1u: DAC OUT=%2u, Supply ReadBack %4u V=%+5.1fV %4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
+//				puts(buff1);
+
+				switch (mode) {
+				case roll_mode:
+					if (dac_v > ROLL_MAX) {
+						dac_v = 0;
+					}
+					DAC1_SetOutput(++dac_v);
+					LED_MODE_SetHigh();
+					break;
+				case static_mode:
+					dac_v = STATIC_PS;
+					DAC1_SetOutput(dac_v);
+					LED_MODE_SetHigh();
+					break;
+				case off_mode:
+				default:
+					mode = off_mode;
+					dac_v = 0;
+					DAC1_SetOutput(dac_v);
+					LED_MODE_SetLow();
+					break;
+				}
+
 				/*
 				 * read serial port for command data
+				 * check mode switch
 				 */
 				cli_read(&cli_ctx);
 				disp_tick = false;
+				if (!MODESW_RB0_GetValue()) {
+					if (++mode_sw > 4) {
+						mode++;
+						mode_sw = 0;
+					}
+				} else {
+					mode_sw = 0;
+				}
 			}
 		}
 	}

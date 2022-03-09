@@ -23,7 +23,19 @@ extern "C" {
 #include "mcc_generated_files/adcc.h"
 
 #define MAX_ADC_CHAN	2
-extern const char *build_date, *build_time;
+#define STATIC_PS	20
+#define ROLL_MAX	19
+	
+#define	V_SCALE		0.405194
+#define I_SCALE		0.004
+	
+	extern const char *build_date, *build_time;
+
+	typedef enum {
+		off_mode,
+		roll_mode,
+		static_mode,
+	} MODE_TYPES;
 #ifdef	__cplusplus
 }
 #endif
