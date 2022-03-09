@@ -28187,8 +28187,8 @@ volatile _Bool disp_tick = 0, adc_tick = 0;
 volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar  9 2022", *build_time = "11:55:09";
-MODE_TYPES mode = roll_mode;
+const char *build_date = "Mar  9 2022", *build_time = "12:42:09";
+MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 
 void display_led(DISPLAY_TYPES led);

@@ -53,7 +53,7 @@ volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx; // command buffer 
 const char *build_date = __DATE__, *build_time = __TIME__;
-MODE_TYPES mode = roll_mode;
+MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 
 void display_led(DISPLAY_TYPES led);

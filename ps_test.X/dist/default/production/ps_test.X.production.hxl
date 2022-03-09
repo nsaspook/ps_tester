@@ -11,25 +11,21 @@
  Intel Hex-file ranges:
   0h - 3h		(dist/default/production/ps_test.X.production.hex)
   8h - B1h		(dist/default/production/ps_test.X.production.hex)
-  2000h - 5611h		(dist/default/production/ps_test.X.production.hex)
-  5614h - 583Dh		(dist/default/production/ps_test.X.production.hex)
-  5840h - 587Dh		(dist/default/production/ps_test.X.production.hex)
-  5880h - 5CC6h		(dist/default/production/ps_test.X.production.hex)
-  5CC8h - 5D98h		(dist/default/production/ps_test.X.production.hex)
-  5D9Ah - 5D9Dh		(dist/default/production/ps_test.X.production.hex)
-  5DA0h - 5DA7h		(dist/default/production/ps_test.X.production.hex)
+  2000h - 5609h		(dist/default/production/ps_test.X.production.hex)
+  560Ch - 5835h		(dist/default/production/ps_test.X.production.hex)
+  5838h - 5875h		(dist/default/production/ps_test.X.production.hex)
+  5878h - 5CBEh		(dist/default/production/ps_test.X.production.hex)
+  5CC0h - 5D9Bh		(dist/default/production/ps_test.X.production.hex)
   200000h - 20000Fh		(dist/default/production/ps_test.X.production.hex)
   300000h - 300009h		(dist/default/production/ps_test.X.production.hex)
  Unused ranges:
   4h - 7h
   B2h - 1FFFh
-  5612h - 5613h
-  583Eh - 583Fh
-  587Eh - 587Fh
-  5CC7h - 5CC7h
-  5D99h - 5D99h
-  5D9Eh - 5D9Fh
-  5DA8h - 1FFFFFh
+  560Ah - 560Bh
+  5836h - 5837h
+  5876h - 5877h
+  5CBFh - 5CBFh
+  5D9Ch - 1FFFFFh
   200010h - 2FFFFFh
 
 ### Hex Memory Map ###
@@ -916,8 +912,8 @@
 000055D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000055E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000055F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005610 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00005600 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
+00005610 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005620 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005630 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005640 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -951,11 +947,11 @@
 00005800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005820 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005830 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00005830 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
 00005840 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005850 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005860 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005870 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00005870 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
 00005880 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005890 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000058A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1023,8 +1019,8 @@
 00005C80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005C90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005CA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005CB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005CC0 | H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 H1 H1 H1 H1
+00005CB0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 --
+00005CC0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005CD0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005CE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005CF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1037,8 +1033,7 @@
 00005D60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005D70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00005D80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00005D90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 -- H1 H1 H1 H1 -- --
-00005DA0 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+00005D90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
