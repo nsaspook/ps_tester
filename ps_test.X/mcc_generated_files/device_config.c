@@ -91,7 +91,7 @@
 #pragma config WRTC = OFF    // Boot Block Write Protection bit->Boot Block (000000-0007FFh) not write-protected
 #pragma config WRTD = OFF    // Data EEPROM Write Protection bit->Data EEPROM not write-protected
 #pragma config WRTSAF = OFF    // SAF Write protection bit->SAF not Write Protected
-#pragma config LVP = ON    // Low Voltage Programming Enable bit->Low voltage programming enabled. MCLR/VPP pin function is MCLR. MCLRE configuration bit is ignored
+#pragma config LVP = OFF    // Low Voltage Programming Enable bit->HV on MCLR/VPP must be used for programming
 
 // CONFIG5L
 #pragma config CP = OFF    // PFM and Data EEPROM Code Protection bit->PFM and Data EEPROM code protection disabled

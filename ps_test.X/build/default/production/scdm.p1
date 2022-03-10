@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17063 `(v ~T0 @X0 0 tf ]
-[v F17065 `(v ~T0 @X0 0 tf ]
-[v F17141 `(v ~T0 @X0 0 tf1`*v ]
+[v F17139 `(v ~T0 @X0 0 tf ]
+[v F17141 `(v ~T0 @X0 0 tf ]
+[v F17217 `(v ~T0 @X0 0 tf1`*v ]
 "24 ./scdm.h
 [; ;./scdm.h: 24:  typedef struct _t_cmd {
-[s S2206 `*Cuc 1 `*F17141 1 ]
+[s S2206 `*Cuc 1 `*F17217 1 ]
 [n S2206 _t_cmd cmd fh ]
 "29
 [; ;./scdm.h: 29:  typedef struct _t_cli_ctx {
@@ -12,8 +12,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2207 _t_cli_ctx cmds cmd cpos ]
 "6 scdm.c
 [; ;scdm.c: 6: uint8_t res = E_CMD_OK;
-[c E17149 0 1 2 3 .. ]
-[n E17149 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
+[c E17225 0 1 2 3 .. ]
+[n E17225 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
 "60 ./scdm.h
 [; ;./scdm.h: 60:  void fh_pr(void *a_data);
 [v _fh_pr `(v ~T0 @X0 0 ef1`*v ]
@@ -23,7 +23,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;./scdm.h: 62:  void fh_po(void *a_data);
 [v _fh_po `(v ~T0 @X0 0 ef1`*v ]
-[v F17174 `(v ~T0 @X0 0 tf1`*v ]
+[v F17250 `(v ~T0 @X0 0 tf1`*v ]
 "29 /opt/microchip/xc8/v2.36/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
@@ -49,8 +49,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/string.h: 40: int strncmp (const char *, const char *, size_t);
 [v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
-[v F17193 `(v ~T0 @X0 0 tf1`*v ]
-[v F17201 `(v ~T0 @X0 0 tf1`*v ]
+[v F17269 `(v ~T0 @X0 0 tf1`*v ]
+[v F17277 `(v ~T0 @X0 0 tf1`*v ]
 "251 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 251: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2300,10 +2300,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 03FFFh ;# ">
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17063 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17139 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17065 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17141 ~T0 @X0 1 e ]
 "4 scdm.c
 [; ;scdm.c: 4: const char cmdm[] = "\r\n Command processor V0.1\r\n";
 [v _cmdm `Cuc ~T0 @X0 -> 28 `i e ]
@@ -2346,7 +2346,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;scdm.c: 6: uint8_t res = E_CMD_OK;
 [v _res `uc ~T0 @X0 1 e ]
 [i _res
--> . `E17149 0 `uc
+-> . `E17225 0 `uc
 ]
 "11
 [; ;scdm.c: 11: static t_cmd g_cmds[] = {
@@ -2367,7 +2367,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 :U ..
 -> -> 0 `i `*Cuc
--> -> 0 `i `*F17174
+-> -> 0 `i `*F17250
 ..
 ..
 ]
@@ -2506,14 +2506,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;scdm.c: 56:  uint8_t ret = E_CMD_OK;
 [v _ret `uc ~T0 @X0 1 a ]
-[e = _ret -> . `E17149 0 `uc ]
+[e = _ret -> . `E17225 0 `uc ]
 "58
 [; ;scdm.c: 58:  if (!strlen(a_ctx->cmd)) {
 [e $ ! ! != ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 0 `i `ui 2215  ]
 {
 "59
 [; ;scdm.c: 59:   return E_CMD_EMPTY;
-[e ) -> . `E17149 3 `uc ]
+[e ) -> . `E17225 3 `uc ]
 [e $UE 2214  ]
 "60
 [; ;scdm.c: 60:  }
@@ -2525,7 +2525,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "63
 [; ;scdm.c: 63:   return E_CMD_TOO_SHORT;
-[e ) -> . `E17149 2 `uc ]
+[e ) -> . `E17225 2 `uc ]
 [e $UE 2214  ]
 "64
 [; ;scdm.c: 64:  }
@@ -2559,15 +2559,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2217 ]
 "66
 [; ;scdm.c: 66:  while (a_ctx->cmds[i].fh) {
-[e $ != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17193 2218  ]
+[e $ != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17269 2218  ]
 [e :U 2219 ]
 "75
 [; ;scdm.c: 75:  if (!a_ctx->cmds[i].fh) {
-[e $ ! ! != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17201 2221  ]
+[e $ ! ! != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17277 2221  ]
 {
 "76
 [; ;scdm.c: 76:   ret = E_CMD_NOT_FOUND;
-[e = _ret -> . `E17149 1 `uc ]
+[e = _ret -> . `E17225 1 `uc ]
 "77
 [; ;scdm.c: 77:  }
 }

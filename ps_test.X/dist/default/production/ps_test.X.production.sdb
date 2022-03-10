@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 18F57K42 ]
 [d frameptr 16353 ]
-"121 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"121 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [e E15967 . `uc
 channel_ANA0 0
 channel_ANA1 1
@@ -17,7 +17,7 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"97 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"97 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [e E15965 . `uc
 TMR6_ROP_STARTS_TMRON 0
 TMR6_ROP_STARTS_TMRON_ERSHIGH 1
@@ -69,18 +69,18 @@ TMR6_UART1_TX_EDGE 22
 TMR6_UART2_RX_EDGE 23
 TMR6_UART2_TX_EDGE 24
 ]
-"79 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"79 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [e E355 . `uc
 SPI1_DEFAULT 0
 ]
-"56 /fred/ps_tester/ps_test.X/main.c
-[e E17133 . `uc
+"56 /public/ps_tester/ps_test.X/main.c
+[e E17209 . `uc
 off_mode 0
 roll_mode 1
 static_mode 2
 ]
 "150
-[e E17114 . `uc
+[e E17190 . `uc
 oo00_off 0
 oo00_g 1
 oo00_r 2
@@ -95,7 +95,7 @@ oo30_g 10
 oo30_r 11
 oooff 12
 ]
-"33 /fred/ps_tester/ps_test.X/timers.c
+"33 /public/ps_tester/ps_test.X/timers.c
 [e E15965 APP_TIMERS `uc
 TMR_INTERNAL 0
 TMR_T1 1
@@ -105,8 +105,8 @@ TMR_T4 4
 TMR_DISPLAY 5
 TMR_COUNT 6
 ]
-"3 /fred/ps_tester/ps_test.X/disp_led.c
-[e E17121 . `uc
+"3 /public/ps_tester/ps_test.X/disp_led.c
+[e E17197 . `uc
 oo00_off 0
 oo00_g 1
 oo00_r 2
@@ -121,12 +121,64 @@ oo30_g 10
 oo30_r 11
 oooff 12
 ]
-"6 /fred/ps_tester/ps_test.X/scdm.c
-[e E17149 _t_cmd_status `uc
+"6 /public/ps_tester/ps_test.X/scdm.c
+[e E17225 _t_cmd_status `uc
 E_CMD_OK 0
 E_CMD_NOT_FOUND 1
 E_CMD_TOO_SHORT 2
 E_CMD_EMPTY 3
+]
+"88 /public/ps_tester/ps_test.X/mcc_generated_files/tmr2.c
+[e E15965 . `uc
+TMR2_ROP_STARTS_TMRON 0
+TMR2_ROP_STARTS_TMRON_ERSHIGH 1
+TMR2_ROP_STARTS_TMRON_ERSLOW 2
+TMR2_ROP_RESETS_ERSBOTHEDGE 3
+TMR2_ROP_RESETS_ERSRISINGEDGE 4
+TMR2_ROP_RESETS_ERSFALLINGEDGE 5
+TMR2_ROP_RESETS_ERSLOW 6
+TMR2_ROP_RESETS_ERSHIGH 7
+TMR2_OS_STARTS_TMRON 8
+TMR2_OS_STARTS_ERSRISINGEDGE 9
+TMR2_OS_STARTS_ERSFALLINGEDGE 10
+TMR2_OS_STARTS_ERSBOTHEDGE 11
+TMR2_OS_STARTS_ERSFIRSTRISINGEDGE 12
+TMR2_OS_STARTS_ERSFIRSTFALLINGEDGE 13
+TMR2_OS_STARTS_ERSRISINGEDGEDETECT 14
+TMR2_OS_STARTS_ERSFALLINGEDGEDETECT 15
+TMR2_OS_STARTS_TMRON_ERSHIGH 22
+TMR2_OS_STARTS_TMRON_ERSLOW 23
+TMR2_MS_STARTS_TMRON_ERSRISINGEDGEDETECT 17
+TMR2_MS_STARTS_TMRON_ERSFALLINGEDGEDETECT 18
+TMR2_MS_STARTS_TMRON_ERSBOTHEDGE 19
+]
+"94
+[e E15988 . `uc
+TMR2_T2INPPS 0
+TMR2_RESERVED 1
+TMR2_T4POSTSCALED 2
+TMR2_T6POSTSCALED 3
+TMR2_CCP1_OUT 4
+TMR2_CCP2_OUT 5
+TMR2_CCP3_OUT 6
+TMR2_CCP4_OUT 7
+TMR2_PWM5_OUT 8
+TMR2_PWM6_OUT 9
+TMR2_PWM7_OUT 10
+TMR2_PWM8_OUT 11
+TMR2_RESERVED_2 12
+TMR2_RESERVED_3 13
+TMR2_C1_OUT_SYNC 14
+TMR2_C2_OUT_SYNC 15
+TMR2_ZCD_OUTPUT 16
+TMR2_CLC1_OUT 17
+TMR2_CLC2_OUT 18
+TMR2_CLC3_OUT 19
+TMR2_CLC4_OUT 20
+TMR2_UART1_RX_EDGE 21
+TMR2_UART1_TX_EDGE 22
+TMR2_UART2_RX_EDGE 23
+TMR2_UART2_TX_EDGE 24
 ]
 "4 /opt/microchip/xc8/v2.36/pic/sources/c99/common/__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
@@ -214,9 +266,9 @@ E_CMD_EMPTY 3
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 /opt/microchip/xc8/v2.36/pic/sources/c99/common/xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"3 /fred/ps_tester/ps_test.X/disp_led.c
+"3 /public/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
-"67 /fred/ps_tester/ps_test.X/main.c
+"67 /public/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 "83
 [v _Adc_Isr Adc_Isr `(v  1 e 1 0 ]
@@ -228,7 +280,7 @@ E_CMD_EMPTY 3
 [v _fh_po fh_po `(v  1 e 1 0 ]
 "121
 [v _main main `(v  1 e 1 0 ]
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"64 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 "139
 [v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
@@ -238,29 +290,45 @@ E_CMD_EMPTY 3
 [v _ADCC_SetADIInterruptHandler ADCC_SetADIInterruptHandler `(v  1 e 1 0 ]
 "320
 [v _ADCC_DefaultInterruptHandler ADCC_DefaultInterruptHandler `(v  1 e 1 0 ]
-"58 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 "66
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
 "71
 [v _DAC1_GetOutput DAC1_GetOutput `(uc  1 e 1 0 ]
-"52 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "79
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
-"50 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"50 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"64
+"67
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"82
+"85
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 /fred/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /public/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+"64 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 "100
 [v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
-"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"62 /public/ps_tester/ps_test.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"100
+[v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
+"111
+[v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
+"122
+[v _TMR2_Counter8BitGet TMR2_Counter8BitGet `(uc  1 e 1 0 ]
+"136
+[v _TMR2_Counter8BitSet TMR2_Counter8BitSet `(v  1 e 1 0 ]
+"147
+[v _TMR2_Period8BitSet TMR2_Period8BitSet `(v  1 e 1 0 ]
+"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 "128
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
@@ -270,7 +338,7 @@ E_CMD_EMPTY 3
 [v _TMR5_SetInterruptHandler TMR5_SetInterruptHandler `(v  1 e 1 0 ]
 "183
 [v _TMR5_DefaultInterruptHandler TMR5_DefaultInterruptHandler `(v  1 e 1 0 ]
-"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 "109
 [v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
@@ -290,7 +358,7 @@ E_CMD_EMPTY 3
 [v _TMR6_SetInterruptHandler TMR6_SetInterruptHandler `(v  1 e 1 0 ]
 "198
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
-"87 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"87 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 "161
 [v _UART1_is_rx_ready UART1_is_rx_ready `(a  1 e 1 0 ]
@@ -326,7 +394,7 @@ E_CMD_EMPTY 3
 [v _UART1_SetRxInterruptHandler UART1_SetRxInterruptHandler `(v  1 e 1 0 ]
 "333
 [v _UART1_SetTxInterruptHandler UART1_SetTxInterruptHandler `(v  1 e 1 0 ]
-"20 /fred/ps_tester/ps_test.X/scdm.c
+"20 /public/ps_tester/ps_test.X/scdm.c
 [v _cli_init cli_init `(v  1 s 1 cli_init ]
 "32
 [v _scmd_init scmd_init `(v  1 e 1 0 ]
@@ -338,13 +406,13 @@ E_CMD_EMPTY 3
 [v __cli_interpret_cmd _cli_interpret_cmd `(uc  1 s 1 _cli_interpret_cmd ]
 "82
 [v _cli_read cli_read `(v  1 e 1 0 ]
-"11 /fred/ps_tester/ps_test.X/timers.c
+"11 /public/ps_tester/ps_test.X/timers.c
 [v _StartTimer StartTimer `(v  1 e 1 0 ]
 "19
 [v _TimerDone TimerDone `(a  1 e 1 0 ]
 "48
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
-"518 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.h
+"518 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.h
 [v _UART1_RxInterruptHandler UART1_RxInterruptHandler `*.38(v  1 e 3 0 ]
 "536
 [v _UART1_TxInterruptHandler UART1_TxInterruptHandler `*.38(v  1 e 3 0 ]
@@ -356,7 +424,7 @@ E_CMD_EMPTY 3
 [v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
 "69
 [v _nout nout `i  1 s 2 nout ]
-[s S1006 . 1 `uc 1 INT0IP 1 0 :1:0 
+[s S1020 . 1 `uc 1 INT0IP 1 0 :1:0 
 `uc 1 ZCDIP 1 0 :1:1 
 `uc 1 ADIP 1 0 :1:2 
 `uc 1 ADTIP 1 0 :1:3 
@@ -366,9 +434,9 @@ E_CMD_EMPTY 3
 `uc 1 SMT1PWAIP 1 0 :1:7 
 ]
 "2845 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
-[u S1015 . 1 `S1006 1 . 1 0 ]
-[v _IPR1bits IPR1bits `VES1015  1 e 1 @14721 ]
-[s S961 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
+[u S1029 . 1 `S1020 1 . 1 0 ]
+[v _IPR1bits IPR1bits `VES1029  1 e 1 @14721 ]
+[s S975 . 1 `uc 1 I2C1TXIP 1 0 :1:0 
 `uc 1 I2C1IP 1 0 :1:1 
 `uc 1 I2C1EIP 1 0 :1:2 
 `uc 1 U1RXIP 1 0 :1:3 
@@ -378,24 +446,24 @@ E_CMD_EMPTY 3
 `uc 1 TMR0IP 1 0 :1:7 
 ]
 "2969
-[u S970 . 1 `S961 1 . 1 0 ]
-[v _IPR3bits IPR3bits `VES970  1 e 1 @14723 ]
-[s S995 . 1 `uc 1 . 1 0 :6:0 
+[u S984 . 1 `S975 1 . 1 0 ]
+[v _IPR3bits IPR3bits `VES984  1 e 1 @14723 ]
+[s S1009 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TMR5IP 1 0 :1:6 
 `uc 1 TMR5GIP 1 0 :1:7 
 ]
 "3252
-[u S999 . 1 `S995 1 . 1 0 ]
-[v _IPR8bits IPR8bits `VES999  1 e 1 @14728 ]
-[s S982 . 1 `uc 1 TMR6IP 1 0 :1:0 
+[u S1013 . 1 `S1009 1 . 1 0 ]
+[v _IPR8bits IPR8bits `VES1013  1 e 1 @14728 ]
+[s S996 . 1 `uc 1 TMR6IP 1 0 :1:0 
 `uc 1 CCP3IP 1 0 :1:1 
 `uc 1 CWG3IP 1 0 :1:2 
 `uc 1 CLC3IP 1 0 :1:3 
 ]
 "3280
-[u S987 . 1 `S982 1 . 1 0 ]
-[v _IPR9bits IPR9bits `VES987  1 e 1 @14729 ]
-[s S187 . 1 `uc 1 INT0IE 1 0 :1:0 
+[u S1001 . 1 `S996 1 . 1 0 ]
+[v _IPR9bits IPR9bits `VES1001  1 e 1 @14729 ]
+[s S201 . 1 `uc 1 INT0IE 1 0 :1:0 
 `uc 1 ZCDIE 1 0 :1:1 
 `uc 1 ADIE 1 0 :1:2 
 `uc 1 ADTIE 1 0 :1:3 
@@ -405,9 +473,9 @@ E_CMD_EMPTY 3
 `uc 1 SMT1PWAIE 1 0 :1:7 
 ]
 "3410
-[u S196 . 1 `S187 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES196  1 e 1 @14737 ]
-[s S1080 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
+[u S210 . 1 `S201 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES210  1 e 1 @14737 ]
+[s S1094 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
 `uc 1 I2C1IE 1 0 :1:1 
 `uc 1 I2C1EIE 1 0 :1:2 
 `uc 1 U1RXIE 1 0 :1:3 
@@ -417,24 +485,24 @@ E_CMD_EMPTY 3
 `uc 1 TMR0IE 1 0 :1:7 
 ]
 "3534
-[u S1089 . 1 `S1080 1 . 1 0 ]
-[v _PIE3bits PIE3bits `VES1089  1 e 1 @14739 ]
-[s S1327 . 1 `uc 1 . 1 0 :6:0 
+[u S1103 . 1 `S1094 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1103  1 e 1 @14739 ]
+[s S1341 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TMR5IE 1 0 :1:6 
 `uc 1 TMR5GIE 1 0 :1:7 
 ]
 "3817
-[u S1331 . 1 `S1327 1 . 1 0 ]
-[v _PIE8bits PIE8bits `VES1331  1 e 1 @14744 ]
-[s S638 . 1 `uc 1 TMR6IE 1 0 :1:0 
+[u S1345 . 1 `S1341 1 . 1 0 ]
+[v _PIE8bits PIE8bits `VES1345  1 e 1 @14744 ]
+[s S652 . 1 `uc 1 TMR6IE 1 0 :1:0 
 `uc 1 CCP3IE 1 0 :1:1 
 `uc 1 CWG3IE 1 0 :1:2 
 `uc 1 CLC3IE 1 0 :1:3 
 ]
 "3845
-[u S643 . 1 `S638 1 . 1 0 ]
-[v _PIE9bits PIE9bits `VES643  1 e 1 @14745 ]
-[s S166 . 1 `uc 1 INT0IF 1 0 :1:0 
+[u S657 . 1 `S652 1 . 1 0 ]
+[v _PIE9bits PIE9bits `VES657  1 e 1 @14745 ]
+[s S180 . 1 `uc 1 INT0IF 1 0 :1:0 
 `uc 1 ZCDIF 1 0 :1:1 
 `uc 1 ADIF 1 0 :1:2 
 `uc 1 ADTIF 1 0 :1:3 
@@ -444,9 +512,9 @@ E_CMD_EMPTY 3
 `uc 1 SMT1PWAIF 1 0 :1:7 
 ]
 "3975
-[u S175 . 1 `S166 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES175  1 e 1 @14753 ]
-[s S1560 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
+[u S189 . 1 `S180 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES189  1 e 1 @14753 ]
+[s S1574 . 1 `uc 1 DMA1SCNTIF 1 0 :1:0 
 `uc 1 DMA1DCNTIF 1 0 :1:1 
 `uc 1 DMA1ORIF 1 0 :1:2 
 `uc 1 DMA1AIF 1 0 :1:3 
@@ -456,23 +524,35 @@ E_CMD_EMPTY 3
 `uc 1 I2C1RXIF 1 0 :1:7 
 ]
 "4037
-[u S1569 . 1 `S1560 1 . 1 0 ]
-[v _PIR2bits PIR2bits `VES1569  1 e 1 @14754 ]
-[s S1316 . 1 `uc 1 . 1 0 :6:0 
+[u S1583 . 1 `S1574 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES1583  1 e 1 @14754 ]
+[s S2240 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR1GIF 1 0 :1:1 
+`uc 1 TMR2IF 1 0 :1:2 
+`uc 1 CCP1IF 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 NCO1IF 1 0 :1:5 
+`uc 1 CWG1IF 1 0 :1:6 
+`uc 1 CLC1IF 1 0 :1:7 
+]
+"4161
+[u S2249 . 1 `S2240 1 . 1 0 ]
+[v _PIR4bits PIR4bits `VES2249  1 e 1 @14756 ]
+[s S1330 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 TMR5IF 1 0 :1:6 
 `uc 1 TMR5GIF 1 0 :1:7 
 ]
 "4382
-[u S1320 . 1 `S1316 1 . 1 0 ]
-[v _PIR8bits PIR8bits `VES1320  1 e 1 @14760 ]
-[s S625 . 1 `uc 1 TMR6IF 1 0 :1:0 
+[u S1334 . 1 `S1330 1 . 1 0 ]
+[v _PIR8bits PIR8bits `VES1334  1 e 1 @14760 ]
+[s S639 . 1 `uc 1 TMR6IF 1 0 :1:0 
 `uc 1 CCP3IF 1 0 :1:1 
 `uc 1 CWG3IF 1 0 :1:2 
 `uc 1 CLC3IF 1 0 :1:3 
 ]
 "4410
-[u S630 . 1 `S625 1 . 1 0 ]
-[v _PIR9bits PIR9bits `VES630  1 e 1 @14761 ]
+[u S644 . 1 `S639 1 . 1 0 ]
+[v _PIR9bits PIR9bits `VES644  1 e 1 @14761 ]
 "4461
 [v _PMD0 PMD0 `VEuc  1 e 1 @14784 ]
 "4523
@@ -505,6 +585,10 @@ E_CMD_EMPTY 3
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @14869 ]
 "7368
 [v _RC6PPS RC6PPS `VEuc  1 e 1 @14870 ]
+"7568
+[v _RD2PPS RD2PPS `VEuc  1 e 1 @14874 ]
+"8118
+[v _RF2PPS RF2PPS `VEuc  1 e 1 @14890 ]
 "8418
 [v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
 "8480
@@ -631,7 +715,7 @@ E_CMD_EMPTY 3
 [v _U1UIR U1UIR `VEuc  1 e 1 @15864 ]
 "27444
 [v _U1ERRIR U1ERRIR `VEuc  1 e 1 @15865 ]
-[s S1166 . 1 `uc 1 TXCIF 1 0 :1:0 
+[s S1180 . 1 `uc 1 TXCIF 1 0 :1:0 
 `uc 1 RXFOIF 1 0 :1:1 
 `uc 1 RXBKIF 1 0 :1:2 
 `uc 1 FERIF 1 0 :1:3 
@@ -641,7 +725,7 @@ E_CMD_EMPTY 3
 `uc 1 TXMTIF 1 0 :1:7 
 ]
 "27471
-[s S1175 . 1 `uc 1 U1TXCIF 1 0 :1:0 
+[s S1189 . 1 `uc 1 U1TXCIF 1 0 :1:0 
 `uc 1 U1RXFOIF 1 0 :1:1 
 `uc 1 U1RXBKIF 1 0 :1:2 
 `uc 1 U1FERIF 1 0 :1:3 
@@ -650,8 +734,8 @@ E_CMD_EMPTY 3
 `uc 1 U1PERIF 1 0 :1:6 
 `uc 1 U1TXMTIF 1 0 :1:7 
 ]
-[u S1184 . 1 `S1166 1 . 1 0 `S1175 1 . 1 0 ]
-[v _U1ERRIRbits U1ERRIRbits `VES1184  1 e 1 @15865 ]
+[u S1198 . 1 `S1180 1 . 1 0 `S1189 1 . 1 0 ]
+[v _U1ERRIRbits U1ERRIRbits `VES1198  1 e 1 @15865 ]
 "27556
 [v _U1ERRIE U1ERRIE `VEuc  1 e 1 @15866 ]
 "27668
@@ -724,6 +808,38 @@ E_CMD_EMPTY 3
 [v _ADACT ADACT `VEuc  1 e 1 @16126 ]
 "32630
 [v _ADCLK ADCLK `VEuc  1 e 1 @16127 ]
+[s S2172 . 1 `uc 1 P5TSEL 1 0 :2:0 
+`uc 1 P6TSEL 1 0 :2:2 
+`uc 1 P7TSEL 1 0 :2:4 
+`uc 1 P8TSEL 1 0 :2:6 
+]
+"38277
+[s S2177 . 1 `uc 1 P5TSEL0 1 0 :1:0 
+`uc 1 P5TSEL1 1 0 :1:1 
+`uc 1 P6TSEL0 1 0 :1:2 
+`uc 1 P6TSEL1 1 0 :1:3 
+`uc 1 P7TSEL0 1 0 :1:4 
+`uc 1 P7TSEL1 1 0 :1:5 
+`uc 1 P8TSEL0 1 0 :1:6 
+`uc 1 P8TSEL1 1 0 :1:7 
+]
+"38277
+[u S2186 . 1 `S2172 1 . 1 0 `S2177 1 . 1 0 ]
+"38277
+"38277
+[v _CCPTMRS1bits CCPTMRS1bits `VES2186  1 e 1 @16223 ]
+"38947
+[v _PWM6DCL PWM6DCL `VEuc  1 e 1 @16232 ]
+"39013
+[v _PWM6DCH PWM6DCH `VEuc  1 e 1 @16233 ]
+"39183
+[v _PWM6CON PWM6CON `VEuc  1 e 1 @16234 ]
+"39246
+[v _PWM5DCL PWM5DCL `VEuc  1 e 1 @16236 ]
+"39312
+[v _PWM5DCH PWM5DCH `VEuc  1 e 1 @16237 ]
+"39482
+[v _PWM5CON PWM5CON `VEuc  1 e 1 @16238 ]
 "40470
 [v _T6TMR T6TMR `VEuc  1 e 1 @16274 ]
 "40508
@@ -742,14 +858,14 @@ E_CMD_EMPTY 3
 [v _TMR5H TMR5H `VEuc  1 e 1 @16281 ]
 "41210
 [v _T5CON T5CON `VEuc  1 e 1 @16282 ]
-[s S1349 . 1 `uc 1 ON 1 0 :1:0 
+[s S1363 . 1 `uc 1 ON 1 0 :1:0 
 `uc 1 RD16 1 0 :1:1 
 `uc 1 NOT_SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 CKPS 1 0 :2:4 
 ]
 "41246
-[s S1355 . 1 `uc 1 TMR5ON 1 0 :1:0 
+[s S1369 . 1 `uc 1 TMR5ON 1 0 :1:0 
 `uc 1 T5RD16 1 0 :1:1 
 `uc 1 NOT_T5SYNC 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -757,28 +873,40 @@ E_CMD_EMPTY 3
 `uc 1 T5CKPS1 1 0 :1:5 
 ]
 "41246
-[s S1362 . 1 `uc 1 . 1 0 :4:0 
+[s S1376 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CKPS0 1 0 :1:4 
 `uc 1 CKPS1 1 0 :1:5 
 ]
 "41246
-[s S1366 . 1 `uc 1 . 1 0 :1:0 
+[s S1380 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 RD165 1 0 :1:1 
 ]
 "41246
-[u S1369 . 1 `S1349 1 . 1 0 `S1355 1 . 1 0 `S1362 1 . 1 0 `S1366 1 . 1 0 ]
+[u S1383 . 1 `S1363 1 . 1 0 `S1369 1 . 1 0 `S1376 1 . 1 0 `S1380 1 . 1 0 ]
 "41246
 "41246
-[v _T5CONbits T5CONbits `VES1369  1 e 1 @16282 ]
+[v _T5CONbits T5CONbits `VES1383  1 e 1 @16282 ]
 "41400
 [v _T5GCON T5GCON `VEuc  1 e 1 @16283 ]
 "41614
 [v _T5GATE T5GATE `VEuc  1 e 1 @16284 ]
 "41780
 [v _T5CLK T5CLK `VEuc  1 e 1 @16285 ]
+"43422
+[v _T2TMR T2TMR `VEuc  1 e 1 @16298 ]
+"43460
+[v _T2PR T2PR `VEuc  1 e 1 @16299 ]
+"43498
+[v _T2CON T2CON `VEuc  1 e 1 @16300 ]
+"43644
+[v _T2HLT T2HLT `VEuc  1 e 1 @16301 ]
+"43772
+[v _T2CLKCON T2CLKCON `VEuc  1 e 1 @16302 ]
+"43930
+[v _T2RST T2RST `VEuc  1 e 1 @16303 ]
 "45530
 [v _LATA LATA `VEuc  1 e 1 @16314 ]
-[s S1781 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S1795 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -788,7 +916,7 @@ E_CMD_EMPTY 3
 `uc 1 LATA7 1 0 :1:7 
 ]
 "45557
-[s S1790 . 1 `uc 1 LA0 1 0 :1:0 
+[s S1804 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -798,17 +926,17 @@ E_CMD_EMPTY 3
 `uc 1 LA7 1 0 :1:7 
 ]
 "45557
-[u S1799 . 1 `S1781 1 . 1 0 `S1790 1 . 1 0 ]
+[u S1813 . 1 `S1795 1 . 1 0 `S1804 1 . 1 0 ]
 "45557
 "45557
-[v _LATAbits LATAbits `VES1799  1 e 1 @16314 ]
+[v _LATAbits LATAbits `VES1813  1 e 1 @16314 ]
 "45642
 [v _LATB LATB `VEuc  1 e 1 @16315 ]
 "45754
 [v _LATC LATC `VEuc  1 e 1 @16316 ]
 "45866
 [v _LATD LATD `VEuc  1 e 1 @16317 ]
-[s S1665 . 1 `uc 1 LATD0 1 0 :1:0 
+[s S1679 . 1 `uc 1 LATD0 1 0 :1:0 
 `uc 1 LATD1 1 0 :1:1 
 `uc 1 LATD2 1 0 :1:2 
 `uc 1 LATD3 1 0 :1:3 
@@ -818,7 +946,7 @@ E_CMD_EMPTY 3
 `uc 1 LATD7 1 0 :1:7 
 ]
 "45893
-[s S1674 . 1 `uc 1 LD0 1 0 :1:0 
+[s S1688 . 1 `uc 1 LD0 1 0 :1:0 
 `uc 1 LD1 1 0 :1:1 
 `uc 1 LD2 1 0 :1:2 
 `uc 1 LD3 1 0 :1:3 
@@ -828,29 +956,29 @@ E_CMD_EMPTY 3
 `uc 1 LD7 1 0 :1:7 
 ]
 "45893
-[u S1683 . 1 `S1665 1 . 1 0 `S1674 1 . 1 0 ]
+[u S1697 . 1 `S1679 1 . 1 0 `S1688 1 . 1 0 ]
 "45893
 "45893
-[v _LATDbits LATDbits `VES1683  1 e 1 @16317 ]
+[v _LATDbits LATDbits `VES1697  1 e 1 @16317 ]
 "45978
 [v _LATE LATE `VEuc  1 e 1 @16318 ]
-[s S1637 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S1651 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "45995
-[s S1641 . 1 `uc 1 LE0 1 0 :1:0 
+[s S1655 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
 "45995
-[u S1645 . 1 `S1637 1 . 1 0 `S1641 1 . 1 0 ]
+[u S1659 . 1 `S1651 1 . 1 0 `S1655 1 . 1 0 ]
 "45995
 "45995
-[v _LATEbits LATEbits `VES1645  1 e 1 @16318 ]
+[v _LATEbits LATEbits `VES1659  1 e 1 @16318 ]
 "46030
 [v _LATF LATF `VEuc  1 e 1 @16319 ]
-[s S1999 . 1 `uc 1 LATF0 1 0 :1:0 
+[s S2013 . 1 `uc 1 LATF0 1 0 :1:0 
 `uc 1 LATF1 1 0 :1:1 
 `uc 1 LATF2 1 0 :1:2 
 `uc 1 LATF3 1 0 :1:3 
@@ -860,7 +988,7 @@ E_CMD_EMPTY 3
 `uc 1 LATF7 1 0 :1:7 
 ]
 "46057
-[s S2008 . 1 `uc 1 LF0 1 0 :1:0 
+[s S2022 . 1 `uc 1 LF0 1 0 :1:0 
 `uc 1 LF1 1 0 :1:1 
 `uc 1 LF2 1 0 :1:2 
 `uc 1 LF3 1 0 :1:3 
@@ -870,17 +998,17 @@ E_CMD_EMPTY 3
 `uc 1 LF7 1 0 :1:7 
 ]
 "46057
-[u S2017 . 1 `S1999 1 . 1 0 `S2008 1 . 1 0 ]
+[u S2031 . 1 `S2013 1 . 1 0 `S2022 1 . 1 0 ]
 "46057
 "46057
-[v _LATFbits LATFbits `VES2017  1 e 1 @16319 ]
+[v _LATFbits LATFbits `VES2031  1 e 1 @16319 ]
 "46142
 [v _TRISA TRISA `VEuc  1 e 1 @16322 ]
 "46204
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
 "46266
 [v _TRISC TRISC `VEuc  1 e 1 @16324 ]
-[s S1507 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S1521 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -890,17 +1018,17 @@ E_CMD_EMPTY 3
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "46283
-[u S1516 . 1 `S1507 1 . 1 0 ]
+[u S1530 . 1 `S1521 1 . 1 0 ]
 "46283
 "46283
-[v _TRISCbits TRISCbits `VES1516  1 e 1 @16324 ]
+[v _TRISCbits TRISCbits `VES1530  1 e 1 @16324 ]
 "46328
 [v _TRISD TRISD `VEuc  1 e 1 @16325 ]
 "46390
 [v _TRISE TRISE `VEuc  1 e 1 @16326 ]
 "46422
 [v _TRISF TRISF `VEuc  1 e 1 @16327 ]
-[s S1754 . 1 `uc 1 RA0 1 0 :1:0 
+[s S1768 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -910,11 +1038,11 @@ E_CMD_EMPTY 3
 `uc 1 RA7 1 0 :1:7 
 ]
 "46501
-[u S1763 . 1 `S1754 1 . 1 0 ]
+[u S1777 . 1 `S1768 1 . 1 0 ]
 "46501
 "46501
-[v _PORTAbits PORTAbits `VES1763  1 e 1 @16330 ]
-[s S1842 . 1 `uc 1 RB0 1 0 :1:0 
+[v _PORTAbits PORTAbits `VES1777  1 e 1 @16330 ]
+[s S1856 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -924,11 +1052,11 @@ E_CMD_EMPTY 3
 `uc 1 RB7 1 0 :1:7 
 ]
 "46563
-[u S1851 . 1 `S1842 1 . 1 0 ]
+[u S1865 . 1 `S1856 1 . 1 0 ]
 "46563
 "46563
-[v _PORTBbits PORTBbits `VES1851  1 e 1 @16331 ]
-[s S923 . 1 `uc 1 INT0EDG 1 0 :1:0 
+[v _PORTBbits PORTBbits `VES1865  1 e 1 @16331 ]
+[s S937 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -937,23 +1065,23 @@ E_CMD_EMPTY 3
 `uc 1 GIE 1 0 :1:7 
 ]
 "46852
-[s S931 . 1 `uc 1 . 1 0 :7:0 
+[s S945 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 GIEH 1 0 :1:7 
 ]
 "46852
-[u S934 . 1 `S923 1 . 1 0 `S931 1 . 1 0 ]
+[u S948 . 1 `S937 1 . 1 0 `S945 1 . 1 0 ]
 "46852
 "46852
-[v _INTCON0bits INTCON0bits `VES934  1 e 1 @16338 ]
+[v _INTCON0bits INTCON0bits `VES948  1 e 1 @16338 ]
 "46928
 [v _IVTLOCK IVTLOCK `VEuc  1 e 1 @16340 ]
-[s S951 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+[s S965 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
 ]
 "46938
-[u S953 . 1 `S951 1 . 1 0 ]
+[u S967 . 1 `S965 1 . 1 0 ]
 "46938
 "46938
-[v _IVTLOCKbits IVTLOCKbits `VES953  1 e 1 @16340 ]
+[v _IVTLOCKbits IVTLOCKbits `VES967  1 e 1 @16340 ]
 "46957
 [v _IVTBASEL IVTBASEL `VEuc  1 e 1 @16341 ]
 "47019
@@ -964,7 +1092,7 @@ E_CMD_EMPTY 3
 [v _GIE GIE `VEb  1 e 0 @130711 ]
 "54794
 [v _PLLR PLLR `VEb  1 e 0 @118496 ]
-"50 /fred/ps_tester/ps_test.X/main.c
+"50 /public/ps_tester/ps_test.X/main.c
 [v _ana ana `VE[2]us  1 e 4 0 ]
 "51
 [v _disp_tick disp_tick `VEa  1 e 1 0 ]
@@ -972,19 +1100,19 @@ E_CMD_EMPTY 3
 "52
 [v _adc_chan adc_chan `VEuc  1 e 1 0 ]
 "56
-[v _mode mode `E17133  1 e 1 0 ]
+[v _mode mode `E17209  1 e 1 0 ]
 "57
 [v _vval vval `d  1 e 4 0 ]
 [v _ival ival `d  1 e 4 0 ]
-"58 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_ADI_InterruptHandler ADCC_ADI_InterruptHandler `*.38(v  1 e 3 0 ]
-"58 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _timer5ReloadVal timer5ReloadVal `VEus  1 e 2 0 ]
 "59
 [v _TMR5_InterruptHandler TMR5_InterruptHandler `*.38(v  1 e 3 0 ]
-"59 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"59 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_InterruptHandler TMR6_InterruptHandler `*.38(v  1 e 3 0 ]
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"64 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _uart1TxHead uart1TxHead `VEuc  1 s 1 uart1TxHead ]
 "65
 [v _uart1TxTail uart1TxTail `VEuc  1 s 1 uart1TxTail ]
@@ -998,37 +1126,37 @@ E_CMD_EMPTY 3
 [v _uart1RxTail uart1RxTail `VEuc  1 s 1 uart1RxTail ]
 "71
 [v _uart1RxBuffer uart1RxBuffer `VE[64]uc  1 s 64 uart1RxBuffer ]
-[s S1069 . 1 `uc 1 perr 1 0 :1:0 
+[s S1083 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "72
-[u S1074 . 1 `S1069 1 . 1 0 `uc 1 status 1 0 ]
-[v _uart1RxStatusBuffer uart1RxStatusBuffer `VE[64]S1074  1 s 64 uart1RxStatusBuffer ]
+[u S1088 . 1 `S1083 1 . 1 0 `uc 1 status 1 0 ]
+[v _uart1RxStatusBuffer uart1RxStatusBuffer `VE[64]S1088  1 s 64 uart1RxStatusBuffer ]
 "73
 [v _uart1RxCount uart1RxCount `VEuc  1 e 1 0 ]
 "74
-[v _uart1RxLastError uart1RxLastError `VES1074  1 s 1 uart1RxLastError ]
+[v _uart1RxLastError uart1RxLastError `VES1088  1 s 1 uart1RxLastError ]
 "79
 [v _UART1_FramingErrorHandler UART1_FramingErrorHandler `*.38(v  1 e 3 0 ]
 "80
 [v _UART1_OverrunErrorHandler UART1_OverrunErrorHandler `*.38(v  1 e 3 0 ]
 "81
 [v _UART1_ErrorHandler UART1_ErrorHandler `*.38(v  1 e 3 0 ]
-"4 /fred/ps_tester/ps_test.X/scdm.c
+"4 /public/ps_tester/ps_test.X/scdm.c
 [v _cmdm cmdm `C[28]uc  1 e 28 0 ]
-[s S1822 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
+[s S1836 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
 "5
-[s S1829 _t_cli_ctx 131 `*.39S1822 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
-[v _cli_ctx cli_ctx `S1829  1 e 131 0 ]
+[s S1843 _t_cli_ctx 131 `*.39S1836 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
+[v _cli_ctx cli_ctx `S1843  1 e 131 0 ]
 "6
 [v _res res `uc  1 e 1 0 ]
 "11
-[v _g_cmds g_cmds `[4]S1822  1 s 16 g_cmds ]
-"6 /fred/ps_tester/ps_test.X/timers.c
+[v _g_cmds g_cmds `[4]S1836  1 s 16 g_cmds ]
+"6 /public/ps_tester/ps_test.X/timers.c
 [v _tickCount tickCount `VE[6]us  1 e 12 0 ]
-"121 /fred/ps_tester/ps_test.X/main.c
+"121 /public/ps_tester/ps_test.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "123
@@ -1036,7 +1164,7 @@ E_CMD_EMPTY 3
 [v main@mode_sw mode_sw `uc  1 a 1 119 ]
 "235
 } 0
-"32 /fred/ps_tester/ps_test.X/scdm.c
+"32 /public/ps_tester/ps_test.X/scdm.c
 [v _scmd_init scmd_init `(v  1 e 1 0 ]
 {
 "35
@@ -1044,19 +1172,19 @@ E_CMD_EMPTY 3
 "20
 [v _cli_init cli_init `(v  1 s 1 cli_init ]
 {
-[s S1822 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
-[s S1829 _t_cli_ctx 131 `*.39S1822 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
-[v cli_init@a_ctx a_ctx `*.39S1829  1 p 2 20 ]
-[v cli_init@a_cmds a_cmds `*.39S1822  1 p 2 22 ]
+[s S1836 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
+[s S1843 _t_cli_ctx 131 `*.39S1836 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
+[v cli_init@a_ctx a_ctx `*.39S1843  1 p 2 20 ]
+[v cli_init@a_cmds a_cmds `*.39S1836  1 p 2 22 ]
 "30
 } 0
 "9 /opt/microchip/xc8/v2.36/pic/sources/c99/common/nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S2599 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S2948 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S2602 _IO_FILE 11 `S2599 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v sprintf@f f `S2602  1 a 11 9 ]
+[s S2951 _IO_FILE 11 `S2948 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v sprintf@f f `S2951  1 a 11 9 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 7 ]
 "9
@@ -1078,9 +1206,9 @@ E_CMD_EMPTY 3
 {
 "1393
 [v vfprintf@cfmt cfmt `*.31uc  1 a 1 55 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "1390
-[v vfprintf@fp fp `*.39S2634  1 p 2 110 ]
+[v vfprintf@fp fp `*.39S2983  1 p 2 110 ]
 [v vfprintf@fmt fmt `*.31Cuc  1 p 1 112 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 113 ]
 "1404
@@ -1099,9 +1227,9 @@ E_CMD_EMPTY 3
 "694
 [v vfpfcnvrt@cp cp `*.34uc  1 a 2 96 ]
 [v vfpfcnvrt@c c `uc  1 a 1 102 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "692
-[v vfpfcnvrt@fp fp `*.39S2634  1 p 2 79 ]
+[v vfpfcnvrt@fp fp `*.39S2983  1 p 2 79 ]
 [v vfpfcnvrt@fmt fmt `*.30*.31uc  1 p 1 81 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 82 ]
 "1387
@@ -1115,9 +1243,9 @@ E_CMD_EMPTY 3
 [v utoa@i i `i  1 a 2 30 ]
 [v utoa@w w `i  1 a 2 20 ]
 [v utoa@p p `i  1 a 2 18 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "615
-[v utoa@fp fp `*.39S2634  1 p 2 0 ]
+[v utoa@fp fp `*.39S2983  1 p 2 0 ]
 [v utoa@d d `uo  1 p 8 2 ]
 "641
 } 0
@@ -1156,9 +1284,9 @@ E_CMD_EMPTY 3
 "571
 [v stoa@w w `i  1 a 2 45 ]
 [v stoa@i i `i  1 a 2 43 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "568
-[v stoa@fp fp `*.39S2634  1 p 2 31 ]
+[v stoa@fp fp `*.39S2983  1 p 2 31 ]
 [v stoa@s s `*.34uc  1 p 2 33 ]
 "570
 [v stoa@F1164 F1164 `[7]uc  1 s 7 F1164 ]
@@ -1188,9 +1316,9 @@ E_CMD_EMPTY 3
 "334
 [v efgtoa@mode mode `uc  1 a 1 56 ]
 [v efgtoa@nmode nmode `uc  1 a 1 53 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "332
-[v efgtoa@fp fp `*.39S2634  1 p 2 17 ]
+[v efgtoa@fp fp `*.39S2983  1 p 2 17 ]
 [v efgtoa@f f `d  1 p 4 19 ]
 [v efgtoa@c c `uc  1 p 1 23 ]
 "525
@@ -1225,9 +1353,9 @@ E_CMD_EMPTY 3
 "74
 [v pad@w w `i  1 a 2 49 ]
 [v pad@i i `i  1 a 2 47 ]
-[s S2634 _IO_FILE 0 ]
+[s S2983 _IO_FILE 0 ]
 "72
-[v pad@fp fp `*.39S2634  1 p 2 40 ]
+[v pad@fp fp `*.39S2983  1 p 2 40 ]
 [v pad@buf buf `*.39uc  1 p 2 42 ]
 [v pad@p p `i  1 p 2 44 ]
 "95
@@ -1235,9 +1363,9 @@ E_CMD_EMPTY 3
 "3 /opt/microchip/xc8/v2.36/pic/sources/c99/common/floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S2785 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S3134 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S2785  1 a 4 6 ]
+[v floorf@u u `S3134  1 a 4 6 ]
 "7
 [v floorf@m m `ul  1 a 4 0 ]
 "6
@@ -1245,21 +1373,21 @@ E_CMD_EMPTY 3
 "3
 [v floorf@x x `f  1 p 4 45 ]
 "4
-[v floorf@F526 F526 `S2785  1 s 4 F526 ]
+[v floorf@F526 F526 `S3134  1 s 4 F526 ]
 "27
 } 0
 "4 /opt/microchip/xc8/v2.36/pic/sources/c99/common/__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S2785 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S3134 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S2785  1 a 4 30 ]
+[v ___fpclassifyf@u u `S3134  1 a 4 30 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 28 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 20 ]
 "5
-[v ___fpclassifyf@F465 F465 `S2785  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S3134  1 s 4 F465 ]
 "11
 } 0
 "43 /opt/microchip/xc8/v2.36/pic/sources/c99/common/fltol.c
@@ -1304,17 +1432,17 @@ E_CMD_EMPTY 3
 "8 /opt/microchip/xc8/v2.36/pic/sources/c99/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S2457 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S2806 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S2462 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S2465 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2457 1 fAsBytes 4 0 `S2462 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S2465  1 a 4 7 ]
+[s S2811 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S2814 . 4 `l 1 i 4 0 `d 1 f 4 0 `S2806 1 fAsBytes 4 0 `S2811 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S2814  1 a 4 7 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 3 ]
-[s S2533 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2882 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2536 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2533 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2536  1 a 2 11 ]
+[u S2885 . 2 `s 1 i 2 0 `us 1 n 2 0 `S2882 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2885  1 a 2 11 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 2 ]
 "11
@@ -1416,23 +1544,23 @@ E_CMD_EMPTY 3
 [v ___wmul@multiplicand multiplicand `ui  1 p 2 22 ]
 "53
 } 0
-"3 /fred/ps_tester/ps_test.X/disp_led.c
+"3 /public/ps_tester/ps_test.X/disp_led.c
 [v _display_led display_led `(v  1 e 1 0 ]
 {
-[v display_led@led led `E17121  1 a 1 wreg ]
-[v display_led@led led `E17121  1 a 1 wreg ]
-[v display_led@led led `E17121  1 a 1 22 ]
+[v display_led@led led `E17197  1 a 1 wreg ]
+[v display_led@led led `E17197  1 a 1 wreg ]
+[v display_led@led led `E17197  1 a 1 22 ]
 "66
 } 0
-"82 /fred/ps_tester/ps_test.X/scdm.c
+"82 /public/ps_tester/ps_test.X/scdm.c
 [v _cli_read cli_read `(v  1 e 1 0 ]
 {
 "84
 [v cli_read@i i `uc  1 a 1 12 ]
-[s S1822 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
+[s S1836 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
 "82
-[s S1829 _t_cli_ctx 131 `*.39S1822 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
-[v cli_read@a_ctx a_ctx `*.39S1829  1 p 2 49 ]
+[s S1843 _t_cli_ctx 131 `*.39S1836 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
+[v cli_read@a_ctx a_ctx `*.39S1843  1 p 2 49 ]
 "113
 } 0
 "4 /opt/microchip/xc8/v2.36/pic/sources/c99/common/memset.c
@@ -1448,7 +1576,7 @@ E_CMD_EMPTY 3
 [v memset@n n `ui  1 p 2 24 ]
 "90
 } 0
-"47 /fred/ps_tester/ps_test.X/scdm.c
+"47 /public/ps_tester/ps_test.X/scdm.c
 [v _linux_putc linux_putc `(uc  1 e 1 0 ]
 {
 [v linux_putc@data data `*.34uc  1 p 2 43 ]
@@ -1461,7 +1589,7 @@ E_CMD_EMPTY 3
 [v linux_getc@a_data a_data `*.30uc  1 p 1 21 ]
 "45
 } 0
-"161 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"161 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_is_rx_ready UART1_is_rx_ready `(a  1 e 1 0 ]
 {
 "164
@@ -1473,17 +1601,17 @@ E_CMD_EMPTY 3
 [v UART1_Read@readValue readValue `uc  1 a 1 20 ]
 "200
 } 0
-"53 /fred/ps_tester/ps_test.X/scdm.c
+"53 /public/ps_tester/ps_test.X/scdm.c
 [v __cli_interpret_cmd _cli_interpret_cmd `(uc  1 s 1 _cli_interpret_cmd ]
 {
 "55
 [v __cli_interpret_cmd@i i `uc  1 a 1 48 ]
 "56
 [v __cli_interpret_cmd@ret ret `uc  1 a 1 47 ]
-[s S1822 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
+[s S1836 _t_cmd 4 `*.31Cuc 1 cmd 1 0 `*.38(v 1 fh 3 1 ]
 "53
-[s S1829 _t_cli_ctx 131 `*.39S1822 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
-[v __cli_interpret_cmd@a_ctx a_ctx `*.39S1829  1 p 2 45 ]
+[s S1843 _t_cli_ctx 131 `*.39S1836 1 cmds 2 0 `[128]uc 1 cmd 128 2 `uc 1 cpos 1 130 ]
+[v __cli_interpret_cmd@a_ctx a_ctx `*.39S1843  1 p 2 45 ]
 "80
 } 0
 "3 /opt/microchip/xc8/v2.36/pic/sources/c99/common/strncmp.c
@@ -1507,7 +1635,7 @@ E_CMD_EMPTY 3
 [v strlen@s s `*.34Cuc  1 p 2 20 ]
 "12
 } 0
-"112 /fred/ps_tester/ps_test.X/main.c
+"112 /public/ps_tester/ps_test.X/main.c
 [v _fh_po fh_po `(v  1 e 1 0 ]
 {
 [v fh_po@a_data a_data `*.39v  1 p 2 43 ]
@@ -1539,21 +1667,21 @@ E_CMD_EMPTY 3
 [v fputs@c c `uc  1 a 1 37 ]
 "8
 [v fputs@s s `*.34Cuc  1 p 2 31 ]
-[u S2599 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2602 _IO_FILE 11 `S2599 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputs@fp fp `*.39S2602  1 p 2 33 ]
+[u S2948 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2951 _IO_FILE 11 `S2948 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputs@fp fp `*.39S2951  1 p 2 33 ]
 "19
 } 0
 "8 /opt/microchip/xc8/v2.36/pic/sources/c99/common/nf_fputc.c
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 22 ]
-[u S2599 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S2602 _IO_FILE 11 `S2599 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.39S2602  1 p 2 24 ]
+[u S2948 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S2951 _IO_FILE 11 `S2948 1 . 3 0 `i 1 count 2 3 `[2]uc 1 ungetbuf 2 5 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.39S2951  1 p 2 24 ]
 "24
 } 0
-"230 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"230 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _putch putch `(v  1 e 1 0 ]
 {
 [v putch@txData txData `uc  1 a 1 wreg ]
@@ -1585,12 +1713,12 @@ E_CMD_EMPTY 3
 [v ___xxtofl@sign sign `uc  1 a 1 28 ]
 "44
 } 0
-"50 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"50 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"62
+"65
 } 0
-"87 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"87 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_Initialize UART1_Initialize `(v  1 e 1 0 ]
 {
 "159
@@ -1625,7 +1753,7 @@ E_CMD_EMPTY 3
 [v UART1_SetErrorHandler@interruptHandler interruptHandler `*.38(v  1 p 3 20 ]
 "325
 } 0
-"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_Initialize TMR6_Initialize `(v  1 e 1 0 ]
 {
 "95
@@ -1636,7 +1764,7 @@ E_CMD_EMPTY 3
 [v TMR6_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "196
 } 0
-"65 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"65 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_Initialize TMR5_Initialize `(v  1 e 1 0 ]
 {
 "98
@@ -1647,39 +1775,54 @@ E_CMD_EMPTY 3
 [v TMR5_SetInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "181
 } 0
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/spi1.c
+"62 /public/ps_tester/ps_test.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"86
+} 0
+"64 /public/ps_tester/ps_test.X/mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"82 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/pwm6.c
+[v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/pwm5.c
+[v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"85 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
 {
-"100
+"103
 } 0
-"55 /fred/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
+"55 /public/ps_tester/ps_test.X/mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
-"150
+"152
 } 0
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/mcc.c
+"67 /public/ps_tester/ps_test.X/mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"80
+"83
 } 0
-"52 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"52 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 [v INTERRUPT_Initialize@state state `a  1 a 1 20 ]
 "77
 } 0
-"58 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"58 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_Initialize DAC1_Initialize `(v  1 e 1 0 ]
 {
 "64
 } 0
-"64 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"64 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
 "119
@@ -1690,7 +1833,7 @@ E_CMD_EMPTY 3
 [v ADCC_SetADIInterruptHandler@InterruptHandler InterruptHandler `*.38(v  1 p 3 20 ]
 "318
 } 0
-"66 /fred/ps_tester/ps_test.X/mcc_generated_files/dac1.c
+"66 /public/ps_tester/ps_test.X/mcc_generated_files/dac1.c
 [v _DAC1_SetOutput DAC1_SetOutput `(v  1 e 1 0 ]
 {
 [v DAC1_SetOutput@inputData inputData `uc  1 a 1 wreg ]
@@ -1704,7 +1847,7 @@ E_CMD_EMPTY 3
 {
 "74
 } 0
-"307 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"307 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_ISR ADCC_ISR `IIH(v  1 e 1 0 ]
 {
 "314
@@ -1714,17 +1857,17 @@ E_CMD_EMPTY 3
 {
 "323
 } 0
-"83 /fred/ps_tester/ps_test.X/main.c
+"83 /public/ps_tester/ps_test.X/main.c
 [v _Adc_Isr Adc_Isr `(v  1 e 1 0 ]
 {
 "94
 } 0
-"139 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
+"139 /public/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
 {
 "143
 } 0
-"166 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"166 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_ISR TMR6_ISR `IIH(v  1 e 1 0 ]
 {
 "168
@@ -1736,22 +1879,22 @@ E_CMD_EMPTY 3
 {
 "192
 } 0
-"67 /fred/ps_tester/ps_test.X/main.c
+"67 /public/ps_tester/ps_test.X/main.c
 [v _Led_Blink Led_Blink `(v  1 e 1 0 ]
 {
 "74
 } 0
-"198 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
+"198 /public/ps_tester/ps_test.X/mcc_generated_files/tmr6.c
 [v _TMR6_DefaultInterruptHandler TMR6_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "201
 } 0
-"79 /fred/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
+"79 /public/ps_tester/ps_test.X/mcc_generated_files/interrupt_manager.c
 [v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
 {
 "81
 } 0
-"235 /fred/ps_tester/ps_test.X/mcc_generated_files/uart1.c
+"235 /public/ps_tester/ps_test.X/mcc_generated_files/uart1.c
 [v _UART1_tx_vect_isr UART1_tx_vect_isr `IIH(v  1 e 1 0 ]
 {
 "241
@@ -1789,7 +1932,7 @@ E_CMD_EMPTY 3
 {
 "305
 } 0
-"165 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"165 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_ISR TMR5_ISR `IIH(v  1 e 1 0 ]
 {
 "176
@@ -1799,14 +1942,14 @@ E_CMD_EMPTY 3
 {
 "186
 } 0
-"48 /fred/ps_tester/ps_test.X/timers.c
+"48 /public/ps_tester/ps_test.X/timers.c
 [v _Timers_Isr Timers_Isr `(v  1 e 1 0 ]
 {
 "51
 [v Timers_Isr@i i `i  1 a 2 16 ]
 "56
 } 0
-"128 /fred/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
+"128 /public/ps_tester/ps_test.X/mcc_generated_files/tmr5.c
 [v _TMR5_WriteTimer TMR5_WriteTimer `(v  1 e 1 0 ]
 {
 [v TMR5_WriteTimer@timerVal timerVal `us  1 p 2 14 ]

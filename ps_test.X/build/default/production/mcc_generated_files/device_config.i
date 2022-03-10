@@ -52,7 +52,7 @@
 #pragma config WRTC = OFF
 #pragma config WRTD = OFF
 #pragma config WRTSAF = OFF
-#pragma config LVP = ON
+#pragma config LVP = OFF
 
 
 #pragma config CP = OFF

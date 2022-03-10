@@ -60,7 +60,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93
 [p x WRTSAF  =  OFF     ]
 "94
-[p x LVP  =  ON     ]
+[p x LVP  =  OFF     ]
 "97
 [; ;mcc_generated_files/device_config.c: 97: 
 [p x CP  =  OFF     ]

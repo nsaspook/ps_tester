@@ -449,6 +449,18 @@
 #define LED_MODE_SetAnalogMode()      do { ANSELDbits.ANSELD1 = 1; } while(0)
 #define LED_MODE_SetDigitalMode()     do { ANSELDbits.ANSELD1 = 0; } while(0)
 
+// get/set RD2 procedures
+#define RD2_SetHigh()            do { LATDbits.LATD2 = 1; } while(0)
+#define RD2_SetLow()             do { LATDbits.LATD2 = 0; } while(0)
+#define RD2_Toggle()             do { LATDbits.LATD2 = ~LATDbits.LATD2; } while(0)
+#define RD2_GetValue()              PORTDbits.RD2
+#define RD2_SetDigitalInput()    do { TRISDbits.TRISD2 = 1; } while(0)
+#define RD2_SetDigitalOutput()   do { TRISDbits.TRISD2 = 0; } while(0)
+#define RD2_SetPullup()             do { WPUDbits.WPUD2 = 1; } while(0)
+#define RD2_ResetPullup()           do { WPUDbits.WPUD2 = 0; } while(0)
+#define RD2_SetAnalogMode()         do { ANSELDbits.ANSELD2 = 1; } while(0)
+#define RD2_SetDigitalMode()        do { ANSELDbits.ANSELD2 = 0; } while(0)
+
 // get/set IO_00 aliases
 #define IO_00_TRIS                 TRISDbits.TRISD4
 #define IO_00_LAT                  LATDbits.LATD4
@@ -568,6 +580,18 @@
 #define LED_DB_SetOpenDrain()       do { ODCONEbits.ODCE2 = 1; } while(0)
 #define LED_DB_SetAnalogMode()      do { ANSELEbits.ANSELE2 = 1; } while(0)
 #define LED_DB_SetDigitalMode()     do { ANSELEbits.ANSELE2 = 0; } while(0)
+
+// get/set RF2 procedures
+#define RF2_SetHigh()            do { LATFbits.LATF2 = 1; } while(0)
+#define RF2_SetLow()             do { LATFbits.LATF2 = 0; } while(0)
+#define RF2_Toggle()             do { LATFbits.LATF2 = ~LATFbits.LATF2; } while(0)
+#define RF2_GetValue()              PORTFbits.RF2
+#define RF2_SetDigitalInput()    do { TRISFbits.TRISF2 = 1; } while(0)
+#define RF2_SetDigitalOutput()   do { TRISFbits.TRISF2 = 0; } while(0)
+#define RF2_SetPullup()             do { WPUFbits.WPUF2 = 1; } while(0)
+#define RF2_ResetPullup()           do { WPUFbits.WPUF2 = 0; } while(0)
+#define RF2_SetAnalogMode()         do { ANSELFbits.ANSELF2 = 1; } while(0)
+#define RF2_SetDigitalMode()        do { ANSELFbits.ANSELF2 = 0; } while(0)
 
 // get/set IO_20 aliases
 #define IO_20_TRIS                 TRISFbits.TRISF4

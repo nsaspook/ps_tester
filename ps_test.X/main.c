@@ -183,7 +183,7 @@ void main(void)
 			if (disp_tick) {
 				vval = (double) ana[0] * V_SCALE;
 				ival = (double) ana[1] * I_SCALE;
-				printf(" PS Test %1u: DAC OUT=%2u, Supply ReadBack %4u V=%+5.1fV %4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
+				printf(" PS Test %1u: DAC OUT=%.2u, Supply ReadBack %4.4u V=%+6.1fV %4.4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
 
 				/*
 				 * mode switch state machine

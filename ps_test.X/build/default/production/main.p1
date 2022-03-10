@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17063 `(v ~T0 @X0 0 tf ]
-[v F17065 `(v ~T0 @X0 0 tf ]
+[v F17139 `(v ~T0 @X0 0 tf ]
+[v F17141 `(v ~T0 @X0 0 tf ]
 "56 main.c
 [; ;main.c: 56: MODE_TYPES mode = off_mode;
-[c E17133 0 1 2 .. ]
-[n E17133 . off_mode roll_mode static_mode  ]
+[c E17209 0 1 2 .. ]
+[n E17209 . off_mode roll_mode static_mode  ]
 "45984 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45984:     struct {
 [s S2065 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -30,8 +30,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/stdio.h: 102: int puts(const char *);
 [v _puts `(i ~T0 @X0 0 ef1`*Cuc ]
 [p mainexit ]
-"76 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 76: void SYSTEM_Initialize(void);
+"79 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 79: void SYSTEM_Initialize(void);
 [v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
@@ -48,10 +48,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45893
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45893: extern volatile LATDbits_t LATDbits __attribute__((address(0x3FBD)));
 [v _LATDbits `VS2061 ~T0 @X0 0 e@16317 ]
-[v F17018 `(v ~T0 @X0 0 tf ]
+[v F16963 `(v ~T0 @X0 0 tf ]
 "847 ./mcc_generated_files/tmr6.h
 [; ;./mcc_generated_files/tmr6.h: 847:  void TMR6_SetInterruptHandler(void (* InterruptHandler)(void));
-[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F17018 ]
+[v _TMR6_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F16963 ]
 [v F16886 `(v ~T0 @X0 0 tf ]
 "368 ./mcc_generated_files/tmr5.h
 [; ;./mcc_generated_files/tmr5.h: 368:  void TMR5_SetInterruptHandler(void (* InterruptHandler)(void));
@@ -59,10 +59,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27 ./timers.h
 [; ;./timers.h: 27: void Timers_Isr(void);
 [v _Timers_Isr `(v ~T0 @X0 0 ef ]
-[v F16943 `(v ~T0 @X0 0 tf ]
+[v F17096 `(v ~T0 @X0 0 tf ]
 "850 ./mcc_generated_files/adcc.h
 [; ;./mcc_generated_files/adcc.h: 850: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16943 ]
+[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F17096 ]
 "67 ./scdm.h
 [; ;./scdm.h: 67:  void scmd_init(void);
 [v _scmd_init `(v ~T0 @X0 0 ef ]
@@ -86,11 +86,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _DAC1_SetOutput `(v ~T0 @X0 0 ef1`uc ]
 "150 main.c
 [; ;main.c: 150:     display_led(oo00_off);
-[c E17114 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E17114 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
+[c E17190 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
+[n E17190 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
 "59
 [; ;main.c: 59: void display_led(DISPLAY_TYPES led);
-[v _display_led `(v ~T0 @X0 0 ef1`E17114 ]
+[v _display_led `(v ~T0 @X0 0 ef1`E17190 ]
 "46490 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46490:     struct {
 [s S2083 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -123,10 +123,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45557
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45557: extern volatile LATAbits_t LATAbits __attribute__((address(0x3FBA)));
 [v _LATAbits `VS2052 ~T0 @X0 0 e@16314 ]
-[v F17141 `(v ~T0 @X0 0 tf1`*v ]
+[v F17217 `(v ~T0 @X0 0 tf1`*v ]
 "24 ./scdm.h
 [; ;./scdm.h: 24:  typedef struct _t_cmd {
-[s S2206 `*Cuc 1 `*F17141 1 ]
+[s S2206 `*Cuc 1 `*F17217 1 ]
 [n S2206 _t_cmd cmd fh ]
 "29
 [; ;./scdm.h: 29:  typedef struct _t_cli_ctx {
@@ -2402,10 +2402,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 03FFFh ;# ">
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17063 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17139 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17065 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17141 ~T0 @X0 1 e ]
 "50 main.c
 [; ;main.c: 50: volatile adc_result_t ana[2];
 [v _ana `Vus ~T0 @X0 -> 2 `i e ]
@@ -2429,7 +2429,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53: char buff1[255];
 [v _buff1 `uc ~T0 @X0 -> 255 `i e ]
 "55
-[; ;main.c: 55: const char *build_date = "Mar  9 2022", *build_time = "12:42:09";
+[; ;main.c: 55: const char *build_date = "Mar 10 2022", *build_time = "09:41:52";
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -2440,9 +2440,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "56
 [; ;main.c: 56: MODE_TYPES mode = off_mode;
-[v _mode `E17133 ~T0 @X0 1 e ]
+[v _mode `E17209 ~T0 @X0 1 e ]
 [i _mode
-. `E17133 0
+. `E17209 0
 ]
 "57
 [; ;main.c: 57: double vval = 0.0, ival = 0.0;
@@ -2529,7 +2529,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _puts (1 :s 3C ]
 "103
 [; ;main.c: 103:  mode = roll_mode;
-[e = _mode . `E17133 1 ]
+[e = _mode . `E17209 1 ]
 "104
 [; ;main.c: 104: }
 [e :UE 2214 ]
@@ -2552,7 +2552,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _puts (1 :s 4C ]
 "109
 [; ;main.c: 109:  mode = static_mode;
-[e = _mode . `E17133 2 ]
+[e = _mode . `E17209 2 ]
 "110
 [; ;main.c: 110: }
 [e :UE 2215 ]
@@ -2575,7 +2575,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _puts (1 :s 5C ]
 "115
 [; ;main.c: 115:  mode = off_mode;
-[e = _mode . `E17133 0 ]
+[e = _mode . `E17209 0 ]
 "116
 [; ;main.c: 116: }
 [e :UE 2216 ]
@@ -2647,7 +2647,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "150
 [; ;main.c: 150:     display_led(oo00_off);
-[e ( _display_led (1 . `E17114 0 ]
+[e ( _display_led (1 . `E17190 0 ]
 "151
 [; ;main.c: 151:    } else {
 }
@@ -2660,7 +2660,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "153
 [; ;main.c: 153:      display_led(oo00_g);
-[e ( _display_led (1 . `E17114 1 ]
+[e ( _display_led (1 . `E17190 1 ]
 "154
 [; ;main.c: 154:     } else {
 }
@@ -2669,7 +2669,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "155
 [; ;main.c: 155:      display_led(oo00_r);
-[e ( _display_led (1 . `E17114 2 ]
+[e ( _display_led (1 . `E17190 2 ]
 "156
 [; ;main.c: 156:     }
 }
@@ -2684,7 +2684,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "160
 [; ;main.c: 160:     display_led(oo10_off);
-[e ( _display_led (1 . `E17114 3 ]
+[e ( _display_led (1 . `E17190 3 ]
 "161
 [; ;main.c: 161:    } else {
 }
@@ -2697,7 +2697,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "163
 [; ;main.c: 163:      display_led(oo10_g);
-[e ( _display_led (1 . `E17114 4 ]
+[e ( _display_led (1 . `E17190 4 ]
 "164
 [; ;main.c: 164:     } else {
 }
@@ -2706,7 +2706,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "165
 [; ;main.c: 165:      display_led(oo10_r);
-[e ( _display_led (1 . `E17114 5 ]
+[e ( _display_led (1 . `E17190 5 ]
 "166
 [; ;main.c: 166:     }
 }
@@ -2724,7 +2724,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "171
 [; ;main.c: 171:     display_led(oo30_r);
-[e ( _display_led (1 . `E17114 11 ]
+[e ( _display_led (1 . `E17190 11 ]
 "172
 [; ;main.c: 172:    } else {
 }
@@ -2733,7 +2733,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "173
 [; ;main.c: 173:     display_led(oo30_off);
-[e ( _display_led (1 . `E17114 9 ]
+[e ( _display_led (1 . `E17190 9 ]
 "174
 [; ;main.c: 174:    }
 }
@@ -2744,7 +2744,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "178
 [; ;main.c: 178:     display_led(oo20_g);
-[e ( _display_led (1 . `E17114 7 ]
+[e ( _display_led (1 . `E17190 7 ]
 "179
 [; ;main.c: 179:    } else {
 }
@@ -2753,7 +2753,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "180
 [; ;main.c: 180:     display_led(oo20_off);
-[e ( _display_led (1 . `E17114 6 ]
+[e ( _display_led (1 . `E17190 6 ]
 "181
 [; ;main.c: 181:    }
 }
@@ -2769,7 +2769,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 185:     ival = (double) ana[1] * 0.004;
 [e = _ival * -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `d .0.004 ]
 "186
-[; ;main.c: 186:     printf(" PS Test %1u: DAC OUT=%2u, Supply ReadBack %4u V=%+5.1fV %4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
+[; ;main.c: 186:     printf(" PS Test %1u: DAC OUT=%.2u, Supply ReadBack %4.4u V=%+6.1fV %4.4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
 [e ( _printf , , , , , , (. :s 6C -> _mode `ui -> -> ( _DAC1_GetOutput ..  `us `ui -> *U + &U _ana * -> -> -> 0 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui _vval -> *U + &U _ana * -> -> -> 1 `i `ui `ux -> -> # *U &U _ana `ui `ux `ui _ival ]
 "191
 [; ;main.c: 191:     switch (mode) {
@@ -2843,7 +2843,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2259 ]
 "208
 [; ;main.c: 208:      mode = off_mode;
-[e = _mode . `E17133 0 ]
+[e = _mode . `E17209 0 ]
 "209
 [; ;main.c: 209:      dac_v = 0;
 [e = _dac_v -> -> 0 `i `uc ]
@@ -2872,9 +2872,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2241  ]
 [e :U 2242 ]
-[e [\ -> _mode `ui , $ -> . `E17133 1 `ui 2243
- , $ -> . `E17133 2 `ui 2251
- , $ -> . `E17133 0 `ui 2258
+[e [\ -> _mode `ui , $ -> . `E17209 1 `ui 2243
+ , $ -> . `E17209 2 `ui 2251
+ , $ -> . `E17209 0 `ui 2258
  2259 ]
 [e :U 2241 ]
 "220
@@ -2893,7 +2893,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "224
 [; ;main.c: 224:       mode++;
-[e ++ _mode -> -> 1 `i `E17133 ]
+[e ++ _mode -> -> 1 `i `E17209 ]
 "225
 [; ;main.c: 225:       mode_sw = 0;
 [e = _mode_sw -> -> 0 `i `uc ]
@@ -2947,9 +2947,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 2217 ]
 }
 [p f _printf 8496130 ]
-[a 1C 77 97 114 32 32 57 32 50 48 50 50 0 ]
-[a 2C 49 50 58 52 50 58 49 48 0 ]
-[a 6C 32 80 83 32 84 101 115 116 32 37 49 117 58 32 68 65 67 32 79 85 84 61 37 50 117 44 32 83 117 112 112 108 121 32 82 101 97 100 66 97 99 107 32 37 52 117 32 86 61 37 43 53 46 49 102 86 32 37 52 117 32 73 61 37 43 51 46 49 102 109 65 13 10 0 ]
+[a 2C 48 57 58 52 49 58 53 52 0 ]
+[a 1C 77 97 114 32 49 48 32 50 48 50 50 0 ]
+[a 6C 32 80 83 32 84 101 115 116 32 37 49 117 58 32 68 65 67 32 79 85 84 61 37 46 50 117 44 32 83 117 112 112 108 121 32 82 101 97 100 66 97 99 107 32 37 52 46 52 117 32 86 61 37 43 54 46 49 102 86 32 37 52 46 52 117 32 73 61 37 43 51 46 49 102 109 65 13 10 0 ]
 [a 4C 13 10 32 83 116 101 97 100 121 32 49 48 48 48 86 68 67 32 79 78 32 13 10 0 ]
 [a 3C 13 10 32 82 97 109 112 32 116 111 32 49 48 48 48 86 68 67 32 79 78 32 13 10 0 ]
 [a 5C 13 10 32 86 111 108 116 97 103 101 32 79 70 70 32 13 10 0 ]
