@@ -2567,8 +2567,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/adcc.c: 98:     ADCON2 = 0x00;
 [e = _ADCON2 -> -> 0 `i `uc ]
 "100
-[; ;mcc_generated_files/adcc.c: 100:     ADCON3 = 0x00;
-[e = _ADCON3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/adcc.c: 100:     ADCON3 = 0x20;
+[e = _ADCON3 -> -> 32 `i `uc ]
 "102
 [; ;mcc_generated_files/adcc.c: 102:     ADSTAT = 0x00;
 [e = _ADSTAT -> -> 0 `i `uc ]
@@ -2579,11 +2579,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/adcc.c: 106:     ADACT = 0x07;
 [e = _ADACT -> -> 7 `i `uc ]
 "108
-[; ;mcc_generated_files/adcc.c: 108:     ADCLK = 0x00;
-[e = _ADCLK -> -> 0 `i `uc ]
+[; ;mcc_generated_files/adcc.c: 108:     ADCLK = 0x0F;
+[e = _ADCLK -> -> 15 `i `uc ]
 "110
-[; ;mcc_generated_files/adcc.c: 110:     ADCON0 = 0x94;
-[e = _ADCON0 -> -> 148 `i `uc ]
+[; ;mcc_generated_files/adcc.c: 110:     ADCON0 = 0x84;
+[e = _ADCON0 -> -> 132 `i `uc ]
 "113
 [; ;mcc_generated_files/adcc.c: 113:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]

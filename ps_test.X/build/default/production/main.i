@@ -28442,7 +28442,7 @@ volatile _Bool disp_tick = 0, adc_tick = 0;
 volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 10 2022", *build_time = "09:41:52";
+const char *build_date = "Mar 10 2022", *build_time = "15:29:14";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 
@@ -28513,6 +28513,8 @@ void main(void)
  TMR5_SetInterruptHandler(Timers_Isr);
  ADCC_SetADIInterruptHandler(Adc_Isr);
  ADPCH = adc_chan;
+ PWM5_LoadDutyValue(0);
+ PWM6_LoadDutyValue(0);
 
 
 

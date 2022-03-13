@@ -27193,7 +27193,7 @@ void ADCC_Initialize(void)
 
     ADCON2 = 0x00;
 
-    ADCON3 = 0x00;
+    ADCON3 = 0x20;
 
     ADSTAT = 0x00;
 
@@ -27201,9 +27201,9 @@ void ADCC_Initialize(void)
 
     ADACT = 0x07;
 
-    ADCLK = 0x00;
+    ADCLK = 0x0F;
 
-    ADCON0 = 0x94;
+    ADCON0 = 0x84;
 
 
     PIR1bits.ADIF = 0;

@@ -96,18 +96,18 @@ void ADCC_Initialize(void)
     ADCON1 = 0x00;
     // ADCRS 0; ADMD Basic_mode; ADACLR disabled; ADPSIS RES; 
     ADCON2 = 0x00;
-    // ADCALC First derivative of Single measurement; ADTMD disabled; ADSOI ADGO not cleared; 
-    ADCON3 = 0x00;
+    // ADCALC Actual result vs filtered value; ADTMD disabled; ADSOI ADGO not cleared; 
+    ADCON3 = 0x20;
     // ADMATH registers not updated; 
     ADSTAT = 0x00;
     // ADNREF VSS; ADPREF external; 
     ADREF = 0x02;
     // ADACT TMR5; 
     ADACT = 0x07;
-    // ADCS FOSC/2; 
-    ADCLK = 0x00;
-    // ADGO stop; ADFM right; ADON enabled; ADCS Frc; ADCONT disabled; 
-    ADCON0 = 0x94;
+    // ADCS FOSC/32; 
+    ADCLK = 0x0F;
+    // ADGO stop; ADFM right; ADON enabled; ADCS FOSC/ADCLK; ADCONT disabled; 
+    ADCON0 = 0x84;
     
     // Clear the ADC interrupt flag
     PIR1bits.ADIF = 0;

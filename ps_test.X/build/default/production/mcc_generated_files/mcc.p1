@@ -25,12 +25,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93 mcc_generated_files/dac1.h
 [; ;mcc_generated_files/dac1.h: 93: void DAC1_Initialize(void);
 [v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
-"100 mcc_generated_files/tmr5.h
-[; ;mcc_generated_files/tmr5.h: 100: void TMR5_Initialize(void);
-[v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "102 mcc_generated_files/pwm5.h
 [; ;mcc_generated_files/pwm5.h: 102:  void PWM5_Initialize(void);
 [v _PWM5_Initialize `(v ~T0 @X0 0 ef ]
+"100 mcc_generated_files/tmr5.h
+[; ;mcc_generated_files/tmr5.h: 100: void TMR5_Initialize(void);
+[v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "365 mcc_generated_files/tmr2.h
 [; ;mcc_generated_files/tmr2.h: 365: void TMR2_Initialize(void);
 [v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
@@ -2368,11 +2368,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 59:     DAC1_Initialize();
 [e ( _DAC1_Initialize ..  ]
 "60
-[; ;mcc_generated_files/mcc.c: 60:     TMR5_Initialize();
-[e ( _TMR5_Initialize ..  ]
-"61
-[; ;mcc_generated_files/mcc.c: 61:     PWM5_Initialize();
+[; ;mcc_generated_files/mcc.c: 60:     PWM5_Initialize();
 [e ( _PWM5_Initialize ..  ]
+"61
+[; ;mcc_generated_files/mcc.c: 61:     TMR5_Initialize();
+[e ( _TMR5_Initialize ..  ]
 "62
 [; ;mcc_generated_files/mcc.c: 62:     TMR2_Initialize();
 [e ( _TMR2_Initialize ..  ]

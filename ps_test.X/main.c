@@ -130,6 +130,8 @@ void main(void)
 	TMR5_SetInterruptHandler(Timers_Isr);
 	ADCC_SetADIInterruptHandler(Adc_Isr);
 	ADPCH = adc_chan;
+	PWM5_LoadDutyValue(0);  // set PS signals to zero
+	PWM6_LoadDutyValue(0);
 
 	/*
 	 * init serial command parser on USART
