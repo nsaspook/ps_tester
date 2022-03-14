@@ -20,11 +20,15 @@
         <itemPath>mcc_generated_files/pwm5.h</itemPath>
         <itemPath>mcc_generated_files/pwm6.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
+        <itemPath>mcc_generated_files/dma1.h</itemPath>
       </logicalFolder>
       <itemPath>timers.h</itemPath>
       <itemPath>ps_test.h</itemPath>
       <itemPath>disp_led.h</itemPath>
       <itemPath>scdm.h</itemPath>
+      <itemPath>eadog.h</itemPath>
+      <itemPath>mydisplay.h</itemPath>
+      <itemPath>ringbufs.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -49,11 +53,14 @@
         <itemPath>mcc_generated_files/pwm5.c</itemPath>
         <itemPath>mcc_generated_files/pwm6.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
+        <itemPath>mcc_generated_files/dma1.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>timers.c</itemPath>
       <itemPath>disp_led.c</itemPath>
       <itemPath>scdm.c</itemPath>
+      <itemPath>eadog.c</itemPath>
+      <itemPath>ringbufs.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -70,7 +77,7 @@
         <targetDevice>PIC18F57K42</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>pk4hybrid</platformTool>
+        <platformTool>ICD4Tool</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.36</languageToolchainVersion>
         <platform>2</platform>

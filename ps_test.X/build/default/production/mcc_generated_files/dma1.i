@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/adcc.c"
+# 1 "mcc_generated_files/dma1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/adcc.c" 2
-# 51 "mcc_generated_files/adcc.c"
+# 1 "mcc_generated_files/dma1.c" 2
+# 51 "mcc_generated_files/dma1.c"
 # 1 "/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/xc.h" 1 3
 # 18 "/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -27057,363 +27057,223 @@ __attribute__((__unsupported__("The READTIMER" "3" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/xc.h" 2 3
-# 51 "mcc_generated_files/adcc.c" 2
+# 51 "mcc_generated_files/dma1.c" 2
 
-# 1 "mcc_generated_files/adcc.h" 1
-# 56 "mcc_generated_files/adcc.h"
-# 1 "/opt/microchip/xc8/v2.36/pic/include/c99/stdbool.h" 1 3
-# 56 "mcc_generated_files/adcc.h" 2
-# 72 "mcc_generated_files/adcc.h"
-typedef uint16_t adc_result_t;
+# 1 "mcc_generated_files/dma1.h" 1
+# 55 "mcc_generated_files/dma1.h"
+uint8_t SrcVarName0[10];
 
-typedef __uint24 uint24_t;
-# 89 "mcc_generated_files/adcc.h"
-typedef enum
+
+
+
+
+
+
+void DMA1_Initialize(void);
+
+
+
+
+
+
+void DMA1_SelectSourceRegion(uint8_t region);
+
+
+
+
+
+
+void DMA1_SetSourceAddress(uint24_t address);
+
+
+
+
+
+
+void DMA1_SetDestinationAddress(uint16_t address);
+
+
+
+
+
+
+void DMA1_SetSourceSize(uint16_t size);
+
+
+
+
+
+
+void DMA1_SetDestinationSize(uint16_t size);
+
+
+
+
+
+
+uint24_t DMA1_GetSourcePointer(void);
+
+
+
+
+
+
+uint16_t DMA1_GetDestinationPointer(void);
+
+
+
+
+
+
+void DMA1_SetStartTrigger(uint8_t sirq);
+
+
+
+
+
+
+void DMA1_SetAbortTrigger(uint8_t airq);
+
+
+
+
+
+
+void DMA1_StartTransfer(void);
+
+
+
+
+
+
+void DMA1_StartTransferWithTrigger(void);
+
+
+
+
+
+
+void DMA1_StopTransfer(void);
+
+
+
+
+
+
+void DMA1_SetDMAPriority(uint8_t priority);
+# 52 "mcc_generated_files/dma1.c" 2
+
+
+
+
+
+
+
+void DMA1_Initialize(void)
 {
-    channel_ANA0 = 0x0,
-    channel_ANA1 = 0x1,
-    channel_ANB2 = 0xA,
-    channel_ANB3 = 0xB,
-    channel_ANB4 = 0xC,
-    channel_ANB5 = 0xD,
-    channel_VSS = 0x3B,
-    channel_Temp = 0x3C,
-    channel_DAC1 = 0x3D,
-    channel_FVR_Buffer1 = 0x3E,
-    channel_FVR_Buffer2 = 0x3F
-} adcc_channel_t;
-# 136 "mcc_generated_files/adcc.h"
-void ADCC_Initialize(void);
-# 165 "mcc_generated_files/adcc.h"
-void ADCC_StartConversion(adcc_channel_t channel);
-# 195 "mcc_generated_files/adcc.h"
-_Bool ADCC_IsConversionDone(void);
-# 227 "mcc_generated_files/adcc.h"
-adc_result_t ADCC_GetConversionResult(void);
-# 258 "mcc_generated_files/adcc.h"
-adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-# 283 "mcc_generated_files/adcc.h"
-void ADCC_StopConversion(void);
-# 310 "mcc_generated_files/adcc.h"
-void ADCC_SetStopOnInterrupt(void);
-# 335 "mcc_generated_files/adcc.h"
-void ADCC_DischargeSampleCapacitor(void);
-# 361 "mcc_generated_files/adcc.h"
-void ADCC_LoadAcquisitionRegister(uint16_t);
-# 387 "mcc_generated_files/adcc.h"
-void ADCC_SetPrechargeTime(uint16_t);
-# 412 "mcc_generated_files/adcc.h"
-void ADCC_SetRepeatCount(uint8_t);
-# 440 "mcc_generated_files/adcc.h"
-uint8_t ADCC_GetCurrentCountofConversions(void);
-# 464 "mcc_generated_files/adcc.h"
-void ADCC_ClearAccumulator(void);
-# 489 "mcc_generated_files/adcc.h"
-uint24_t ADCC_GetAccumulatorValue(void);
-# 517 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasAccumulatorOverflowed(void);
-# 542 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetFilterValue(void);
-# 570 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetPreviousResult(void);
-# 596 "mcc_generated_files/adcc.h"
-void ADCC_DefineSetPoint(uint16_t);
-# 622 "mcc_generated_files/adcc.h"
-void ADCC_SetUpperThreshold(uint16_t);
-# 648 "mcc_generated_files/adcc.h"
-void ADCC_SetLowerThreshold(uint16_t);
-# 675 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetErrorCalculation(void);
-# 702 "mcc_generated_files/adcc.h"
-void ADCC_EnableDoubleSampling(void);
-# 726 "mcc_generated_files/adcc.h"
-void ADCC_EnableContinuousConversion(void);
-# 750 "mcc_generated_files/adcc.h"
-void ADCC_DisableContinuousConversion(void);
-# 778 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasErrorCrossedUpperThreshold(void);
-# 806 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasErrorCrossedLowerThreshold(void);
-# 833 "mcc_generated_files/adcc.h"
-uint8_t ADCC_GetConversionStageStatus(void);
-# 850 "mcc_generated_files/adcc.h"
-void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-# 870 "mcc_generated_files/adcc.h"
-void ADCC_DefaultInterruptHandler(void);
-# 52 "mcc_generated_files/adcc.c" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 109 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 53 "mcc_generated_files/adcc.c" 2
+    DMA1SSA = &SrcVarName0;
+
+    DMA1DSA = &SPI1TXB;
+
+    DMA1CON1 = 0x02;
+
+    DMA1SSZ = 1;
+
+    DMA1DSZ = 1;
+
+    DMA1SIRQ = 0x00;
+
+    DMA1AIRQ = 0x00;
 
 
+    PIR2bits.DMA1DCNTIF = 0;
+
+    PIR2bits.DMA1SCNTIF = 0;
+
+    PIR2bits.DMA1AIF = 0;
+
+    PIR2bits.DMA1ORIF =0;
+
+    PIE2bits.DMA1DCNTIE = 0;
+    PIE2bits.DMA1SCNTIE = 0;
+    PIE2bits.DMA1AIE = 0;
+    PIE2bits.DMA1ORIE = 0;
 
 
-
-void (*ADCC_ADI_InterruptHandler)(void);
-
-
-
-
-
-void ADCC_Initialize(void)
-{
-
-
-    ADLTHL = 0x00;
-
-    ADLTHH = 0x00;
-
-    ADUTHL = 0x00;
-
-    ADUTHH = 0x00;
-
-    ADSTPTL = 0x00;
-
-    ADSTPTH = 0x00;
-
-    ADACCU = 0x00;
-
-    ADRPT = 0x00;
-
-    ADPCH = 0x00;
-
-    ADACQL = 0x10;
-
-    ADACQH = 0x00;
-
-    ADCAP = 0x00;
-
-    ADPREL = 0x00;
-
-    ADPREH = 0x00;
-
-    ADCON1 = 0x00;
-
-    ADCON2 = 0x00;
-
-    ADCON3 = 0x20;
-
-    ADSTAT = 0x00;
-
-    ADREF = 0x02;
-
-    ADACT = 0x07;
-
-    ADCLK = 0x1F;
-
-    ADCON0 = 0x84;
-
-
-    PIR1bits.ADIF = 0;
-
-    PIE1bits.ADIE = 1;
-
-    ADCC_SetADIInterruptHandler(ADCC_DefaultInterruptHandler);
+    DMA1CON0 = 0x80;
 
 }
 
-void ADCC_StartConversion(adcc_channel_t channel)
+void DMA1_SelectSourceRegion(uint8_t region)
+{
+ DMA1CON1bits.SMR = region;
+}
+
+void DMA1_SetSourceAddress(uint24_t address)
+{
+ DMA1SSA = address;
+}
+
+void DMA1_SetDestinationAddress(uint16_t address)
+{
+ DMA1DSA = address;
+}
+
+void DMA1_SetSourceSize(uint16_t size)
+{
+ DMA1SSZ= size;
+}
+
+void DMA1_SetDestinationSize(uint16_t size)
+{
+ DMA1DSZ= size;
+}
+
+uint24_t DMA1_GetSourcePointer(void)
+{
+ return DMA1SPTR;
+}
+
+uint16_t DMA1_GetDestinationPointer(void)
+{
+ return DMA1DPTR;
+}
+
+void DMA1_SetStartTrigger(uint8_t sirq)
+{
+ DMA1SIRQ = sirq;
+}
+
+void DMA1_SetAbortTrigger(uint8_t airq)
+{
+ DMA1AIRQ = airq;
+}
+
+void DMA1_StartTransfer(void)
+{
+ DMA1CON0bits.DGO = 1;
+}
+
+void DMA1_StartTransferWithTrigger(void)
+{
+ DMA1CON0bits.SIRQEN = 1;
+}
+
+void DMA1_StopTransfer(void)
+{
+ DMA1CON0bits.SIRQEN = 0;
+ DMA1CON0bits.DGO = 0;
+}
+
+void DMA1_SetDMAPriority(uint8_t priority)
 {
 
-    ADPCH = channel;
-
-
-    ADCON0bits.ADON = 1;
-
-
-    ADCON0bits.ADGO = 1;
-}
-
-_Bool ADCC_IsConversionDone(void)
-{
-
-    return ((unsigned char)(!ADCON0bits.ADGO));
-}
-
-adc_result_t ADCC_GetConversionResult(void)
-{
-
-    return ((adc_result_t)((ADRESH << 8) + ADRESL));
-}
-
-adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
-{
-
-    ADPCH = channel;
-
-
-    ADCON0bits.ADON = 1;
-
-
-    ADCON0bits.ADCONT = 0;
-
-
-    ADCON0bits.ADGO = 1;
-
-
-
-    while (ADCON0bits.ADGO)
-    {
-    }
-
-
-
-    return ((adc_result_t)((ADRESH << 8) + ADRESL));
-}
-
-void ADCC_StopConversion(void)
-{
-
-    ADCON0bits.ADGO = 0;
-}
-
-void ADCC_SetStopOnInterrupt(void)
-{
-
-    ADCON3bits.ADSOI = 1;
-}
-
-void ADCC_DischargeSampleCapacitor(void)
-{
-
-    ADPCH = 0x3b;
-}
-
-void ADCC_LoadAcquisitionRegister(uint16_t acquisitionValue)
-{
-
-    ADACQH = (uint8_t) (acquisitionValue >> 8);
-    ADACQL = (uint8_t) acquisitionValue;
-}
-
-void ADCC_SetPrechargeTime(uint16_t prechargeTime)
-{
-
-    ADPREH = (uint8_t) (prechargeTime >> 8);
-    ADPREL = (uint8_t) prechargeTime;
-}
-
-void ADCC_SetRepeatCount(uint8_t repeatCount)
-{
-
-    ADRPT = repeatCount;
-}
-
-uint8_t ADCC_GetCurrentCountofConversions(void)
-{
-
-    return ADCNT;
-}
-
-void ADCC_ClearAccumulator(void)
-{
-
-    ADCON2bits.ADACLR = 1;
-}
-
-uint24_t ADCC_GetAccumulatorValue(void)
-{
-
-    return (((uint24_t)ADACCU << 16)+((uint24_t)ADACCH << 8) + ADACCL);
-}
-
-_Bool ADCC_HasAccumulatorOverflowed(void)
-{
-
-    return ADSTATbits.ADAOV;
-}
-
-uint16_t ADCC_GetFilterValue(void)
-{
-
-    return ((uint16_t)((ADFLTRH << 8) + ADFLTRL));
-}
-
-uint16_t ADCC_GetPreviousResult(void)
-{
-
-    return ((uint16_t)((ADPREVH << 8) + ADPREVL));
-}
-
-void ADCC_DefineSetPoint(uint16_t setPoint)
-{
-
-    ADSTPTH = (uint8_t) (setPoint >> 8);
-    ADSTPTL = (uint8_t) setPoint;
-}
-
-void ADCC_SetUpperThreshold(uint16_t upperThreshold)
-{
-
-    ADUTHH = (uint8_t) (upperThreshold >> 8);
-    ADUTHL = (uint8_t) (upperThreshold);
-}
-
-void ADCC_SetLowerThreshold(uint16_t lowerThreshold)
-{
-
-    ADLTHH = (uint8_t) (lowerThreshold >> 8);
-    ADLTHL = (uint8_t) lowerThreshold;
-}
-
-uint16_t ADCC_GetErrorCalculation(void)
-{
-
- return ((uint16_t)((ADERRH << 8) + ADERRL));
-}
-
-void ADCC_EnableDoubleSampling(void)
-{
-
-    ADCON1bits.ADDSEN = 1;
-}
-
-void ADCC_EnableContinuousConversion(void)
-{
-
-    ADCON0bits.ADCONT = 1;
-}
-
-void ADCC_DisableContinuousConversion(void)
-{
-
-    ADCON0bits.ADCONT = 0;
-}
-
-_Bool ADCC_HasErrorCrossedUpperThreshold(void)
-{
-
-    return ADSTATbits.ADUTHR;
-}
-
-_Bool ADCC_HasErrorCrossedLowerThreshold(void)
-{
-
-    return ADSTATbits.ADLTHR;
-}
-
-uint8_t ADCC_GetConversionStageStatus(void)
-{
-
-    return ADSTATbits.ADSTAT;
-}
-
-void __attribute__((picinterrupt(("irq(AD),base(8)")))) ADCC_ISR()
-{
-
-    PIR1bits.ADIF = 0;
-
-    if (ADCC_ADI_InterruptHandler)
-            ADCC_ADI_InterruptHandler();
-}
-
-void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
-    ADCC_ADI_InterruptHandler = InterruptHandler;
-}
-
-void ADCC_DefaultInterruptHandler(void){
-
-
+ PRLOCK = 0x55;
+ PRLOCK = 0xAA;
+ PRLOCKbits.PRLOCKED = 0;
+ DMA1PR = priority;
+ PRLOCK = 0x55;
+ PRLOCK = 0xAA;
+ PRLOCKbits.PRLOCKED = 1;
 }

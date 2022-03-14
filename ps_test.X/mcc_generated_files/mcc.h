@@ -55,6 +55,7 @@
 #include "interrupt_manager.h"
 #include "tmr5.h"
 #include "tmr6.h"
+#include "dma1.h"
 #include "pwm6.h"
 #include "tmr2.h"
 #include "pwm5.h"
@@ -104,6 +105,17 @@ void OSCILLATOR_Initialize(void);
  */
 void PMD_Initialize(void);
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the System Arbiter for DMA to the default priority.
+ * @Example
+    SystemArbiter_DMA_Initialize();
+ */
+void SystemArbiter_Initialize(void);
 
 #endif	/* MCC_H */
 /**

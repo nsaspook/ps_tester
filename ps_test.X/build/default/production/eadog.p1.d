@@ -1,5 +1,6 @@
-build/default/production/main.p1:  \
-main.c  \
+build/default/production/eadog.p1:  \
+eadog.c  \
+eadog.h  \
 ps_test.h  \
 mcc_generated_files/mcc.h  \
 mcc_generated_files/device_config.h  \
@@ -17,7 +18,5 @@ mcc_generated_files/uart1.h  \
 mcc_generated_files/spi1.h  \
 timers.h  \
 disp_led.h  \
-eadog.h  \
-ringbufs.h  \
 mydisplay.h  \
-scdm.h 
+ringbufs.h 

@@ -1,19 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17139 `(v ~T0 @X0 0 tf ]
-[v F17141 `(v ~T0 @X0 0 tf ]
-[v F17217 `(v ~T0 @X0 0 tf1`*v ]
+[v F17162 `(v ~T0 @X0 0 tf ]
+[v F17164 `(v ~T0 @X0 0 tf ]
+[v F17354 `(v ~T0 @X0 0 tf1`*v ]
 "24 ./scdm.h
 [; ;./scdm.h: 24:  typedef struct _t_cmd {
-[s S2206 `*Cuc 1 `*F17217 1 ]
-[n S2206 _t_cmd cmd fh ]
+[s S2209 `*Cuc 1 `*F17354 1 ]
+[n S2209 _t_cmd cmd fh ]
 "29
 [; ;./scdm.h: 29:  typedef struct _t_cli_ctx {
-[s S2207 `*S2206 1 `uc -> 128 `i `uc 1 ]
-[n S2207 _t_cli_ctx cmds cmd cpos ]
+[s S2210 `*S2209 1 `uc -> 128 `i `uc 1 ]
+[n S2210 _t_cli_ctx cmds cmd cpos ]
 "6 scdm.c
 [; ;scdm.c: 6: uint8_t res = E_CMD_OK;
-[c E17225 0 1 2 3 .. ]
-[n E17225 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
+[c E17362 0 1 2 3 .. ]
+[n E17362 _t_cmd_status E_CMD_OK E_CMD_NOT_FOUND E_CMD_TOO_SHORT E_CMD_EMPTY  ]
 "60 ./scdm.h
 [; ;./scdm.h: 60:  void fh_pr(void *a_data);
 [v _fh_pr `(v ~T0 @X0 0 ef1`*v ]
@@ -23,15 +23,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "62
 [; ;./scdm.h: 62:  void fh_po(void *a_data);
 [v _fh_po `(v ~T0 @X0 0 ef1`*v ]
-[v F17250 `(v ~T0 @X0 0 tf1`*v ]
+[v F17387 `(v ~T0 @X0 0 tf1`*v ]
 "29 /opt/microchip/xc8/v2.36/pic/include/c99/string.h
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
 "109 /opt/microchip/xc8/v2.36/pic/include/c99/stdio.h
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/stdio.h: 109: int sprintf(char *restrict, const char *restrict, ...);
 [v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
-"32 ./ps_test.h
-[; ;./ps_test.h: 32:  extern const char *build_date, *build_time;
+"48 ./ps_test.h
+[; ;./ps_test.h: 48:  extern const char *build_date, *build_time;
 [v _build_date `*Cuc ~T0 @X0 0 e ]
 [v _build_time `*Cuc ~T0 @X0 0 e ]
 "102 /opt/microchip/xc8/v2.36/pic/include/c99/stdio.h
@@ -49,8 +49,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "40
 [; ;/opt/microchip/xc8/v2.36/pic/include/c99/string.h: 40: int strncmp (const char *, const char *, size_t);
 [v _strncmp `(i ~T0 @X0 0 ef3`*Cuc`*Cuc`ui ]
-[v F17269 `(v ~T0 @X0 0 tf1`*v ]
-[v F17277 `(v ~T0 @X0 0 tf1`*v ]
+[v F17406 `(v ~T0 @X0 0 tf1`*v ]
+[v F17414 `(v ~T0 @X0 0 tf1`*v ]
 "251 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 251: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2298,12 +2298,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48272
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 48272: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
+"55 ./mcc_generated_files/dma1.h
+[; ;./mcc_generated_files/dma1.h: 55: uint8_t SrcVarName0[10];
+[v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17139 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17162 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17141 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17164 ~T0 @X0 1 e ]
 "4 scdm.c
 [; ;scdm.c: 4: const char cmdm[] = "\r\n Command processor V0.1\r\n";
 [v _cmdm `Cuc ~T0 @X0 -> 28 `i e ]
@@ -2341,16 +2344,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "5
 [; ;scdm.c: 5: t_cli_ctx cli_ctx;
-[v _cli_ctx `S2207 ~T0 @X0 1 e ]
+[v _cli_ctx `S2210 ~T0 @X0 1 e ]
 "6
 [; ;scdm.c: 6: uint8_t res = E_CMD_OK;
 [v _res `uc ~T0 @X0 1 e ]
 [i _res
--> . `E17225 0 `uc
+-> . `E17362 0 `uc
 ]
 "11
 [; ;scdm.c: 11: static t_cmd g_cmds[] = {
-[v _g_cmds `S2206 ~T0 @X0 -> 4 `i s ]
+[v _g_cmds `S2209 ~T0 @X0 -> 4 `i s ]
 [i _g_cmds
 :U ..
 :U ..
@@ -2367,27 +2370,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 :U ..
 -> -> 0 `i `*Cuc
--> -> 0 `i `*F17250
+-> -> 0 `i `*F17387
 ..
 ..
 ]
 "20
 [; ;scdm.c: 20: static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
-[v _cli_init `(v ~T0 @X0 1 sf2`*S2207`*S2206 ]
+[v _cli_init `(v ~T0 @X0 1 sf2`*S2210`*S2209 ]
 "21
 [; ;scdm.c: 21: {
 {
 [e :U _cli_init ]
 "20
 [; ;scdm.c: 20: static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
-[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
-[v _a_cmds `*S2206 ~T0 @X0 1 r2 ]
+[v _a_ctx `*S2210 ~T0 @X0 1 r1 ]
+[v _a_cmds `*S2209 ~T0 @X0 1 r2 ]
 "21
 [; ;scdm.c: 21: {
 [f ]
 "22
 [; ;scdm.c: 22:  memset(a_ctx, 0x00, sizeof(t_cli_ctx));
-[e ( _memset (3 , , -> _a_ctx `*v -> 0 `i -> # `S2207 `ui ]
+[e ( _memset (3 , , -> _a_ctx `*v -> 0 `i -> # `S2210 `ui ]
 "23
 [; ;scdm.c: 23:  a_ctx->cmds = a_cmds;
 [e = . *U _a_ctx 0 _a_cmds ]
@@ -2402,7 +2405,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _puts (1 &U _cmdm ]
 "30
 [; ;scdm.c: 30: }
-[e :UE 2208 ]
+[e :UE 2211 ]
 }
 "32
 [; ;scdm.c: 32: void scmd_init(void)
@@ -2417,7 +2420,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _cli_init (2 , &U _cli_ctx &U _g_cmds ]
 "35
 [; ;scdm.c: 35: }
-[e :UE 2209 ]
+[e :UE 2212 ]
 }
 "37
 [; ;scdm.c: 37: uint8_t linux_getc(uint8_t *a_data)
@@ -2434,7 +2437,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "39
 [; ;scdm.c: 39:  if (UART1_is_rx_ready()) {
-[e $ ! != -> ( _UART1_is_rx_ready ..  `i -> 0 `i 2211  ]
+[e $ ! != -> ( _UART1_is_rx_ready ..  `i -> 0 `i 2214  ]
 {
 "40
 [; ;scdm.c: 40:   a_data[0] = UART1_Read();
@@ -2442,24 +2445,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;scdm.c: 41:   return 1;
 [e ) -> -> 1 `i `uc ]
-[e $UE 2210  ]
+[e $UE 2213  ]
 "42
 [; ;scdm.c: 42:  } else {
 }
-[e $U 2212  ]
-[e :U 2211 ]
+[e $U 2215  ]
+[e :U 2214 ]
 {
 "43
 [; ;scdm.c: 43:   return 0;
 [e ) -> -> 0 `i `uc ]
-[e $UE 2210  ]
+[e $UE 2213  ]
 "44
 [; ;scdm.c: 44:  }
 }
-[e :U 2212 ]
+[e :U 2215 ]
 "45
 [; ;scdm.c: 45: }
-[e :UE 2210 ]
+[e :UE 2213 ]
 }
 "47
 [; ;scdm.c: 47: uint8_t linux_putc(uint8_t *data, uint8_t a_len)
@@ -2481,21 +2484,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;scdm.c: 50:  return 1;
 [e ) -> -> 1 `i `uc ]
-[e $UE 2213  ]
+[e $UE 2216  ]
 "51
 [; ;scdm.c: 51: }
-[e :UE 2213 ]
+[e :UE 2216 ]
 }
 "53
 [; ;scdm.c: 53: static uint8_t _cli_interpret_cmd(t_cli_ctx *a_ctx)
-[v __cli_interpret_cmd `(uc ~T0 @X0 1 sf1`*S2207 ]
+[v __cli_interpret_cmd `(uc ~T0 @X0 1 sf1`*S2210 ]
 "54
 [; ;scdm.c: 54: {
 {
 [e :U __cli_interpret_cmd ]
 "53
 [; ;scdm.c: 53: static uint8_t _cli_interpret_cmd(t_cli_ctx *a_ctx)
-[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
+[v _a_ctx `*S2210 ~T0 @X0 1 r1 ]
 "54
 [; ;scdm.c: 54: {
 [f ]
@@ -2506,90 +2509,90 @@ Version 4.0 HI-TECH Software Intermediate Code
 "56
 [; ;scdm.c: 56:  uint8_t ret = E_CMD_OK;
 [v _ret `uc ~T0 @X0 1 a ]
-[e = _ret -> . `E17225 0 `uc ]
+[e = _ret -> . `E17362 0 `uc ]
 "58
 [; ;scdm.c: 58:  if (!strlen(a_ctx->cmd)) {
-[e $ ! ! != ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 0 `i `ui 2215  ]
+[e $ ! ! != ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 0 `i `ui 2218  ]
 {
 "59
 [; ;scdm.c: 59:   return E_CMD_EMPTY;
-[e ) -> . `E17225 3 `uc ]
-[e $UE 2214  ]
+[e ) -> . `E17362 3 `uc ]
+[e $UE 2217  ]
 "60
 [; ;scdm.c: 60:  }
 }
-[e :U 2215 ]
+[e :U 2218 ]
 "62
 [; ;scdm.c: 62:  if (strlen(a_ctx->cmd) < 2) {
-[e $ ! < ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 2 `i `ui 2216  ]
+[e $ ! < ( _strlen (1 -> &U . *U _a_ctx 1 `*Cuc -> -> 2 `i `ui 2219  ]
 {
 "63
 [; ;scdm.c: 63:   return E_CMD_TOO_SHORT;
-[e ) -> . `E17225 2 `uc ]
-[e $UE 2214  ]
+[e ) -> . `E17362 2 `uc ]
+[e $UE 2217  ]
 "64
 [; ;scdm.c: 64:  }
 }
-[e :U 2216 ]
+[e :U 2219 ]
 "66
 [; ;scdm.c: 66:  while (a_ctx->cmds[i].fh) {
-[e $U 2217  ]
-[e :U 2218 ]
+[e $U 2220  ]
+[e :U 2221 ]
 {
 "67
 [; ;scdm.c: 67:   if (!strncmp(a_ctx->cmds[i].cmd, a_ctx->cmd, strlen(a_ctx->cmds[i].cmd))) {
-[e $ ! ! != ( _strncmp (3 , , . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> &U . *U _a_ctx 1 `*Cuc ( _strlen (1 . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> 0 `i 2220  ]
+[e $ ! ! != ( _strncmp (3 , , . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> &U . *U _a_ctx 1 `*Cuc ( _strlen (1 . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 0 -> 0 `i 2223  ]
 {
 "69
 [; ;scdm.c: 69:    a_ctx->cmds[i].fh((void *) a_ctx);
 [e ( *U . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 (1 -> _a_ctx `*v ]
 "70
 [; ;scdm.c: 70:    break;
-[e $U 2219  ]
+[e $U 2222  ]
 "71
 [; ;scdm.c: 71:   }
 }
-[e :U 2220 ]
+[e :U 2223 ]
 "72
 [; ;scdm.c: 72:   i++;
 [e ++ _i -> -> 1 `i `uc ]
 "73
 [; ;scdm.c: 73:  }
 }
-[e :U 2217 ]
+[e :U 2220 ]
 "66
 [; ;scdm.c: 66:  while (a_ctx->cmds[i].fh) {
-[e $ != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17269 2218  ]
-[e :U 2219 ]
+[e $ != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17406 2221  ]
+[e :U 2222 ]
 "75
 [; ;scdm.c: 75:  if (!a_ctx->cmds[i].fh) {
-[e $ ! ! != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17277 2221  ]
+[e $ ! ! != . *U + . *U _a_ctx 0 * -> _i `ux -> -> # *U . *U _a_ctx 0 `ui `ux 1 -> -> 0 `i `*F17414 2224  ]
 {
 "76
 [; ;scdm.c: 76:   ret = E_CMD_NOT_FOUND;
-[e = _ret -> . `E17225 1 `uc ]
+[e = _ret -> . `E17362 1 `uc ]
 "77
 [; ;scdm.c: 77:  }
 }
-[e :U 2221 ]
+[e :U 2224 ]
 "79
 [; ;scdm.c: 79:  return ret;
 [e ) _ret ]
-[e $UE 2214  ]
+[e $UE 2217  ]
 "80
 [; ;scdm.c: 80: }
-[e :UE 2214 ]
+[e :UE 2217 ]
 }
 "82
 [; ;scdm.c: 82: void cli_read(t_cli_ctx *a_ctx)
-[v _cli_read `(v ~T0 @X0 1 ef1`*S2207 ]
+[v _cli_read `(v ~T0 @X0 1 ef1`*S2210 ]
 "83
 [; ;scdm.c: 83: {
 {
 [e :U _cli_read ]
 "82
 [; ;scdm.c: 82: void cli_read(t_cli_ctx *a_ctx)
-[v _a_ctx `*S2207 ~T0 @X0 1 r1 ]
+[v _a_ctx `*S2210 ~T0 @X0 1 r1 ]
 "83
 [; ;scdm.c: 83: {
 [f ]
@@ -2599,37 +2602,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _i -> -> 0 `i `uc ]
 "87
 [; ;scdm.c: 87:  if (!linux_getc(&i)) {
-[e $ ! ! != -> ( _linux_getc (1 &U _i `i -> 0 `i 2223  ]
+[e $ ! ! != -> ( _linux_getc (1 &U _i `i -> 0 `i 2226  ]
 {
 "88
 [; ;scdm.c: 88:   return;
-[e $UE 2222  ]
+[e $UE 2225  ]
 "89
 [; ;scdm.c: 89:  }
 }
-[e :U 2223 ]
+[e :U 2226 ]
 "92
 [; ;scdm.c: 92:  switch (i) {
-[e $U 2225  ]
+[e $U 2228  ]
 {
 "93
 [; ;scdm.c: 93:  case 0x7f:
-[e :U 2226 ]
+[e :U 2229 ]
 "94
 [; ;scdm.c: 94:  case 0x7e:
-[e :U 2227 ]
+[e :U 2230 ]
 "95
 [; ;scdm.c: 95:   break;
-[e $U 2224  ]
+[e $U 2227  ]
 "96
 [; ;scdm.c: 96:  case 0x1b:
-[e :U 2228 ]
+[e :U 2231 ]
 "97
 [; ;scdm.c: 97:   break;
-[e $U 2224  ]
+[e $U 2227  ]
 "98
 [; ;scdm.c: 98:  case '\r':
-[e :U 2229 ]
+[e :U 2232 ]
 "99
 [; ;scdm.c: 99:   a_ctx->cmd[(((a_ctx->cpos) < (128 - 1)) ? (a_ctx->cpos + 1) : (a_ctx->cpos))] = '\0';
 [e = *U + &U . *U _a_ctx 1 * -> -> ? < -> . *U _a_ctx 2 `i - -> 128 `i -> 1 `i : + -> . *U _a_ctx 2 `i -> 1 `i -> . *U _a_ctx 2 `i `ui `ux -> -> # *U &U . *U _a_ctx 1 `ui `ux -> -> 0 `ui `uc ]
@@ -2647,13 +2650,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _memset (3 , , -> &U . *U _a_ctx 1 `*v -> 0 `i -> -> 128 `i `ui ]
 "104
 [; ;scdm.c: 104:   break;
-[e $U 2224  ]
+[e $U 2227  ]
 "105
 [; ;scdm.c: 105:  default:
-[e :U 2230 ]
+[e :U 2233 ]
 "107
 [; ;scdm.c: 107:   if (a_ctx->cpos < (128 - 1)) {
-[e $ ! < -> . *U _a_ctx 2 `i - -> 128 `i -> 1 `i 2231  ]
+[e $ ! < -> . *U _a_ctx 2 `i - -> 128 `i -> 1 `i 2234  ]
 {
 "108
 [; ;scdm.c: 108:    a_ctx->cmd[a_ctx->cpos++] = i;
@@ -2664,24 +2667,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "110
 [; ;scdm.c: 110:   }
 }
-[e :U 2231 ]
+[e :U 2234 ]
 "111
 [; ;scdm.c: 111:   break;
-[e $U 2224  ]
+[e $U 2227  ]
 "112
 [; ;scdm.c: 112:  }
 }
-[e $U 2224  ]
-[e :U 2225 ]
-[e [\ -> _i `i , $ -> 127 `i 2226
- , $ -> 126 `i 2227
- , $ -> 27 `i 2228
- , $ -> -> 13 `ui `i 2229
- 2230 ]
-[e :U 2224 ]
+[e $U 2227  ]
+[e :U 2228 ]
+[e [\ -> _i `i , $ -> 127 `i 2229
+ , $ -> 126 `i 2230
+ , $ -> 27 `i 2231
+ , $ -> -> 13 `ui `i 2232
+ 2233 ]
+[e :U 2227 ]
 "113
 [; ;scdm.c: 113: }
-[e :UE 2222 ]
+[e :UE 2225 ]
 }
 [p f _sprintf 8650752 ]
 [a 2C 112 115 0 ]

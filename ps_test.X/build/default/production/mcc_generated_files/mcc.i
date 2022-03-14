@@ -27504,12 +27504,116 @@ extern void (*TMR6_InterruptHandler)(void);
 void TMR6_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/dma1.h" 1
+# 55 "mcc_generated_files/dma1.h"
+uint8_t SrcVarName0[10];
+
+
+
+
+
+
+
+void DMA1_Initialize(void);
+
+
+
+
+
+
+void DMA1_SelectSourceRegion(uint8_t region);
+
+
+
+
+
+
+void DMA1_SetSourceAddress(uint24_t address);
+
+
+
+
+
+
+void DMA1_SetDestinationAddress(uint16_t address);
+
+
+
+
+
+
+void DMA1_SetSourceSize(uint16_t size);
+
+
+
+
+
+
+void DMA1_SetDestinationSize(uint16_t size);
+
+
+
+
+
+
+uint24_t DMA1_GetSourcePointer(void);
+
+
+
+
+
+
+uint16_t DMA1_GetDestinationPointer(void);
+
+
+
+
+
+
+void DMA1_SetStartTrigger(uint8_t sirq);
+
+
+
+
+
+
+void DMA1_SetAbortTrigger(uint8_t airq);
+
+
+
+
+
+
+void DMA1_StartTransfer(void);
+
+
+
+
+
+
+void DMA1_StartTransferWithTrigger(void);
+
+
+
+
+
+
+void DMA1_StopTransfer(void);
+
+
+
+
+
+
+void DMA1_SetDMAPriority(uint8_t priority);
+# 58 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/pwm6.h" 1
 # 102 "mcc_generated_files/pwm6.h"
  void PWM6_Initialize(void);
 # 129 "mcc_generated_files/pwm6.h"
  void PWM6_LoadDutyValue(uint16_t dutyValue);
-# 58 "mcc_generated_files/mcc.h" 2
+# 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr2.h" 1
 # 79 "mcc_generated_files/tmr2.h"
@@ -27750,14 +27854,14 @@ void TMR2_Period8BitSet(uint8_t periodVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 848 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 59 "mcc_generated_files/mcc.h" 2
+# 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm5.h" 1
 # 102 "mcc_generated_files/pwm5.h"
  void PWM5_Initialize(void);
 # 129 "mcc_generated_files/pwm5.h"
  void PWM5_LoadDutyValue(uint16_t dutyValue);
-# 60 "mcc_generated_files/mcc.h" 2
+# 61 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adcc.h" 1
 # 72 "mcc_generated_files/adcc.h"
@@ -27837,7 +27941,7 @@ uint8_t ADCC_GetConversionStageStatus(void);
 void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
 # 870 "mcc_generated_files/adcc.h"
 void ADCC_DefaultInterruptHandler(void);
-# 61 "mcc_generated_files/mcc.h" 2
+# 62 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/dac1.h" 1
 # 93 "mcc_generated_files/dac1.h"
@@ -27846,7 +27950,7 @@ void DAC1_Initialize(void);
 void DAC1_SetOutput(uint8_t inputData);
 # 163 "mcc_generated_files/dac1.h"
 uint8_t DAC1_GetOutput(void);
-# 62 "mcc_generated_files/mcc.h" 2
+# 63 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/uart1.h" 1
 # 75 "mcc_generated_files/uart1.h"
@@ -27899,7 +28003,7 @@ void (*UART1_TxInterruptHandler)(void);
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void));
 # 574 "mcc_generated_files/uart1.h"
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
-# 63 "mcc_generated_files/mcc.h" 2
+# 64 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/spi1.h" 1
 # 59 "mcc_generated_files/spi1.h"
@@ -27916,13 +28020,15 @@ void SPI1_WriteBlock(void *block, size_t blockSize);
 void SPI1_ReadBlock(void *block, size_t blockSize);
 void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
-# 64 "mcc_generated_files/mcc.h" 2
-# 79 "mcc_generated_files/mcc.h"
+# 65 "mcc_generated_files/mcc.h" 2
+# 80 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 92 "mcc_generated_files/mcc.h"
+# 93 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 105 "mcc_generated_files/mcc.h"
+# 106 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
+# 118 "mcc_generated_files/mcc.h"
+void SystemArbiter_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
 
@@ -27933,15 +28039,17 @@ void SYSTEM_Initialize(void)
     PMD_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
+    ADCC_Initialize();
+    DMA1_Initialize();
+    TMR2_Initialize();
     PWM6_Initialize();
     TMR6_Initialize();
-    ADCC_Initialize();
     DAC1_Initialize();
-    PWM5_Initialize();
     TMR5_Initialize();
-    TMR2_Initialize();
+    PWM5_Initialize();
     UART1_Initialize();
     SPI1_Initialize();
+    SystemArbiter_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
@@ -27980,4 +28088,13 @@ void PMD_Initialize(void)
     PMD6 = 0x00;
 
     PMD7 = 0x00;
+}
+
+
+void SystemArbiter_Initialize(void)
+{
+
+    PRLOCK = 0x55;
+    PRLOCK = 0xAA;
+    PRLOCKbits.PRLOCKED = 1;
 }

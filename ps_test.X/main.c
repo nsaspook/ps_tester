@@ -130,7 +130,7 @@ void main(void)
 	TMR5_SetInterruptHandler(Timers_Isr);
 	ADCC_SetADIInterruptHandler(Adc_Isr);
 	ADPCH = adc_chan;
-	PWM5_LoadDutyValue(0);  // set PS signals to zero
+	PWM5_LoadDutyValue(0); // set PS signals to zero
 	PWM6_LoadDutyValue(0);
 
 	/*
@@ -145,6 +145,10 @@ void main(void)
 	//INTERRUPT_GlobalInterruptLowEnable();
 
 	DAC1_SetOutput(dac_v);
+
+	init_display();
+//	eaDogM_CursorOff();
+//	eaDogM_WriteString("SPI display testing");
 
 	while (true) {
 		if (adc_tick) {

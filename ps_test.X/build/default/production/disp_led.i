@@ -27925,12 +27925,116 @@ extern void (*TMR6_InterruptHandler)(void);
 void TMR6_DefaultInterruptHandler(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/dma1.h" 1
+# 55 "./mcc_generated_files/dma1.h"
+uint8_t SrcVarName0[10];
+
+
+
+
+
+
+
+void DMA1_Initialize(void);
+
+
+
+
+
+
+void DMA1_SelectSourceRegion(uint8_t region);
+
+
+
+
+
+
+void DMA1_SetSourceAddress(uint24_t address);
+
+
+
+
+
+
+void DMA1_SetDestinationAddress(uint16_t address);
+
+
+
+
+
+
+void DMA1_SetSourceSize(uint16_t size);
+
+
+
+
+
+
+void DMA1_SetDestinationSize(uint16_t size);
+
+
+
+
+
+
+uint24_t DMA1_GetSourcePointer(void);
+
+
+
+
+
+
+uint16_t DMA1_GetDestinationPointer(void);
+
+
+
+
+
+
+void DMA1_SetStartTrigger(uint8_t sirq);
+
+
+
+
+
+
+void DMA1_SetAbortTrigger(uint8_t airq);
+
+
+
+
+
+
+void DMA1_StartTransfer(void);
+
+
+
+
+
+
+void DMA1_StartTransferWithTrigger(void);
+
+
+
+
+
+
+void DMA1_StopTransfer(void);
+
+
+
+
+
+
+void DMA1_SetDMAPriority(uint8_t priority);
+# 58 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/pwm6.h" 1
 # 102 "./mcc_generated_files/pwm6.h"
  void PWM6_Initialize(void);
 # 129 "./mcc_generated_files/pwm6.h"
  void PWM6_LoadDutyValue(uint16_t dutyValue);
-# 58 "./mcc_generated_files/mcc.h" 2
+# 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 79 "./mcc_generated_files/tmr2.h"
@@ -28171,14 +28275,14 @@ void TMR2_Period8BitSet(uint8_t periodVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 848 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 59 "./mcc_generated_files/mcc.h" 2
+# 60 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm5.h" 1
 # 102 "./mcc_generated_files/pwm5.h"
  void PWM5_Initialize(void);
 # 129 "./mcc_generated_files/pwm5.h"
  void PWM5_LoadDutyValue(uint16_t dutyValue);
-# 60 "./mcc_generated_files/mcc.h" 2
+# 61 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/adcc.h" 1
 # 72 "./mcc_generated_files/adcc.h"
@@ -28258,7 +28362,7 @@ uint8_t ADCC_GetConversionStageStatus(void);
 void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
 # 870 "./mcc_generated_files/adcc.h"
 void ADCC_DefaultInterruptHandler(void);
-# 61 "./mcc_generated_files/mcc.h" 2
+# 62 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/dac1.h" 1
 # 93 "./mcc_generated_files/dac1.h"
@@ -28267,7 +28371,7 @@ void DAC1_Initialize(void);
 void DAC1_SetOutput(uint8_t inputData);
 # 163 "./mcc_generated_files/dac1.h"
 uint8_t DAC1_GetOutput(void);
-# 62 "./mcc_generated_files/mcc.h" 2
+# 63 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/uart1.h" 1
 # 75 "./mcc_generated_files/uart1.h"
@@ -28320,7 +28424,7 @@ void (*UART1_TxInterruptHandler)(void);
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void));
 # 574 "./mcc_generated_files/uart1.h"
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
-# 63 "./mcc_generated_files/mcc.h" 2
+# 64 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/spi1.h" 1
 # 59 "./mcc_generated_files/spi1.h"
@@ -28337,13 +28441,15 @@ void SPI1_WriteBlock(void *block, size_t blockSize);
 void SPI1_ReadBlock(void *block, size_t blockSize);
 void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
-# 64 "./mcc_generated_files/mcc.h" 2
-# 79 "./mcc_generated_files/mcc.h"
+# 65 "./mcc_generated_files/mcc.h" 2
+# 80 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 92 "./mcc_generated_files/mcc.h"
+# 93 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 105 "./mcc_generated_files/mcc.h"
+# 106 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
+# 118 "./mcc_generated_files/mcc.h"
+void SystemArbiter_Initialize(void);
 # 21 "./ps_test.h" 2
 # 1 "./timers.h" 1
 # 11 "./timers.h"
@@ -28367,7 +28473,93 @@ void Timers_Isr(void);
 # 22 "./ps_test.h" 2
 # 1 "./disp_led.h" 1
 # 23 "./ps_test.h" 2
-# 32 "./ps_test.h"
+
+# 1 "./eadog.h" 1
+# 27 "./eadog.h"
+# 1 "./ps_test.h" 1
+# 28 "./eadog.h" 2
+# 1 "./ringbufs.h" 1
+# 18 "./ringbufs.h"
+ typedef struct ringBufS_t {
+  uint8_t buf[64];
+  uint8_t head;
+  uint8_t tail;
+  uint8_t count;
+ } ringBufS_t;
+
+ void ringBufS_init(volatile ringBufS_t *_this);
+ int8_t ringBufS_empty(ringBufS_t *_this);
+ int8_t ringBufS_full(ringBufS_t *_this);
+ uint8_t ringBufS_get(ringBufS_t *_this);
+ void ringBufS_put(ringBufS_t *_this, const uint8_t c);
+ void ringBufS_put_dma(ringBufS_t *_this, const uint8_t c);
+ void ringBufS_put_dma_cpy(ringBufS_t *, const char *, const uint8_t);
+ void ringBufS_flush(ringBufS_t *_this, const int8_t clearBuffer);
+# 29 "./eadog.h" 2
+
+struct spi_link_type {
+ uint8_t SPI_LCD : 1;
+ uint8_t SPI_AUX : 1;
+ uint8_t LCD_TIMER : 1;
+ volatile uint8_t LCD_DATA : 1;
+ uint16_t delay;
+ uint8_t config;
+ struct ringBufS_t *tx1b, *tx1a;
+ volatile int32_t int_count;
+};
+# 50 "./eadog.h"
+ void wdtdelay(uint32_t);
+ void init_display(void);
+ void init_port_dma(void);
+ void send_port_data_dma(uint16_t);
+ uint8_t* port_data_dma_ptr(void);
+ void send_lcd_data_dma(uint8_t);
+ void send_lcd_cmd_dma(uint8_t);
+ void start_lcd(void);
+ void wait_lcd_set(void);
+ _Bool wait_lcd_check(void);
+ void wait_lcd_done(void);
+ void eaDogM_WriteChr(int8_t);
+ void eaDogM_WriteCommand(uint8_t);
+ void eaDogM_SetPos(uint8_t, uint8_t);
+ void eaDogM_ClearRow(uint8_t);
+ void eaDogM_WriteString(char *);
+ void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
+ void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
+ void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
+
+ void spi_putch(char);
+# 25 "./ps_test.h" 2
+# 1 "./mydisplay.h" 1
+# 40 "./mydisplay.h"
+typedef enum {
+ DIS_STR = 0,
+ DIS_HELP,
+ DIS_ERR,
+ DIS_CLEAR,
+} D_CODES;
+
+
+typedef struct D_data {
+    char lcd[4][4][40];
+    uint8_t vterm : 1;
+    D_CODES last_info;
+} D_data;
+
+void MyeaDogM_WriteStringAtPos(const uint8_t, const uint8_t, char *);
+uint8_t update_lcd(uint8_t);
+uint8_t set_vterm(const uint8_t);
+char * get_vterm_ptr(const uint8_t, const uint8_t);
+void vterm_dump(void);
+void vterm_sequence(void);
+__attribute__((inline)) D_CODES display_info(void);
+__attribute__((inline)) D_CODES display_help(void);
+_Bool help_button(void);
+_Bool check_help(const _Bool);
+D_CODES set_display_info(const D_CODES);
+D_CODES set_temp_display_help(const D_CODES);
+# 26 "./ps_test.h" 2
+# 48 "./ps_test.h"
  extern const char *build_date, *build_time;
 
  typedef enum {
