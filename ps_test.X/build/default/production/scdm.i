@@ -28025,6 +28025,15 @@ void DMA1_StopTransfer(void);
 
 
 void DMA1_SetDMAPriority(uint8_t priority);
+
+
+
+
+
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
+# 170 "./mcc_generated_files/dma1.h"
+void DMA1_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm6.h" 1
@@ -28546,7 +28555,7 @@ struct spi_link_type {
  void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
  void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
  void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
-
+ void source_dma_done(void);
  void spi_putch(char);
 # 25 "./ps_test.h" 2
 # 1 "./mydisplay.h" 1

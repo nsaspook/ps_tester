@@ -27161,9 +27161,19 @@ void DMA1_StopTransfer(void);
 
 
 void DMA1_SetDMAPriority(uint8_t priority);
+
+
+
+
+
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
+# 170 "mcc_generated_files/dma1.h"
+void DMA1_DefaultInterruptHandler(void);
 # 52 "mcc_generated_files/dma1.c" 2
 
 
+void (*DMA1_SCNTI_InterruptHandler)(void);
 
 
 
@@ -27176,13 +27186,13 @@ void DMA1_Initialize(void)
 
     DMA1DSA = &SPI1TXB;
 
-    DMA1CON1 = 0x02;
+    DMA1CON1 = 0x03;
 
     DMA1SSZ = 1;
 
     DMA1DSZ = 1;
 
-    DMA1SIRQ = 0x00;
+    DMA1SIRQ = 0x15;
 
     DMA1AIRQ = 0x00;
 
@@ -27196,12 +27206,13 @@ void DMA1_Initialize(void)
     PIR2bits.DMA1ORIF =0;
 
     PIE2bits.DMA1DCNTIE = 0;
-    PIE2bits.DMA1SCNTIE = 0;
+    PIE2bits.DMA1SCNTIE = 1;
+ DMA1_SetSCNTIInterruptHandler(DMA1_DefaultInterruptHandler);
     PIE2bits.DMA1AIE = 0;
     PIE2bits.DMA1ORIE = 0;
 
 
-    DMA1CON0 = 0x80;
+    DMA1CON0 = 0xC0;
 
 }
 
@@ -27276,4 +27287,23 @@ void DMA1_SetDMAPriority(uint8_t priority)
  PRLOCK = 0x55;
  PRLOCK = 0xAA;
  PRLOCKbits.PRLOCKED = 1;
+}
+
+void __attribute__((picinterrupt(("irq(16),base(8)")))) DMA1_DMASCNTI_ISR()
+{
+
+    PIR2bits.DMA1SCNTIF = 0;
+
+    if (DMA1_SCNTI_InterruptHandler)
+            DMA1_SCNTI_InterruptHandler();
+}
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void))
+{
+  DMA1_SCNTI_InterruptHandler = InterruptHandler;
+}
+
+void DMA1_DefaultInterruptHandler(void){
+
+
 }

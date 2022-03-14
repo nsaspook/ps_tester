@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16571 `(v ~T0 @X0 0 tf ]
-[v F16573 `(v ~T0 @X0 0 tf ]
+[v F16576 `(v ~T0 @X0 0 tf ]
+[v F16578 `(v ~T0 @X0 0 tf ]
 "109 mcc_generated_files/interrupt_manager.h
 [; ;mcc_generated_files/interrupt_manager.h: 109: void INTERRUPT_Initialize (void);
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
@@ -2354,10 +2354,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
 "518 mcc_generated_files/uart1.h
 [; ;mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F16571 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F16576 ~T0 @X0 1 e ]
 "536
 [; ;mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F16573 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F16578 ~T0 @X0 1 e ]
 "50 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]

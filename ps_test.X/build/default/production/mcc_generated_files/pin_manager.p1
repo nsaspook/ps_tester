@@ -2438,8 +2438,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 64:     LATB = 0x00;
 [e = _LATB -> -> 0 `i `uc ]
 "65
-[; ;mcc_generated_files/pin_manager.c: 65:     LATC = 0x00;
-[e = _LATC -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 65:     LATC = 0x07;
+[e = _LATC -> -> 7 `i `uc ]
 "70
 [; ;mcc_generated_files/pin_manager.c: 70:     TRISE = 0x02;
 [e = _TRISE -> -> 2 `i `uc ]

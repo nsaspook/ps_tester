@@ -28029,6 +28029,15 @@ void DMA1_StopTransfer(void);
 
 
 void DMA1_SetDMAPriority(uint8_t priority);
+
+
+
+
+
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
+# 170 "./mcc_generated_files/dma1.h"
+void DMA1_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm6.h" 1
@@ -28591,7 +28600,7 @@ struct spi_link_type {
  void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
  void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
  void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
-
+ void source_dma_done(void);
  void spi_putch(char);
 # 4 "eadog.c" 2
 
@@ -28693,14 +28702,14 @@ void init_port_dma(void)
 
 static void send_lcd_data(const uint8_t data)
 {
- do { LATCbits.LATC0 = 0; } while(0);
+ do { LATCbits.LATC2 = 0; } while(0);
  SPI1_ExchangeByte(data);
  wdtdelay(8);
 }
 
 static void send_lcd_cmd(const uint8_t cmd)
 {
- do { LATCbits.LATC0 = 0; } while(0);
+ do { LATCbits.LATC2 = 0; } while(0);
  SPI1_ExchangeByte(0xFE);
  wdtdelay(8);
  SPI1_ExchangeByte(cmd);
@@ -28709,7 +28718,7 @@ static void send_lcd_cmd(const uint8_t cmd)
 
 static void send_lcd_cmd_long(const uint8_t cmd)
 {
- do { LATCbits.LATC0 = 0; } while(0);
+ do { LATCbits.LATC2 = 0; } while(0);
  SPI1_ExchangeByte(0xFE);
  wdtdelay(8);
  SPI1_ExchangeByte(cmd);
@@ -28729,7 +28738,7 @@ void eaDogM_WriteString(char *strPtr)
  wait_lcd_set();
 
  ringBufS_flush(spi_link.tx1a, 0);
- do { LATCbits.LATC0 = 0; } while(0);
+ do { LATCbits.LATC2 = 0; } while(0);
  if (len > 64) {
   strPtr[64] = 0;
   len = 64;
@@ -28770,7 +28779,7 @@ void send_lcd_data_dma(const uint8_t strPtr)
  wait_lcd_set();
 
  ringBufS_flush(spi_link.tx1a, 0);
- do { LATCbits.LATC0 = 0; } while(0);
+ do { LATCbits.LATC2 = 0; } while(0);
  DMA1CON0bits.EN = 0;
  DMA1SSZ = 1;
  DMA1CON0bits.EN = 1;
@@ -28891,4 +28900,9 @@ void wait_lcd_done(void)
 {
  while (spi_link.LCD_DATA);
  while (!SPI1STATUSbits.TXBE);
+}
+
+void source_dma_done(void)
+{
+ spi_link.LCD_DATA = 0;
 }

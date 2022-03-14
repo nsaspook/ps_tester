@@ -27079,7 +27079,7 @@ void PIN_MANAGER_Initialize(void)
     LATA = 0x20;
     LATF = 0x00;
     LATB = 0x00;
-    LATC = 0x00;
+    LATC = 0x07;
 
 
 

@@ -137,6 +137,7 @@ void main(void)
 	 * init serial command parser on USART
 	 */
 	scmd_init();
+	DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();
@@ -147,8 +148,8 @@ void main(void)
 	DAC1_SetOutput(dac_v);
 
 	init_display();
-//	eaDogM_CursorOff();
-//	eaDogM_WriteString("SPI display testing");
+	eaDogM_CursorOff();
+	eaDogM_WriteString("SPI display testing");
 
 	while (true) {
 		if (adc_tick) {
@@ -190,7 +191,7 @@ void main(void)
 				vval = (double) ana[0] * V_SCALE;
 				ival = (double) ana[1] * I_SCALE;
 				printf(" PS Test %1u: DAC OUT=%.2u, Supply ReadBack %4.4u V=%+6.1fV %4.4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
-
+				eaDogM_WriteString("Display testing  ");
 				/*
 				 * mode switch state machine
 				 */

@@ -27606,6 +27606,15 @@ void DMA1_StopTransfer(void);
 
 
 void DMA1_SetDMAPriority(uint8_t priority);
+
+
+
+
+
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
+# 170 "mcc_generated_files/dma1.h"
+void DMA1_DefaultInterruptHandler(void);
 # 58 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm6.h" 1

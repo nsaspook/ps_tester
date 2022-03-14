@@ -458,3 +458,8 @@ void wait_lcd_done(void)
 	while (spi_link.LCD_DATA);
 	while (!SPI1STATUSbits.TXBE);
 }
+
+void source_dma_done(void)
+{
+	spi_link.LCD_DATA = 0;
+}

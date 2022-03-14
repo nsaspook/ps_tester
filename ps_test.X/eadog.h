@@ -66,7 +66,7 @@ struct spi_link_type { // internal SPI state table
 	void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
 	void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
 	void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
-	
+	void source_dma_done(void);
 	void spi_putch(char);
 
 #define eaDogM_Cls()             eaDogM_WriteCommand(EADOGM_CMD_CLR)

@@ -1,6 +1,6 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17162 `(v ~T0 @X0 0 tf ]
-[v F17164 `(v ~T0 @X0 0 tf ]
+[v F17167 `(v ~T0 @X0 0 tf ]
+[v F17169 `(v ~T0 @X0 0 tf ]
 "18 ./ringbufs.h
 [; ;./ringbufs.h: 18:  typedef struct ringBufS_t {
 [s S2207 `uc -> 64 `i `uc 1 `uc 1 `uc 1 ]
@@ -2448,10 +2448,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
 "518 ./mcc_generated_files/uart1.h
 [; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17162 ~T0 @X0 1 e ]
+[v _UART1_RxInterruptHandler `*F17167 ~T0 @X0 1 e ]
 "536
 [; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17164 ~T0 @X0 1 e ]
+[v _UART1_TxInterruptHandler `*F17169 ~T0 @X0 1 e ]
 "9 eadog.c
 [; ;eadog.c: 9: struct spi_link_type spi_link;
 [v _spi_link `S2208 ~T0 @X0 1 e ]
@@ -2496,12 +2496,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "19
 [; ;eadog.c: 19:  static uint32_t dcount;
-[v F17362 `ul ~T0 @X0 1 s dcount ]
+[v F17368 `ul ~T0 @X0 1 s dcount ]
 "21
 [; ;eadog.c: 21:  for (dcount = 0; dcount <= delay; dcount++) {
 {
-[e = F17362 -> -> -> 0 `i `l `ul ]
-[e $ <= F17362 _delay 2210  ]
+[e = F17368 -> -> -> 0 `i `l `ul ]
+[e $ <= F17368 _delay 2210  ]
 [e $U 2211  ]
 [e :U 2210 ]
 {
@@ -2514,8 +2514,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;eadog.c: 24:  };
 }
-[e ++ F17362 -> -> -> 1 `i `l `ul ]
-[e $ <= F17362 _delay 2210  ]
+[e ++ F17368 -> -> -> 1 `i `l `ul ]
+[e $ <= F17368 _delay 2210  ]
 [e :U 2211 ]
 }
 "25
@@ -2674,10 +2674,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 119: {
 [f ]
 "120
-[; ;eadog.c: 120:  do { LATCbits.LATC0 = 0; } while(0);
+[; ;eadog.c: 120:  do { LATCbits.LATC2 = 0; } while(0);
 [e :U 2218 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2217 ]
 "121
@@ -2704,10 +2704,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 126: {
 [f ]
 "127
-[; ;eadog.c: 127:  do { LATCbits.LATC0 = 0; } while(0);
+[; ;eadog.c: 127:  do { LATCbits.LATC2 = 0; } while(0);
 [e :U 2222 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2221 ]
 "128
@@ -2740,10 +2740,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 135: {
 [f ]
 "136
-[; ;eadog.c: 136:  do { LATCbits.LATC0 = 0; } while(0);
+[; ;eadog.c: 136:  do { LATCbits.LATC2 = 0; } while(0);
 [e :U 2226 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2225 ]
 "137
@@ -2786,10 +2786,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 155:  ringBufS_flush(spi_link.tx1a, 0);
 [e ( _ringBufS_flush (2 , . _spi_link 7 -> -> 0 `i `c ]
 "156
-[; ;eadog.c: 156:  do { LATCbits.LATC0 = 0; } while(0);
+[; ;eadog.c: 156:  do { LATCbits.LATC2 = 0; } while(0);
 [e :U 2230 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2229 ]
 "157
@@ -2877,10 +2877,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 196:  ringBufS_flush(spi_link.tx1a, 0);
 [e ( _ringBufS_flush (2 , . _spi_link 7 -> -> 0 `i `c ]
 "197
-[; ;eadog.c: 197:  do { LATCbits.LATC0 = 0; } while(0);
+[; ;eadog.c: 197:  do { LATCbits.LATC2 = 0; } while(0);
 [e :U 2236 ]
 {
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2235 ]
 "198
@@ -3254,4 +3254,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "460
 [; ;eadog.c: 460: }
 [e :UE 2258 ]
+}
+"462
+[; ;eadog.c: 462: void source_dma_done(void)
+[v _source_dma_done `(v ~T0 @X0 1 ef ]
+"463
+[; ;eadog.c: 463: {
+{
+[e :U _source_dma_done ]
+[f ]
+"464
+[; ;eadog.c: 464:  spi_link.LCD_DATA = 0;
+[e = . _spi_link 3 -> -> 0 `i `uc ]
+"465
+[; ;eadog.c: 465: }
+[e :UE 2265 ]
 }

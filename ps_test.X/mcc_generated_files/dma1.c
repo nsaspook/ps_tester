@@ -51,6 +51,7 @@
 #include <xc.h>
 #include "dma1.h"
 
+void (*DMA1_SCNTI_InterruptHandler)(void);
 
 /**
   Section: DMA1 APIs
@@ -62,14 +63,14 @@ void DMA1_Initialize(void)
     DMA1SSA = &SrcVarName0;
     //Destination Address : &SPI1TXB
     DMA1DSA = &SPI1TXB;
-    //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP not cleared; 
-    DMA1CON1 = 0x02;
+    //DMODE unchanged; DSTP not cleared; SMR GPR; SMODE incremented; SSTP cleared; 
+    DMA1CON1 = 0x03;
     //Source Message Size : 1
     DMA1SSZ = 1;
     //Destination Message Size : 1
     DMA1DSZ = 1;
-    //Start Trigger : SIRQ None; 
-    DMA1SIRQ = 0x00;
+    //Start Trigger : SIRQ SPI1TX; 
+    DMA1SIRQ = 0x15;
     //Abort Trigger : AIRQ None; 
     DMA1AIRQ = 0x00;
 	
@@ -83,12 +84,13 @@ void DMA1_Initialize(void)
     PIR2bits.DMA1ORIF =0; 
     
     PIE2bits.DMA1DCNTIE = 0;
-    PIE2bits.DMA1SCNTIE = 0;
+    PIE2bits.DMA1SCNTIE = 1; 
+	DMA1_SetSCNTIInterruptHandler(DMA1_DefaultInterruptHandler);
     PIE2bits.DMA1AIE = 0;
     PIE2bits.DMA1ORIE = 0;
 	
-    //EN enabled; SIRQEN disabled; DGO not in progress; AIRQEN disabled; 
-    DMA1CON0 = 0x80;
+    //EN enabled; SIRQEN enabled; DGO not in progress; AIRQEN disabled; 
+    DMA1CON0 = 0xC0;
 	
 }
 
@@ -165,6 +167,24 @@ void DMA1_SetDMAPriority(uint8_t priority)
 	PRLOCKbits.PRLOCKED = 1;
 }
 
+void __interrupt(irq(IRQ_DMA1SCNT),base(8)) DMA1_DMASCNTI_ISR()
+{
+    // Clear the source count interrupt flag
+    PIR2bits.DMA1SCNTIF = 0;
+
+    if (DMA1_SCNTI_InterruptHandler)
+            DMA1_SCNTI_InterruptHandler();
+}
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void))
+{
+	 DMA1_SCNTI_InterruptHandler = InterruptHandler;
+}
+
+void DMA1_DefaultInterruptHandler(void){
+    // add your DMA1 interrupt custom code
+    // or set custom function using DMA1_SetSCNTIInterruptHandler() /DMA1_SetDCNTIInterruptHandler() /DMA1_SetAIInterruptHandler() /DMA1_SetORIInterruptHandler()
+}
 /**
  End of File
 */

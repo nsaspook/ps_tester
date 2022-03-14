@@ -28030,6 +28030,15 @@ void DMA1_StopTransfer(void);
 
 
 void DMA1_SetDMAPriority(uint8_t priority);
+
+
+
+
+
+
+void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
+# 170 "./mcc_generated_files/dma1.h"
+void DMA1_DefaultInterruptHandler(void);
 # 58 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pwm6.h" 1
@@ -28551,7 +28560,7 @@ struct spi_link_type {
  void eaDogM_WriteStringAtPos(uint8_t, uint8_t, char *);
  void eaDogM_WriteIntAtPos(uint8_t, uint8_t, uint8_t);
  void eaDogM_WriteByteToCGRAM(uint8_t, uint8_t);
-
+ void source_dma_done(void);
  void spi_putch(char);
 # 25 "./ps_test.h" 2
 # 1 "./mydisplay.h" 1
@@ -28634,7 +28643,7 @@ volatile _Bool disp_tick = 0, adc_tick = 0;
 volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 13 2022", *build_time = "14:07:47";
+const char *build_date = "Mar 14 2022", *build_time = "14:41:55";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 
@@ -28712,6 +28721,7 @@ void main(void)
 
 
  scmd_init();
+ DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 
  (INTCON0bits.GIEH = 1);
@@ -28722,8 +28732,8 @@ void main(void)
  DAC1_SetOutput(dac_v);
 
  init_display();
-
-
+ eaDogM_WriteCommand(0b00001100);
+ eaDogM_WriteString("SPI display testing");
 
  while (1) {
   if (adc_tick) {
@@ -28765,7 +28775,7 @@ void main(void)
     vval = (double) ana[0] * 0.405194;
     ival = (double) ana[1] * 0.004;
     printf(" PS Test %1u: DAC OUT=%.2u, Supply ReadBack %4.4u V=%+6.1fV %4.4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
-
+    eaDogM_WriteString("Display testing  ");
 
 
 
