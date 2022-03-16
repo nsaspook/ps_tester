@@ -1,6 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16576 `(v ~T0 @X0 0 tf ]
 [v F16578 `(v ~T0 @X0 0 tf ]
+[v F16580 `(v ~T0 @X0 0 tf ]
+[v F16582 `(v ~T0 @X0 0 tf ]
+[v F16584 `(v ~T0 @X0 0 tf ]
 "46838 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 46838:     struct {
 [s S2095 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2349,12 +2351,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 mcc_generated_files/dma1.h
 [; ;mcc_generated_files/dma1.h: 55: uint8_t SrcVarName0[10];
 [v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
-"518 mcc_generated_files/uart1.h
-[; ;mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F16576 ~T0 @X0 1 e ]
-"536
-[; ;mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F16578 ~T0 @X0 1 e ]
+"559 mcc_generated_files/uart1.h
+[; ;mcc_generated_files/uart1.h: 559: void (*UART1_RxInterruptHandler)(void);
+[v _UART1_RxInterruptHandler `*F16578 ~T0 @X0 1 e ]
+"577
+[; ;mcc_generated_files/uart1.h: 577: void (*UART1_TxInterruptHandler)(void);
+[v _UART1_TxInterruptHandler `*F16580 ~T0 @X0 1 e ]
+"595
+[; ;mcc_generated_files/uart1.h: 595: void (*UART1_FramingErrorInterruptHandler)(void);
+[v _UART1_FramingErrorInterruptHandler `*F16582 ~T0 @X0 1 e ]
+"613
+[; ;mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
+[v _UART1_UARTInterruptHandler `*F16584 ~T0 @X0 1 e ]
 "52 mcc_generated_files/interrupt_manager.c
 [; ;mcc_generated_files/interrupt_manager.c: 52: void INTERRUPT_Initialize (void)
 [v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
@@ -2407,34 +2415,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/interrupt_manager.c: 72:     IPR2bits.DMA1SCNTIP = 1;
 [e = . . _IPR2bits 0 0 -> -> 1 `i `uc ]
 "73
-[; ;mcc_generated_files/interrupt_manager.c: 73:     IPR3bits.U1TXIP = 1;
-[e = . . _IPR3bits 0 4 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 73:     IPR3bits.U1IP = 1;
+[e = . . _IPR3bits 0 6 -> -> 1 `i `uc ]
 "74
-[; ;mcc_generated_files/interrupt_manager.c: 74:     IPR3bits.U1RXIP = 0;
-[e = . . _IPR3bits 0 3 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 74:     IPR3bits.U1TXIP = 0;
+[e = . . _IPR3bits 0 4 -> -> 0 `i `uc ]
 "75
-[; ;mcc_generated_files/interrupt_manager.c: 75:     IPR9bits.TMR6IP = 1;
-[e = . . _IPR9bits 0 0 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 75:     IPR3bits.U1EIP = 1;
+[e = . . _IPR3bits 0 5 -> -> 1 `i `uc ]
 "76
-[; ;mcc_generated_files/interrupt_manager.c: 76:     IPR8bits.TMR5IP = 1;
-[e = . . _IPR8bits 0 1 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 76:     IPR3bits.U1RXIP = 0;
+[e = . . _IPR3bits 0 3 -> -> 0 `i `uc ]
 "77
-[; ;mcc_generated_files/interrupt_manager.c: 77:     IPR1bits.ADIP = 1;
-[e = . . _IPR1bits 0 2 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 77:     IPR9bits.TMR6IP = 1;
+[e = . . _IPR9bits 0 0 -> -> 1 `i `uc ]
 "78
-[; ;mcc_generated_files/interrupt_manager.c: 78: }
+[; ;mcc_generated_files/interrupt_manager.c: 78:     IPR8bits.TMR5IP = 1;
+[e = . . _IPR8bits 0 1 -> -> 1 `i `uc ]
+"79
+[; ;mcc_generated_files/interrupt_manager.c: 79:     IPR1bits.ADIP = 1;
+[e = . . _IPR1bits 0 2 -> -> 1 `i `uc ]
+"80
+[; ;mcc_generated_files/interrupt_manager.c: 80: }
 [e :UE 2205 ]
 }
 [v $root$_Default_ISR `(v ~T0 @X0 0 e ]
-"80
-[; ;mcc_generated_files/interrupt_manager.c: 80: void __attribute__((picinterrupt(("irq(default),base(8)")))) Default_ISR()
+"82
+[; ;mcc_generated_files/interrupt_manager.c: 82: void __attribute__((picinterrupt(("irq(default),base(8)")))) Default_ISR()
 [v _Default_ISR `(v ~T1 @X0 1 ef ]
-"81
-[; ;mcc_generated_files/interrupt_manager.c: 81: {
+"83
+[; ;mcc_generated_files/interrupt_manager.c: 83: {
 {
 [e :U _Default_ISR ]
 [f ]
-"82
-[; ;mcc_generated_files/interrupt_manager.c: 82: }
+"84
+[; ;mcc_generated_files/interrupt_manager.c: 84: }
 [e :UE 2206 ]
 }

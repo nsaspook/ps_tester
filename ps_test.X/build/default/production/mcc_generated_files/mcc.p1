@@ -1,6 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16576 `(v ~T0 @X0 0 tf ]
 [v F16578 `(v ~T0 @X0 0 tf ]
+[v F16580 `(v ~T0 @X0 0 tf ]
+[v F16582 `(v ~T0 @X0 0 tf ]
+[v F16584 `(v ~T0 @X0 0 tf ]
 "109 mcc_generated_files/interrupt_manager.h
 [; ;mcc_generated_files/interrupt_manager.h: 109: void INTERRUPT_Initialize (void);
 [v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
@@ -31,12 +33,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "93 mcc_generated_files/dac1.h
 [; ;mcc_generated_files/dac1.h: 93: void DAC1_Initialize(void);
 [v _DAC1_Initialize `(v ~T0 @X0 0 ef ]
-"100 mcc_generated_files/tmr5.h
-[; ;mcc_generated_files/tmr5.h: 100: void TMR5_Initialize(void);
-[v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "102 mcc_generated_files/pwm5.h
 [; ;mcc_generated_files/pwm5.h: 102:  void PWM5_Initialize(void);
 [v _PWM5_Initialize `(v ~T0 @X0 0 ef ]
+"100 mcc_generated_files/tmr5.h
+[; ;mcc_generated_files/tmr5.h: 100: void TMR5_Initialize(void);
+[v _TMR5_Initialize `(v ~T0 @X0 0 ef ]
 "116 mcc_generated_files/uart1.h
 [; ;mcc_generated_files/uart1.h: 116: void UART1_Initialize(void);
 [v _UART1_Initialize `(v ~T0 @X0 0 ef ]
@@ -2352,12 +2354,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 mcc_generated_files/dma1.h
 [; ;mcc_generated_files/dma1.h: 55: uint8_t SrcVarName0[10];
 [v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
-"518 mcc_generated_files/uart1.h
-[; ;mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F16576 ~T0 @X0 1 e ]
-"536
-[; ;mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F16578 ~T0 @X0 1 e ]
+"559 mcc_generated_files/uart1.h
+[; ;mcc_generated_files/uart1.h: 559: void (*UART1_RxInterruptHandler)(void);
+[v _UART1_RxInterruptHandler `*F16578 ~T0 @X0 1 e ]
+"577
+[; ;mcc_generated_files/uart1.h: 577: void (*UART1_TxInterruptHandler)(void);
+[v _UART1_TxInterruptHandler `*F16580 ~T0 @X0 1 e ]
+"595
+[; ;mcc_generated_files/uart1.h: 595: void (*UART1_FramingErrorInterruptHandler)(void);
+[v _UART1_FramingErrorInterruptHandler `*F16582 ~T0 @X0 1 e ]
+"613
+[; ;mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
+[v _UART1_UARTInterruptHandler `*F16584 ~T0 @X0 1 e ]
 "50 mcc_generated_files/mcc.c
 [; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
 [v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
@@ -2397,11 +2405,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/mcc.c: 61:     DAC1_Initialize();
 [e ( _DAC1_Initialize ..  ]
 "62
-[; ;mcc_generated_files/mcc.c: 62:     TMR5_Initialize();
-[e ( _TMR5_Initialize ..  ]
-"63
-[; ;mcc_generated_files/mcc.c: 63:     PWM5_Initialize();
+[; ;mcc_generated_files/mcc.c: 62:     PWM5_Initialize();
 [e ( _PWM5_Initialize ..  ]
+"63
+[; ;mcc_generated_files/mcc.c: 63:     TMR5_Initialize();
+[e ( _TMR5_Initialize ..  ]
 "64
 [; ;mcc_generated_files/mcc.c: 64:     UART1_Initialize();
 [e ( _UART1_Initialize ..  ]

@@ -118,18 +118,21 @@ void fh_po(void *a_data)
 
 void fh_pu(void *a_data)
 {
+	puts("\r\n Voltage UP \r\n");
 	roll_max = ROLL_MAX + 10;
 	static_ps = STATIC_PS + 10;
 }
 
 void fh_pd(void *a_data)
 {
+	puts("\r\n Voltage DOWN \r\n");
 	roll_max = ROLL_MAX - 10;
 	static_ps = STATIC_PS - 10;
 }
 
 void fh_pl(void *a_data)
 {
+	puts("\r\n Voltage LOW \r\n");
 	roll_max = 2;
 	static_ps = 3;
 }

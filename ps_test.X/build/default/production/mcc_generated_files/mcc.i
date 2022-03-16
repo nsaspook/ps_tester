@@ -28004,14 +28004,26 @@ void UART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 498 "mcc_generated_files/uart1.h"
 void UART1_SetErrorHandler(void (* interruptHandler)(void));
-# 518 "mcc_generated_files/uart1.h"
+# 519 "mcc_generated_files/uart1.h"
+void UART1_FramingError_ISR(void);
+# 541 "mcc_generated_files/uart1.h"
+void UART1_UartInterrupt_ISR(void);
+# 559 "mcc_generated_files/uart1.h"
 void (*UART1_RxInterruptHandler)(void);
-# 536 "mcc_generated_files/uart1.h"
+# 577 "mcc_generated_files/uart1.h"
 void (*UART1_TxInterruptHandler)(void);
-# 556 "mcc_generated_files/uart1.h"
+# 595 "mcc_generated_files/uart1.h"
+void (*UART1_FramingErrorInterruptHandler)(void);
+# 613 "mcc_generated_files/uart1.h"
+void (*UART1_UARTInterruptHandler)(void);
+# 631 "mcc_generated_files/uart1.h"
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void));
-# 574 "mcc_generated_files/uart1.h"
+# 649 "mcc_generated_files/uart1.h"
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
+# 667 "mcc_generated_files/uart1.h"
+void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void));
+# 685 "mcc_generated_files/uart1.h"
+void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void));
 # 64 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/spi1.h" 1
@@ -28054,8 +28066,8 @@ void SYSTEM_Initialize(void)
     PWM6_Initialize();
     TMR6_Initialize();
     DAC1_Initialize();
-    TMR5_Initialize();
     PWM5_Initialize();
+    TMR5_Initialize();
     UART1_Initialize();
     SPI1_Initialize();
     SystemArbiter_Initialize();

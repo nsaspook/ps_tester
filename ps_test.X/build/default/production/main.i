@@ -28428,14 +28428,26 @@ void UART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 498 "./mcc_generated_files/uart1.h"
 void UART1_SetErrorHandler(void (* interruptHandler)(void));
-# 518 "./mcc_generated_files/uart1.h"
+# 519 "./mcc_generated_files/uart1.h"
+void UART1_FramingError_ISR(void);
+# 541 "./mcc_generated_files/uart1.h"
+void UART1_UartInterrupt_ISR(void);
+# 559 "./mcc_generated_files/uart1.h"
 void (*UART1_RxInterruptHandler)(void);
-# 536 "./mcc_generated_files/uart1.h"
+# 577 "./mcc_generated_files/uart1.h"
 void (*UART1_TxInterruptHandler)(void);
-# 556 "./mcc_generated_files/uart1.h"
+# 595 "./mcc_generated_files/uart1.h"
+void (*UART1_FramingErrorInterruptHandler)(void);
+# 613 "./mcc_generated_files/uart1.h"
+void (*UART1_UARTInterruptHandler)(void);
+# 631 "./mcc_generated_files/uart1.h"
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void));
-# 574 "./mcc_generated_files/uart1.h"
+# 649 "./mcc_generated_files/uart1.h"
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
+# 667 "./mcc_generated_files/uart1.h"
+void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void));
+# 685 "./mcc_generated_files/uart1.h"
+void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void));
 # 64 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/spi1.h" 1
@@ -28648,7 +28660,7 @@ volatile _Bool disp_tick = 0, adc_tick = 0;
 volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 15 2022", *build_time = "14:46:31";
+const char *build_date = "Mar 16 2022", *build_time = "13:41:05";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
@@ -28707,18 +28719,21 @@ void fh_po(void *a_data)
 
 void fh_pu(void *a_data)
 {
+ puts("\r\n Voltage UP \r\n");
  roll_max = 19 + 10;
  static_ps = 20 + 10;
 }
 
 void fh_pd(void *a_data)
 {
+ puts("\r\n Voltage DOWN \r\n");
  roll_max = 19 - 10;
  static_ps = 20 - 10;
 }
 
 void fh_pl(void *a_data)
 {
+ puts("\r\n Voltage LOW \r\n");
  roll_max = 2;
  static_ps = 3;
 }

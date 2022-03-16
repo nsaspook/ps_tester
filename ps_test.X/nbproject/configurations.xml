@@ -14,13 +14,13 @@
         <itemPath>mcc_generated_files/pin_manager.h</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.h</itemPath>
         <itemPath>mcc_generated_files/tmr6.h</itemPath>
-        <itemPath>mcc_generated_files/uart1.h</itemPath>
         <itemPath>mcc_generated_files/tmr5.h</itemPath>
         <itemPath>mcc_generated_files/spi1.h</itemPath>
         <itemPath>mcc_generated_files/pwm5.h</itemPath>
         <itemPath>mcc_generated_files/pwm6.h</itemPath>
         <itemPath>mcc_generated_files/tmr2.h</itemPath>
         <itemPath>mcc_generated_files/dma1.h</itemPath>
+        <itemPath>mcc_generated_files/uart1.h</itemPath>
       </logicalFolder>
       <itemPath>timers.h</itemPath>
       <itemPath>ps_test.h</itemPath>
@@ -47,13 +47,13 @@
         <itemPath>mcc_generated_files/adcc.c</itemPath>
         <itemPath>mcc_generated_files/tmr6.c</itemPath>
         <itemPath>mcc_generated_files/interrupt_manager.c</itemPath>
-        <itemPath>mcc_generated_files/uart1.c</itemPath>
         <itemPath>mcc_generated_files/tmr5.c</itemPath>
         <itemPath>mcc_generated_files/spi1.c</itemPath>
         <itemPath>mcc_generated_files/pwm5.c</itemPath>
         <itemPath>mcc_generated_files/pwm6.c</itemPath>
         <itemPath>mcc_generated_files/tmr2.c</itemPath>
         <itemPath>mcc_generated_files/dma1.c</itemPath>
+        <itemPath>mcc_generated_files/uart1.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>timers.c</itemPath>
@@ -77,7 +77,7 @@
         <targetDevice>PIC18F57K42</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.36</languageToolchainVersion>
         <platform>2</platform>
@@ -344,20 +344,15 @@
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UpdateOptions"
                   value="ToolFirmwareOption.UseLatest"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.activationmode" value="nohv"/>
         <property key="communication.interface" value=""/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="freeze.timers" value="false"/>
-        <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="true"/>
         <property key="memories.configurationmemory" value="true"/>
@@ -367,15 +362,15 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram" value="true"/>
         <property key="memories.instruction.ram.ranges"
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/public/ps_tester/ps_test.X/debug/default/ps_test_ptg"/>
         <property key="programmerToGoImageName" value="ps_test_ptg"/>
-        <property key="programmertogo.imagename" value=""/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>
@@ -393,12 +388,9 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.program.otpconfig" value="false"/>
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
-        <property key="programoptions.usehighvoltageonmclr" value="false"/>
-        <property key="programoptions.uselvpprogramming" value="false"/>
         <property key="ptgProgramImage" value="true"/>
         <property key="ptgSendImage" value="true"/>
         <property key="toolpack.updateoptions"
@@ -440,8 +432,6 @@
         <property key="communication.interface" value=""/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
-        <property key="debugoptions.debug-startup" value="Use system settings"/>
-        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="freeze.timers" value="false"/>
@@ -458,7 +448,10 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
+        <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="true"/>
+        <property key="programmerToGoFilePath"
+                  value="/public/ps_tester/ps_test.X/debug/default/ps_test_ptg"/>
         <property key="programmerToGoImageName" value="ps_test_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
@@ -477,7 +470,6 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
-        <property key="programoptions.program.otpconfig" value="false"/>
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>

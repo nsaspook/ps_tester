@@ -1,6 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F17167 `(v ~T0 @X0 0 tf ]
 [v F17169 `(v ~T0 @X0 0 tf ]
+[v F17171 `(v ~T0 @X0 0 tf ]
+[v F17173 `(v ~T0 @X0 0 tf ]
+[v F17175 `(v ~T0 @X0 0 tf ]
 "18 ./ringbufs.h
 [; ;./ringbufs.h: 18:  typedef struct ringBufS_t {
 [s S2207 `uc -> 64 `i `uc 1 `uc 1 `uc 1 ]
@@ -2446,12 +2448,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 ./mcc_generated_files/dma1.h
 [; ;./mcc_generated_files/dma1.h: 55: uint8_t SrcVarName0[10];
 [v _SrcVarName0 `uc ~T0 @X0 -> 10 `i e ]
-"518 ./mcc_generated_files/uart1.h
-[; ;./mcc_generated_files/uart1.h: 518: void (*UART1_RxInterruptHandler)(void);
-[v _UART1_RxInterruptHandler `*F17167 ~T0 @X0 1 e ]
-"536
-[; ;./mcc_generated_files/uart1.h: 536: void (*UART1_TxInterruptHandler)(void);
-[v _UART1_TxInterruptHandler `*F17169 ~T0 @X0 1 e ]
+"559 ./mcc_generated_files/uart1.h
+[; ;./mcc_generated_files/uart1.h: 559: void (*UART1_RxInterruptHandler)(void);
+[v _UART1_RxInterruptHandler `*F17169 ~T0 @X0 1 e ]
+"577
+[; ;./mcc_generated_files/uart1.h: 577: void (*UART1_TxInterruptHandler)(void);
+[v _UART1_TxInterruptHandler `*F17171 ~T0 @X0 1 e ]
+"595
+[; ;./mcc_generated_files/uart1.h: 595: void (*UART1_FramingErrorInterruptHandler)(void);
+[v _UART1_FramingErrorInterruptHandler `*F17173 ~T0 @X0 1 e ]
+"613
+[; ;./mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
+[v _UART1_UARTInterruptHandler `*F17175 ~T0 @X0 1 e ]
 "9 eadog.c
 [; ;eadog.c: 9: struct spi_link_type spi_link;
 [v _spi_link `S2208 ~T0 @X0 1 e ]
@@ -2496,12 +2504,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "19
 [; ;eadog.c: 19:  static uint32_t dcount;
-[v F17369 `ul ~T0 @X0 1 s dcount ]
+[v F17383 `ul ~T0 @X0 1 s dcount ]
 "21
 [; ;eadog.c: 21:  for (dcount = 0; dcount <= delay; dcount++) {
 {
-[e = F17369 -> -> -> 0 `i `l `ul ]
-[e $ <= F17369 _delay 2210  ]
+[e = F17383 -> -> -> 0 `i `l `ul ]
+[e $ <= F17383 _delay 2210  ]
 [e $U 2211  ]
 [e :U 2210 ]
 {
@@ -2514,8 +2522,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;eadog.c: 24:  };
 }
-[e ++ F17369 -> -> -> 1 `i `l `ul ]
-[e $ <= F17369 _delay 2210  ]
+[e ++ F17383 -> -> -> 1 `i `l `ul ]
+[e $ <= F17383 _delay 2210  ]
 [e :U 2211 ]
 }
 "25

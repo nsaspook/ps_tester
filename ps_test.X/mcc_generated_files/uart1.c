@@ -54,8 +54,8 @@
 /**
   Section: Macro Declarations
 */
-#define UART1_TX_BUFFER_SIZE 8
-#define UART1_RX_BUFFER_SIZE 8
+#define UART1_TX_BUFFER_SIZE 64
+#define UART1_RX_BUFFER_SIZE 64
 
 /**
   Section: Global Variables
@@ -91,6 +91,10 @@ void UART1_Initialize(void)
     UART1_SetRxInterruptHandler(UART1_Receive_ISR);
     PIE3bits.U1TXIE = 0;
     UART1_SetTxInterruptHandler(UART1_Transmit_ISR);
+    PIE3bits.U1EIE = 0;
+    UART1_SetFramingErrorInterruptHandler(UART1_FramingError_ISR);
+    PIE3bits.U1IE = 0;
+    UART1_SetUartInterruptHandler(UART1_UartInterrupt_ISR);
 
     // Set the UART1 module to the options selected in the user interface.
 
@@ -115,8 +119,8 @@ void UART1_Initialize(void)
     // BRGS high speed; MODE Asynchronous 8-bit mode; RXEN enabled; TXEN enabled; ABDEN disabled; 
     U1CON0 = 0xB0;
 
-    // RXBIMD Set RXBKIF on rising RX input; BRKOVR disabled; WUE disabled; SENDB disabled; ON enabled; 
-    U1CON1 = 0x80;
+    // RXBIMD Set RXBKIF on rising RX input; BRKOVR disabled; WUE enabled; SENDB disabled; ON enabled; 
+    U1CON1 = 0x90;
 
     // TXPOL not inverted; FLO off; C0EN Checksum Mode 0; RXPOL not inverted; RUNOVF RX input shifter stops all activity; STP Transmit 1Stop bit, receiver verifies first Stop bit; 
     U1CON2 = 0x00;
@@ -156,6 +160,10 @@ void UART1_Initialize(void)
 
     // enable receive interrupt
     PIE3bits.U1RXIE = 1;
+    // enable error interrupt
+    PIE3bits.U1EIE = 1;
+    // enable uart interrupt
+    PIE3bits.U1IE = 1;
 }
 
 bool UART1_is_rx_ready(void)
@@ -232,7 +240,7 @@ void putch(char txData)
     UART1_Write(txData);
 }
 
-void __interrupt(irq(U1TX),base(8)) UART1_tx_vect_isr()
+void __interrupt(irq(U1TX),base(8),low_priority) UART1_tx_vect_isr()
 {   
     if(UART1_TxInterruptHandler)
     {
@@ -248,7 +256,21 @@ void __interrupt(irq(U1RX),base(8),low_priority) UART1_rx_vect_isr()
     }
 }
 
+void __interrupt(irq(U1E),base(8)) UART1_framing_err_vect_isr()
+{
+    if(UART1_FramingErrorInterruptHandler)
+    {
+        UART1_FramingErrorInterruptHandler();
+    }
+}
 
+void __interrupt(irq(U1),base(8)) UART1_vect_isr()
+{
+    if(UART1_UARTInterruptHandler)
+    {
+        UART1_UARTInterruptHandler();
+    }
+}
 
 void UART1_Transmit_ISR(void)
 {
@@ -324,7 +346,22 @@ void UART1_SetErrorHandler(void (* interruptHandler)(void)){
     UART1_ErrorHandler = interruptHandler;
 }
 
+void UART1_FramingError_ISR(void)
+{
+    // To clear the interrupt condition, all bits in the UxERRIR register must be cleared
+    U1ERRIR = 0;
+    
+    // add your UART1 error interrupt custom code
 
+}
+
+void UART1_UartInterrupt_ISR(void)
+{
+    // WUIF must be cleared by software to clear UxIF
+    U1UIRbits.WUIF = 0;
+    
+    // add your UART1 interrupt custom code
+}
 
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void)){
     UART1_RxInterruptHandler = InterruptHandler;
@@ -334,7 +371,13 @@ void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void)){
     UART1_TxInterruptHandler = InterruptHandler;
 }
 
+void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void)){
+    UART1_FramingErrorInterruptHandler = InterruptHandler;
+}
 
+void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void)){
+    UART1_UARTInterruptHandler = InterruptHandler;
+}
 /**
   End of File
 */

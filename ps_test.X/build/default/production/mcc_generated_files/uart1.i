@@ -27252,14 +27252,26 @@ void UART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 498 "mcc_generated_files/uart1.h"
 void UART1_SetErrorHandler(void (* interruptHandler)(void));
-# 518 "mcc_generated_files/uart1.h"
+# 519 "mcc_generated_files/uart1.h"
+void UART1_FramingError_ISR(void);
+# 541 "mcc_generated_files/uart1.h"
+void UART1_UartInterrupt_ISR(void);
+# 559 "mcc_generated_files/uart1.h"
 void (*UART1_RxInterruptHandler)(void);
-# 536 "mcc_generated_files/uart1.h"
+# 577 "mcc_generated_files/uart1.h"
 void (*UART1_TxInterruptHandler)(void);
-# 556 "mcc_generated_files/uart1.h"
+# 595 "mcc_generated_files/uart1.h"
+void (*UART1_FramingErrorInterruptHandler)(void);
+# 613 "mcc_generated_files/uart1.h"
+void (*UART1_UARTInterruptHandler)(void);
+# 631 "mcc_generated_files/uart1.h"
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void));
-# 574 "mcc_generated_files/uart1.h"
+# 649 "mcc_generated_files/uart1.h"
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
+# 667 "mcc_generated_files/uart1.h"
+void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void));
+# 685 "mcc_generated_files/uart1.h"
+void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void));
 # 51 "mcc_generated_files/uart1.c" 2
 
 # 1 "mcc_generated_files/interrupt_manager.h" 1
@@ -27269,13 +27281,13 @@ void INTERRUPT_Initialize (void);
 # 64 "mcc_generated_files/uart1.c"
 static volatile uint8_t uart1TxHead = 0;
 static volatile uint8_t uart1TxTail = 0;
-static volatile uint8_t uart1TxBuffer[8];
+static volatile uint8_t uart1TxBuffer[64];
 volatile uint8_t uart1TxBufferRemaining;
 
 static volatile uint8_t uart1RxHead = 0;
 static volatile uint8_t uart1RxTail = 0;
-static volatile uint8_t uart1RxBuffer[8];
-static volatile uart1_status_t uart1RxStatusBuffer[8];
+static volatile uint8_t uart1RxBuffer[64];
+static volatile uart1_status_t uart1RxStatusBuffer[64];
 volatile uint8_t uart1RxCount;
 static volatile uart1_status_t uart1RxLastError;
 
@@ -27297,6 +27309,10 @@ void UART1_Initialize(void)
     UART1_SetRxInterruptHandler(UART1_Receive_ISR);
     PIE3bits.U1TXIE = 0;
     UART1_SetTxInterruptHandler(UART1_Transmit_ISR);
+    PIE3bits.U1EIE = 0;
+    UART1_SetFramingErrorInterruptHandler(UART1_FramingError_ISR);
+    PIE3bits.U1IE = 0;
+    UART1_SetUartInterruptHandler(UART1_UartInterrupt_ISR);
 
 
 
@@ -27322,7 +27338,7 @@ void UART1_Initialize(void)
     U1CON0 = 0xB0;
 
 
-    U1CON1 = 0x80;
+    U1CON1 = 0x90;
 
 
     U1CON2 = 0x00;
@@ -27362,6 +27378,10 @@ void UART1_Initialize(void)
 
 
     PIE3bits.U1RXIE = 1;
+
+    PIE3bits.U1EIE = 1;
+
+    PIE3bits.U1IE = 1;
 }
 
 _Bool UART1_is_rx_ready(void)
@@ -27438,7 +27458,7 @@ void putch(char txData)
     UART1_Write(txData);
 }
 
-void __attribute__((picinterrupt(("irq(U1TX),base(8)")))) UART1_tx_vect_isr()
+void __attribute__((picinterrupt(("irq(U1TX),base(8),low_priority")))) UART1_tx_vect_isr()
 {
     if(UART1_TxInterruptHandler)
     {
@@ -27454,7 +27474,21 @@ void __attribute__((picinterrupt(("irq(U1RX),base(8),low_priority")))) UART1_rx_
     }
 }
 
+void __attribute__((picinterrupt(("irq(U1E),base(8)")))) UART1_framing_err_vect_isr()
+{
+    if(UART1_FramingErrorInterruptHandler)
+    {
+        UART1_FramingErrorInterruptHandler();
+    }
+}
 
+void __attribute__((picinterrupt(("irq(U1),base(8)")))) UART1_vect_isr()
+{
+    if(UART1_UARTInterruptHandler)
+    {
+        UART1_UARTInterruptHandler();
+    }
+}
 
 void UART1_Transmit_ISR(void)
 {
@@ -27530,7 +27564,22 @@ void UART1_SetErrorHandler(void (* interruptHandler)(void)){
     UART1_ErrorHandler = interruptHandler;
 }
 
+void UART1_FramingError_ISR(void)
+{
 
+    U1ERRIR = 0;
+
+
+
+}
+
+void UART1_UartInterrupt_ISR(void)
+{
+
+    U1UIRbits.WUIF = 0;
+
+
+}
 
 void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void)){
     UART1_RxInterruptHandler = InterruptHandler;
@@ -27538,4 +27587,12 @@ void UART1_SetRxInterruptHandler(void (* InterruptHandler)(void)){
 
 void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void)){
     UART1_TxInterruptHandler = InterruptHandler;
+}
+
+void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void)){
+    UART1_FramingErrorInterruptHandler = InterruptHandler;
+}
+
+void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void)){
+    UART1_UARTInterruptHandler = InterruptHandler;
 }
