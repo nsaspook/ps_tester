@@ -124,7 +124,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( U1TX ) base ( 8 ) ]
 [v F16367 `(v ~T0 @X0 0 tf ]
-[t T2 __interrupt irq ( U1RX ) base ( 8 ) ]
+[t T2 __interrupt irq ( U1RX ) base ( 8 ) low_priority ]
 [v F16369 `(v ~T0 @X0 0 tf ]
 "444 mcc_generated_files/uart1.h
 [; ;mcc_generated_files/uart1.h: 444: void UART1_RxDataHandler(void);
@@ -2408,8 +2408,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "66
-[; ;mcc_generated_files/uart1.c: 66: static volatile uint8_t uart1TxBuffer[64];
-[v _uart1TxBuffer `Vuc ~T0 @X0 -> 64 `i s ]
+[; ;mcc_generated_files/uart1.c: 66: static volatile uint8_t uart1TxBuffer[8];
+[v _uart1TxBuffer `Vuc ~T0 @X0 -> 8 `i s ]
 "67
 [; ;mcc_generated_files/uart1.c: 67: volatile uint8_t uart1TxBufferRemaining;
 [v _uart1TxBufferRemaining `Vuc ~T0 @X0 1 e ]
@@ -2426,11 +2426,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ]
 "71
-[; ;mcc_generated_files/uart1.c: 71: static volatile uint8_t uart1RxBuffer[64];
-[v _uart1RxBuffer `Vuc ~T0 @X0 -> 64 `i s ]
+[; ;mcc_generated_files/uart1.c: 71: static volatile uint8_t uart1RxBuffer[8];
+[v _uart1RxBuffer `Vuc ~T0 @X0 -> 8 `i s ]
 "72
-[; ;mcc_generated_files/uart1.c: 72: static volatile uart1_status_t uart1RxStatusBuffer[64];
-[v _uart1RxStatusBuffer `VS2203 ~T0 @X0 -> 64 `i s ]
+[; ;mcc_generated_files/uart1.c: 72: static volatile uart1_status_t uart1RxStatusBuffer[8];
+[v _uart1RxStatusBuffer `VS2203 ~T0 @X0 -> 8 `i s ]
 "73
 [; ;mcc_generated_files/uart1.c: 73: volatile uint8_t uart1RxCount;
 [v _uart1RxCount `Vuc ~T0 @X0 1 e ]
@@ -2817,7 +2817,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [v $root$_UART1_rx_vect_isr `(v ~T0 @X0 0 e ]
 "243
-[; ;mcc_generated_files/uart1.c: 243: void __attribute__((picinterrupt(("irq(U1RX),base(8)")))) UART1_rx_vect_isr()
+[; ;mcc_generated_files/uart1.c: 243: void __attribute__((picinterrupt(("irq(U1RX),base(8),low_priority")))) UART1_rx_vect_isr()
 [v _UART1_rx_vect_isr `(v ~T2 @X0 1 ef ]
 "244
 [; ;mcc_generated_files/uart1.c: 244: {

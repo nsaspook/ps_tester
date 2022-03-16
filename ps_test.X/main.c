@@ -55,6 +55,7 @@ extern t_cli_ctx cli_ctx; // command buffer
 const char *build_date = __DATE__, *build_time = __TIME__;
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
+uint8_t dac_v = 0, mode_sw = 0, roll_max = ROLL_MAX, static_ps = STATIC_PS;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -115,12 +116,30 @@ void fh_po(void *a_data)
 	mode = off_mode;
 }
 
+void fh_pu(void *a_data)
+{
+	roll_max = ROLL_MAX + 10;
+	static_ps = STATIC_PS + 10;
+}
+
+void fh_pd(void *a_data)
+{
+	roll_max = ROLL_MAX - 10;
+	static_ps = STATIC_PS - 10;
+}
+
+void fh_pl(void *a_data)
+{
+	roll_max = 2;
+	static_ps = 3;
+}
+
 /*
 	     Main application
  */
 void main(void)
 {
-	uint8_t dac_v = 0, mode_sw = 0;
+
 	// Initialize the device
 	SYSTEM_Initialize();
 
@@ -132,24 +151,25 @@ void main(void)
 	ADPCH = adc_chan;
 	PWM5_LoadDutyValue(0); // set PS signals to zero
 	PWM6_LoadDutyValue(0);
-
-	/*
-	 * init serial command parser on USART
-	 */
-	scmd_init();
 	DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();
 
 	// Enable low priority global interrupts.
-	//INTERRUPT_GlobalInterruptLowEnable();
+	INTERRUPT_GlobalInterruptLowEnable();
 
 	DAC1_SetOutput(dac_v);
 
 	init_display();
 	eaDogM_CursorOff();
 	eaDogM_WriteString("SPI display testing");
+	/*
+	 * init serial command parser on USART
+	 */
+	scmd_init();
+	sprintf(buff1, "\r\n Build %s %s\r\n", build_date, build_time);
+	puts(buff1);
 
 	while (true) {
 		if (adc_tick) {
@@ -197,7 +217,7 @@ void main(void)
 				 */
 				switch (mode) {
 				case roll_mode: // sawtooth voltage ramp
-					if (dac_v > ROLL_MAX) {
+					if (dac_v > roll_max) {
 						dac_v = 0;
 					}
 					DAC1_SetOutput(++dac_v);
@@ -205,7 +225,7 @@ void main(void)
 					HVON_OUT_RA5_SetLow();
 					break;
 				case static_mode: // 1000 vdc unloaded
-					dac_v = STATIC_PS;
+					dac_v = static_ps;
 					DAC1_SetOutput(dac_v);
 					LED_MODE_SetHigh();
 					HVON_OUT_RA5_SetLow();

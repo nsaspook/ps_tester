@@ -52,6 +52,8 @@ extern "C" {
 		roll_mode,
 		static_mode,
 	} MODE_TYPES;
+	
+	extern char buff1[255];
 #ifdef	__cplusplus
 }
 #endif

@@ -13,6 +13,9 @@ static t_cmd g_cmds[] = {
 	{ "pr", fh_pr},
 	{ "ps", fh_ps},
 	{ "po", fh_po},
+	{ "pu", fh_pu},
+	{ "pd", fh_pd},
+	{ "pl", fh_pl},
 	// null command terminator
 	{ 0x00, 0x00}
 };
@@ -24,8 +27,6 @@ static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
 	/*
 	 * serial port boot messages
 	 */
-	sprintf(a_ctx->cmd, "\r\n Ps Tester %s %s\r\n", build_date, build_time);
-	puts(a_ctx->cmd);
 	puts(cmdm);
 }
 
@@ -84,7 +85,7 @@ void cli_read(t_cli_ctx *a_ctx)
 	uint8_t i = 0x00;
 
 	// if no character available - then exit
-	if (!CLI_IO_INPUT(&i)) {
+	if (!linux_getc(&i)) {
 		return;
 	}
 
@@ -97,7 +98,7 @@ void cli_read(t_cli_ctx *a_ctx)
 		break;
 	case KEY_CODE_ENTER: // new line
 		a_ctx->cmd[POSINC(a_ctx->cpos)] = '\0';
-		CLI_IO_OUTPUT((unsigned char *) "\r\n", 2);
+		linux_putc((unsigned char *) "\r\n", 2);
 		res = _cli_interpret_cmd(a_ctx);
 		a_ctx->cpos = 0;
 		memset(a_ctx->cmd, 0x00, CLI_CMD_BUFFER_SIZE);
@@ -106,7 +107,7 @@ void cli_read(t_cli_ctx *a_ctx)
 		/* echo */
 		if (a_ctx->cpos < (CLI_CMD_BUFFER_SIZE - 1)) {
 			a_ctx->cmd[a_ctx->cpos++] = i;
-			CLI_IO_OUTPUT(&i, 1);
+			linux_putc(&i, 1);
 		}
 		break;
 	}

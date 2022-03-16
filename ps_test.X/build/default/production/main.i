@@ -28600,6 +28600,8 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ extern char buff1[255];
 # 47 "main.c" 2
 
 # 1 "./scdm.h" 1
@@ -28614,7 +28616,7 @@ D_CODES set_temp_display_help(const D_CODES);
   char cmd[128];
   uint8_t cpos;
  } t_cli_ctx;
-# 49 "./scdm.h"
+# 43 "./scdm.h"
  typedef enum _t_cmd_status {
   E_CMD_OK = 0,
   E_CMD_NOT_FOUND,
@@ -28629,6 +28631,9 @@ D_CODES set_temp_display_help(const D_CODES);
  void fh_pr(void *a_data);
  void fh_ps(void *a_data);
  void fh_po(void *a_data);
+ void fh_pu(void *a_data);
+ void fh_pd(void *a_data);
+ void fh_pl(void *a_data);
 
 
 
@@ -28643,9 +28648,10 @@ volatile _Bool disp_tick = 0, adc_tick = 0;
 volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 14 2022", *build_time = "14:41:55";
+const char *build_date = "Mar 15 2022", *build_time = "14:46:31";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
+uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -28663,7 +28669,7 @@ void Led_Blink(void)
 
  disp_tick = 1;
 }
-# 83 "main.c"
+# 84 "main.c"
 void Adc_Isr(void)
 {
  ana[adc_chan] = ADCC_GetConversionResult();
@@ -28699,12 +28705,30 @@ void fh_po(void *a_data)
  mode = off_mode;
 }
 
+void fh_pu(void *a_data)
+{
+ roll_max = 19 + 10;
+ static_ps = 20 + 10;
+}
+
+void fh_pd(void *a_data)
+{
+ roll_max = 19 - 10;
+ static_ps = 20 - 10;
+}
+
+void fh_pl(void *a_data)
+{
+ roll_max = 2;
+ static_ps = 3;
+}
+
 
 
 
 void main(void)
 {
- uint8_t dac_v = 0, mode_sw = 0;
+
 
  SYSTEM_Initialize();
 
@@ -28716,24 +28740,25 @@ void main(void)
  ADPCH = adc_chan;
  PWM5_LoadDutyValue(0);
  PWM6_LoadDutyValue(0);
-
-
-
-
- scmd_init();
  DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 
  (INTCON0bits.GIEH = 1);
 
 
-
+ (INTCON0bits.GIEL = 1);
 
  DAC1_SetOutput(dac_v);
 
  init_display();
  eaDogM_WriteCommand(0b00001100);
  eaDogM_WriteString("SPI display testing");
+
+
+
+ scmd_init();
+ sprintf(buff1, "\r\n Build %s %s\r\n", build_date, build_time);
+ puts(buff1);
 
  while (1) {
   if (adc_tick) {
@@ -28781,7 +28806,7 @@ void main(void)
 
     switch (mode) {
     case roll_mode:
-     if (dac_v > 19) {
+     if (dac_v > roll_max) {
       dac_v = 0;
      }
      DAC1_SetOutput(++dac_v);
@@ -28789,7 +28814,7 @@ void main(void)
      do { LATAbits.LATA5 = 0; } while(0);
      break;
     case static_mode:
-     dac_v = 20;
+     dac_v = static_ps;
      DAC1_SetOutput(dac_v);
      do { LATDbits.LATD1 = 1; } while(0);
      do { LATAbits.LATA5 = 0; } while(0);

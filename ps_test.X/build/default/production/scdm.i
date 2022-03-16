@@ -28595,6 +28595,8 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ extern char buff1[255];
 # 2 "scdm.c" 2
 # 1 "./scdm.h" 1
 # 24 "./scdm.h"
@@ -28608,7 +28610,7 @@ D_CODES set_temp_display_help(const D_CODES);
   char cmd[128];
   uint8_t cpos;
  } t_cli_ctx;
-# 49 "./scdm.h"
+# 43 "./scdm.h"
  typedef enum _t_cmd_status {
   E_CMD_OK = 0,
   E_CMD_NOT_FOUND,
@@ -28623,6 +28625,9 @@ D_CODES set_temp_display_help(const D_CODES);
  void fh_pr(void *a_data);
  void fh_ps(void *a_data);
  void fh_po(void *a_data);
+ void fh_pu(void *a_data);
+ void fh_pd(void *a_data);
+ void fh_pl(void *a_data);
 
 
 
@@ -28643,6 +28648,9 @@ static t_cmd g_cmds[] = {
  { "pr", fh_pr},
  { "ps", fh_ps},
  { "po", fh_po},
+ { "pu", fh_pu},
+ { "pd", fh_pd},
+ { "pl", fh_pl},
 
  { 0x00, 0x00}
 };
@@ -28654,8 +28662,6 @@ static void cli_init(t_cli_ctx *a_ctx, t_cmd *a_cmds)
 
 
 
- sprintf(a_ctx->cmd, "\r\n Ps Tester %s %s\r\n", build_date, build_time);
- puts(a_ctx->cmd);
  puts(cmdm);
 }
 

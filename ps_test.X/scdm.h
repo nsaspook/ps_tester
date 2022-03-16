@@ -32,12 +32,6 @@ extern "C" {
 		uint8_t cpos;
 	} t_cli_ctx;
 
-#define CLI_IO_INPUT(__data) \
-	linux_getc(__data)
-
-#define CLI_IO_OUTPUT(__data, __len) \
-	linux_putc(__data, __len)
-
 #define KEY_CODE_BACKSPACE	0x7f
 #define KEY_CODE_DELETE		0x7e
 #define KEY_CODE_ENTER		'\r'
@@ -60,6 +54,9 @@ extern "C" {
 	void fh_pr(void *a_data);
 	void fh_ps(void *a_data);
 	void fh_po(void *a_data);
+	void fh_pu(void *a_data);
+	void fh_pd(void *a_data);
+	void fh_pl(void *a_data);
 
 	/*
 	 * command parser functions

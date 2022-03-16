@@ -54,8 +54,8 @@
 /**
   Section: Macro Declarations
 */
-#define UART1_TX_BUFFER_SIZE 64
-#define UART1_RX_BUFFER_SIZE 64
+#define UART1_TX_BUFFER_SIZE 8
+#define UART1_RX_BUFFER_SIZE 8
 
 /**
   Section: Global Variables
@@ -240,7 +240,7 @@ void __interrupt(irq(U1TX),base(8)) UART1_tx_vect_isr()
     }
 }
 
-void __interrupt(irq(U1RX),base(8)) UART1_rx_vect_isr()
+void __interrupt(irq(U1RX),base(8),low_priority) UART1_rx_vect_isr()
 {
     if(UART1_RxInterruptHandler)
     {

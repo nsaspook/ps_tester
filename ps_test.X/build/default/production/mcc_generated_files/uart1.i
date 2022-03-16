@@ -27269,13 +27269,13 @@ void INTERRUPT_Initialize (void);
 # 64 "mcc_generated_files/uart1.c"
 static volatile uint8_t uart1TxHead = 0;
 static volatile uint8_t uart1TxTail = 0;
-static volatile uint8_t uart1TxBuffer[64];
+static volatile uint8_t uart1TxBuffer[8];
 volatile uint8_t uart1TxBufferRemaining;
 
 static volatile uint8_t uart1RxHead = 0;
 static volatile uint8_t uart1RxTail = 0;
-static volatile uint8_t uart1RxBuffer[64];
-static volatile uart1_status_t uart1RxStatusBuffer[64];
+static volatile uint8_t uart1RxBuffer[8];
+static volatile uart1_status_t uart1RxStatusBuffer[8];
 volatile uint8_t uart1RxCount;
 static volatile uart1_status_t uart1RxLastError;
 
@@ -27446,7 +27446,7 @@ void __attribute__((picinterrupt(("irq(U1TX),base(8)")))) UART1_tx_vect_isr()
     }
 }
 
-void __attribute__((picinterrupt(("irq(U1RX),base(8)")))) UART1_rx_vect_isr()
+void __attribute__((picinterrupt(("irq(U1RX),base(8),low_priority")))) UART1_rx_vect_isr()
 {
     if(UART1_RxInterruptHandler)
     {

@@ -28567,6 +28567,8 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ extern char buff1[255];
 # 28 "./eadog.h" 2
 
 
@@ -28663,7 +28665,7 @@ void init_display(void)
  SPI1CON0bits.EN = 0;
  SPI1CON2 = 0x02;
  SPI1CON0bits.EN = 1;
-# 82 "eadog.c"
+
  SPI1INTFbits.SPI1TXUIF = 0;
  DMA1CON1bits.DMODE = 0;
  DMA1CON1bits.DSTP = 0;
@@ -28836,7 +28838,8 @@ void eaDogM_WriteByteToCGRAM(uint8_t ndx, uint8_t data)
 {
 
 }
-# 397 "eadog.c"
+
+
 void eaDogM_WriteCommand(const uint8_t cmd)
 {
  send_lcd_cmd_dma(cmd);

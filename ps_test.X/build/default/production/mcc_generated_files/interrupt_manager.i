@@ -28064,7 +28064,7 @@ void INTERRUPT_Initialize (void)
 
     IPR2bits.DMA1SCNTIP = 1;
     IPR3bits.U1TXIP = 1;
-    IPR3bits.U1RXIP = 1;
+    IPR3bits.U1RXIP = 0;
     IPR9bits.TMR6IP = 1;
     IPR8bits.TMR5IP = 1;
     IPR1bits.ADIP = 1;

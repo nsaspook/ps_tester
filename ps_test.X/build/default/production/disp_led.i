@@ -28576,6 +28576,8 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ extern char buff1[255];
 # 15 "./disp_led.h" 2
 
  typedef enum {
