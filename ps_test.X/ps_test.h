@@ -25,7 +25,7 @@ extern "C" {
 #include "mydisplay.h"
 #include "ringbufs.h"
 
-#define MAX_ADC_CHAN	2
+#define MAX_ADC_CHAN	channel_FVR_Buffer2
 #define STATIC_PS	20
 #define ROLL_MAX	19
 	

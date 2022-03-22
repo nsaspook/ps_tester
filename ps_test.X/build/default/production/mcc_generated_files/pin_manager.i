@@ -27060,7 +27060,7 @@ unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 686 "mcc_generated_files/pin_manager.h"
+# 746 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 

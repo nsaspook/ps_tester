@@ -27065,7 +27065,7 @@ unsigned char __t3rd16on(void);
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 686 "mcc_generated_files/pin_manager.h"
+# 746 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -27880,75 +27880,78 @@ typedef __uint24 uint24_t;
 # 89 "mcc_generated_files/adcc.h"
 typedef enum
 {
-    channel_ANA0 = 0x0,
-    channel_ANA1 = 0x1,
+    PS_V_ANA = 0x0,
+    PS_I_ANA = 0x1,
     channel_ANB2 = 0xA,
     channel_ANB3 = 0xB,
     channel_ANB4 = 0xC,
     channel_ANB5 = 0xD,
+    DAC_ANA = 0x21,
+    PWM5_ANA = 0x28,
+    PWM6_ANA = 0x29,
     channel_VSS = 0x3B,
     channel_Temp = 0x3C,
     channel_DAC1 = 0x3D,
     channel_FVR_Buffer1 = 0x3E,
     channel_FVR_Buffer2 = 0x3F
 } adcc_channel_t;
-# 136 "mcc_generated_files/adcc.h"
+# 139 "mcc_generated_files/adcc.h"
 void ADCC_Initialize(void);
-# 165 "mcc_generated_files/adcc.h"
+# 168 "mcc_generated_files/adcc.h"
 void ADCC_StartConversion(adcc_channel_t channel);
-# 195 "mcc_generated_files/adcc.h"
+# 198 "mcc_generated_files/adcc.h"
 _Bool ADCC_IsConversionDone(void);
-# 227 "mcc_generated_files/adcc.h"
+# 230 "mcc_generated_files/adcc.h"
 adc_result_t ADCC_GetConversionResult(void);
-# 258 "mcc_generated_files/adcc.h"
+# 261 "mcc_generated_files/adcc.h"
 adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-# 283 "mcc_generated_files/adcc.h"
+# 286 "mcc_generated_files/adcc.h"
 void ADCC_StopConversion(void);
-# 310 "mcc_generated_files/adcc.h"
+# 313 "mcc_generated_files/adcc.h"
 void ADCC_SetStopOnInterrupt(void);
-# 335 "mcc_generated_files/adcc.h"
+# 338 "mcc_generated_files/adcc.h"
 void ADCC_DischargeSampleCapacitor(void);
-# 361 "mcc_generated_files/adcc.h"
+# 364 "mcc_generated_files/adcc.h"
 void ADCC_LoadAcquisitionRegister(uint16_t);
-# 387 "mcc_generated_files/adcc.h"
+# 390 "mcc_generated_files/adcc.h"
 void ADCC_SetPrechargeTime(uint16_t);
-# 412 "mcc_generated_files/adcc.h"
+# 415 "mcc_generated_files/adcc.h"
 void ADCC_SetRepeatCount(uint8_t);
-# 440 "mcc_generated_files/adcc.h"
+# 443 "mcc_generated_files/adcc.h"
 uint8_t ADCC_GetCurrentCountofConversions(void);
-# 464 "mcc_generated_files/adcc.h"
+# 467 "mcc_generated_files/adcc.h"
 void ADCC_ClearAccumulator(void);
-# 489 "mcc_generated_files/adcc.h"
+# 492 "mcc_generated_files/adcc.h"
 uint24_t ADCC_GetAccumulatorValue(void);
-# 517 "mcc_generated_files/adcc.h"
+# 520 "mcc_generated_files/adcc.h"
 _Bool ADCC_HasAccumulatorOverflowed(void);
-# 542 "mcc_generated_files/adcc.h"
+# 545 "mcc_generated_files/adcc.h"
 uint16_t ADCC_GetFilterValue(void);
-# 570 "mcc_generated_files/adcc.h"
+# 573 "mcc_generated_files/adcc.h"
 uint16_t ADCC_GetPreviousResult(void);
-# 596 "mcc_generated_files/adcc.h"
+# 599 "mcc_generated_files/adcc.h"
 void ADCC_DefineSetPoint(uint16_t);
-# 622 "mcc_generated_files/adcc.h"
+# 625 "mcc_generated_files/adcc.h"
 void ADCC_SetUpperThreshold(uint16_t);
-# 648 "mcc_generated_files/adcc.h"
+# 651 "mcc_generated_files/adcc.h"
 void ADCC_SetLowerThreshold(uint16_t);
-# 675 "mcc_generated_files/adcc.h"
+# 678 "mcc_generated_files/adcc.h"
 uint16_t ADCC_GetErrorCalculation(void);
-# 702 "mcc_generated_files/adcc.h"
+# 705 "mcc_generated_files/adcc.h"
 void ADCC_EnableDoubleSampling(void);
-# 726 "mcc_generated_files/adcc.h"
+# 729 "mcc_generated_files/adcc.h"
 void ADCC_EnableContinuousConversion(void);
-# 750 "mcc_generated_files/adcc.h"
+# 753 "mcc_generated_files/adcc.h"
 void ADCC_DisableContinuousConversion(void);
-# 778 "mcc_generated_files/adcc.h"
+# 781 "mcc_generated_files/adcc.h"
 _Bool ADCC_HasErrorCrossedUpperThreshold(void);
-# 806 "mcc_generated_files/adcc.h"
+# 809 "mcc_generated_files/adcc.h"
 _Bool ADCC_HasErrorCrossedLowerThreshold(void);
-# 833 "mcc_generated_files/adcc.h"
+# 836 "mcc_generated_files/adcc.h"
 uint8_t ADCC_GetConversionStageStatus(void);
-# 850 "mcc_generated_files/adcc.h"
+# 853 "mcc_generated_files/adcc.h"
 void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-# 870 "mcc_generated_files/adcc.h"
+# 873 "mcc_generated_files/adcc.h"
 void ADCC_DefaultInterruptHandler(void);
 # 62 "mcc_generated_files/mcc.h" 2
 

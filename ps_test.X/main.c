@@ -49,7 +49,6 @@
 
 volatile adc_result_t ana[MAX_ADC_CHAN];
 volatile bool disp_tick = false, adc_tick = false;
-volatile uint8_t adc_chan = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx; // command buffer 
 const char *build_date = __DATE__, *build_time = __TIME__;
@@ -83,11 +82,34 @@ void Led_Blink(void)
  */
 void Adc_Isr(void)
 {
-	ana[adc_chan] = ADCC_GetConversionResult();
-	if (adc_chan++ >= MAX_ADC_CHAN) {
-		adc_chan = 0;
+	static adcc_channel_t c_adc_chan = PS_V_ANA;
+
+	ana[c_adc_chan] = ADCC_GetConversionResult();
+
+	/*
+	 * convert ADC channels to ADC data array values
+	 */
+	switch (c_adc_chan) {
+	case PS_V_ANA:
+		c_adc_chan = PS_I_ANA;
+		break;
+	case PS_I_ANA:
+		c_adc_chan = channel_DAC1;
+		break;
+	case channel_DAC1:
+		c_adc_chan = PWM5_ANA;
+		break;
+	case PWM5_ANA:
+		c_adc_chan = PWM6_ANA;
+		break;
+	case PWM6_ANA:
+		c_adc_chan = PS_V_ANA;
+		break;
+	default:
+		c_adc_chan = PS_V_ANA;
+		break;
 	}
-	ADPCH = adc_chan;
+	ADPCH = c_adc_chan;
 	/*
 	 * adc value valid flag
 	 */
@@ -151,7 +173,7 @@ void main(void)
 	TMR6_SetInterruptHandler(Led_Blink);
 	TMR5_SetInterruptHandler(Timers_Isr);
 	ADCC_SetADIInterruptHandler(Adc_Isr);
-	ADPCH = adc_chan;
+	ADPCH = PS_V_ANA;
 	PWM5_LoadDutyValue(0); // set PS signals to zero
 	PWM6_LoadDutyValue(0);
 	DMA1_SetSCNTIInterruptHandler(source_dma_done);
@@ -176,20 +198,20 @@ void main(void)
 
 	while (true) {
 		if (adc_tick) {
-			if (ana[0] < 900) {
+			if (ana[PS_V_ANA] < 900) {
 				display_led(oo00_off);
 			} else {
-				if (ana[0] > 1800) {
+				if (ana[PS_V_ANA] > 1800) {
 					display_led(oo00_g);
 				} else {
 					display_led(oo00_r);
 				}
 			}
 
-			if (ana[1] < 50) {
+			if (ana[PS_I_ANA] < 50) {
 				display_led(oo10_off);
 			} else {
-				if (ana[1] > 150) {
+				if (ana[PS_I_ANA] > 150) {
 					display_led(oo10_g);
 				} else {
 					display_led(oo10_r);
@@ -211,9 +233,9 @@ void main(void)
 			}
 
 			if (disp_tick) {
-				vval = (double) ana[0] * V_SCALE;
-				ival = (double) ana[1] * I_SCALE;
-				printf(" PS Test %1u: DAC OUT=%.2u, Supply ReadBack %4.4u V=%+6.1fV %4.4u I=%+3.1fmA\r\n", mode, (uint16_t) DAC1_GetOutput(), ana[0], vval, ana[1], ival);
+				vval = (double) ana[PS_V_ANA] * V_SCALE;
+				ival = (double) ana[PS_I_ANA] * I_SCALE;
+				printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA\r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
 				eaDogM_WriteString("Display testing  ");
 				/*
 				 * mode switch state machine

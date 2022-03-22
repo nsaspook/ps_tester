@@ -1,5 +1,5 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F16022 `(v ~T0 @X0 0 tf ]
+[v F16025 `(v ~T0 @X0 0 tf ]
 "28714 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 28714: extern volatile unsigned char ADLTHL __attribute__((address(0x3EDE)));
 [v _ADLTHL `Vuc ~T0 @X0 0 e@16094 ]
@@ -88,17 +88,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3410
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 3410: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x3991)));
 [v _PIE1bits `VS151 ~T0 @X0 0 e@14737 ]
-[v F16016 `(v ~T0 @X0 0 tf ]
-"850 mcc_generated_files/adcc.h
-[; ;mcc_generated_files/adcc.h: 850: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16016 ]
-"870
-[; ;mcc_generated_files/adcc.h: 870: void ADCC_DefaultInterruptHandler(void);
+[v F16019 `(v ~T0 @X0 0 tf ]
+"853 mcc_generated_files/adcc.h
+[; ;mcc_generated_files/adcc.h: 853: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void));
+[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 0 ef1`*F16019 ]
+"873
+[; ;mcc_generated_files/adcc.h: 873: void ADCC_DefaultInterruptHandler(void);
 [v _ADCC_DefaultInterruptHandler `(v ~T0 @X0 0 ef ]
 "121 mcc_generated_files/adcc.c
 [; ;mcc_generated_files/adcc.c: 121: void ADCC_StartConversion(adcc_channel_t channel)
-[c E15967 0 1 10 11 12 13 59 60 61 62 63 .. ]
-[n E15967 . channel_ANA0 channel_ANA1 channel_ANB2 channel_ANB3 channel_ANB4 channel_ANB5 channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
+[c E15967 0 1 10 11 12 13 33 40 41 59 60 61 62 63 .. ]
+[n E15967 . PS_V_ANA PS_I_ANA channel_ANB2 channel_ANB3 channel_ANB4 channel_ANB5 DAC_ANA PWM5_ANA PWM6_ANA channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "31845 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 31845:     struct {
 [s S1410 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -257,9 +257,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCON1bits `VS1415 ~T0 @X0 0 e@16121 ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt irq ( AD ) base ( 8 ) ]
-[v F16060 `(v ~T0 @X0 0 tf ]
-[v F16062 `(v ~T0 @X0 0 tf ]
-[v F16064 `(v ~T0 @X0 0 tf ]
+[v F16063 `(v ~T0 @X0 0 tf ]
+[v F16065 `(v ~T0 @X0 0 tf ]
+[v F16067 `(v ~T0 @X0 0 tf ]
 "251 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 251: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2509,7 +2509,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; <" TOSU equ 03FFFh ;# ">
 "58 mcc_generated_files/adcc.c
 [; ;mcc_generated_files/adcc.c: 58: void (*ADCC_ADI_InterruptHandler)(void);
-[v _ADCC_ADI_InterruptHandler `*F16022 ~T0 @X0 1 e ]
+[v _ADCC_ADI_InterruptHandler `*F16025 ~T0 @X0 1 e ]
 "64
 [; ;mcc_generated_files/adcc.c: 64: void ADCC_Initialize(void)
 [v _ADCC_Initialize `(v ~T0 @X0 1 ef ]
@@ -3101,7 +3101,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _PIR1bits 0 2 -> -> 0 `i `uc ]
 "312
 [; ;mcc_generated_files/adcc.c: 312:     if (ADCC_ADI_InterruptHandler)
-[e $ ! != _ADCC_ADI_InterruptHandler -> -> 0 `i `*F16060 2232  ]
+[e $ ! != _ADCC_ADI_InterruptHandler -> -> 0 `i `*F16063 2232  ]
 "313
 [; ;mcc_generated_files/adcc.c: 313:             ADCC_ADI_InterruptHandler();
 [e ( *U _ADCC_ADI_InterruptHandler ..  ]
@@ -3112,10 +3112,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "316
 [; ;mcc_generated_files/adcc.c: 316: void ADCC_SetADIInterruptHandler(void (* InterruptHandler)(void)){
-[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 1 ef1`*F16062 ]
+[v _ADCC_SetADIInterruptHandler `(v ~T0 @X0 1 ef1`*F16065 ]
 {
 [e :U _ADCC_SetADIInterruptHandler ]
-[v _InterruptHandler `*F16064 ~T0 @X0 1 r1 ]
+[v _InterruptHandler `*F16067 ~T0 @X0 1 r1 ]
 [f ]
 "317
 [; ;mcc_generated_files/adcc.c: 317:     ADCC_ADI_InterruptHandler = InterruptHandler;
