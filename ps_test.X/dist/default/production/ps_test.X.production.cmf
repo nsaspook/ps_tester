@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcXdoEOpD.o
+$/tmp/xcXdahIkA.o
 idloc IDLOC 5 200000 200000 10 1 1
 init CODE 0 AE AE 4 1 2
 reset_vec CODE 0 0 0 4 1 2
@@ -1920,103 +1920,103 @@ $dist/default/production/ps_test.X.production.o
 11EB8 text0 CODE >278:/fred/ps_tester/ps_test.X/main.c
 11EBC text0 CODE >281:/fred/ps_tester/ps_test.X/main.c
 11EC0 text0 CODE >282:/fred/ps_tester/ps_test.X/main.c
-12F1C cinit CODE >30857:/tmp/xcXFNMpDn.s
-12F1C cinit CODE >30859:/tmp/xcXFNMpDn.s
-12F1C cinit CODE >30862:/tmp/xcXFNMpDn.s
-12F1C cinit CODE >31058:/tmp/xcXFNMpDn.s
-12F1E cinit CODE >31059:/tmp/xcXFNMpDn.s
-12F20 cinit CODE >31060:/tmp/xcXFNMpDn.s
-12F22 cinit CODE >31061:/tmp/xcXFNMpDn.s
-12F24 cinit CODE >31062:/tmp/xcXFNMpDn.s
-12F26 cinit CODE >31063:/tmp/xcXFNMpDn.s
-12F28 cinit CODE >31064:/tmp/xcXFNMpDn.s
-12F2C cinit CODE >31065:/tmp/xcXFNMpDn.s
-12F30 cinit CODE >31066:/tmp/xcXFNMpDn.s
-12F30 cinit CODE >31067:/tmp/xcXFNMpDn.s
-12F32 cinit CODE >31068:/tmp/xcXFNMpDn.s
-12F38 cinit CODE >31069:/tmp/xcXFNMpDn.s
-12F3A cinit CODE >31070:/tmp/xcXFNMpDn.s
-12F3C cinit CODE >31071:/tmp/xcXFNMpDn.s
-12F3E cinit CODE >31072:/tmp/xcXFNMpDn.s
-12F40 cinit CODE >31073:/tmp/xcXFNMpDn.s
-12F42 cinit CODE >31077:/tmp/xcXFNMpDn.s
-12F44 cinit CODE >31078:/tmp/xcXFNMpDn.s
-12F46 cinit CODE >31079:/tmp/xcXFNMpDn.s
-12F48 cinit CODE >31080:/tmp/xcXFNMpDn.s
-12F4A cinit CODE >31081:/tmp/xcXFNMpDn.s
-12F4C cinit CODE >31082:/tmp/xcXFNMpDn.s
-12F4E cinit CODE >31083:/tmp/xcXFNMpDn.s
-12F52 cinit CODE >31084:/tmp/xcXFNMpDn.s
-12F56 cinit CODE >31085:/tmp/xcXFNMpDn.s
-12F56 cinit CODE >31086:/tmp/xcXFNMpDn.s
-12F58 cinit CODE >31087:/tmp/xcXFNMpDn.s
-12F5E cinit CODE >31088:/tmp/xcXFNMpDn.s
-12F60 cinit CODE >31089:/tmp/xcXFNMpDn.s
-12F62 cinit CODE >31090:/tmp/xcXFNMpDn.s
-12F64 cinit CODE >31094:/tmp/xcXFNMpDn.s
-12F66 cinit CODE >31095:/tmp/xcXFNMpDn.s
-12F68 cinit CODE >31096:/tmp/xcXFNMpDn.s
-12F6A cinit CODE >31097:/tmp/xcXFNMpDn.s
-12F6C cinit CODE >31098:/tmp/xcXFNMpDn.s
-12F6E cinit CODE >31099:/tmp/xcXFNMpDn.s
-12F70 cinit CODE >31100:/tmp/xcXFNMpDn.s
-12F72 cinit CODE >31101:/tmp/xcXFNMpDn.s
-12F78 cinit CODE >31102:/tmp/xcXFNMpDn.s
-12F7A cinit CODE >31103:/tmp/xcXFNMpDn.s
-12F80 cinit CODE >31107:/tmp/xcXFNMpDn.s
-12F84 cinit CODE >31108:/tmp/xcXFNMpDn.s
-12F88 cinit CODE >31109:/tmp/xcXFNMpDn.s
-12F88 cinit CODE >31110:/tmp/xcXFNMpDn.s
-12F8A cinit CODE >31111:/tmp/xcXFNMpDn.s
-12F8C cinit CODE >31112:/tmp/xcXFNMpDn.s
-12F8E cinit CODE >31113:/tmp/xcXFNMpDn.s
-12F90 cinit CODE >31114:/tmp/xcXFNMpDn.s
-12F92 cinit CODE >31115:/tmp/xcXFNMpDn.s
-12F94 cinit CODE >31118:/tmp/xcXFNMpDn.s
-12F98 cinit CODE >31119:/tmp/xcXFNMpDn.s
-12F9A cinit CODE >31120:/tmp/xcXFNMpDn.s
-12F9A cinit CODE >31121:/tmp/xcXFNMpDn.s
-12F9C cinit CODE >31122:/tmp/xcXFNMpDn.s
-12F9E cinit CODE >31123:/tmp/xcXFNMpDn.s
-12FA0 cinit CODE >31126:/tmp/xcXFNMpDn.s
-12FA4 cinit CODE >31127:/tmp/xcXFNMpDn.s
-12FA6 cinit CODE >31128:/tmp/xcXFNMpDn.s
-12FA6 cinit CODE >31129:/tmp/xcXFNMpDn.s
-12FA8 cinit CODE >31130:/tmp/xcXFNMpDn.s
-12FAA cinit CODE >31131:/tmp/xcXFNMpDn.s
-12FAC cinit CODE >31134:/tmp/xcXFNMpDn.s
-12FB0 cinit CODE >31135:/tmp/xcXFNMpDn.s
-12FB2 cinit CODE >31136:/tmp/xcXFNMpDn.s
-12FB2 cinit CODE >31137:/tmp/xcXFNMpDn.s
-12FB4 cinit CODE >31138:/tmp/xcXFNMpDn.s
-12FB6 cinit CODE >31139:/tmp/xcXFNMpDn.s
-12FB8 cinit CODE >31142:/tmp/xcXFNMpDn.s
-12FBC cinit CODE >31143:/tmp/xcXFNMpDn.s
-12FBE cinit CODE >31144:/tmp/xcXFNMpDn.s
-12FBE cinit CODE >31145:/tmp/xcXFNMpDn.s
-12FC0 cinit CODE >31146:/tmp/xcXFNMpDn.s
-12FC2 cinit CODE >31147:/tmp/xcXFNMpDn.s
-12FC4 cinit CODE >31150:/tmp/xcXFNMpDn.s
-12FC8 cinit CODE >31151:/tmp/xcXFNMpDn.s
-12FCA cinit CODE >31152:/tmp/xcXFNMpDn.s
-12FCA cinit CODE >31153:/tmp/xcXFNMpDn.s
-12FCC cinit CODE >31154:/tmp/xcXFNMpDn.s
-12FCE cinit CODE >31155:/tmp/xcXFNMpDn.s
-12FD0 cinit CODE >31158:/tmp/xcXFNMpDn.s
-12FD4 cinit CODE >31159:/tmp/xcXFNMpDn.s
-12FD6 cinit CODE >31160:/tmp/xcXFNMpDn.s
-12FD6 cinit CODE >31161:/tmp/xcXFNMpDn.s
-12FD8 cinit CODE >31162:/tmp/xcXFNMpDn.s
-12FDA cinit CODE >31163:/tmp/xcXFNMpDn.s
-12FDC cinit CODE >31171:/tmp/xcXFNMpDn.s
-12FDE cinit CODE >31172:/tmp/xcXFNMpDn.s
-12FE0 cinit CODE >31173:/tmp/xcXFNMpDn.s
-12FE2 cinit CODE >31174:/tmp/xcXFNMpDn.s
-12FE4 cinit CODE >31175:/tmp/xcXFNMpDn.s
-12FE6 cinit CODE >31176:/tmp/xcXFNMpDn.s
-12FE8 cinit CODE >31182:/tmp/xcXFNMpDn.s
-12FE8 cinit CODE >31184:/tmp/xcXFNMpDn.s
-12FEA cinit CODE >31185:/tmp/xcXFNMpDn.s
+12F1C cinit CODE >30857:/tmp/xcXEMEnen.s
+12F1C cinit CODE >30859:/tmp/xcXEMEnen.s
+12F1C cinit CODE >30862:/tmp/xcXEMEnen.s
+12F1C cinit CODE >31058:/tmp/xcXEMEnen.s
+12F1E cinit CODE >31059:/tmp/xcXEMEnen.s
+12F20 cinit CODE >31060:/tmp/xcXEMEnen.s
+12F22 cinit CODE >31061:/tmp/xcXEMEnen.s
+12F24 cinit CODE >31062:/tmp/xcXEMEnen.s
+12F26 cinit CODE >31063:/tmp/xcXEMEnen.s
+12F28 cinit CODE >31064:/tmp/xcXEMEnen.s
+12F2C cinit CODE >31065:/tmp/xcXEMEnen.s
+12F30 cinit CODE >31066:/tmp/xcXEMEnen.s
+12F30 cinit CODE >31067:/tmp/xcXEMEnen.s
+12F32 cinit CODE >31068:/tmp/xcXEMEnen.s
+12F38 cinit CODE >31069:/tmp/xcXEMEnen.s
+12F3A cinit CODE >31070:/tmp/xcXEMEnen.s
+12F3C cinit CODE >31071:/tmp/xcXEMEnen.s
+12F3E cinit CODE >31072:/tmp/xcXEMEnen.s
+12F40 cinit CODE >31073:/tmp/xcXEMEnen.s
+12F42 cinit CODE >31077:/tmp/xcXEMEnen.s
+12F44 cinit CODE >31078:/tmp/xcXEMEnen.s
+12F46 cinit CODE >31079:/tmp/xcXEMEnen.s
+12F48 cinit CODE >31080:/tmp/xcXEMEnen.s
+12F4A cinit CODE >31081:/tmp/xcXEMEnen.s
+12F4C cinit CODE >31082:/tmp/xcXEMEnen.s
+12F4E cinit CODE >31083:/tmp/xcXEMEnen.s
+12F52 cinit CODE >31084:/tmp/xcXEMEnen.s
+12F56 cinit CODE >31085:/tmp/xcXEMEnen.s
+12F56 cinit CODE >31086:/tmp/xcXEMEnen.s
+12F58 cinit CODE >31087:/tmp/xcXEMEnen.s
+12F5E cinit CODE >31088:/tmp/xcXEMEnen.s
+12F60 cinit CODE >31089:/tmp/xcXEMEnen.s
+12F62 cinit CODE >31090:/tmp/xcXEMEnen.s
+12F64 cinit CODE >31094:/tmp/xcXEMEnen.s
+12F66 cinit CODE >31095:/tmp/xcXEMEnen.s
+12F68 cinit CODE >31096:/tmp/xcXEMEnen.s
+12F6A cinit CODE >31097:/tmp/xcXEMEnen.s
+12F6C cinit CODE >31098:/tmp/xcXEMEnen.s
+12F6E cinit CODE >31099:/tmp/xcXEMEnen.s
+12F70 cinit CODE >31100:/tmp/xcXEMEnen.s
+12F72 cinit CODE >31101:/tmp/xcXEMEnen.s
+12F78 cinit CODE >31102:/tmp/xcXEMEnen.s
+12F7A cinit CODE >31103:/tmp/xcXEMEnen.s
+12F80 cinit CODE >31107:/tmp/xcXEMEnen.s
+12F84 cinit CODE >31108:/tmp/xcXEMEnen.s
+12F88 cinit CODE >31109:/tmp/xcXEMEnen.s
+12F88 cinit CODE >31110:/tmp/xcXEMEnen.s
+12F8A cinit CODE >31111:/tmp/xcXEMEnen.s
+12F8C cinit CODE >31112:/tmp/xcXEMEnen.s
+12F8E cinit CODE >31113:/tmp/xcXEMEnen.s
+12F90 cinit CODE >31114:/tmp/xcXEMEnen.s
+12F92 cinit CODE >31115:/tmp/xcXEMEnen.s
+12F94 cinit CODE >31118:/tmp/xcXEMEnen.s
+12F98 cinit CODE >31119:/tmp/xcXEMEnen.s
+12F9A cinit CODE >31120:/tmp/xcXEMEnen.s
+12F9A cinit CODE >31121:/tmp/xcXEMEnen.s
+12F9C cinit CODE >31122:/tmp/xcXEMEnen.s
+12F9E cinit CODE >31123:/tmp/xcXEMEnen.s
+12FA0 cinit CODE >31126:/tmp/xcXEMEnen.s
+12FA4 cinit CODE >31127:/tmp/xcXEMEnen.s
+12FA6 cinit CODE >31128:/tmp/xcXEMEnen.s
+12FA6 cinit CODE >31129:/tmp/xcXEMEnen.s
+12FA8 cinit CODE >31130:/tmp/xcXEMEnen.s
+12FAA cinit CODE >31131:/tmp/xcXEMEnen.s
+12FAC cinit CODE >31134:/tmp/xcXEMEnen.s
+12FB0 cinit CODE >31135:/tmp/xcXEMEnen.s
+12FB2 cinit CODE >31136:/tmp/xcXEMEnen.s
+12FB2 cinit CODE >31137:/tmp/xcXEMEnen.s
+12FB4 cinit CODE >31138:/tmp/xcXEMEnen.s
+12FB6 cinit CODE >31139:/tmp/xcXEMEnen.s
+12FB8 cinit CODE >31142:/tmp/xcXEMEnen.s
+12FBC cinit CODE >31143:/tmp/xcXEMEnen.s
+12FBE cinit CODE >31144:/tmp/xcXEMEnen.s
+12FBE cinit CODE >31145:/tmp/xcXEMEnen.s
+12FC0 cinit CODE >31146:/tmp/xcXEMEnen.s
+12FC2 cinit CODE >31147:/tmp/xcXEMEnen.s
+12FC4 cinit CODE >31150:/tmp/xcXEMEnen.s
+12FC8 cinit CODE >31151:/tmp/xcXEMEnen.s
+12FCA cinit CODE >31152:/tmp/xcXEMEnen.s
+12FCA cinit CODE >31153:/tmp/xcXEMEnen.s
+12FCC cinit CODE >31154:/tmp/xcXEMEnen.s
+12FCE cinit CODE >31155:/tmp/xcXEMEnen.s
+12FD0 cinit CODE >31158:/tmp/xcXEMEnen.s
+12FD4 cinit CODE >31159:/tmp/xcXEMEnen.s
+12FD6 cinit CODE >31160:/tmp/xcXEMEnen.s
+12FD6 cinit CODE >31161:/tmp/xcXEMEnen.s
+12FD8 cinit CODE >31162:/tmp/xcXEMEnen.s
+12FDA cinit CODE >31163:/tmp/xcXEMEnen.s
+12FDC cinit CODE >31171:/tmp/xcXEMEnen.s
+12FDE cinit CODE >31172:/tmp/xcXEMEnen.s
+12FE0 cinit CODE >31173:/tmp/xcXEMEnen.s
+12FE2 cinit CODE >31174:/tmp/xcXEMEnen.s
+12FE4 cinit CODE >31175:/tmp/xcXEMEnen.s
+12FE6 cinit CODE >31176:/tmp/xcXEMEnen.s
+12FE8 cinit CODE >31182:/tmp/xcXEMEnen.s
+12FE8 cinit CODE >31184:/tmp/xcXEMEnen.s
+12FEA cinit CODE >31185:/tmp/xcXEMEnen.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -2057,7 +2057,7 @@ _PWM6CON 3F6A 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _PWM6DCH 3F69 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _PWM6DCL 3F68 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/ps_test.X.production.o
-__mediumconst FE92 0 MEDIUMCONST 0 mediumconst /tmp/xcXdoEOpD.o
+__mediumconst FE92 0 MEDIUMCONST 0 mediumconst /tmp/xcXdahIkA.o
 DMA1_SetSCNTIInterruptHandler@InterruptHandler 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/ps_test.X.production.o
 __end_of_UART1_SetFramingErrorHandler 14924 0 CODE 0 text79 dist/default/production/ps_test.X.production.o
@@ -2096,7 +2096,7 @@ _WPUC 3A61 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUD 3A71 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUE 3A81 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _WPUF 3A91 0 ABS 0 - dist/default/production/ps_test.X.production.o
-___sp 0 0 STACK 2 stack /tmp/xcXdoEOpD.o
+___sp 0 0 STACK 2 stack /tmp/xcXdahIkA.o
 _atoi 12D00 0 CODE 0 text28 dist/default/production/ps_test.X.production.o
 _cmdm FE98 0 MEDIUMCONST 0 mediumconst dist/default/production/ps_test.X.production.o
 _dbuf 280 0 BANK2 1 bssBANK2 dist/default/production/ps_test.X.production.o
@@ -2115,7 +2115,7 @@ pad@i 73 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 pad@p 70 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 pad@w 75 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 send_lcd_cmd@cmd 22 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
-start AE 0 CODE 0 init /tmp/xcXdoEOpD.o
+start AE 0 CODE 0 init /tmp/xcXdahIkA.o
 _PWM6_LoadDutyValue 14442 0 CODE 0 text99 dist/default/production/ps_test.X.production.o
 ___flmul@aexp 73 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 ___flmul@bexp 74 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
@@ -2171,11 +2171,11 @@ utoa@i 97 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@n 8F 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@p 8B 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 utoa@w 8D 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
-__accesstop 60 0 ABS 0 - /tmp/xcXdoEOpD.o
-intlevel0 0 0 CODE 0 text /tmp/xcXdoEOpD.o
-intlevel1 0 0 CODE 0 text /tmp/xcXdoEOpD.o
-intlevel2 0 0 CODE 0 text /tmp/xcXdoEOpD.o
-intlevel3 0 0 CODE 0 text /tmp/xcXdoEOpD.o
+__accesstop 60 0 ABS 0 - /tmp/xcXdahIkA.o
+intlevel0 0 0 CODE 0 text /tmp/xcXdahIkA.o
+intlevel1 0 0 CODE 0 text /tmp/xcXdahIkA.o
+intlevel2 0 0 CODE 0 text /tmp/xcXdahIkA.o
+intlevel3 0 0 CODE 0 text /tmp/xcXdahIkA.o
 __ptext100 14474 0 CODE 0 text100 dist/default/production/ps_test.X.production.o
 __ptext101 1498E 0 CODE 0 text101 dist/default/production/ps_test.X.production.o
 __ptext102 149AC 0 CODE 0 text102 dist/default/production/ps_test.X.production.o
@@ -2276,8 +2276,8 @@ _ANSELE 3A80 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _ANSELF 3A90 0 ABS 0 - dist/default/production/ps_test.X.production.o
 __LdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production/ps_test.X.production.o
 ___awdiv@dividend 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXdoEOpD.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXdoEOpD.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXdahIkA.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXdahIkA.o
 __end_of_ringBufS_flush 13DC4 0 CODE 0 text49 dist/default/production/ps_test.X.production.o
 ?_tolower 24 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 __end_of_UART1_rx_vect_isr 14024 0 CODE 0 text105 dist/default/production/ps_test.X.production.o
@@ -2467,7 +2467,7 @@ _U1FIFO 3DF7 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _send_lcd_cmd_long 1435A 0 CODE 0 text34 dist/default/production/ps_test.X.production.o
 __end_of_printf 14610 0 CODE 0 text4 dist/default/production/ps_test.X.production.o
 _UART1_Transmit_ISR 14590 0 CODE 0 text104 dist/default/production/ps_test.X.production.o
-isa$xinst 0 0 ABS 0 - /tmp/xcXdoEOpD.o
+isa$xinst 0 0 ABS 0 - /tmp/xcXdahIkA.o
 fputc@fp 22 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 fputs@fp 67 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 _UART1_rx_vect_isr 13FDC 0 CODE 0 text105 dist/default/production/ps_test.X.production.o
@@ -2529,7 +2529,7 @@ __Hbank31 0 0 ABS 0 bank31 dist/default/production/ps_test.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/ps_test.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production/ps_test.X.production.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/production/ps_test.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXdoEOpD.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXdahIkA.o
 ___xxtofl@arg 62 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 ___xxtofl@exp 61 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 ___xxtofl@val 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
@@ -2990,12 +2990,12 @@ _UART1_vect_isr 142E4 0 CODE 0 text129 dist/default/production/ps_test.X.product
 _strcpy 13B50 0 CODE 0 text14 dist/default/production/ps_test.X.production.o
 _strlen 13EB6 0 CODE 0 text59 dist/default/production/ps_test.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/ps_test.X.production.o
-isa$std 1 0 ABS 0 - /tmp/xcXdoEOpD.o
+isa$std 1 0 ABS 0 - /tmp/xcXdahIkA.o
 ___fldiv@new_exp 69 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 __end_of_UART1_Write 142A8 0 CODE 0 text70 dist/default/production/ps_test.X.production.o
 _UART1_SetFramingErrorInterruptHandler 14908 0 CODE 0 text78 dist/default/production/ps_test.X.production.o
-stackhi 0 0 ABS 0 - /tmp/xcXdoEOpD.o
-stacklo 0 0 ABS 0 - /tmp/xcXdoEOpD.o
+stackhi 0 0 ABS 0 - /tmp/xcXdahIkA.o
+stacklo 0 0 ABS 0 - /tmp/xcXdahIkA.o
 eaDogM_WriteString@strPtr 6A 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
 __end_of_Timers_Isr 13E68 0 CODE 0 text122 dist/default/production/ps_test.X.production.o
 ringBufS_put_dma@_this 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
@@ -3207,7 +3207,7 @@ __Ltext97 0 0 ABS 0 text97 dist/default/production/ps_test.X.production.o
 __Ltext98 0 0 ABS 0 text98 dist/default/production/ps_test.X.production.o
 __Ltext99 0 0 ABS 0 text99 dist/default/production/ps_test.X.production.o
 __end_of_PWM5_Initialize 1485A 0 CODE 0 text89 dist/default/production/ps_test.X.production.o
-__ramtop 2000 0 RAM 0 ramtop /tmp/xcXdoEOpD.o
+__ramtop 2000 0 RAM 0 ramtop /tmp/xcXdahIkA.o
 _sprintf 13C6C 0 CODE 0 text1 dist/default/production/ps_test.X.production.o
 TMR6_ISR@CountCallBack 38 0 COMRAM 1 bssCOMRAM dist/default/production/ps_test.X.production.o
 eaDogM_WriteString@len 6E 0 BANK0 1 cstackBANK0 dist/default/production/ps_test.X.production.o
@@ -3238,8 +3238,8 @@ _SLRCONC 3A63 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCOND 3A73 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCONE 3A83 0 ABS 0 - dist/default/production/ps_test.X.production.o
 _SLRCONF 3A93 0 ABS 0 - dist/default/production/ps_test.X.production.o
-___heap_hi 0 0 ABS 0 - /tmp/xcXdoEOpD.o
-___heap_lo 0 0 ABS 0 - /tmp/xcXdoEOpD.o
+___heap_hi 0 0 ABS 0 - /tmp/xcXdahIkA.o
+___heap_lo 0 0 ABS 0 - /tmp/xcXdahIkA.o
 _ADCC_DefaultInterruptHandler 149CA 0 CODE 0 text112 dist/default/production/ps_test.X.production.o
 ___fltol@f1 1E 0 COMRAM 1 cstackCOMRAM dist/default/production/ps_test.X.production.o
 _UART1_UartInterrupt_ISR 149BE 0 CODE 0 text130 dist/default/production/ps_test.X.production.o
