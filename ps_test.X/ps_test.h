@@ -28,10 +28,21 @@ extern "C" {
 #define MAX_ADC_CHAN	channel_FVR_Buffer2
 #define STATIC_PS	20
 #define ROLL_MAX	19
-	
-#define	V_SCALE		0.405194
-#define I_SCALE		0.004
-	
+
+	/*
+	 * electrical unit scaling for various power supplies
+	 */
+#define	V_SCALE_0		0.405194
+#define I_SCALE_0		0.004
+#define	V_SCALE_1		0.405194
+#define I_SCALE_1		0.004
+#define	V_SCALE_2		0.405194
+#define I_SCALE_2		0.004
+#define	V_SCALE_3		0.405194
+#define I_SCALE_3		0.004
+#define	V_SCALE_4		0.405194
+#define I_SCALE_4		0.004
+
 #define EADOGM_CMD_CLR		1
 #define EADOGM_CMD_CURSOR_ON     0b00001111
 #define EADOGM_CMD_CURSOR_OFF    0b00001100
@@ -44,7 +55,7 @@ extern "C" {
 #define EADOGM_CMD_SET_TABLE2    0b00101010
 #define EADOGM_COLSPAN		16	
 #define NHD
-	
+
 	extern const char *build_date, *build_time;
 
 	typedef enum {
@@ -52,7 +63,12 @@ extern "C" {
 		roll_mode,
 		static_mode,
 	} MODE_TYPES;
-	
+
+	typedef struct PS_TYPE {
+		double v_scale;
+		double i_scale;
+	} PS_TYPE;
+
 	extern char buff1[255];
 #ifdef	__cplusplus
 }

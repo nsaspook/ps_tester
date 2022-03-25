@@ -28602,7 +28602,7 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 48 "./ps_test.h"
+# 59 "./ps_test.h"
  extern const char *build_date, *build_time;
 
  typedef enum {
@@ -28610,6 +28610,11 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ typedef struct PS_TYPE {
+  double v_scale;
+  double i_scale;
+ } PS_TYPE;
 
  extern char buff1[255];
 # 2 "scdm.c" 2
@@ -28640,6 +28645,7 @@ D_CODES set_temp_display_help(const D_CODES);
  void fh_pr(void *a_data);
  void fh_ps(void *a_data);
  void fh_po(void *a_data);
+ void fh_pp(void *a_data);
  void fh_pu(void *a_data);
  void fh_pd(void *a_data);
  void fh_pl(void *a_data);
@@ -28663,6 +28669,7 @@ static t_cmd g_cmds[] = {
  { "pr", fh_pr},
  { "ps", fh_ps},
  { "po", fh_po},
+ { "pp", fh_pp},
  { "pu", fh_pu},
  { "pd", fh_pd},
  { "pl", fh_pl},

@@ -13,6 +13,7 @@ static t_cmd g_cmds[] = {
 	{ "pr", fh_pr},
 	{ "ps", fh_ps},
 	{ "po", fh_po},
+	{ "pp", fh_pp},
 	{ "pu", fh_pu},
 	{ "pd", fh_pd},
 	{ "pl", fh_pl},

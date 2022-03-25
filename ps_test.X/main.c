@@ -55,6 +55,31 @@ const char *build_date = __DATE__, *build_time = __TIME__;
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = ROLL_MAX, static_ps = STATIC_PS;
+PS_TYPE ps_type[] = {
+	{
+		.v_scale = V_SCALE_0,
+		.i_scale = I_SCALE_0,
+	},
+	{
+		.v_scale = V_SCALE_1,
+		.i_scale = I_SCALE_1,
+	},
+	{
+		.v_scale = V_SCALE_2,
+		.i_scale = I_SCALE_2,
+	},
+	{
+		.v_scale = V_SCALE_3,
+		.i_scale = I_SCALE_3,
+	},
+	{
+		.v_scale = V_SCALE_4,
+		.i_scale = I_SCALE_4,
+	},
+};
+
+PS_TYPE *ps_type_ptr = ps_type;
+volatile uint8_t ps_type_index = 0;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -129,6 +154,8 @@ void fh_pr(void *a_data)
 void fh_ps(void *a_data)
 {
 	puts("\r\n Steady 1000VDC ON \r\n");
+	roll_max = ROLL_MAX;
+	static_ps = STATIC_PS;
 	mode = static_mode;
 }
 
@@ -138,18 +165,24 @@ void fh_po(void *a_data)
 	mode = off_mode;
 }
 
+void fh_pp(void *a_data)
+{
+	puts("\r\n Voltage ON \r\n");
+	mode = static_mode;
+}
+
 void fh_pu(void *a_data)
 {
 	puts("\r\n Voltage UP \r\n");
 	roll_max = ROLL_MAX + 10;
-	static_ps = STATIC_PS + 10;
+	static_ps = STATIC_PS + 11;
 }
 
 void fh_pd(void *a_data)
 {
 	puts("\r\n Voltage DOWN \r\n");
-	roll_max = ROLL_MAX - 10;
-	static_ps = STATIC_PS - 10;
+	roll_max = ROLL_MAX - 12;
+	static_ps = STATIC_PS - 12;
 }
 
 void fh_pl(void *a_data)
@@ -164,6 +197,7 @@ void fh_pl(void *a_data)
  */
 void main(void)
 {
+	uint8_t lcd_update = 0;
 
 	// Initialize the device
 	SYSTEM_Initialize();
@@ -233,10 +267,20 @@ void main(void)
 			}
 
 			if (disp_tick) {
-				vval = (double) ana[PS_V_ANA] * V_SCALE;
-				ival = (double) ana[PS_I_ANA] * I_SCALE;
-				printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA\r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
-				eaDogM_WriteString("Display testing  ");
+				ps_type_ptr = &ps_type[ps_type_index]; // set power supply scaling pointer
+				vval = (double) ana[PS_V_ANA] * ps_type_ptr->v_scale;
+				ival = (double) ana[PS_I_ANA] * ps_type_ptr->i_scale;
+				printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
+				if (!(lcd_update++ & 0x03)) { // slow LCD update rate
+					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
+					eaDogM_WriteStringAtPos(0, 0, buff1);
+					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
+					eaDogM_WriteStringAtPos(1, 0, buff1);
+					sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+					eaDogM_WriteStringAtPos(2, 0, buff1);
+					sprintf(buff1, "V=%+6.1fV I=%+3.1fmA", vval, ival);
+					eaDogM_WriteStringAtPos(3, 0, buff1);
+				}
 				/*
 				 * mode switch state machine
 				 */

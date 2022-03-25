@@ -5,8 +5,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F17178 `(v ~T0 @X0 0 tf ]
 "3 disp_led.c
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[c E17358 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
-[n E17358 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
+[c E17362 0 1 2 3 4 5 6 7 8 9 10 11 12 .. ]
+[n E17362 . oo00_off oo00_g oo00_r oo10_off oo10_g oo10_r oo20_off oo20_g oo20_r oo30_off oo30_g oo30_r oooff  ]
 "45872 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
 [; ;/root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h: 45872:     struct {
 [s S2062 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -2301,343 +2301,343 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_UARTInterruptHandler `*F17178 ~T0 @X0 1 e ]
 "3 disp_led.c
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[v _display_led `(v ~T0 @X0 1 ef1`E17358 ]
+[v _display_led `(v ~T0 @X0 1 ef1`E17362 ]
 "4
 [; ;disp_led.c: 4: {
 {
 [e :U _display_led ]
 "3
 [; ;disp_led.c: 3: void display_led(DISPLAY_TYPES led)
-[v _led `E17358 ~T0 @X0 1 r1 ]
+[v _led `E17362 ~T0 @X0 1 r1 ]
 "4
 [; ;disp_led.c: 4: {
 [f ]
 "5
 [; ;disp_led.c: 5:  switch (led) {
-[e $U 2211  ]
+[e $U 2212  ]
 {
 "6
 [; ;disp_led.c: 6:  case oo00_off:
-[e :U 2212 ]
+[e :U 2213 ]
 "7
 [; ;disp_led.c: 7:   do { LATDbits.LATD4 = 0; } while(0);
-[e :U 2215 ]
+[e :U 2216 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2214 ]
+[e :U 2215 ]
 "8
 [; ;disp_led.c: 8:   do { LATDbits.LATD5 = 0; } while(0);
-[e :U 2218 ]
+[e :U 2219 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2217 ]
+[e :U 2218 ]
 "9
 [; ;disp_led.c: 9:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "10
 [; ;disp_led.c: 10:  case oo00_r:
-[e :U 2219 ]
+[e :U 2220 ]
 "11
 [; ;disp_led.c: 11:   do { LATDbits.LATD4 = 0; } while(0);
-[e :U 2222 ]
+[e :U 2223 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2221 ]
+[e :U 2222 ]
 "12
 [; ;disp_led.c: 12:   do { LATDbits.LATD5 = 1; } while(0);
-[e :U 2225 ]
+[e :U 2226 ]
 {
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 2224 ]
+[e :U 2225 ]
 "13
 [; ;disp_led.c: 13:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "14
 [; ;disp_led.c: 14:  case oo00_g:
-[e :U 2226 ]
+[e :U 2227 ]
 "15
 [; ;disp_led.c: 15:   do { LATDbits.LATD4 = 1; } while(0);
-[e :U 2229 ]
+[e :U 2230 ]
 {
 [e = . . _LATDbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 2228 ]
+[e :U 2229 ]
 "16
 [; ;disp_led.c: 16:   do { LATDbits.LATD5 = 0; } while(0);
-[e :U 2232 ]
+[e :U 2233 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2231 ]
+[e :U 2232 ]
 "17
 [; ;disp_led.c: 17:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "18
 [; ;disp_led.c: 18:  case oo10_off:
-[e :U 2233 ]
+[e :U 2234 ]
 "19
 [; ;disp_led.c: 19:   do { LATDbits.LATD6 = 0; } while(0);
-[e :U 2236 ]
+[e :U 2237 ]
 {
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2235 ]
+[e :U 2236 ]
 "20
 [; ;disp_led.c: 20:   do { LATDbits.LATD7 = 0; } while(0);
-[e :U 2239 ]
+[e :U 2240 ]
 {
 [e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2238 ]
+[e :U 2239 ]
 "21
 [; ;disp_led.c: 21:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "22
 [; ;disp_led.c: 22:  case oo10_r:
-[e :U 2240 ]
+[e :U 2241 ]
 "23
 [; ;disp_led.c: 23:   do { LATDbits.LATD6 = 0; } while(0);
-[e :U 2243 ]
+[e :U 2244 ]
 {
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2242 ]
+[e :U 2243 ]
 "24
 [; ;disp_led.c: 24:   do { LATDbits.LATD7 = 1; } while(0);
-[e :U 2246 ]
+[e :U 2247 ]
 {
 [e = . . _LATDbits 0 7 -> -> 1 `i `uc ]
 }
-[e :U 2245 ]
+[e :U 2246 ]
 "25
 [; ;disp_led.c: 25:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "26
 [; ;disp_led.c: 26:  case oo10_g:
-[e :U 2247 ]
+[e :U 2248 ]
 "27
 [; ;disp_led.c: 27:   do { LATDbits.LATD6 = 1; } while(0);
-[e :U 2250 ]
+[e :U 2251 ]
 {
 [e = . . _LATDbits 0 6 -> -> 1 `i `uc ]
 }
-[e :U 2249 ]
+[e :U 2250 ]
 "28
 [; ;disp_led.c: 28:   do { LATDbits.LATD7 = 0; } while(0);
-[e :U 2253 ]
+[e :U 2254 ]
 {
 [e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2252 ]
+[e :U 2253 ]
 "29
 [; ;disp_led.c: 29:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "30
 [; ;disp_led.c: 30:  case oo20_off:
-[e :U 2254 ]
+[e :U 2255 ]
 "31
 [; ;disp_led.c: 31:   do { LATFbits.LATF4 = 0; } while(0);
-[e :U 2257 ]
+[e :U 2258 ]
 {
 [e = . . _LATFbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2256 ]
+[e :U 2257 ]
 "32
 [; ;disp_led.c: 32:   do { LATFbits.LATF5 = 0; } while(0);
-[e :U 2260 ]
+[e :U 2261 ]
 {
 [e = . . _LATFbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2259 ]
+[e :U 2260 ]
 "33
 [; ;disp_led.c: 33:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "34
 [; ;disp_led.c: 34:  case oo20_r:
-[e :U 2261 ]
+[e :U 2262 ]
 "35
 [; ;disp_led.c: 35:   do { LATFbits.LATF4 = 0; } while(0);
-[e :U 2264 ]
+[e :U 2265 ]
 {
 [e = . . _LATFbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2263 ]
+[e :U 2264 ]
 "36
 [; ;disp_led.c: 36:   do { LATFbits.LATF5 = 1; } while(0);
-[e :U 2267 ]
+[e :U 2268 ]
 {
 [e = . . _LATFbits 0 5 -> -> 1 `i `uc ]
 }
-[e :U 2266 ]
+[e :U 2267 ]
 "37
 [; ;disp_led.c: 37:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "38
 [; ;disp_led.c: 38:  case oo20_g:
-[e :U 2268 ]
+[e :U 2269 ]
 "39
 [; ;disp_led.c: 39:   do { LATFbits.LATF4 = 1; } while(0);
-[e :U 2271 ]
+[e :U 2272 ]
 {
 [e = . . _LATFbits 0 4 -> -> 1 `i `uc ]
 }
-[e :U 2270 ]
+[e :U 2271 ]
 "40
 [; ;disp_led.c: 40:   do { LATFbits.LATF5 = 0; } while(0);
-[e :U 2274 ]
+[e :U 2275 ]
 {
 [e = . . _LATFbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2273 ]
+[e :U 2274 ]
 "41
 [; ;disp_led.c: 41:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "42
 [; ;disp_led.c: 42:  case oo30_off:
-[e :U 2275 ]
+[e :U 2276 ]
 "43
 [; ;disp_led.c: 43:   do { LATFbits.LATF6 = 0; } while(0);
-[e :U 2278 ]
+[e :U 2279 ]
 {
 [e = . . _LATFbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2277 ]
+[e :U 2278 ]
 "44
 [; ;disp_led.c: 44:   do { LATFbits.LATF7 = 0; } while(0);
-[e :U 2281 ]
+[e :U 2282 ]
 {
 [e = . . _LATFbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2280 ]
+[e :U 2281 ]
 "45
 [; ;disp_led.c: 45:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "46
 [; ;disp_led.c: 46:  case oo30_r:
-[e :U 2282 ]
+[e :U 2283 ]
 "47
 [; ;disp_led.c: 47:   do { LATFbits.LATF6 = 0; } while(0);
-[e :U 2285 ]
+[e :U 2286 ]
 {
 [e = . . _LATFbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2284 ]
+[e :U 2285 ]
 "48
 [; ;disp_led.c: 48:   do { LATFbits.LATF7 = 1; } while(0);
-[e :U 2288 ]
+[e :U 2289 ]
 {
 [e = . . _LATFbits 0 7 -> -> 1 `i `uc ]
 }
-[e :U 2287 ]
+[e :U 2288 ]
 "49
 [; ;disp_led.c: 49:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "50
 [; ;disp_led.c: 50:  case oo30_g:
-[e :U 2289 ]
+[e :U 2290 ]
 "51
 [; ;disp_led.c: 51:   do { LATFbits.LATF6 = 1; } while(0);
-[e :U 2292 ]
+[e :U 2293 ]
 {
 [e = . . _LATFbits 0 6 -> -> 1 `i `uc ]
 }
-[e :U 2291 ]
+[e :U 2292 ]
 "52
 [; ;disp_led.c: 52:   do { LATFbits.LATF7 = 0; } while(0);
-[e :U 2295 ]
+[e :U 2296 ]
 {
 [e = . . _LATFbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2294 ]
+[e :U 2295 ]
 "53
 [; ;disp_led.c: 53:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "54
 [; ;disp_led.c: 54:  default:
-[e :U 2296 ]
+[e :U 2297 ]
 "55
 [; ;disp_led.c: 55:   do { LATDbits.LATD4 = 0; } while(0);
-[e :U 2299 ]
+[e :U 2300 ]
 {
 [e = . . _LATDbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2298 ]
+[e :U 2299 ]
 "56
 [; ;disp_led.c: 56:   do { LATDbits.LATD5 = 0; } while(0);
-[e :U 2302 ]
+[e :U 2303 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2301 ]
+[e :U 2302 ]
 "57
 [; ;disp_led.c: 57:   do { LATDbits.LATD6 = 0; } while(0);
-[e :U 2305 ]
+[e :U 2306 ]
 {
 [e = . . _LATDbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2304 ]
+[e :U 2305 ]
 "58
 [; ;disp_led.c: 58:   do { LATDbits.LATD7 = 0; } while(0);
-[e :U 2308 ]
+[e :U 2309 ]
 {
 [e = . . _LATDbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2307 ]
+[e :U 2308 ]
 "59
 [; ;disp_led.c: 59:   do { LATFbits.LATF4 = 0; } while(0);
-[e :U 2311 ]
+[e :U 2312 ]
 {
 [e = . . _LATFbits 0 4 -> -> 0 `i `uc ]
 }
-[e :U 2310 ]
+[e :U 2311 ]
 "60
 [; ;disp_led.c: 60:   do { LATFbits.LATF5 = 0; } while(0);
-[e :U 2314 ]
+[e :U 2315 ]
 {
 [e = . . _LATFbits 0 5 -> -> 0 `i `uc ]
 }
-[e :U 2313 ]
+[e :U 2314 ]
 "61
 [; ;disp_led.c: 61:   do { LATFbits.LATF6 = 0; } while(0);
-[e :U 2317 ]
+[e :U 2318 ]
 {
 [e = . . _LATFbits 0 6 -> -> 0 `i `uc ]
 }
-[e :U 2316 ]
+[e :U 2317 ]
 "62
 [; ;disp_led.c: 62:   do { LATFbits.LATF7 = 0; } while(0);
-[e :U 2320 ]
+[e :U 2321 ]
 {
 [e = . . _LATFbits 0 7 -> -> 0 `i `uc ]
 }
-[e :U 2319 ]
+[e :U 2320 ]
 "63
 [; ;disp_led.c: 63:   break;
-[e $U 2210  ]
+[e $U 2211  ]
 "64
 [; ;disp_led.c: 64:  }
 }
-[e $U 2210  ]
+[e $U 2211  ]
+[e :U 2212 ]
+[e [\ -> _led `ui , $ -> . `E17362 0 `ui 2213
+ , $ -> . `E17362 2 `ui 2220
+ , $ -> . `E17362 1 `ui 2227
+ , $ -> . `E17362 3 `ui 2234
+ , $ -> . `E17362 5 `ui 2241
+ , $ -> . `E17362 4 `ui 2248
+ , $ -> . `E17362 6 `ui 2255
+ , $ -> . `E17362 8 `ui 2262
+ , $ -> . `E17362 7 `ui 2269
+ , $ -> . `E17362 9 `ui 2276
+ , $ -> . `E17362 11 `ui 2283
+ , $ -> . `E17362 10 `ui 2290
+ 2297 ]
 [e :U 2211 ]
-[e [\ -> _led `ui , $ -> . `E17358 0 `ui 2212
- , $ -> . `E17358 2 `ui 2219
- , $ -> . `E17358 1 `ui 2226
- , $ -> . `E17358 3 `ui 2233
- , $ -> . `E17358 5 `ui 2240
- , $ -> . `E17358 4 `ui 2247
- , $ -> . `E17358 6 `ui 2254
- , $ -> . `E17358 8 `ui 2261
- , $ -> . `E17358 7 `ui 2268
- , $ -> . `E17358 9 `ui 2275
- , $ -> . `E17358 11 `ui 2282
- , $ -> . `E17358 10 `ui 2289
- 2296 ]
-[e :U 2210 ]
 "66
 [; ;disp_led.c: 66: }
-[e :UE 2209 ]
+[e :UE 2210 ]
 }

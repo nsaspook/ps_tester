@@ -54,6 +54,7 @@ extern "C" {
 	void fh_pr(void *a_data);
 	void fh_ps(void *a_data);
 	void fh_po(void *a_data);
+	void fh_pp(void *a_data);
 	void fh_pu(void *a_data);
 	void fh_pd(void *a_data);
 	void fh_pl(void *a_data);

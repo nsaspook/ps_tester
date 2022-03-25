@@ -9,8 +9,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S2207 ringBufS_t buf head tail count ]
 "30 ./eadog.h
 [; ;./eadog.h: 30: struct spi_link_type {
-[s S2208 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*S2207 1 `*S2207 1 `Vl 1 ]
-[n S2208 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config tx1b tx1a int_count ]
+[s S2209 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 `us 1 `uc 1 `*S2207 1 `*S2207 1 `Vl 1 ]
+[n S2209 spi_link_type SPI_LCD SPI_AUX LCD_TIMER LCD_DATA delay config tx1b tx1a int_count ]
 "8 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/builtins.h
 [v ___nop `(v ~T0 @X0 0 ef ]
 [p i ___nop ]
@@ -2462,7 +2462,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _UART1_UARTInterruptHandler `*F17178 ~T0 @X0 1 e ]
 "9 eadog.c
 [; ;eadog.c: 9: struct spi_link_type spi_link;
-[v _spi_link `S2208 ~T0 @X0 1 e ]
+[v _spi_link `S2209 ~T0 @X0 1 e ]
 "10
 [; ;eadog.c: 10: struct ringBufS_t ring_buf1;
 [v _ring_buf1 `S2207 ~T0 @X0 1 e ]
@@ -2504,14 +2504,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "19
 [; ;eadog.c: 19:  static uint32_t dcount;
-[v F17386 `ul ~T0 @X0 1 s dcount ]
+[v F17390 `ul ~T0 @X0 1 s dcount ]
 "21
 [; ;eadog.c: 21:  for (dcount = 0; dcount <= delay; dcount++) {
 {
-[e = F17386 -> -> -> 0 `i `l `ul ]
-[e $ <= F17386 _delay 2210  ]
-[e $U 2211  ]
-[e :U 2210 ]
+[e = F17390 -> -> -> 0 `i `l `ul ]
+[e $ <= F17390 _delay 2211  ]
+[e $U 2212  ]
+[e :U 2211 ]
 {
 "22
 [; ;eadog.c: 22:   __nop();
@@ -2522,13 +2522,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;eadog.c: 24:  };
 }
-[e ++ F17386 -> -> -> 1 `i `l `ul ]
-[e $ <= F17386 _delay 2210  ]
-[e :U 2211 ]
+[e ++ F17390 -> -> -> 1 `i `l `ul ]
+[e $ <= F17390 _delay 2211  ]
+[e :U 2212 ]
 }
 "25
 [; ;eadog.c: 25: }
-[e :UE 2209 ]
+[e :UE 2210 ]
 }
 "31
 [; ;eadog.c: 31: void init_display(void)
@@ -2627,7 +2627,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SPI1INTFbits 1 1 -> -> 1 `i `uc ]
 "77
 [; ;eadog.c: 77: }
-[e :UE 2213 ]
+[e :UE 2214 ]
 }
 "82
 [; ;eadog.c: 82: void init_port_dma(void)
@@ -2666,7 +2666,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _DMA2CON0bits 0 4 -> -> 0 `i `uc ]
 "93
 [; ;eadog.c: 93: }
-[e :UE 2214 ]
+[e :UE 2215 ]
 }
 "101
 [; ;eadog.c: 101: static void send_lcd_data(const uint8_t data)
@@ -2683,11 +2683,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "103
 [; ;eadog.c: 103:  do { LATCbits.LATC2 = 0; } while(0);
-[e :U 2218 ]
+[e :U 2219 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2217 ]
+[e :U 2218 ]
 "104
 [; ;eadog.c: 104:  SPI1_ExchangeByte(data);
 [e ( _SPI1_ExchangeByte (1 _data ]
@@ -2696,7 +2696,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _wdtdelay (1 -> -> -> 8 `i `l `ul ]
 "106
 [; ;eadog.c: 106: }
-[e :UE 2215 ]
+[e :UE 2216 ]
 }
 "108
 [; ;eadog.c: 108: static void send_lcd_cmd(const uint8_t cmd)
@@ -2713,11 +2713,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "110
 [; ;eadog.c: 110:  do { LATCbits.LATC2 = 0; } while(0);
-[e :U 2222 ]
+[e :U 2223 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2221 ]
+[e :U 2222 ]
 "111
 [; ;eadog.c: 111:  SPI1_ExchangeByte(0xFE);
 [e ( _SPI1_ExchangeByte (1 -> -> 254 `i `uc ]
@@ -2732,7 +2732,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _wdtdelay (1 -> -> -> 8 `i `l `ul ]
 "115
 [; ;eadog.c: 115: }
-[e :UE 2219 ]
+[e :UE 2220 ]
 }
 "117
 [; ;eadog.c: 117: static void send_lcd_cmd_long(const uint8_t cmd)
@@ -2749,11 +2749,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "119
 [; ;eadog.c: 119:  do { LATCbits.LATC2 = 0; } while(0);
-[e :U 2226 ]
+[e :U 2227 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2225 ]
+[e :U 2226 ]
 "120
 [; ;eadog.c: 120:  SPI1_ExchangeByte(0xFE);
 [e ( _SPI1_ExchangeByte (1 -> -> 254 `i `uc ]
@@ -2768,7 +2768,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _wdtdelay (1 -> -> -> 800 `i `l `ul ]
 "124
 [; ;eadog.c: 124: }
-[e :UE 2223 ]
+[e :UE 2224 ]
 }
 "129
 [; ;eadog.c: 129: void eaDogM_WriteString(char *strPtr)
@@ -2795,14 +2795,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _ringBufS_flush (2 , . _spi_link 7 -> -> 0 `i `c ]
 "139
 [; ;eadog.c: 139:  do { LATCbits.LATC2 = 0; } while(0);
-[e :U 2230 ]
+[e :U 2231 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2229 ]
+[e :U 2230 ]
 "140
 [; ;eadog.c: 140:  if (len > 64) {
-[e $ ! > -> _len `i -> 64 `i 2231  ]
+[e $ ! > -> _len `i -> 64 `i 2232  ]
 {
 "141
 [; ;eadog.c: 141:   strPtr[64] = 0;
@@ -2813,7 +2813,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "143
 [; ;eadog.c: 143:  }
 }
-[e :U 2231 ]
+[e :U 2232 ]
 "144
 [; ;eadog.c: 144:  DMA1CON0bits.EN = 0;
 [e = . . _DMA1CON0bits 0 6 -> -> 0 `i `uc ]
@@ -2831,7 +2831,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _start_lcd ..  ]
 "155
 [; ;eadog.c: 155: }
-[e :UE 2227 ]
+[e :UE 2228 ]
 }
 "160
 [; ;eadog.c: 160: void send_lcd_cmd_dma(const uint8_t strPtr)
@@ -2863,7 +2863,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _wait_lcd_done ..  ]
 "167
 [; ;eadog.c: 167: }
-[e :UE 2232 ]
+[e :UE 2233 ]
 }
 "172
 [; ;eadog.c: 172: void send_lcd_data_dma(const uint8_t strPtr)
@@ -2886,11 +2886,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _ringBufS_flush (2 , . _spi_link 7 -> -> 0 `i `c ]
 "180
 [; ;eadog.c: 180:  do { LATCbits.LATC2 = 0; } while(0);
-[e :U 2236 ]
+[e :U 2237 ]
 {
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
 }
-[e :U 2235 ]
+[e :U 2236 ]
 "181
 [; ;eadog.c: 181:  DMA1CON0bits.EN = 0;
 [e = . . _DMA1CON0bits 0 6 -> -> 0 `i `uc ]
@@ -2908,7 +2908,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _start_lcd ..  ]
 "189
 [; ;eadog.c: 189: }
-[e :UE 2233 ]
+[e :UE 2234 ]
 }
 "191
 [; ;eadog.c: 191: void eaDogM_WriteStringAtPos(const uint8_t r, const uint8_t c, char *strPtr)
@@ -2930,64 +2930,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _row `uc ~T0 @X0 1 a ]
 "195
 [; ;eadog.c: 195:  switch (r) {
-[e $U 2239  ]
+[e $U 2240  ]
 {
 "196
 [; ;eadog.c: 196:  case 0:
-[e :U 2240 ]
+[e :U 2241 ]
 "197
 [; ;eadog.c: 197:   row = 0x40;
 [e = _row -> -> 64 `i `uc ]
 "198
 [; ;eadog.c: 198:   break;
-[e $U 2238  ]
+[e $U 2239  ]
 "199
 [; ;eadog.c: 199:  case 1:
-[e :U 2241 ]
+[e :U 2242 ]
 "200
 [; ;eadog.c: 200:   row = 0x14;
 [e = _row -> -> 20 `i `uc ]
 "201
 [; ;eadog.c: 201:   break;
-[e $U 2238  ]
+[e $U 2239  ]
 "202
 [; ;eadog.c: 202:  case 2:
-[e :U 2242 ]
+[e :U 2243 ]
 "203
 [; ;eadog.c: 203:   row = 0x54;
 [e = _row -> -> 84 `i `uc ]
 "204
 [; ;eadog.c: 204:   break;
-[e $U 2238  ]
+[e $U 2239  ]
 "205
 [; ;eadog.c: 205:  case 3:
-[e :U 2243 ]
+[e :U 2244 ]
 "206
 [; ;eadog.c: 206:   row = 0x00;
 [e = _row -> -> 0 `i `uc ]
 "207
 [; ;eadog.c: 207:   break;
-[e $U 2238  ]
+[e $U 2239  ]
 "208
 [; ;eadog.c: 208:  default:
-[e :U 2244 ]
+[e :U 2245 ]
 "209
 [; ;eadog.c: 209:   row = 0x40;
 [e = _row -> -> 64 `i `uc ]
 "210
 [; ;eadog.c: 210:   break;
-[e $U 2238  ]
+[e $U 2239  ]
 "211
 [; ;eadog.c: 211:  }
 }
-[e $U 2238  ]
+[e $U 2239  ]
+[e :U 2240 ]
+[e [\ -> _r `i , $ -> 0 `i 2241
+ , $ -> 1 `i 2242
+ , $ -> 2 `i 2243
+ , $ -> 3 `i 2244
+ 2245 ]
 [e :U 2239 ]
-[e [\ -> _r `i , $ -> 0 `i 2240
- , $ -> 1 `i 2241
- , $ -> 2 `i 2242
- , $ -> 3 `i 2243
- 2244 ]
-[e :U 2238 ]
 "212
 [; ;eadog.c: 212:  send_lcd_cmd_dma(0x45);
 [e ( _send_lcd_cmd_dma (1 -> -> 69 `i `uc ]
@@ -3002,7 +3002,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _eaDogM_WriteString (1 _strPtr ]
 "216
 [; ;eadog.c: 216: }
-[e :UE 2237 ]
+[e :UE 2238 ]
 }
 "218
 [; ;eadog.c: 218: void eaDogM_WriteIntAtPos(uint8_t r, uint8_t c, uint8_t i)
@@ -3021,7 +3021,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "221
 [; ;eadog.c: 221: }
-[e :UE 2245 ]
+[e :UE 2246 ]
 }
 "223
 [; ;eadog.c: 223: void eaDogM_SetPos(const uint8_t r, const uint8_t c)
@@ -3039,7 +3039,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "226
 [; ;eadog.c: 226: }
-[e :UE 2246 ]
+[e :UE 2247 ]
 }
 "228
 [; ;eadog.c: 228: void eaDogM_ClearRow(const uint8_t r)
@@ -3056,7 +3056,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "231
 [; ;eadog.c: 231: }
-[e :UE 2247 ]
+[e :UE 2248 ]
 }
 "233
 [; ;eadog.c: 233: void eaDogM_WriteByteToCGRAM(uint8_t ndx, uint8_t data)
@@ -3074,7 +3074,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "236
 [; ;eadog.c: 236: }
-[e :UE 2248 ]
+[e :UE 2249 ]
 }
 "239
 [; ;eadog.c: 239: void eaDogM_WriteCommand(const uint8_t cmd)
@@ -3094,7 +3094,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _send_lcd_cmd_dma (1 _cmd ]
 "242
 [; ;eadog.c: 242: }
-[e :UE 2249 ]
+[e :UE 2250 ]
 }
 "244
 [; ;eadog.c: 244: void eaDogM_WriteChr(const int8_t value)
@@ -3114,7 +3114,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _send_lcd_data_dma (1 -> _value `uc ]
 "247
 [; ;eadog.c: 247: }
-[e :UE 2250 ]
+[e :UE 2251 ]
 }
 "252
 [; ;eadog.c: 252: void send_port_data_dma(uint16_t dsize)
@@ -3131,11 +3131,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "254
 [; ;eadog.c: 254:  if (dsize > 1024)
-[e $ ! > -> _dsize `ui -> -> 1024 `i `ui 2252  ]
+[e $ ! > -> _dsize `ui -> -> 1024 `i `ui 2253  ]
 "255
 [; ;eadog.c: 255:   dsize = 1024;
 [e = _dsize -> -> 1024 `i `us ]
-[e :U 2252 ]
+[e :U 2253 ]
 "257
 [; ;eadog.c: 257:  DMA2CON0bits.EN = 0;
 [e = . . _DMA2CON0bits 0 6 -> -> 0 `i `uc ]
@@ -3153,7 +3153,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _DMA2CON0bits 1 5 -> -> 1 `i `uc ]
 "262
 [; ;eadog.c: 262: }
-[e :UE 2251 ]
+[e :UE 2252 ]
 }
 "267
 [; ;eadog.c: 267: uint8_t* port_data_dma_ptr(void)
@@ -3166,10 +3166,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "269
 [; ;eadog.c: 269:  return port_data;
 [e ) &U _port_data ]
-[e $UE 2253  ]
+[e $UE 2254  ]
 "270
 [; ;eadog.c: 270: }
-[e :UE 2253 ]
+[e :UE 2254 ]
 }
 "275
 [; ;eadog.c: 275: void spi_putch(char c)
@@ -3189,7 +3189,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _ringBufS_put_dma (2 , . _spi_link 7 -> _c `uc ]
 "278
 [; ;eadog.c: 278: }
-[e :UE 2254 ]
+[e :UE 2255 ]
 }
 "283
 [; ;eadog.c: 283: void start_lcd(void)
@@ -3204,7 +3204,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _DMA1CON0bits 1 5 -> -> 1 `i `uc ]
 "286
 [; ;eadog.c: 286: }
-[e :UE 2255 ]
+[e :UE 2256 ]
 }
 "288
 [; ;eadog.c: 288: void wait_lcd_set(void)
@@ -3219,7 +3219,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _spi_link 3 -> -> 1 `i `uc ]
 "291
 [; ;eadog.c: 291: }
-[e :UE 2256 ]
+[e :UE 2257 ]
 }
 "293
 [; ;eadog.c: 293: _Bool wait_lcd_check(void)
@@ -3232,10 +3232,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "295
 [; ;eadog.c: 295:  return spi_link.LCD_DATA;
 [e ) -> . _spi_link 3 `a ]
-[e $UE 2257  ]
+[e $UE 2258  ]
 "296
 [; ;eadog.c: 296: }
-[e :UE 2257 ]
+[e :UE 2258 ]
 }
 "298
 [; ;eadog.c: 298: void wait_lcd_done(void)
@@ -3247,21 +3247,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "300
 [; ;eadog.c: 300:  while (spi_link.LCD_DATA);
-[e $U 2259  ]
-[e :U 2260 ]
-[e :U 2259 ]
-[e $ != -> . _spi_link 3 `i -> 0 `i 2260  ]
+[e $U 2260  ]
 [e :U 2261 ]
+[e :U 2260 ]
+[e $ != -> . _spi_link 3 `i -> 0 `i 2261  ]
+[e :U 2262 ]
 "301
 [; ;eadog.c: 301:  while (!SPI1STATUSbits.TXBE);
-[e $U 2262  ]
-[e :U 2263 ]
-[e :U 2262 ]
-[e $ ! != -> . . _SPI1STATUSbits 0 5 `i -> 0 `i 2263  ]
+[e $U 2263  ]
 [e :U 2264 ]
+[e :U 2263 ]
+[e $ ! != -> . . _SPI1STATUSbits 0 5 `i -> 0 `i 2264  ]
+[e :U 2265 ]
 "302
 [; ;eadog.c: 302: }
-[e :UE 2258 ]
+[e :UE 2259 ]
 }
 "304
 [; ;eadog.c: 304: void source_dma_done(void)
@@ -3276,5 +3276,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . _spi_link 3 -> -> 0 `i `uc ]
 "307
 [; ;eadog.c: 307: }
-[e :UE 2265 ]
+[e :UE 2266 ]
 }

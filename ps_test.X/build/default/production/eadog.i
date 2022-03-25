@@ -28574,7 +28574,7 @@ D_CODES set_temp_display_help(const D_CODES);
  void ringBufS_put_dma_cpy(ringBufS_t *, const char *, const uint8_t);
  void ringBufS_flush(ringBufS_t *_this, const int8_t clearBuffer);
 # 27 "./ps_test.h" 2
-# 48 "./ps_test.h"
+# 59 "./ps_test.h"
  extern const char *build_date, *build_time;
 
  typedef enum {
@@ -28582,6 +28582,11 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ typedef struct PS_TYPE {
+  double v_scale;
+  double i_scale;
+ } PS_TYPE;
 
  extern char buff1[255];
 # 28 "./eadog.h" 2

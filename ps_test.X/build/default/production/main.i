@@ -28607,7 +28607,7 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 48 "./ps_test.h"
+# 59 "./ps_test.h"
  extern const char *build_date, *build_time;
 
  typedef enum {
@@ -28615,6 +28615,11 @@ D_CODES set_temp_display_help(const D_CODES);
   roll_mode,
   static_mode,
  } MODE_TYPES;
+
+ typedef struct PS_TYPE {
+  double v_scale;
+  double i_scale;
+ } PS_TYPE;
 
  extern char buff1[255];
 # 47 "main.c" 2
@@ -28646,6 +28651,7 @@ D_CODES set_temp_display_help(const D_CODES);
  void fh_pr(void *a_data);
  void fh_ps(void *a_data);
  void fh_po(void *a_data);
+ void fh_pp(void *a_data);
  void fh_pu(void *a_data);
  void fh_pd(void *a_data);
  void fh_pl(void *a_data);
@@ -28662,10 +28668,35 @@ volatile adc_result_t ana[channel_FVR_Buffer2];
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 22 2022", *build_time = "11:08:34";
+const char *build_date = "Mar 24 2022", *build_time = "21:09:44";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
+PS_TYPE ps_type[] = {
+ {
+  .v_scale = 0.405194,
+  .i_scale = 0.004,
+ },
+ {
+  .v_scale = 0.405194,
+  .i_scale = 0.004,
+ },
+ {
+  .v_scale = 0.405194,
+  .i_scale = 0.004,
+ },
+ {
+  .v_scale = 0.405194,
+  .i_scale = 0.004,
+ },
+ {
+  .v_scale = 0.405194,
+  .i_scale = 0.004,
+ },
+};
+
+PS_TYPE *ps_type_ptr = ps_type;
+volatile uint8_t ps_type_index = 0;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -28683,7 +28714,7 @@ void Led_Blink(void)
 
  disp_tick = 1;
 }
-# 83 "main.c"
+# 108 "main.c"
 void Adc_Isr(void)
 {
  static adcc_channel_t c_adc_chan = PS_V_ANA;
@@ -28733,6 +28764,8 @@ void fh_pr(void *a_data)
 void fh_ps(void *a_data)
 {
  puts("\r\n Steady 1000VDC ON \r\n");
+ roll_max = 19;
+ static_ps = 20;
  mode = static_mode;
 }
 
@@ -28742,18 +28775,24 @@ void fh_po(void *a_data)
  mode = off_mode;
 }
 
+void fh_pp(void *a_data)
+{
+ puts("\r\n Voltage ON \r\n");
+ mode = static_mode;
+}
+
 void fh_pu(void *a_data)
 {
  puts("\r\n Voltage UP \r\n");
  roll_max = 19 + 10;
- static_ps = 20 + 10;
+ static_ps = 20 + 11;
 }
 
 void fh_pd(void *a_data)
 {
  puts("\r\n Voltage DOWN \r\n");
- roll_max = 19 - 10;
- static_ps = 20 - 10;
+ roll_max = 19 - 12;
+ static_ps = 20 - 12;
 }
 
 void fh_pl(void *a_data)
@@ -28768,6 +28807,7 @@ void fh_pl(void *a_data)
 
 void main(void)
 {
+ uint8_t lcd_update = 0;
 
 
  SYSTEM_Initialize();
@@ -28837,10 +28877,20 @@ void main(void)
    }
 
    if (disp_tick) {
-    vval = (double) ana[PS_V_ANA] * 0.405194;
-    ival = (double) ana[PS_I_ANA] * 0.004;
-    printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA\r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
-    eaDogM_WriteString("Display testing  ");
+    ps_type_ptr = &ps_type[ps_type_index];
+    vval = (double) ana[PS_V_ANA] * ps_type_ptr->v_scale;
+    ival = (double) ana[PS_I_ANA] * ps_type_ptr->i_scale;
+    printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
+    if (!(lcd_update++ & 0x03)) {
+     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
+     eaDogM_WriteStringAtPos(0, 0, buff1);
+     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
+     eaDogM_WriteStringAtPos(1, 0, buff1);
+     sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+     eaDogM_WriteStringAtPos(2, 0, buff1);
+     sprintf(buff1, "V=%+6.1fV I=%+3.1fmA", vval, ival);
+     eaDogM_WriteStringAtPos(3, 0, buff1);
+    }
 
 
 
