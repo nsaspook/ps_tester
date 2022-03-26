@@ -61,6 +61,7 @@
 #include "pwm5.h"
 #include "adcc.h"
 #include "dac1.h"
+#include "memory.h"
 #include "uart1.h"
 #include "spi1.h"
 

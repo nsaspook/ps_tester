@@ -29,12 +29,19 @@ extern "C" {
 #define STATIC_PS	20
 #define ROLL_MAX	19
 
+#define EECKSUM		0x00
+#define EEPSDATA	0x10
+
+#define ESS		0
+#define ASS		1
+
+
 	/*
 	 * electrical unit scaling for various power supplies
 	 */
 #define	V_SCALE_0		0.405194
 #define I_SCALE_0		0.004
-#define	V_SCALE_1		0.405194
+#define	V_SCALE_1		0.810
 #define I_SCALE_1		0.004
 #define	V_SCALE_2		0.405194
 #define I_SCALE_2		0.004

@@ -58,13 +58,15 @@ extern "C" {
 	void fh_pu(void *a_data);
 	void fh_pd(void *a_data);
 	void fh_pl(void *a_data);
+	void fh_p0(void *a_data);
+	void fh_p1(void *a_data);
 
 	/*
 	 * command parser functions
 	 */
 	void scmd_init(void);
 	void cli_read(t_cli_ctx *);
-
+	uint8_t linux_getc(uint8_t *);
 
 #ifdef	__cplusplus
 }

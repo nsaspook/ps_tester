@@ -79,7 +79,7 @@ PS_TYPE ps_type[] = {
 };
 
 PS_TYPE *ps_type_ptr = ps_type;
-volatile uint8_t ps_type_index = 0;
+volatile uint8_t ps_type_index = ESS;
 
 void display_led(DISPLAY_TYPES led);
 
@@ -192,12 +192,26 @@ void fh_pl(void *a_data)
 	static_ps = 3;
 }
 
+void fh_p0(void *a_data)
+{
+	puts("\r\n EXT Suppression Supply \r\n");
+	ps_type_index = ESS;
+	DATAEE_WriteByte(EEPSDATA, ps_type_index);
+}
+
+void fh_p1(void *a_data)
+{
+	puts("\r\n ACCEL Suppression Supply \r\n");
+	ps_type_index = ASS;
+	DATAEE_WriteByte(EEPSDATA, ps_type_index);
+}
+
 /*
 	     Main application
  */
 void main(void)
 {
-	uint8_t lcd_update = 0;
+	uint8_t lcd_update = 0, i = 0;
 
 	// Initialize the device
 	SYSTEM_Initialize();
@@ -226,9 +240,20 @@ void main(void)
 	/*
 	 * init serial command parser on USART
 	 */
+	while (linux_getc(&i)); // clear receive buffer and fifo
 	scmd_init();
 	sprintf(buff1, "\r\n Build %s %s\r\n", build_date, build_time);
 	puts(buff1);
+
+	if (DATAEE_ReadByte(EECKSUM) != '1') {
+		DATAEE_WriteByte(EECKSUM, '1');
+		DATAEE_WriteByte(EECKSUM + 1, '9');
+		DATAEE_WriteByte(EECKSUM + 2, '5');
+		DATAEE_WriteByte(EECKSUM + 3, '7');
+		DATAEE_WriteByte(EEPSDATA, ESS); // default power supply type
+	} else {
+		ps_type_index = DATAEE_ReadByte(EEPSDATA); // read power supply type
+	}
 
 	while (true) {
 		if (adc_tick) {
@@ -270,7 +295,8 @@ void main(void)
 				ps_type_ptr = &ps_type[ps_type_index]; // set power supply scaling pointer
 				vval = (double) ana[PS_V_ANA] * ps_type_ptr->v_scale;
 				ival = (double) ana[PS_I_ANA] * ps_type_ptr->i_scale;
-				printf(" PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n", mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
+				printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n",
+					ps_type_index, mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
 				if (!(lcd_update++ & 0x03)) { // slow LCD update rate
 					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
 					eaDogM_WriteStringAtPos(0, 0, buff1);

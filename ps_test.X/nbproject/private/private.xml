@@ -5,6 +5,7 @@
         <group>
             <file>file:/public/ps_tester/ps_test.X/main.c</file>
             <file>file:/public/ps_tester/ps_test.X/eadog.c</file>
+            <file>file:/public/ps_tester/ps_test.X/mcc_generated_files/memory.c</file>
             <file>file:/public/ps_tester/ps_test.X/ps_test.h</file>
             <file>file:/public/ps_tester/ps_test.X/scdm.h</file>
             <file>file:/public/ps_tester/ps_test.X/scdm.c</file>

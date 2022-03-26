@@ -28383,6 +28383,25 @@ void DAC1_SetOutput(uint8_t inputData);
 uint8_t DAC1_GetOutput(void);
 # 63 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/memory.h" 1
+# 99 "./mcc_generated_files/memory.h"
+uint8_t FLASH_ReadByte(uint32_t flashAddr);
+# 125 "./mcc_generated_files/memory.h"
+uint16_t FLASH_ReadWord(uint32_t flashAddr);
+# 157 "./mcc_generated_files/memory.h"
+void FLASH_WriteByte(uint32_t flashAddr, uint8_t *flashRdBufPtr, uint8_t byte);
+# 193 "./mcc_generated_files/memory.h"
+int8_t FLASH_WriteBlock(uint32_t writeAddr, uint8_t *flashWrBufPtr);
+# 218 "./mcc_generated_files/memory.h"
+void FLASH_EraseBlock(uint32_t baseAddr);
+# 249 "./mcc_generated_files/memory.h"
+void DATAEE_WriteByte(uint16_t bAdd, uint8_t bData);
+# 275 "./mcc_generated_files/memory.h"
+uint8_t DATAEE_ReadByte(uint16_t bAdd);
+
+void MEMORY_Tasks(void);
+# 64 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/uart1.h" 1
 # 75 "./mcc_generated_files/uart1.h"
 typedef union {
@@ -28446,7 +28465,7 @@ void UART1_SetTxInterruptHandler(void (* InterruptHandler)(void));
 void UART1_SetFramingErrorInterruptHandler(void (* InterruptHandler)(void));
 # 685 "./mcc_generated_files/uart1.h"
 void UART1_SetUartInterruptHandler(void (* InterruptHandler)(void));
-# 64 "./mcc_generated_files/mcc.h" 2
+# 65 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/spi1.h" 1
 # 59 "./mcc_generated_files/spi1.h"
@@ -28463,14 +28482,14 @@ void SPI1_WriteBlock(void *block, size_t blockSize);
 void SPI1_ReadBlock(void *block, size_t blockSize);
 void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
-# 65 "./mcc_generated_files/mcc.h" 2
-# 80 "./mcc_generated_files/mcc.h"
+# 66 "./mcc_generated_files/mcc.h" 2
+# 81 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 93 "./mcc_generated_files/mcc.h"
+# 94 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 106 "./mcc_generated_files/mcc.h"
+# 107 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 118 "./mcc_generated_files/mcc.h"
+# 119 "./mcc_generated_files/mcc.h"
 void SystemArbiter_Initialize(void);
 # 21 "./ps_test.h" 2
 # 1 "./timers.h" 1
@@ -28602,7 +28621,7 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 59 "./ps_test.h"
+# 66 "./ps_test.h"
  extern const char *build_date, *build_time;
 
  typedef enum {
@@ -28649,12 +28668,15 @@ D_CODES set_temp_display_help(const D_CODES);
  void fh_pu(void *a_data);
  void fh_pd(void *a_data);
  void fh_pl(void *a_data);
+ void fh_p0(void *a_data);
+ void fh_p1(void *a_data);
 
 
 
 
  void scmd_init(void);
  void cli_read(t_cli_ctx *);
+ uint8_t linux_getc(uint8_t *);
 # 3 "scdm.c" 2
 
 const char cmdm[] = "\r\n Command processor V0.1\r\n";
@@ -28673,6 +28695,8 @@ static t_cmd g_cmds[] = {
  { "pu", fh_pu},
  { "pd", fh_pd},
  { "pl", fh_pl},
+ { "p0", fh_p0},
+ { "p1", fh_p1},
 
  { 0x00, 0x00}
 };

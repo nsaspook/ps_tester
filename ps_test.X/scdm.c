@@ -17,6 +17,8 @@ static t_cmd g_cmds[] = {
 	{ "pu", fh_pu},
 	{ "pd", fh_pd},
 	{ "pl", fh_pl},
+	{ "p0", fh_p0},
+	{ "p1", fh_p1},
 	// null command terminator
 	{ 0x00, 0x00}
 };
