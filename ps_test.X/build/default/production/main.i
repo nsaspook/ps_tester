@@ -28690,7 +28690,7 @@ volatile adc_result_t ana[channel_FVR_Buffer2];
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 25 2022", *build_time = "21:20:24";
+const char *build_date = "Mar 27 2022", *build_time = "09:40:42";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;

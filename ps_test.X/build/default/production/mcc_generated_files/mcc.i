@@ -28088,8 +28088,8 @@ void SYSTEM_Initialize(void)
     PWM6_Initialize();
     TMR6_Initialize();
     DAC1_Initialize();
-    PWM5_Initialize();
     TMR5_Initialize();
+    PWM5_Initialize();
     UART1_Initialize();
     SPI1_Initialize();
     SystemArbiter_Initialize();

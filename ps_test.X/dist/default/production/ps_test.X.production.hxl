@@ -12,8 +12,7 @@
   0h - 3h		(dist/default/production/ps_test.X.production.hex)
   8h - B1h		(dist/default/production/ps_test.X.production.hex)
   FE00h - FFFEh		(dist/default/production/ps_test.X.production.hex)
-  10000h - 14031h		(dist/default/production/ps_test.X.production.hex)
-  14034h - 14279h		(dist/default/production/ps_test.X.production.hex)
+  10000h - 14279h		(dist/default/production/ps_test.X.production.hex)
   1427Ch - 142BDh		(dist/default/production/ps_test.X.production.hex)
   142C0h - 14475h		(dist/default/production/ps_test.X.production.hex)
   14478h - 14611h		(dist/default/production/ps_test.X.production.hex)
@@ -25,7 +24,6 @@
   4h - 7h
   B2h - FDFFh
   FFFFh - FFFFh
-  14032h - 14033h
   1427Ah - 1427Bh
   142BEh - 142BFh
   14476h - 14477h
@@ -1113,7 +1111,7 @@
 00014000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014020 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00014030 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
