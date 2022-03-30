@@ -15988,9 +15988,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </classes>
 <parts>
 <part name="IC1" library="SamacSys_Parts" deviceset="PIC18F57K42-E_PT" device=""/>
-<part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA06-1" device="" package3d_urn="urn:adsk.eagle:package:8340/1" value="ICSP"/>
+<part name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA06-1" device="" package3d_urn="urn:adsk.eagle:package:8340/1" value="ICSP"/>
 <part name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="ASF*" device="" package3d_urn="urn:adsk.eagle:package:12096/1" technology="1"/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="56"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="10000"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="VDD1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
@@ -16037,7 +16037,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VSS34" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="X1" library="con-garry" library_urn="urn:adsk.eagle:library:147" deviceset="332-02" device="" package3d_urn="urn:adsk.eagle:package:6810/1" value="RX-2"/>
 <part name="X2" library="con-garry" library_urn="urn:adsk.eagle:library:147" deviceset="332-02" device="" package3d_urn="urn:adsk.eagle:package:6810/1" value="TX-2"/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="1k"/>
 <part name="SV2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device="" package3d_urn="urn:adsk.eagle:package:8337/1" value="DEBUG"/>
 <part name="VSS36" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="X3" library="con-garry" library_urn="urn:adsk.eagle:library:147" deviceset="332-02" device="" package3d_urn="urn:adsk.eagle:package:6810/1" value="RESETJMP"/>
@@ -16064,7 +16064,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="VSS17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
-<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
+<part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="1k"/>
 <part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1"/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
@@ -16074,13 +16074,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="IC4" library="ic-package" library_urn="urn:adsk.eagle:library:239" deviceset="DIL8" device="S" package3d_urn="urn:adsk.eagle:package:14428/1" value="ILAMP"/>
 <part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
 <part name="R10" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
-<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
+<part name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="1k"/>
 <part name="LED3" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="DBLED"/>
 <part name="VSS14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="JMP2" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1"/>
-<part name="JMP3" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1"/>
+<part name="VSS-GND" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1" value="VSS-GND"/>
+<part name="VDD-VCC" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1" value="VDD-VCC"/>
 <part name="VSS19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="SV3" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1" value="USBH"/>
 <part name="X4" library="con-hirose" library_urn="urn:adsk.eagle:library:152" deviceset="MINI-USB-" device="UX60A-MB-5ST" package3d_urn="urn:adsk.eagle:package:7263/1"/>
@@ -16107,7 +16107,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VDD2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="VDD11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 <part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
-<part name="JMP1" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1"/>
+<part name="VSS-GND-1" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" deviceset="0R-JUMP" device="A" package3d_urn="urn:adsk.eagle:package:15385/1"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="VSS39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS40" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
@@ -16139,17 +16139,20 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VSS51" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS52" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS53" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="VDD6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
+<part name="VDD16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
+<text x="66.04" y="-50.8" size="1.778" layer="91">V</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="33.02" y="73.66" smashed="yes">
 <attribute name="NAME" x="72.39" y="88.9" size="1.778" layer="95" align="center-left"/>
 <attribute name="VALUE" x="72.39" y="86.36" size="1.778" layer="96" align="center-left"/>
 </instance>
-<instance part="SV1" gate="1" x="55.88" y="-58.42" smashed="yes" rot="R90">
+<instance part="ICSP" gate="1" x="55.88" y="-58.42" smashed="yes" rot="R90">
 <attribute name="VALUE" x="68.58" y="-59.69" size="1.778" layer="96" rot="R90"/>
 <attribute name="NAME" x="47.498" y="-59.69" size="1.778" layer="95" rot="R90"/>
 </instance>
@@ -16592,14 +16595,14 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="VALUE" x="-104.14" y="48.26" size="1.778" layer="96"/>
 </instance>
 <instance part="P+7" gate="VCC" x="-96.52" y="63.5" smashed="yes" rot="R180"/>
-<instance part="JMP2" gate="-0R" x="-111.76" y="53.34" smashed="yes">
+<instance part="VSS-GND" gate="-0R" x="-111.76" y="53.34" smashed="yes">
 <attribute name="NAME" x="-109.22" y="54.61" size="1.778" layer="95"/>
 </instance>
-<instance part="JMP2" gate="G$2" x="-114.3" y="55.88" smashed="yes"/>
-<instance part="JMP3" gate="-0R" x="-111.76" y="66.04" smashed="yes">
+<instance part="VSS-GND" gate="G$2" x="-114.3" y="55.88" smashed="yes"/>
+<instance part="VDD-VCC" gate="-0R" x="-111.76" y="66.04" smashed="yes">
 <attribute name="NAME" x="-109.22" y="67.31" size="1.778" layer="95"/>
 </instance>
-<instance part="JMP3" gate="G$2" x="-114.3" y="68.58" smashed="yes"/>
+<instance part="VDD-VCC" gate="G$2" x="-114.3" y="68.58" smashed="yes"/>
 <instance part="VSS19" gate="G$1" x="-78.74" y="-38.1" smashed="yes" rot="R90">
 <attribute name="VALUE" x="-73.66" y="-40.64" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -16769,10 +16772,10 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="NAME" x="-46.99" y="-36.83" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="-44.45" y="-39.37" size="1.778" layer="97"/>
 </instance>
-<instance part="JMP1" gate="-0R" x="142.24" y="-12.7" smashed="yes">
+<instance part="VSS-GND-1" gate="-0R" x="142.24" y="-12.7" smashed="yes">
 <attribute name="NAME" x="144.78" y="-11.43" size="1.778" layer="95"/>
 </instance>
-<instance part="JMP1" gate="G$2" x="139.7" y="-10.16" smashed="yes"/>
+<instance part="VSS-GND-1" gate="G$2" x="139.7" y="-10.16" smashed="yes"/>
 <instance part="GND2" gate="1" x="142.24" y="-17.78" smashed="yes">
 <attribute name="VALUE" x="139.7" y="-20.32" size="1.778" layer="96"/>
 </instance>
@@ -16882,6 +16885,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <instance part="VSS53" gate="G$1" x="-185.42" y="-63.5" smashed="yes">
 <attribute name="VALUE" x="-187.96" y="-68.58" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="VDD6" gate="G$1" x="-66.04" y="48.26" smashed="yes" rot="R270">
+<attribute name="VALUE" x="-68.58" y="50.8" size="1.778" layer="96"/>
+</instance>
+<instance part="VDD16" gate="G$1" x="-66.04" y="25.4" smashed="yes" rot="R270">
+<attribute name="VALUE" x="-68.58" y="27.94" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -16967,7 +16976,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="VDD5" gate="G$1" pin="VDD"/>
 <wire x1="-116.84" y1="68.58" x2="-111.76" y2="68.58" width="0.3048" layer="91"/>
 <junction x="-116.84" y="68.58"/>
-<pinref part="JMP3" gate="-0R" pin="1"/>
+<pinref part="VDD-VCC" gate="-0R" pin="1"/>
 <junction x="-111.76" y="68.58"/>
 </segment>
 <segment>
@@ -17001,13 +17010,14 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <wire x1="60.96" y1="-50.8" x2="60.96" y2="-40.64" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="2"/>
+<pinref part="ICSP" gate="1" pin="2"/>
 <junction x="60.96" y="-50.8"/>
 <label x="60.96" y="-38.1" size="1.778" layer="95"/>
 <pinref part="VDD11" gate="G$1" pin="VDD"/>
+<junction x="60.96" y="-40.64"/>
 </segment>
 <segment>
-<pinref part="JMP3" gate="-0R" pin="3"/>
+<pinref part="VDD-VCC" gate="-0R" pin="3"/>
 <pinref part="VDD13" gate="G$1" pin="VDD"/>
 <junction x="-111.76" y="63.5"/>
 </segment>
@@ -17016,10 +17026,20 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="VDD15" gate="G$1" pin="VDD"/>
 <junction x="-111.76" y="-22.86"/>
 </segment>
+<segment>
+<pinref part="RS232-1" gate="G$1" pin="4"/>
+<pinref part="VDD6" gate="G$1" pin="VDD"/>
+<junction x="-68.58" y="48.26"/>
+</segment>
+<segment>
+<pinref part="RS-232-2" gate="G$1" pin="4"/>
+<pinref part="VDD16" gate="G$1" pin="VDD"/>
+<junction x="-68.58" y="25.4"/>
+</segment>
 </net>
 <net name="VSS" class="0">
 <segment>
-<pinref part="SV1" gate="1" pin="3"/>
+<pinref part="ICSP" gate="1" pin="3"/>
 <wire x1="58.42" y1="-50.8" x2="58.42" y2="-30.48" width="0.1524" layer="91"/>
 <pinref part="VSS2" gate="G$1" pin="VSS"/>
 <junction x="58.42" y="-50.8"/>
@@ -17165,7 +17185,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="VSS7" gate="G$1" pin="VSS"/>
 <wire x1="-116.84" y1="55.88" x2="-111.76" y2="55.88" width="0.3048" layer="91"/>
 <junction x="-116.84" y="55.88"/>
-<pinref part="JMP2" gate="-0R" pin="1"/>
+<pinref part="VSS-GND" gate="-0R" pin="1"/>
 <junction x="-111.76" y="55.88"/>
 </segment>
 <segment>
@@ -17239,22 +17259,18 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-172.72" y="45.72"/>
 </segment>
 <segment>
-<pinref part="JMP1" gate="-0R" pin="1"/>
+<pinref part="VSS-GND-1" gate="-0R" pin="1"/>
 <pinref part="VSS40" gate="G$1" pin="VSS"/>
+<junction x="142.24" y="-10.16"/>
 </segment>
 <segment>
-<pinref part="JMP2" gate="-0R" pin="3"/>
+<pinref part="VSS-GND" gate="-0R" pin="3"/>
 <pinref part="VSS41" gate="G$1" pin="VSS"/>
 <junction x="-111.76" y="50.8"/>
 </segment>
 <segment>
-<pinref part="JMP1" gate="-0R" pin="3"/>
-<pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="JMP1" gate="-0R" pin="2"/>
+<pinref part="VSS-GND-1" gate="-0R" pin="2"/>
 <pinref part="VSS39" gate="G$1" pin="VSS"/>
-<wire x1="142.24" y1="-15.24" x2="144.78" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="-15.24" x2="144.78" y2="-12.7" width="0.1524" layer="91"/>
-<junction x="142.24" y="-15.24"/>
 <junction x="144.78" y="-12.7"/>
 </segment>
 <segment>
@@ -17318,12 +17334,12 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-185.42" y="-60.96"/>
 </segment>
 </net>
-<net name="N$6" class="0">
+<net name="PGD" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="ICSPDAT/RB7"/>
 <wire x1="55.88" y1="17.78" x2="55.88" y2="7.62" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="7.62" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="4"/>
+<pinref part="ICSP" gate="1" pin="4"/>
 <wire x1="55.88" y1="-50.8" x2="55.88" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-33.02" x2="43.18" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="-33.02" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
@@ -17334,14 +17350,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="X1" gate="-2" pin="S"/>
 <wire x1="17.78" y1="-38.1" x2="17.78" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="17.78" y="-38.1"/>
+<label x="43.18" y="-43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="PGC" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="ICSPCLK/RB6"/>
 <wire x1="53.34" y1="17.78" x2="53.34" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="10.16" x2="40.64" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="5"/>
+<pinref part="ICSP" gate="1" pin="5"/>
 <wire x1="53.34" y1="-50.8" x2="53.34" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="-35.56" x2="40.64" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="-35.56" x2="40.64" y2="-25.4" width="0.1524" layer="91"/>
@@ -17353,9 +17370,10 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="17.78" y1="-25.4" x2="40.64" y2="-25.4" width="0.1524" layer="91"/>
 <junction x="17.78" y="-30.48"/>
 <junction x="40.64" y="-25.4"/>
+<label x="43.18" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$4" class="0">
+<net name="CPUCLK" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RA7"/>
 <wire x1="76.2" y1="63.5" x2="83.82" y2="63.5" width="0.1524" layer="91"/>
@@ -17372,9 +17390,10 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="78.74" y1="-5.08" x2="101.6" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="101.6" y="-5.08"/>
 <junction x="83.82" y="20.32"/>
+<label x="91.44" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$8" class="0">
+<net name="ADCREF" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="5"/>
 <wire x1="119.38" y1="-38.1" x2="119.38" y2="-35.56" width="0.1524" layer="91"/>
@@ -17395,6 +17414,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="X5" gate="-3" pin="S"/>
 <wire x1="73.66" y1="30.48" x2="83.82" y2="30.48" width="0.1524" layer="91"/>
 <junction x="83.82" y="30.48"/>
+<label x="106.68" y="-25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -18134,6 +18154,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="IC4" gate="G$1" pin="6"/>
 <wire x1="-81.28" y1="101.6" x2="-96.52" y2="101.6" width="0.1524" layer="91"/>
 <junction x="-96.52" y="101.6"/>
+<junction x="45.72" y="17.78"/>
 </segment>
 </net>
 <net name="N$61" class="0">
@@ -18150,6 +18171,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="-86.36" y1="88.9" x2="-86.36" y2="99.06" width="0.1524" layer="91"/>
 <junction x="-86.36" y="99.06"/>
+<junction x="43.18" y="17.78"/>
 </segment>
 </net>
 <net name="N$62" class="0">
@@ -18176,9 +18198,14 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
 <wire x1="-109.22" y1="53.34" x2="-101.6" y2="53.34" width="0.1524" layer="91"/>
-<pinref part="JMP2" gate="-0R" pin="2"/>
+<pinref part="VSS-GND" gate="-0R" pin="2"/>
 <junction x="-109.22" y="53.34"/>
 <junction x="-101.6" y="53.34"/>
+</segment>
+<segment>
+<pinref part="VSS-GND-1" gate="-0R" pin="3"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<junction x="142.24" y="-15.24"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -18207,7 +18234,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="139.7" y="0"/>
 </segment>
 <segment>
-<pinref part="JMP3" gate="-0R" pin="2"/>
+<pinref part="VDD-VCC" gate="-0R" pin="2"/>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
 <wire x1="-109.22" y1="66.04" x2="-96.52" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-109.22" y="66.04"/>
@@ -18356,15 +18383,16 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="76.2" y="-17.78"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="VPP" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 <junction x="58.42" y="0"/>
 <wire x1="58.42" y1="0" x2="63.5" y2="0" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="1" pin="1"/>
+<pinref part="ICSP" gate="1" pin="1"/>
 <wire x1="63.5" y1="-50.8" x2="63.5" y2="0" width="0.1524" layer="91"/>
 <junction x="63.5" y="-50.8"/>
+<label x="66.04" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RAW_VDD" class="1">
@@ -18549,15 +18577,13 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <approved hash="101,1,-170.18,-27.94,X10-1,S,,,,"/>
 <approved hash="101,1,-170.18,-43.18,X10-7,S,,,,"/>
 <approved hash="101,1,-170.18,-45.72,X10-8,S,,,,"/>
-<approved hash="102,1,142.24,-15.24,GND,VSS,,,,"/>
-<approved hash="201,1,142.24,-15.24,GND,GND\, VSS,,,,"/>
 <approved hash="104,1,132.08,0,Q1,GND,VSS,,,"/>
-<approved hash="115,1,76.2,36.83,N$36,,,,,"/>
-<approved hash="115,1,66.04,16.51,N$37,,,,,"/>
 <approved hash="115,1,87.63,66.04,N$40,,,,,"/>
-<approved hash="115,1,60.96,15.24,N$39,,,,,"/>
 <approved hash="115,1,63.5,11.43,N$38,,,,,"/>
+<approved hash="115,1,76.2,36.83,N$36,,,,,"/>
 <approved hash="115,1,77.47,48.26,N$35,,,,,"/>
+<approved hash="115,1,60.96,15.24,N$39,,,,,"/>
+<approved hash="115,1,66.04,16.51,N$37,,,,,"/>
 </errors>
 </schematic>
 </drawing>

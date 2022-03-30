@@ -86,6 +86,8 @@
 <hole x="103.251" y="-16.7386" drill="2.5"/>
 <text x="-38.3794" y="-11.43" size="1.6764" layer="1" font="vector" ratio="18" rot="R90">these are the controllers you are looking for</text>
 <text x="95.25" y="49.5046" size="1.778" layer="1" font="vector" ratio="16">V</text>
+<text x="-21.4122" y="-7.9756" size="1.778" layer="1" font="vector" ratio="16">DACOUT</text>
+<text x="-21.3106" y="-3.3274" size="1.778" layer="1" font="vector" ratio="16">PWMOUT</text>
 </plain>
 <libraries>
 <library name="SamacSys_Parts">
@@ -3027,7 +3029,7 @@ design rules under a new name.</description>
 <element name="SV5" library="con-lstb" library_urn="urn:adsk.eagle:library:162" package="MA06-1" package3d_urn="urn:adsk.eagle:package:8340/1" value="ANA JUMPER" x="-2.8956" y="-13.7922" smashed="yes">
 <attribute name="MF" value="" x="-2.8956" y="-13.7922" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="-2.8956" y="-13.7922" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="-10.5156" y="-12.1412" size="1.27" layer="25" ratio="10"/>
+<attribute name="NAME" x="-13.843" y="-16.9926" size="1.27" layer="25" ratio="10"/>
 <attribute name="OC_FARNELL" value="unknown" x="-2.8956" y="-13.7922" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="-2.8956" y="-13.7922" size="1.778" layer="27" display="off"/>
 <attribute name="POPULARITY" value="28" x="-2.8956" y="-13.7922" size="1.778" layer="27" display="off"/>
@@ -3072,11 +3074,11 @@ design rules under a new name.</description>
 </element>
 <element name="ANAO0" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" package="A0R-JMP" package3d_urn="urn:adsk.eagle:package:15385/1" value="PS V" x="-3.3528" y="-5.4356" smashed="yes">
 <attribute name="NAME" x="-4.1148" y="-2.7196" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-4.1148" y="-9.4216" size="1.27" layer="27"/>
+<attribute name="VALUE" x="-1.9812" y="-5.1036" size="1.27" layer="27"/>
 </element>
 <element name="ANAO1" library="jump-0r-smd" library_urn="urn:adsk.eagle:library:251" package="A0R-JMP" package3d_urn="urn:adsk.eagle:package:15385/1" value="PS I" x="-10.0838" y="-5.5118" smashed="yes">
 <attribute name="NAME" x="-10.8458" y="-2.7958" size="1.27" layer="25"/>
-<attribute name="VALUE" x="-10.8458" y="-9.4978" size="1.27" layer="27"/>
+<attribute name="VALUE" x="-14.986" y="-5.2052" size="1.27" layer="27"/>
 </element>
 <element name="L1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="L2012C" package3d_urn="urn:adsk.eagle:package:23475/2" value="1K" x="7.3406" y="-5.8674" smashed="yes">
 <attribute name="NAME" x="5.4356" y="-4.5974" size="1.27" layer="25"/>

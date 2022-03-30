@@ -18367,6 +18367,84 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MLE-105-01-G-DV">
+<packages>
+<package name="SAMTEC_MLE-105-01-G-DV">
+<wire x1="-2.6" y1="-1.535" x2="-2.6" y2="1.535" width="0.1" layer="51"/>
+<wire x1="-2.6" y1="1.535" x2="2.6" y2="1.535" width="0.1" layer="51"/>
+<wire x1="2.6" y1="1.535" x2="2.6" y2="-1.535" width="0.1" layer="51"/>
+<wire x1="2.6" y1="-1.535" x2="-2.6" y2="-1.535" width="0.1" layer="51"/>
+<wire x1="-2.655" y1="-1.535" x2="-2.655" y2="1.535" width="0.2" layer="21"/>
+<wire x1="2.655" y1="-1.535" x2="2.655" y2="1.535" width="0.2" layer="21"/>
+<wire x1="-2.85" y1="-2.79" x2="-2.85" y2="2.79" width="0.05" layer="39"/>
+<wire x1="-2.85" y1="2.79" x2="2.85" y2="2.79" width="0.05" layer="39"/>
+<wire x1="2.85" y1="2.79" x2="2.85" y2="-2.79" width="0.05" layer="39"/>
+<wire x1="2.85" y1="-2.79" x2="-2.85" y2="-2.79" width="0.05" layer="39"/>
+<text x="-3.6" y="3.555" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.6" y="-4.805" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="2" y="-3.3" radius="0.1" width="0.2" layer="21"/>
+<circle x="2" y="-3.3" radius="0.1" width="0.2" layer="51"/>
+<smd name="01" x="2" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="02" x="2" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="03" x="1" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="04" x="1" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="05" x="0" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="06" x="0" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="07" x="-1" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="08" x="-1" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="09" x="-2" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="10" x="-2" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MLE-105-01-G-DV">
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<text x="-8.12" y="8.736" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="01" x="-12.7" y="5.08" length="middle" direction="pas"/>
+<pin name="02" x="12.7" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="03" x="-12.7" y="2.54" length="middle" direction="pas"/>
+<pin name="04" x="12.7" y="2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="05" x="-12.7" y="0" length="middle" direction="pas"/>
+<pin name="06" x="12.7" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="07" x="-12.7" y="-2.54" length="middle" direction="pas"/>
+<pin name="08" x="12.7" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="09" x="-12.7" y="-5.08" length="middle" direction="pas"/>
+<pin name="10" x="12.7" y="-5.08" length="middle" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MLE-105-01-G-DV" prefix="J">
+<gates>
+<gate name="G$1" symbol="MLE-105-01-G-DV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SAMTEC_MLE-105-01-G-DV">
+<connects>
+<connect gate="G$1" pin="01" pad="01"/>
+<connect gate="G$1" pin="02" pad="02"/>
+<connect gate="G$1" pin="03" pad="03"/>
+<connect gate="G$1" pin="04" pad="04"/>
+<connect gate="G$1" pin="05" pad="05"/>
+<connect gate="G$1" pin="06" pad="06"/>
+<connect gate="G$1" pin="07" pad="07"/>
+<connect gate="G$1" pin="08" pad="08"/>
+<connect gate="G$1" pin="09" pad="09"/>
+<connect gate="G$1" pin="10" pad="10"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MANUFACTURER" value="SAMTEC "/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -18551,6 +18629,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VI_OUT_JUMPER" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1" value="out jumper"/>
 <part name="VSS59" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS60" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
+<part name="J1" library="MLE-105-01-G-DV" deviceset="MLE-105-01-G-DV" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19365,6 +19444,10 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </instance>
 <instance part="VSS60" gate="G$1" x="-147.32" y="99.06" smashed="yes">
 <attribute name="VALUE" x="-147.32" y="96.52" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="J1" gate="G$1" x="-220.98" y="38.1" smashed="yes">
+<attribute name="NAME" x="-229.1" y="46.836" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-228.6" y="27.94" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
