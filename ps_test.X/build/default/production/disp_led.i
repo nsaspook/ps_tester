@@ -28602,9 +28602,11 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 66 "./ps_test.h"
- extern const char *build_date, *build_time;
+
+
  const char build_version[] = "V1.00 PS TEST";
+# 68 "./ps_test.h"
+ extern const char *build_date, *build_time;
 
  typedef enum {
   off_mode,

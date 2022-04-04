@@ -28593,9 +28593,10 @@ D_CODES set_temp_display_help(const D_CODES);
  void ringBufS_put_dma_cpy(ringBufS_t *, const char *, const uint8_t);
  void ringBufS_flush(ringBufS_t *_this, const int8_t clearBuffer);
 # 27 "./ps_test.h" 2
-# 66 "./ps_test.h"
- extern const char *build_date, *build_time;
+
  const char build_version[] = "V1.00 PS TEST";
+# 68 "./ps_test.h"
+ extern const char *build_date, *build_time;
 
  typedef enum {
   off_mode,

@@ -7,8 +7,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 55: MODE_TYPES mode = off_mode;
 [c E17389 0 1 2 .. ]
 [n E17389 . off_mode roll_mode static_mode  ]
-"75 ./ps_test.h
-[; ;./ps_test.h: 75:  typedef struct PS_TYPE {
+"76 ./ps_test.h
+[; ;./ps_test.h: 76:  typedef struct PS_TYPE {
 [s S2209 `d 1 `d 1 ]
 [n S2209 PS_TYPE v_scale i_scale ]
 "45984 /root/.mchp_packs/Microchip/PIC18F-K_DFP/1.6.125/xc8/pic/include/proc/pic18f57k42.h
@@ -2462,8 +2462,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "613
 [; ;./mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
 [v _UART1_UARTInterruptHandler `*F17197 ~T0 @X0 1 e ]
-"67 ./ps_test.h
-[; ;./ps_test.h: 67:  const char build_version[] = "V1.00 PS TEST";
+"28 ./ps_test.h
+[; ;./ps_test.h: 28:  const char build_version[] = "V1.00 PS TEST";
 [v _build_version `Cuc ~T0 @X0 -> 14 `i e ]
 [i _build_version
 :U ..
@@ -2500,7 +2500,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 52: char buff1[255];
 [v _buff1 `uc ~T0 @X0 -> 255 `i e ]
 "54
-[; ;main.c: 54: const char *build_date = "Apr  3 2022", *build_time = "17:14:52";
+[; ;main.c: 54: const char *build_date = "Apr  3 2022", *build_time = "19:10:35";
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -3421,8 +3421,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 14C 37 115 0 ]
 [a 16C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
 [a 17C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
-[a 2C 49 55 58 49 52 58 53 51 0 ]
 [a 1C 65 112 114 32 32 51 32 50 48 50 50 0 ]
+[a 2C 49 57 58 49 48 58 52 48 0 ]
 [a 19C 86 61 37 43 54 46 49 102 86 32 73 61 37 43 51 46 49 102 109 65 32 32 0 ]
 [a 12C 13 10 32 66 117 105 108 100 32 37 115 32 37 115 13 10 0 ]
 [a 10C 13 10 32 69 88 84 32 83 117 112 112 114 101 115 115 105 111 110 32 83 117 112 112 108 121 32 13 10 0 ]

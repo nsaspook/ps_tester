@@ -2326,8 +2326,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "613
 [; ;./mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
 [v _UART1_UARTInterruptHandler `*F17197 ~T0 @X0 1 e ]
-"67 ./ps_test.h
-[; ;./ps_test.h: 67:  const char build_version[] = "V1.00 PS TEST";
+"28 ./ps_test.h
+[; ;./ps_test.h: 28:  const char build_version[] = "V1.00 PS TEST";
 [v _build_version `Cuc ~T0 @X0 -> 14 `i e ]
 [i _build_version
 :U ..
