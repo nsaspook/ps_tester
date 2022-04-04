@@ -2439,6 +2439,36 @@ diameter 1.8 mm, horizontal, grid 7.62 mm</description>
 </package>
 </packages>
 </library>
+<library name="MLE-105-01-G-DV">
+<packages>
+<package name="SAMTEC_MLE-105-01-G-DV">
+<wire x1="-2.6" y1="-1.535" x2="-2.6" y2="1.535" width="0.1" layer="51"/>
+<wire x1="-2.6" y1="1.535" x2="2.6" y2="1.535" width="0.1" layer="51"/>
+<wire x1="2.6" y1="1.535" x2="2.6" y2="-1.535" width="0.1" layer="51"/>
+<wire x1="2.6" y1="-1.535" x2="-2.6" y2="-1.535" width="0.1" layer="51"/>
+<wire x1="-2.655" y1="-1.535" x2="-2.655" y2="1.535" width="0.2" layer="21"/>
+<wire x1="2.655" y1="-1.535" x2="2.655" y2="1.535" width="0.2" layer="21"/>
+<wire x1="-2.85" y1="-2.79" x2="-2.85" y2="2.79" width="0.05" layer="39"/>
+<wire x1="-2.85" y1="2.79" x2="2.85" y2="2.79" width="0.05" layer="39"/>
+<wire x1="2.85" y1="2.79" x2="2.85" y2="-2.79" width="0.05" layer="39"/>
+<wire x1="2.85" y1="-2.79" x2="-2.85" y2="-2.79" width="0.05" layer="39"/>
+<text x="-3.6" y="3.555" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.6" y="-4.805" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="2" y="-3.3" radius="0.1" width="0.2" layer="21"/>
+<circle x="2" y="-3.3" radius="0.1" width="0.2" layer="51"/>
+<smd name="01" x="2" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="02" x="2" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="03" x="1" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="04" x="1" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="05" x="0" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="06" x="0" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="07" x="-1" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="08" x="-1" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="09" x="-2" y="-1.6855" dx="0.61" dy="1.709" layer="1"/>
+<smd name="10" x="-2" y="1.6855" dx="0.61" dy="1.709" layer="1"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3170,6 +3200,11 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="unknown" x="-28.1432" y="10.2616" size="1.778" layer="27" display="off"/>
 <attribute name="POPULARITY" value="48" x="-28.1432" y="10.2616" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="-31.9532" y="7.3406" size="1.27" layer="27" ratio="10"/>
+</element>
+<element name="J1" library="MLE-105-01-G-DV" package="SAMTEC_MLE-105-01-G-DV" value="MLE-105-01-G-DV" x="-30.9372" y="32.3342" smashed="yes" rot="R90">
+<attribute name="MANUFACTURER" value="SAMTEC " x="-30.9372" y="32.3342" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="-34.4922" y="28.7342" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="-26.1322" y="28.7342" size="1.27" layer="27" rot="R90"/>
 </element>
 </elements>
 <signals>

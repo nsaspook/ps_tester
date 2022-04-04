@@ -28628,6 +28628,7 @@ D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
 # 66 "./ps_test.h"
  extern const char *build_date, *build_time;
+ const char build_version[] = "V1.00 PS TEST";
 
  typedef enum {
   off_mode,
@@ -28690,7 +28691,7 @@ volatile adc_result_t ana[channel_FVR_Buffer2];
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Mar 27 2022", *build_time = "17:15:25";
+const char *build_date = "Apr  3 2022", *build_time = "17:14:52";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
@@ -28868,7 +28869,6 @@ void main(void)
 
  init_display();
  eaDogM_WriteCommand(0b00001100);
- eaDogM_WriteString("SPI display testing");
 
 
 
@@ -28876,6 +28876,12 @@ void main(void)
  scmd_init();
  sprintf(buff1, "\r\n Build %s %s\r\n", build_date, build_time);
  puts(buff1);
+ WaitMs(300);
+ sprintf(buff1, "%s %s", build_date, build_time);
+ eaDogM_WriteStringAtPos(0, 0, buff1);
+ sprintf(buff1, "%s", build_version);
+ eaDogM_WriteStringAtPos(1, 0, buff1);
+
 
  if (DATAEE_ReadByte(0x00) != '1') {
   DATAEE_WriteByte(0x00, '1');
@@ -28886,6 +28892,8 @@ void main(void)
  } else {
   ps_type_index = DATAEE_ReadByte(0x10);
  }
+
+ WaitMs(2000);
 
  while (1) {
   if (adc_tick) {
@@ -28931,13 +28939,13 @@ void main(void)
      ps_type_index, mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
     if (!(lcd_update++ & 0x03)) {
      sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
-     eaDogM_WriteStringAtPos(0, 0, buff1);
-     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
      eaDogM_WriteStringAtPos(1, 0, buff1);
-     sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
      eaDogM_WriteStringAtPos(2, 0, buff1);
-     sprintf(buff1, "V=%+6.1fV I=%+3.1fmA", vval, ival);
+     sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
      eaDogM_WriteStringAtPos(3, 0, buff1);
+     sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
+     eaDogM_WriteStringAtPos(0, 0, buff1);
     }
 
 

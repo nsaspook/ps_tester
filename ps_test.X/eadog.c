@@ -193,20 +193,20 @@ void eaDogM_WriteStringAtPos(const uint8_t r, const uint8_t c, char *strPtr)
 	uint8_t row;
 
 	switch (r) {
-	case 0:
+	case 1:
 		row = 0x40;
 		break;
-	case 1:
+	case 2:
 		row = 0x14;
 		break;
-	case 2:
+	case 3:
 		row = 0x54;
 		break;
-	case 3:
+	case 0:
 		row = 0x00;
 		break;
 	default:
-		row = 0x40;
+		row = 0x00;
 		break;
 	}
 	send_lcd_cmd_dma(0x45);

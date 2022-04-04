@@ -18563,7 +18563,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="VSS15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/2"/>
 <part name="VDD10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VDD" device=""/>
-<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220"/>
+<part name="R12" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="56"/>
 <part name="VSS16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="F1" library="polyfuse-smd_10" deviceset="?" device="1206L" technology="050"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="ZENER-DIODE" device="DO34-7" package3d_urn="urn:adsk.eagle:package:43364/1" value="5.6v"/>
@@ -18603,8 +18603,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="R8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="1K"/>
 <part name="LED2" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="-15"/>
 <part name="LED4" library="led" library_urn="urn:adsk.eagle:library:259" deviceset="LED" device="CHIPLED_1206" package3d_urn="urn:adsk.eagle:package:15823/2" value="+15"/>
-<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="3K"/>
-<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="3K"/>
+<part name="R9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="3.83K"/>
+<part name="R13" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="3.83K"/>
 <part name="VSS51" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS52" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS53" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
@@ -18654,7 +18654,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="VALUE" x="61.722" y="1.27" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R2" gate="G$1" x="53.34" y="-10.16" smashed="yes" rot="R180">
-<attribute name="NAME" x="57.15" y="-11.6586" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="52.07" y="-11.6586" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="57.15" y="-6.858" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="C1" gate="G$1" x="58.42" y="-12.7" smashed="yes">
@@ -19135,8 +19135,8 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="VALUE" x="-104.14" y="-45.72" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="R12" gate="G$1" x="58.42" y="-5.08" smashed="yes" rot="R90">
-<attribute name="NAME" x="56.9214" y="-8.89" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="61.722" y="-8.89" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="56.9214" y="-6.35" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="61.722" y="-6.35" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="VSS16" gate="G$1" x="-7.62" y="-50.8" smashed="yes">
 <attribute name="VALUE" x="-10.16" y="-55.88" size="1.778" layer="96" rot="R90"/>

@@ -236,7 +236,6 @@ void main(void)
 
 	init_display();
 	eaDogM_CursorOff();
-	eaDogM_WriteString("SPI display testing");
 	/*
 	 * init serial command parser on USART
 	 */
@@ -244,6 +243,12 @@ void main(void)
 	scmd_init();
 	sprintf(buff1, "\r\n Build %s %s\r\n", build_date, build_time);
 	puts(buff1);
+	WaitMs(300);
+	sprintf(buff1, "%s %s", build_date, build_time);
+	eaDogM_WriteStringAtPos(0, 0, buff1);
+	sprintf(buff1, "%s", build_version);
+	eaDogM_WriteStringAtPos(1, 0, buff1);
+
 
 	if (DATAEE_ReadByte(EECKSUM) != '1') {
 		DATAEE_WriteByte(EECKSUM, '1');
@@ -254,6 +259,8 @@ void main(void)
 	} else {
 		ps_type_index = DATAEE_ReadByte(EEPSDATA); // read power supply type
 	}
+
+	WaitMs(2000);
 
 	while (true) {
 		if (adc_tick) {
@@ -299,13 +306,13 @@ void main(void)
 					ps_type_index, mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
 				if (!(lcd_update++ & 0x03)) { // slow LCD update rate
 					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
-					eaDogM_WriteStringAtPos(0, 0, buff1);
-					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
 					eaDogM_WriteStringAtPos(1, 0, buff1);
-					sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
 					eaDogM_WriteStringAtPos(2, 0, buff1);
-					sprintf(buff1, "V=%+6.1fV I=%+3.1fmA", vval, ival);
+					sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
 					eaDogM_WriteStringAtPos(3, 0, buff1);
+					sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
+					eaDogM_WriteStringAtPos(0, 0, buff1);
 				}
 				/*
 				 * mode switch state machine

@@ -18548,7 +18548,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <part name="C23" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uf"/>
 <part name="VSS58" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="P10_V" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1" value="10 volts"/>
-<part name="SV6" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1" value="out jumper"/>
+<part name="VI_OUT_JUMPER" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1" value="out jumper"/>
 <part name="VSS59" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 <part name="VSS60" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VSS" device=""/>
 </parts>
@@ -19356,15 +19356,15 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <attribute name="VALUE" x="-138.43" y="111.76" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="-138.43" y="98.298" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="SV6" gate="G$1" x="-139.7" y="73.66" smashed="yes" rot="R180">
+<instance part="VI_OUT_JUMPER" gate="G$1" x="-139.7" y="73.66" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-138.43" y="81.28" size="1.778" layer="96" rot="R180"/>
-<attribute name="NAME" x="-138.43" y="67.818" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="-135.89" y="65.278" size="1.778" layer="95" rot="R180"/>
 </instance>
 <instance part="VSS59" gate="G$1" x="-147.32" y="68.58" smashed="yes">
-<attribute name="VALUE" x="-149.86" y="63.5" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="-152.4" y="71.12" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VSS60" gate="G$1" x="-147.32" y="99.06" smashed="yes">
-<attribute name="VALUE" x="-149.86" y="93.98" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="-147.32" y="96.52" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -19846,7 +19846,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-213.36" y="96.52"/>
 </segment>
 <segment>
-<pinref part="SV6" gate="G$1" pin="3"/>
+<pinref part="VI_OUT_JUMPER" gate="G$1" pin="3"/>
 <pinref part="VSS59" gate="G$1" pin="VSS"/>
 <junction x="-147.32" y="71.12"/>
 </segment>
@@ -21153,7 +21153,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <wire x1="-147.32" y1="73.66" x2="-154.94" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="SV6" gate="G$1" pin="2"/>
+<pinref part="VI_OUT_JUMPER" gate="G$1" pin="2"/>
 <junction x="-147.32" y="73.66"/>
 <label x="-167.64" y="73.66" size="1.778" layer="95"/>
 </segment>
@@ -21188,7 +21188,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 </segment>
 <segment>
 <wire x1="-147.32" y1="76.2" x2="-154.94" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="SV6" gate="G$1" pin="1"/>
+<pinref part="VI_OUT_JUMPER" gate="G$1" pin="1"/>
 <junction x="-147.32" y="76.2"/>
 <label x="-167.64" y="76.2" size="1.778" layer="95"/>
 </segment>

@@ -2460,6 +2460,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 "613
 [; ;./mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
 [v _UART1_UARTInterruptHandler `*F17197 ~T0 @X0 1 e ]
+"67 ./ps_test.h
+[; ;./ps_test.h: 67:  const char build_version[] = "V1.00 PS TEST";
+[v _build_version `Cuc ~T0 @X0 -> 14 `i e ]
+[i _build_version
+:U ..
+-> 86 `c
+-> 49 `c
+-> 46 `c
+-> 48 `c
+-> 48 `c
+-> 32 `c
+-> 80 `c
+-> 83 `c
+-> 32 `c
+-> 84 `c
+-> 69 `c
+-> 83 `c
+-> 84 `c
+-> 0 `c
+..
+]
 "9 eadog.c
 [; ;eadog.c: 9: struct spi_link_type spi_link;
 [v _spi_link `S2209 ~T0 @X0 1 e ]
@@ -2504,12 +2525,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "19
 [; ;eadog.c: 19:  static uint32_t dcount;
-[v F17409 `ul ~T0 @X0 1 s dcount ]
+[v F17410 `ul ~T0 @X0 1 s dcount ]
 "21
 [; ;eadog.c: 21:  for (dcount = 0; dcount <= delay; dcount++) {
 {
-[e = F17409 -> -> -> 0 `i `l `ul ]
-[e $ <= F17409 _delay 2211  ]
+[e = F17410 -> -> -> 0 `i `l `ul ]
+[e $ <= F17410 _delay 2211  ]
 [e $U 2212  ]
 [e :U 2211 ]
 {
@@ -2522,8 +2543,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;eadog.c: 24:  };
 }
-[e ++ F17409 -> -> -> 1 `i `l `ul ]
-[e $ <= F17409 _delay 2211  ]
+[e ++ F17410 -> -> -> 1 `i `l `ul ]
+[e $ <= F17410 _delay 2211  ]
 [e :U 2212 ]
 }
 "25
@@ -2933,7 +2954,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2240  ]
 {
 "196
-[; ;eadog.c: 196:  case 0:
+[; ;eadog.c: 196:  case 1:
 [e :U 2241 ]
 "197
 [; ;eadog.c: 197:   row = 0x40;
@@ -2942,7 +2963,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 198:   break;
 [e $U 2239  ]
 "199
-[; ;eadog.c: 199:  case 1:
+[; ;eadog.c: 199:  case 2:
 [e :U 2242 ]
 "200
 [; ;eadog.c: 200:   row = 0x14;
@@ -2951,7 +2972,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 201:   break;
 [e $U 2239  ]
 "202
-[; ;eadog.c: 202:  case 2:
+[; ;eadog.c: 202:  case 3:
 [e :U 2243 ]
 "203
 [; ;eadog.c: 203:   row = 0x54;
@@ -2960,7 +2981,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 204:   break;
 [e $U 2239  ]
 "205
-[; ;eadog.c: 205:  case 3:
+[; ;eadog.c: 205:  case 0:
 [e :U 2244 ]
 "206
 [; ;eadog.c: 206:   row = 0x00;
@@ -2972,8 +2993,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;eadog.c: 208:  default:
 [e :U 2245 ]
 "209
-[; ;eadog.c: 209:   row = 0x40;
-[e = _row -> -> 64 `i `uc ]
+[; ;eadog.c: 209:   row = 0x00;
+[e = _row -> -> 0 `i `uc ]
 "210
 [; ;eadog.c: 210:   break;
 [e $U 2239  ]
@@ -2982,10 +3003,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e $U 2239  ]
 [e :U 2240 ]
-[e [\ -> _r `i , $ -> 0 `i 2241
- , $ -> 1 `i 2242
- , $ -> 2 `i 2243
- , $ -> 3 `i 2244
+[e [\ -> _r `i , $ -> 1 `i 2241
+ , $ -> 2 `i 2242
+ , $ -> 3 `i 2243
+ , $ -> 0 `i 2244
  2245 ]
 [e :U 2239 ]
 "212
