@@ -47,7 +47,8 @@
 #include "ps_test.h"
 #include "scdm.h"
 
-volatile adc_result_t ana[MAX_ADC_CHAN];
+volatile ADC_BUFFER_TYPE a[MAX_ADC_BUFFER];
+volatile uint8_t a_index = 0, i_index = 0;
 volatile bool disp_tick = false, adc_tick = false;
 char buff1[255];
 extern t_cli_ctx cli_ctx; // command buffer 
@@ -109,7 +110,8 @@ void Adc_Isr(void)
 {
 	static adcc_channel_t c_adc_chan = PS_V_ANA;
 
-	ana[c_adc_chan] = ADCC_GetConversionResult();
+	a[a_index].ana[c_adc_chan] = ADCC_GetConversionResult();
+	a[i_index].ana[c_adc_chan] = ADCC_GetConversionResult();
 
 	/*
 	 * convert ADC channels to ADC data array values
@@ -128,10 +130,14 @@ void Adc_Isr(void)
 		c_adc_chan = PWM6_ANA;
 		break;
 	case PWM6_ANA:
-		c_adc_chan = PS_V_ANA;
-		break;
 	default:
 		c_adc_chan = PS_V_ANA;
+		if (mode != roll_mode) {
+			i_index++;
+		}
+		if (i_index >= MAX_ADC_BUFFER) {
+			i_index = 0;
+		}
 		break;
 	}
 	ADPCH = c_adc_chan;
@@ -264,20 +270,20 @@ void main(void)
 
 	while (true) {
 		if (adc_tick) {
-			if (ana[PS_V_ANA] < 900) {
+			if (a[a_index].ana[PS_V_ANA] < 900) {
 				display_led(oo00_off);
 			} else {
-				if (ana[PS_V_ANA] > 1800) {
+				if (a[a_index].ana[PS_V_ANA] > 1800) {
 					display_led(oo00_g);
 				} else {
 					display_led(oo00_r);
 				}
 			}
 
-			if (ana[PS_I_ANA] < 50) {
+			if (a[a_index].ana[PS_I_ANA] < 50) {
 				display_led(oo10_off);
 			} else {
-				if (ana[PS_I_ANA] > 150) {
+				if (a[a_index].ana[PS_I_ANA] > 150) {
 					display_led(oo10_g);
 				} else {
 					display_led(oo10_r);
@@ -300,16 +306,16 @@ void main(void)
 
 			if (disp_tick) {
 				ps_type_ptr = &ps_type[ps_type_index]; // set power supply scaling pointer
-				vval = (double) ana[PS_V_ANA] * ps_type_ptr->v_scale;
-				ival = (double) ana[PS_I_ANA] * ps_type_ptr->i_scale;
+				vval = (double) a[a_index].ana[PS_V_ANA] * ps_type_ptr->v_scale;
+				ival = (double) a[a_index].ana[PS_I_ANA] * ps_type_ptr->i_scale;
 				printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n",
-					ps_type_index, mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
+					ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival);
 				if (!(lcd_update++ & 0x03)) { // slow LCD update rate
-					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
+					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[channel_DAC1], a[a_index].ana[PS_V_ANA], a[a_index].ana[PS_I_ANA]);
 					eaDogM_WriteStringAtPos(1, 0, buff1);
-					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
+					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[DAC_ANA], a[a_index].ana[PWM5_ANA], a[a_index].ana[PWM6_ANA]);
 					eaDogM_WriteStringAtPos(2, 0, buff1);
-					sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+					sprintf(buff1, "D%.2u, M%1u, P%1u, I%2u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index, i_index);
 					eaDogM_WriteStringAtPos(3, 0, buff1);
 					sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
 					eaDogM_WriteStringAtPos(0, 0, buff1);
@@ -319,8 +325,10 @@ void main(void)
 				 */
 				switch (mode) {
 				case roll_mode: // sawtooth voltage ramp
+					i_index++;
 					if (dac_v > roll_max) {
 						dac_v = 0;
+						i_index = 0; // reset ADC result buffer
 					}
 					DAC1_SetOutput(++dac_v);
 					LED_MODE_SetHigh();

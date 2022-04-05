@@ -28621,7 +28621,7 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 66 "./ps_test.h"
+# 67 "./ps_test.h"
  extern const char *build_date, *build_time;
  const char build_version[] = "V1.00 PS TEST";
 
@@ -28635,6 +28635,10 @@ D_CODES set_temp_display_help(const D_CODES);
   double v_scale;
   double i_scale;
  } PS_TYPE;
+
+ typedef struct ADC_BUFFER_TYPE {
+  adc_result_t ana[channel_FVR_Buffer2];
+ } ADC_BUFFER_TYPE;
 
  extern char buff1[255];
 # 2 "scdm.c" 2

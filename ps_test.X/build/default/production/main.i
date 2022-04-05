@@ -28626,7 +28626,7 @@ _Bool check_help(const _Bool);
 D_CODES set_display_info(const D_CODES);
 D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
-# 66 "./ps_test.h"
+# 67 "./ps_test.h"
  extern const char *build_date, *build_time;
  const char build_version[] = "V1.00 PS TEST";
 
@@ -28640,6 +28640,10 @@ D_CODES set_temp_display_help(const D_CODES);
   double v_scale;
   double i_scale;
  } PS_TYPE;
+
+ typedef struct ADC_BUFFER_TYPE {
+  adc_result_t ana[channel_FVR_Buffer2];
+ } ADC_BUFFER_TYPE;
 
  extern char buff1[255];
 # 47 "main.c" 2
@@ -28687,11 +28691,12 @@ D_CODES set_temp_display_help(const D_CODES);
 # 48 "main.c" 2
 
 
-volatile adc_result_t ana[channel_FVR_Buffer2];
+volatile ADC_BUFFER_TYPE a[32];
+volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr  3 2022", *build_time = "17:14:52";
+const char *build_date = "Apr  5 2022", *build_time = "10:16:17";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
@@ -28737,12 +28742,13 @@ void Led_Blink(void)
 
  disp_tick = 1;
 }
-# 108 "main.c"
+# 109 "main.c"
 void Adc_Isr(void)
 {
  static adcc_channel_t c_adc_chan = PS_V_ANA;
 
- ana[c_adc_chan] = ADCC_GetConversionResult();
+ a[a_index].ana[c_adc_chan] = ADCC_GetConversionResult();
+ a[i_index].ana[c_adc_chan] = ADCC_GetConversionResult();
 
 
 
@@ -28761,10 +28767,14 @@ void Adc_Isr(void)
   c_adc_chan = PWM6_ANA;
   break;
  case PWM6_ANA:
-  c_adc_chan = PS_V_ANA;
-  break;
  default:
   c_adc_chan = PS_V_ANA;
+  if (mode != roll_mode) {
+   i_index++;
+  }
+  if (i_index >= 32) {
+   i_index = 0;
+  }
   break;
  }
  ADPCH = c_adc_chan;
@@ -28897,20 +28907,20 @@ void main(void)
 
  while (1) {
   if (adc_tick) {
-   if (ana[PS_V_ANA] < 900) {
+   if (a[a_index].ana[PS_V_ANA] < 900) {
     display_led(oo00_off);
    } else {
-    if (ana[PS_V_ANA] > 1800) {
+    if (a[a_index].ana[PS_V_ANA] > 1800) {
      display_led(oo00_g);
     } else {
      display_led(oo00_r);
     }
    }
 
-   if (ana[PS_I_ANA] < 50) {
+   if (a[a_index].ana[PS_I_ANA] < 50) {
     display_led(oo10_off);
    } else {
-    if (ana[PS_I_ANA] > 150) {
+    if (a[a_index].ana[PS_I_ANA] > 150) {
      display_led(oo10_g);
     } else {
      display_led(oo10_r);
@@ -28933,16 +28943,16 @@ void main(void)
 
    if (disp_tick) {
     ps_type_ptr = &ps_type[ps_type_index];
-    vval = (double) ana[PS_V_ANA] * ps_type_ptr->v_scale;
-    ival = (double) ana[PS_I_ANA] * ps_type_ptr->i_scale;
+    vval = (double) a[a_index].ana[PS_V_ANA] * ps_type_ptr->v_scale;
+    ival = (double) a[a_index].ana[PS_I_ANA] * ps_type_ptr->i_scale;
     printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n",
-     ps_type_index, mode, ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), ana[PS_V_ANA], vval, ana[PS_I_ANA], ival);
+     ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival);
     if (!(lcd_update++ & 0x03)) {
-     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[channel_DAC1], ana[PS_V_ANA], ana[PS_I_ANA]);
+     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[channel_DAC1], a[a_index].ana[PS_V_ANA], a[a_index].ana[PS_I_ANA]);
      eaDogM_WriteStringAtPos(1, 0, buff1);
-     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", ana[DAC_ANA], ana[PWM5_ANA], ana[PWM6_ANA]);
+     sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[DAC_ANA], a[a_index].ana[PWM5_ANA], a[a_index].ana[PWM6_ANA]);
      eaDogM_WriteStringAtPos(2, 0, buff1);
-     sprintf(buff1, "D%.2u, M%1u, P%1u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index);
+     sprintf(buff1, "D%.2u, M%1u, P%1u, I%2u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index, i_index);
      eaDogM_WriteStringAtPos(3, 0, buff1);
      sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
      eaDogM_WriteStringAtPos(0, 0, buff1);
@@ -28952,8 +28962,10 @@ void main(void)
 
     switch (mode) {
     case roll_mode:
+     i_index++;
      if (dac_v > roll_max) {
       dac_v = 0;
+      i_index = 0;
      }
      DAC1_SetOutput(++dac_v);
      do { LATDbits.LATD1 = 1; } while(0);

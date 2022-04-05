@@ -26,6 +26,7 @@ extern "C" {
 #include "ringbufs.h"
 
 #define MAX_ADC_CHAN	channel_FVR_Buffer2
+#define MAX_ADC_BUFFER	32
 #define STATIC_PS	20
 #define ROLL_MAX	19
 
@@ -76,6 +77,10 @@ extern "C" {
 		double v_scale;
 		double i_scale;
 	} PS_TYPE;
+
+	typedef struct ADC_BUFFER_TYPE {
+		adc_result_t ana[MAX_ADC_CHAN];
+	} ADC_BUFFER_TYPE;
 
 	extern char buff1[255];
 #ifdef	__cplusplus
