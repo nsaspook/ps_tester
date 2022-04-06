@@ -28696,7 +28696,7 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr  5 2022", *build_time = "10:16:17";
+const char *build_date = "Apr  5 2022", *build_time = "16:45:22";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
@@ -28790,13 +28790,13 @@ void Adc_Isr(void)
 void fh_pr(void *a_data)
 {
  puts((const char *) a_data);
- puts("\r\n Ramp to 1000VDC ON \r\n");
+ puts("\r\n Ramp VDC ON \r\n");
  mode = roll_mode;
 }
 
 void fh_ps(void *a_data)
 {
- puts("\r\n Steady 1000VDC ON \r\n");
+ puts("\r\n Steady VDC ON : Default\r\n");
  roll_max = 19;
  static_ps = 20;
  mode = static_mode;
@@ -28810,14 +28810,14 @@ void fh_po(void *a_data)
 
 void fh_pp(void *a_data)
 {
- puts("\r\n Voltage ON \r\n");
+ puts("\r\n Voltage ON : Set\r\n");
  mode = static_mode;
 }
 
 void fh_pu(void *a_data)
 {
  puts("\r\n Voltage UP \r\n");
- roll_max = 19 + 10;
+ roll_max = 19 + 12;
  static_ps = 20 + 11;
 }
 
@@ -28967,7 +28967,7 @@ void main(void)
       dac_v = 0;
       i_index = 0;
      }
-     DAC1_SetOutput(++dac_v);
+     DAC1_SetOutput(dac_v++);
      do { LATDbits.LATD1 = 1; } while(0);
      do { LATAbits.LATA5 = 0; } while(0);
      break;

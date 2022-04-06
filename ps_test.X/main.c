@@ -153,13 +153,13 @@ void Adc_Isr(void)
 void fh_pr(void *a_data)
 {
 	puts((const char *) a_data);
-	puts("\r\n Ramp to 1000VDC ON \r\n");
+	puts("\r\n Ramp VDC ON \r\n");
 	mode = roll_mode;
 }
 
 void fh_ps(void *a_data)
 {
-	puts("\r\n Steady 1000VDC ON \r\n");
+	puts("\r\n Steady VDC ON : Default\r\n");
 	roll_max = ROLL_MAX;
 	static_ps = STATIC_PS;
 	mode = static_mode;
@@ -173,14 +173,14 @@ void fh_po(void *a_data)
 
 void fh_pp(void *a_data)
 {
-	puts("\r\n Voltage ON \r\n");
+	puts("\r\n Voltage ON : Set\r\n");
 	mode = static_mode;
 }
 
 void fh_pu(void *a_data)
 {
 	puts("\r\n Voltage UP \r\n");
-	roll_max = ROLL_MAX + 10;
+	roll_max = ROLL_MAX + 12;
 	static_ps = STATIC_PS + 11;
 }
 
@@ -330,7 +330,7 @@ void main(void)
 						dac_v = 0;
 						i_index = 0; // reset ADC result buffer
 					}
-					DAC1_SetOutput(++dac_v);
+					DAC1_SetOutput(dac_v++);
 					LED_MODE_SetHigh();
 					HVON_OUT_RA5_SetLow();
 					break;

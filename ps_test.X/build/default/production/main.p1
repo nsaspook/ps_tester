@@ -2514,7 +2514,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53: char buff1[255];
 [v _buff1 `uc ~T0 @X0 -> 255 `i e ]
 "55
-[; ;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "10:16:17";
+[; ;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -2751,7 +2751,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 155:  puts((const char *) a_data);
 [e ( _puts (1 -> _a_data `*Cuc ]
 "156
-[; ;main.c: 156:  puts("\r\n Ramp to 1000VDC ON \r\n");
+[; ;main.c: 156:  puts("\r\n Ramp VDC ON \r\n");
 [e ( _puts (1 :s 3C ]
 "157
 [; ;main.c: 157:  mode = roll_mode;
@@ -2774,7 +2774,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 161: {
 [f ]
 "162
-[; ;main.c: 162:  puts("\r\n Steady 1000VDC ON \r\n");
+[; ;main.c: 162:  puts("\r\n Steady VDC ON : Default\r\n");
 [e ( _puts (1 :s 4C ]
 "163
 [; ;main.c: 163:  roll_max = 19;
@@ -2826,7 +2826,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 175: {
 [f ]
 "176
-[; ;main.c: 176:  puts("\r\n Voltage ON \r\n");
+[; ;main.c: 176:  puts("\r\n Voltage ON : Set\r\n");
 [e ( _puts (1 :s 6C ]
 "177
 [; ;main.c: 177:  mode = static_mode;
@@ -2852,8 +2852,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 182:  puts("\r\n Voltage UP \r\n");
 [e ( _puts (1 :s 7C ]
 "183
-[; ;main.c: 183:  roll_max = 19 + 10;
-[e = _roll_max -> + -> 19 `i -> 10 `i `uc ]
+[; ;main.c: 183:  roll_max = 19 + 12;
+[e = _roll_max -> + -> 19 `i -> 12 `i `uc ]
 "184
 [; ;main.c: 184:  static_ps = 20 + 11;
 [e = _static_ps -> + -> 20 `i -> 11 `i `uc ]
@@ -3297,8 +3297,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 2270 ]
 "333
-[; ;main.c: 333:      DAC1_SetOutput(++dac_v);
-[e ( _DAC1_SetOutput (1 =+ _dac_v -> -> 1 `i `uc ]
+[; ;main.c: 333:      DAC1_SetOutput(dac_v++);
+[e ( _DAC1_SetOutput (1 ++ _dac_v -> -> 1 `i `uc ]
 "334
 [; ;main.c: 334:      do { LATDbits.LATD1 = 1; } while(0);
 [e :U 2273 ]
@@ -3460,17 +3460,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 14C 37 115 0 ]
 [a 16C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
 [a 17C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
-[a 2C 49 48 58 49 54 58 49 55 0 ]
+[a 2C 49 54 58 52 53 58 50 50 0 ]
 [a 1C 65 112 114 32 32 53 32 50 48 50 50 0 ]
 [a 19C 86 61 37 43 54 46 49 102 86 32 73 61 37 43 51 46 49 102 109 65 32 32 0 ]
+[a 4C 13 10 32 83 116 101 97 100 121 32 86 68 67 32 79 78 32 58 32 68 101 102 97 117 108 116 13 10 0 ]
+[a 6C 13 10 32 86 111 108 116 97 103 101 32 79 78 32 58 32 83 101 116 13 10 0 ]
 [a 12C 13 10 32 66 117 105 108 100 32 37 115 32 37 115 13 10 0 ]
 [a 10C 13 10 32 69 88 84 32 83 117 112 112 114 101 115 115 105 111 110 32 83 117 112 112 108 121 32 13 10 0 ]
 [a 11C 13 10 32 65 67 67 69 76 32 83 117 112 112 114 101 115 115 105 111 110 32 83 117 112 112 108 121 32 13 10 0 ]
 [a 9C 13 10 32 86 111 108 116 97 103 101 32 76 79 87 32 13 10 0 ]
 [a 7C 13 10 32 86 111 108 116 97 103 101 32 85 80 32 13 10 0 ]
 [a 8C 13 10 32 86 111 108 116 97 103 101 32 68 79 87 78 32 13 10 0 ]
-[a 6C 13 10 32 86 111 108 116 97 103 101 32 79 78 32 13 10 0 ]
-[a 4C 13 10 32 83 116 101 97 100 121 32 49 48 48 48 86 68 67 32 79 78 32 13 10 0 ]
-[a 3C 13 10 32 82 97 109 112 32 116 111 32 49 48 48 48 86 68 67 32 79 78 32 13 10 0 ]
+[a 3C 13 10 32 82 97 109 112 32 86 68 67 32 79 78 32 13 10 0 ]
 [a 5C 13 10 32 86 111 108 116 97 103 101 32 79 70 70 32 13 10 0 ]
 [a 15C 32 80 83 32 84 89 80 69 32 37 49 117 58 32 80 83 32 84 101 115 116 32 37 49 117 58 32 68 65 67 32 79 85 84 32 37 52 46 52 117 109 86 32 66 61 37 46 50 117 44 32 83 117 112 112 108 121 32 82 101 97 100 66 97 99 107 32 37 52 46 52 117 109 86 32 86 61 37 43 54 46 49 102 86 32 37 52 46 52 117 109 86 32 73 61 37 43 51 46 49 102 109 65 32 13 10 0 ]

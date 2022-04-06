@@ -5,6 +5,8 @@
         <group>
             <file>file:/fred/ps_tester/ps_test.X/ps_test.h</file>
             <file>file:/fred/ps_tester/ps_test.X/main.c</file>
+            <file>file:/fred/ps_tester/ps_test.X/scdm.h</file>
+            <file>file:/fred/ps_tester/ps_test.X/scdm.c</file>
         </group>
     </open-files>
 </project-private>

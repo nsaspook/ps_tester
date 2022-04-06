@@ -28684,7 +28684,7 @@ D_CODES set_temp_display_help(const D_CODES);
  uint8_t linux_getc(uint8_t *);
 # 3 "scdm.c" 2
 
-const char cmdm[] = "\r\n Command processor V0.1\r\n";
+const char cmdm[] = "\r\n Command processor V0.2\r\n";
 t_cli_ctx cli_ctx;
 uint8_t res = E_CMD_OK;
 
