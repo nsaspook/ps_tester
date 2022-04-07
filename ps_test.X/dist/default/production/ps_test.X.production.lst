@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Tue Apr  5 16:45:32 2022
+                                                                                               Tue Apr  5 20:09:37 2022
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9 
      1                           	processor	18F57K42
@@ -1350,7 +1350,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1336                           ;initializer for _ps_type
   1337                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1359,7 +1359,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1340                           
   1341                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1368,7 +1368,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1344                           
   1345                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1377,7 +1377,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1348                           
   1349                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1386,7 +1386,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1352                           
   1353                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1395,7 +1395,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1356                           
   1357                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1404,7 +1404,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1360                           
   1361                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1413,7 +1413,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1364                           
   1365                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1422,7 +1422,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1368                           
   1369                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -1431,7 +1431,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   1372                           
   1373                           ;main.c: 50: volatile ADC_BUFFER_TYPE a[32];;main.c: 51: volatile uint8_t a_index = 0, i
       +                          _index = 0;;main.c: 52: volatile _Bool disp_tick = 0, adc_tick = 0;;main.c: 53: char buf
-      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "16:45:22";;m
+      +                          f1[255];;main.c: 55: const char *build_date = "Apr  5 2022", *build_time = "20:09:21";;m
       +                          ain.c: 56: MODE_TYPES mode = off_mode;;main.c: 57: double vval = 0.0, ival = 0.0;;main.c
       +                          : 58: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;;main.c: 59: PS_TYPE
       +                           ps_type[] = {
@@ -2177,14 +2177,14 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og9
   2113  00FFBE                     STR_2:
   2114                           
   2115                           ; BSR set to: 61
-  2116  00FFBE  31                 	db	49	;'1'
-  2117  00FFBF  36                 	db	54	;'6'
+  2116  00FFBE  32                 	db	50	;'2'
+  2117  00FFBF  30                 	db	48	;'0'
   2118  00FFC0  3A                 	db	58	;':'
-  2119  00FFC1  34                 	db	52	;'4'
-  2120  00FFC2  35                 	db	53	;'5'
+  2119  00FFC1  30                 	db	48	;'0'
+  2120  00FFC2  39                 	db	57	;'9'
   2121  00FFC3  3A                 	db	58	;':'
   2122  00FFC4  32                 	db	50	;'2'
-  2123  00FFC5  32                 	db	50	;'2'
+  2123  00FFC5  31                 	db	49	;'1'
   2124  00FFC6  00                 	db	0
   2125  00FFC7                     STR_13:
   2126                           
@@ -26742,7 +26742,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Tue Apr  5 16:45:32 2022
+Symbol Table                                                                                   Tue Apr  5 20:09:37 2022
 
                                     _SPI1_ExchangeByte 4CD4  
                                          ___fldiv@aexp 0078  
