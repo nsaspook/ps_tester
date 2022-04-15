@@ -28613,6 +28613,7 @@ D_CODES set_temp_display_help(const D_CODES);
  } ADC_BUFFER_TYPE;
 
  extern char buff1[255];
+ void ps_math(double, adcc_channel_t);
 # 28 "./eadog.h" 2
 
 

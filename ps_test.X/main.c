@@ -55,6 +55,7 @@ extern t_cli_ctx cli_ctx; // command buffer
 const char *build_date = __DATE__, *build_time = __TIME__;
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
+double deviation, sum, sumsqr, mean, variance, stddeviation;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = ROLL_MAX, static_ps = STATIC_PS;
 PS_TYPE ps_type[] = {
 	{
@@ -213,6 +214,28 @@ void fh_p1(void *a_data)
 }
 
 /*
+ * stability statistics
+ * compute power supply Standard Deviation, Mean, and Variance from ADC sample buffer
+ */
+void ps_math(double scale, adcc_channel_t chan)
+{
+	int i, n = 0;
+
+	sum = sumsqr = 0.0;
+	for (i = 0; i < MAX_ADC_BUFFER; i++) {
+		sum += ((double) a[i].ana[chan] * scale);
+		n += 1;
+	}
+	mean = sum / (double) n;
+	for (i = 0; i < n; i++) {
+		deviation = ((double) a[i].ana[chan] * scale) - mean;
+		sumsqr += deviation * deviation;
+	}
+	variance = sumsqr / (double) n;
+	stddeviation = sqrt(variance);
+}
+
+/*
 	     Main application
  */
 void main(void)
@@ -308,14 +331,16 @@ void main(void)
 				ps_type_ptr = &ps_type[ps_type_index]; // set power supply scaling pointer
 				vval = (double) a[a_index].ana[PS_V_ANA] * ps_type_ptr->v_scale;
 				ival = (double) a[a_index].ana[PS_I_ANA] * ps_type_ptr->i_scale;
-				printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n",
-					ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival);
+				ps_math(ps_type_ptr->v_scale, PS_V_ANA);
+				printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA : Statistics Std=%6.1fV Var=%6.1fV Mean=%6.1fV\r\n",
+					ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival,
+					stddeviation, variance, mean);
 				if (!(lcd_update++ & 0x03)) { // slow LCD update rate
 					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[channel_DAC1], a[a_index].ana[PS_V_ANA], a[a_index].ana[PS_I_ANA]);
 					eaDogM_WriteStringAtPos(1, 0, buff1);
 					sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[DAC_ANA], a[a_index].ana[PWM5_ANA], a[a_index].ana[PWM6_ANA]);
 					eaDogM_WriteStringAtPos(2, 0, buff1);
-					sprintf(buff1, "D%.2u, M%1u, P%1u, I%2u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index, i_index);
+					sprintf(buff1, "M%1u, P%1u, D%3.1f V%3.1f   ", mode, ps_type_index, stddeviation, variance);
 					eaDogM_WriteStringAtPos(3, 0, buff1);
 					sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
 					eaDogM_WriteStringAtPos(0, 0, buff1);

@@ -28646,6 +28646,7 @@ D_CODES set_temp_display_help(const D_CODES);
  } ADC_BUFFER_TYPE;
 
  extern char buff1[255];
+ void ps_math(double, adcc_channel_t);
 # 47 "main.c" 2
 
 # 1 "./scdm.h" 1
@@ -28696,9 +28697,10 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr  5 2022", *build_time = "20:09:21";
+const char *build_date = "Apr 14 2022", *build_time = "21:33:42";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
+double deviation, sum, sumsqr, mean, variance, stddeviation;
 uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
 PS_TYPE ps_type[] = {
  {
@@ -28742,7 +28744,7 @@ void Led_Blink(void)
 
  disp_tick = 1;
 }
-# 109 "main.c"
+# 110 "main.c"
 void Adc_Isr(void)
 {
  static adcc_channel_t c_adc_chan = PS_V_ANA;
@@ -28852,6 +28854,28 @@ void fh_p1(void *a_data)
 
 
 
+
+void ps_math(double scale, adcc_channel_t chan)
+{
+ int i, n = 0;
+
+ sum = sumsqr = 0.0;
+ for (i = 0; i < 32; i++) {
+  sum += ((double) a[i].ana[chan] * scale);
+  n += 1;
+ }
+ mean = sum / (double) n;
+ for (i = 0; i < n; i++) {
+  deviation = ((double) a[i].ana[chan] * scale) - mean;
+  sumsqr += deviation * deviation;
+ }
+ variance = sumsqr / (double) n;
+ stddeviation = sqrtf(variance);
+}
+
+
+
+
 void main(void)
 {
  uint8_t lcd_update = 0, i = 0;
@@ -28945,14 +28969,16 @@ void main(void)
     ps_type_ptr = &ps_type[ps_type_index];
     vval = (double) a[a_index].ana[PS_V_ANA] * ps_type_ptr->v_scale;
     ival = (double) a[a_index].ana[PS_I_ANA] * ps_type_ptr->i_scale;
-    printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA \r\n",
-     ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival);
+    ps_math(ps_type_ptr->v_scale, PS_V_ANA);
+    printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA : Statistics Std=%6.1fV Var=%6.1fV Mean=%6.1fV\r\n",
+     ps_type_index, mode, a[a_index].ana[channel_DAC1], (uint16_t) DAC1_GetOutput(), a[a_index].ana[PS_V_ANA], vval, a[a_index].ana[PS_I_ANA], ival,
+     stddeviation, variance, mean);
     if (!(lcd_update++ & 0x03)) {
      sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[channel_DAC1], a[a_index].ana[PS_V_ANA], a[a_index].ana[PS_I_ANA]);
      eaDogM_WriteStringAtPos(1, 0, buff1);
      sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[DAC_ANA], a[a_index].ana[PWM5_ANA], a[a_index].ana[PWM6_ANA]);
      eaDogM_WriteStringAtPos(2, 0, buff1);
-     sprintf(buff1, "D%.2u, M%1u, P%1u, I%2u", (uint16_t) DAC1_GetOutput(), mode, ps_type_index, i_index);
+     sprintf(buff1, "M%1u, P%1u, D%3.1f V%3.1f   ", mode, ps_type_index, stddeviation, variance);
      eaDogM_WriteStringAtPos(3, 0, buff1);
      sprintf(buff1, "V=%+6.1fV I=%+3.1fmA  ", vval, ival);
      eaDogM_WriteStringAtPos(0, 0, buff1);

@@ -28641,6 +28641,7 @@ D_CODES set_temp_display_help(const D_CODES);
  } ADC_BUFFER_TYPE;
 
  extern char buff1[255];
+ void ps_math(double, adcc_channel_t);
 # 2 "scdm.c" 2
 # 1 "./scdm.h" 1
 # 24 "./scdm.h"

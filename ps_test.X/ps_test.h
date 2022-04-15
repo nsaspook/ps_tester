@@ -83,6 +83,7 @@ extern "C" {
 	} ADC_BUFFER_TYPE;
 
 	extern char buff1[255];
+	void ps_math(double, adcc_channel_t);
 #ifdef	__cplusplus
 }
 #endif
