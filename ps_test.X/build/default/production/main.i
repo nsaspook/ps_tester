@@ -28628,7 +28628,7 @@ D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
 # 67 "./ps_test.h"
  extern const char *build_date, *build_time;
- const char build_version[] = "V1.00 PS TEST";
+ const char build_version[] = "V1.01 PS TEST";
 
  typedef enum {
   off_mode,
@@ -28697,7 +28697,7 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr 14 2022", *build_time = "21:33:42";
+const char *build_date = "Apr 14 2022", *build_time = "22:11:10";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 double deviation, sum, sumsqr, mean, variance, stddeviation;

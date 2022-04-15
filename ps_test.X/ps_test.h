@@ -65,7 +65,7 @@ extern "C" {
 #define NHD
 
 	extern const char *build_date, *build_time;
-	const char build_version[] = "V1.00 PS TEST";
+	const char build_version[] = "V1.01 PS TEST";
 
 	typedef enum {
 		off_mode,
