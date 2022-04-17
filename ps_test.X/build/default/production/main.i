@@ -28697,7 +28697,7 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr 14 2022", *build_time = "22:11:10";
+const char *build_date = "Apr 16 2022", *build_time = "18:17:35";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 double deviation, sum, sumsqr, mean, variance, stddeviation;

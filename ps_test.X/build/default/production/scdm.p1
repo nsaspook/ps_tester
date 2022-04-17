@@ -2348,7 +2348,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 "4 scdm.c
-[; ;scdm.c: 4: const char cmdm[] = "\r\n Command processor V0.2\r\n";
+[; ;scdm.c: 4: const char cmdm[] = "\r\n Command processor V1.0\r\n";
 [v _cmdm `Cuc ~T0 @X0 -> 28 `i e ]
 [i _cmdm
 :U ..
@@ -2374,9 +2374,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 114 `c
 -> 32 `c
 -> 86 `c
--> 48 `c
+-> 49 `c
 -> 46 `c
--> 50 `c
+-> 48 `c
 -> 13 `c
 -> 10 `c
 -> 0 `c
