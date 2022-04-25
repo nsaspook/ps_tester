@@ -28623,7 +28623,7 @@ D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
 # 67 "./ps_test.h"
  extern const char *build_date, *build_time;
- const char build_version[] = "V1.01 PS TEST";
+ const char build_version[] = "V1.02 PS TEST";
 
  typedef enum {
   off_mode,
@@ -28642,6 +28642,7 @@ D_CODES set_temp_display_help(const D_CODES);
 
  extern char buff1[255];
  void ps_math(double, adcc_channel_t);
+ void clear_stat_buffer(adcc_channel_t);
 # 2 "scdm.c" 2
 # 1 "./scdm.h" 1
 # 24 "./scdm.h"

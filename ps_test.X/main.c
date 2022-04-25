@@ -148,6 +148,13 @@ void Adc_Isr(void)
 	adc_tick = true;
 }
 
+void clear_stat_buffer(adcc_channel_t chan)
+{
+	for (int i = 0; i < MAX_ADC_BUFFER; i++) {
+		a[i].ana[chan] = 0;
+	}
+}
+
 /*
  * Serial command functions
  */
@@ -156,6 +163,7 @@ void fh_pr(void *a_data)
 	puts((const char *) a_data);
 	puts("\r\n Ramp VDC ON \r\n");
 	mode = roll_mode;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_ps(void *a_data)
@@ -164,18 +172,21 @@ void fh_ps(void *a_data)
 	roll_max = ROLL_MAX;
 	static_ps = STATIC_PS;
 	mode = static_mode;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_po(void *a_data)
 {
 	puts("\r\n Voltage OFF \r\n");
 	mode = off_mode;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pp(void *a_data)
 {
 	puts("\r\n Voltage ON : Set\r\n");
 	mode = static_mode;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pu(void *a_data)
@@ -183,6 +194,7 @@ void fh_pu(void *a_data)
 	puts("\r\n Voltage UP \r\n");
 	roll_max = ROLL_MAX + 12;
 	static_ps = STATIC_PS + 11;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pd(void *a_data)
@@ -190,6 +202,7 @@ void fh_pd(void *a_data)
 	puts("\r\n Voltage DOWN \r\n");
 	roll_max = ROLL_MAX - 12;
 	static_ps = STATIC_PS - 12;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pl(void *a_data)
@@ -197,6 +210,7 @@ void fh_pl(void *a_data)
 	puts("\r\n Voltage LOW \r\n");
 	roll_max = 2;
 	static_ps = 3;
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_p0(void *a_data)
@@ -204,6 +218,7 @@ void fh_p0(void *a_data)
 	puts("\r\n EXT Suppression Supply \r\n");
 	ps_type_index = ESS;
 	DATAEE_WriteByte(EEPSDATA, ps_type_index);
+	clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_p1(void *a_data)
@@ -211,6 +226,7 @@ void fh_p1(void *a_data)
 	puts("\r\n ACCEL Suppression Supply \r\n");
 	ps_type_index = ASS;
 	DATAEE_WriteByte(EEPSDATA, ps_type_index);
+	clear_stat_buffer(PS_V_ANA);
 }
 
 /*

@@ -2461,7 +2461,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/uart1.h: 613: void (*UART1_UARTInterruptHandler)(void);
 [v _UART1_UARTInterruptHandler `*F17197 ~T0 @X0 1 e ]
 "68 ./ps_test.h
-[; ;./ps_test.h: 68:  const char build_version[] = "V1.01 PS TEST";
+[; ;./ps_test.h: 68:  const char build_version[] = "V1.02 PS TEST";
 [v _build_version `Cuc ~T0 @X0 -> 14 `i e ]
 [i _build_version
 :U ..
@@ -2469,7 +2469,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 49 `c
 -> 46 `c
 -> 48 `c
--> 49 `c
+-> 50 `c
 -> 32 `c
 -> 80 `c
 -> 83 `c
@@ -2525,12 +2525,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "19
 [; ;eadog.c: 19:  static uint32_t dcount;
-[v F17416 `ul ~T0 @X0 1 s dcount ]
+[v F17418 `ul ~T0 @X0 1 s dcount ]
 "21
 [; ;eadog.c: 21:  for (dcount = 0; dcount <= delay; dcount++) {
 {
-[e = F17416 -> -> -> 0 `i `l `ul ]
-[e $ <= F17416 _delay 2212  ]
+[e = F17418 -> -> -> 0 `i `l `ul ]
+[e $ <= F17418 _delay 2212  ]
 [e $U 2213  ]
 [e :U 2212 ]
 {
@@ -2543,8 +2543,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "24
 [; ;eadog.c: 24:  };
 }
-[e ++ F17416 -> -> -> 1 `i `l `ul ]
-[e $ <= F17416 _delay 2212  ]
+[e ++ F17418 -> -> -> 1 `i `l `ul ]
+[e $ <= F17418 _delay 2212  ]
 [e :U 2213 ]
 }
 "25

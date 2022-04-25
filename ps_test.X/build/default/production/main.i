@@ -28628,7 +28628,7 @@ D_CODES set_temp_display_help(const D_CODES);
 # 26 "./ps_test.h" 2
 # 67 "./ps_test.h"
  extern const char *build_date, *build_time;
- const char build_version[] = "V1.01 PS TEST";
+ const char build_version[] = "V1.02 PS TEST";
 
  typedef enum {
   off_mode,
@@ -28647,6 +28647,7 @@ D_CODES set_temp_display_help(const D_CODES);
 
  extern char buff1[255];
  void ps_math(double, adcc_channel_t);
+ void clear_stat_buffer(adcc_channel_t);
 # 47 "main.c" 2
 
 # 1 "./scdm.h" 1
@@ -28697,7 +28698,7 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Apr 16 2022", *build_time = "18:17:35";
+const char *build_date = "Apr 24 2022", *build_time = "17:47:44";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 double deviation, sum, sumsqr, mean, variance, stddeviation;
@@ -28786,6 +28787,13 @@ void Adc_Isr(void)
  adc_tick = 1;
 }
 
+void clear_stat_buffer(adcc_channel_t chan)
+{
+ for (int i = 0; i < 32; i++) {
+  a[i].ana[chan] = 0;
+ }
+}
+
 
 
 
@@ -28794,6 +28802,7 @@ void fh_pr(void *a_data)
  puts((const char *) a_data);
  puts("\r\n Ramp VDC ON \r\n");
  mode = roll_mode;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_ps(void *a_data)
@@ -28802,18 +28811,21 @@ void fh_ps(void *a_data)
  roll_max = 19;
  static_ps = 20;
  mode = static_mode;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_po(void *a_data)
 {
  puts("\r\n Voltage OFF \r\n");
  mode = off_mode;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pp(void *a_data)
 {
  puts("\r\n Voltage ON : Set\r\n");
  mode = static_mode;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pu(void *a_data)
@@ -28821,6 +28833,7 @@ void fh_pu(void *a_data)
  puts("\r\n Voltage UP \r\n");
  roll_max = 19 + 12;
  static_ps = 20 + 11;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pd(void *a_data)
@@ -28828,6 +28841,7 @@ void fh_pd(void *a_data)
  puts("\r\n Voltage DOWN \r\n");
  roll_max = 19 - 12;
  static_ps = 20 - 12;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pl(void *a_data)
@@ -28835,6 +28849,7 @@ void fh_pl(void *a_data)
  puts("\r\n Voltage LOW \r\n");
  roll_max = 2;
  static_ps = 3;
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_p0(void *a_data)
@@ -28842,6 +28857,7 @@ void fh_p0(void *a_data)
  puts("\r\n EXT Suppression Supply \r\n");
  ps_type_index = 0;
  DATAEE_WriteByte(0x10, ps_type_index);
+ clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_p1(void *a_data)
@@ -28849,6 +28865,7 @@ void fh_p1(void *a_data)
  puts("\r\n ACCEL Suppression Supply \r\n");
  ps_type_index = 1;
  DATAEE_WriteByte(0x10, ps_type_index);
+ clear_stat_buffer(PS_V_ANA);
 }
 
 
