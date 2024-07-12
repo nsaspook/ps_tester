@@ -13,12 +13,12 @@
   @Description
     This header file provides APIs for driver for DMA1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above or later
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -52,7 +52,7 @@
 */
 #include <stdint.h>
 
-uint8_t SrcVarName0[10];
+uint8_t SrcVarName0[32];
 
 /**
  * @brief Initializes the DMA1 module
@@ -162,6 +162,12 @@ void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void));
 
 
 
+/**
+ * @brief This routine is used to set the callback for the ORI Interrupt.
+ * @return None
+ * @param Callback Function to be called
+ */
+void DMA1_SetORIInterruptHandler(void (* InterruptHandler)(void));
 /**
  * @brief This is the default Interrupt Handler function
  * @return None

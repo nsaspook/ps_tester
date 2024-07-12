@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-    Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
     Device            :  PIC18F57K42
     Driver Version    :  2.00
  */
@@ -269,7 +269,7 @@ void main(void)
 	ADPCH = PS_V_ANA;
 	PWM5_LoadDutyValue(0); // set PS signals to zero
 	PWM6_LoadDutyValue(0);
-	DMA1_SetSCNTIInterruptHandler(source_dma_done);
+//	DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();

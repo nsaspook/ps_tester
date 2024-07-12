@@ -13,12 +13,12 @@
   @Description
     This header file provides implementations for driver APIs for SPI1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above or later
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -58,21 +58,21 @@ typedef struct {
 
 //con0 == SPIxCON0, con1 == SPIxCON1, con2 == SPIxCON2, baud == SPIxBAUD, operation == Master/Slave
 static const spi1_configuration_t spi1_configuration[] = {   
-    { 0x2, 0x40, 0x0, 0x50, 0 }
+    { 0x2, 0x20, 0x0, 0x3, 0 }
 };
 
 void SPI1_Initialize(void)
 {
     //EN disabled; LSBF MSb first; MST bus slave; BMODE last byte; 
     SPI1CON0 = 0x02;
-    //SMP Middle; CKE Active to idle; CKP Idle:Low, Active:High; FST disabled; SSP active high; SDIP active high; SDOP active high; 
-    SPI1CON1 = 0x40;
+    //SMP Middle; CKE Idle to active; CKP Idle:High, Active:Low; FST disabled; SSP active high; SDIP active high; SDOP active high; 
+    SPI1CON1 = 0x20;
     //SSET disabled; TXR not required for a transfer; RXR data is not stored in the FIFO; 
     SPI1CON2 = 0x00;
-    //CLKSEL FOSC; 
-    SPI1CLK = 0x00;
-    //BAUD 80; 
-    SPI1BAUD = 0x50;
+    //CLKSEL MFINTOSC; 
+    SPI1CLK = 0x02;
+    //BAUD 3; 
+    SPI1BAUD = 0x03;
     TRISCbits.TRISC3 = 0;
 }
 
@@ -83,7 +83,6 @@ bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration)
         SPI1CON0 = spi1_configuration[spi1UniqueConfiguration].con0;
         SPI1CON1 = spi1_configuration[spi1UniqueConfiguration].con1;
         SPI1CON2 = spi1_configuration[spi1UniqueConfiguration].con2 | (_SPI1CON2_SPI1RXR_MASK | _SPI1CON2_SPI1TXR_MASK);
-        SPI1CLK  = 0x00;
         SPI1BAUD = spi1_configuration[spi1UniqueConfiguration].baud;        
         TRISCbits.TRISC3 = spi1_configuration[spi1UniqueConfiguration].operation;
         SPI1CON0bits.EN = 1;

@@ -65,7 +65,18 @@ extern "C" {
 #define NHD
 
 	extern const char *build_date, *build_time;
-	const char build_version[] = "V1.02 PS TEST";
+	const char build_version[] = "V2.00 PS TEST";
+
+	struct spi_link_type { // internal SPI state table
+		uint8_t SPI_LCD : 1;
+		uint8_t SPI_AUX : 1;
+		uint8_t LCD_TIMER : 1;
+		volatile uint8_t LCD_DATA : 1;
+		uint16_t delay;
+		uint8_t config;
+		uint8_t * txbuf;
+		volatile int32_t int_count;
+	};
 
 	typedef enum {
 		off_mode,
