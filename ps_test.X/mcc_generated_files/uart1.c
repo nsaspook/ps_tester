@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for UART1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.4.1
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -230,7 +230,7 @@ void UART1_Write(uint8_t txData)
     PIE3bits.U1TXIE = 1;
 }
 
-char getch(void)
+int getch(void)
 {
     return UART1_Read();
 }

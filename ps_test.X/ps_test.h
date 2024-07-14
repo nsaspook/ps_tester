@@ -35,6 +35,9 @@ extern "C" {
 
 #define ESS		0
 #define ASS		1
+#define DLS		2
+#define SMS		3
+#define ACS		4
 
 
 	/*
