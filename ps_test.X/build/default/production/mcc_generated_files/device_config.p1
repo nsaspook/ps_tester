@@ -22,13 +22,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "64
 [p x LPBOREN  =  OFF     ]
 "65
-[p x BOREN  =  OFF     ]
+[p x BOREN  =  SBORDIS     ]
 "68
-[p x BORV  =  VBOR_2P85     ]
+[p x BORV  =  VBOR_2P45     ]
 "69
 [p x ZCD  =  OFF     ]
 "70
-[p x PPS1WAY  =  OFF     ]
+[p x PPS1WAY  =  ON     ]
 "71
 [p x STVREN  =  ON     ]
 "72

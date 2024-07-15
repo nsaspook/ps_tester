@@ -269,7 +269,7 @@ void main(void)
 	ADPCH = PS_V_ANA;
 	PWM5_LoadDutyValue(0); // set PS signals to zero
 	PWM6_LoadDutyValue(0);
-//	DMA1_SetSCNTIInterruptHandler(source_dma_done);
+	DMA1_SetSCNTIInterruptHandler(source_dma_done);
 
 	// Enable high priority global interrupts
 	INTERRUPT_GlobalInterruptHighEnable();

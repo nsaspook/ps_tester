@@ -23,12 +23,12 @@
 #pragma config MVECEN = ON
 #pragma config IVT1WAY = ON
 #pragma config LPBOREN = OFF
-#pragma config BOREN = OFF
+#pragma config BOREN = SBORDIS
 
 
-#pragma config BORV = VBOR_2P85
+#pragma config BORV = VBOR_2P45
 #pragma config ZCD = OFF
-#pragma config PPS1WAY = OFF
+#pragma config PPS1WAY = ON
 #pragma config STVREN = ON
 #pragma config DEBUG = OFF
 #pragma config XINST = OFF
