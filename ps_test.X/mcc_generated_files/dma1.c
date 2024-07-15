@@ -13,12 +13,12 @@
   @Description
     This source file provides APIs for DMA1.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
         Device            :  PIC18F57K42
         Driver Version    :  1.0.0
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.36 and above
-        MPLAB 	          :  MPLAB X 6.00
+        Compiler          :  XC8 2.31 and above
+        MPLAB 	          :  MPLAB X 5.45
 */
 
 /*
@@ -52,7 +52,6 @@
 #include "dma1.h"
 
 void (*DMA1_SCNTI_InterruptHandler)(void);
-void (*DMA1_ORI_InterruptHandler)(void);
 
 /**
   Section: DMA1 APIs
@@ -88,8 +87,7 @@ void DMA1_Initialize(void)
     PIE2bits.DMA1SCNTIE = 1; 
 	DMA1_SetSCNTIInterruptHandler(DMA1_DefaultInterruptHandler);
     PIE2bits.DMA1AIE = 0;
-    PIE2bits.DMA1ORIE =1; 
-	DMA1_SetORIInterruptHandler(DMA1_DefaultInterruptHandler);
+    PIE2bits.DMA1ORIE = 0;
 	
     //EN enabled; SIRQEN enabled; DGO not in progress; AIRQEN disabled; 
     DMA1CON0 = 0xC0;
@@ -181,20 +179,6 @@ void __interrupt(irq(IRQ_DMA1SCNT),base(8)) DMA1_DMASCNTI_ISR()
 void DMA1_SetSCNTIInterruptHandler(void (* InterruptHandler)(void))
 {
 	 DMA1_SCNTI_InterruptHandler = InterruptHandler;
-}
-
-void __interrupt(irq(IRQ_DMA1OR),base(8)) DMA1_DMAORI_ISR()
-{
-    // Clear the source count interrupt flag
-    PIR2bits.DMA1ORIF = 0;
-
-    if (DMA1_ORI_InterruptHandler)
-            DMA1_ORI_InterruptHandler();
-}
-
-void DMA1_SetORIInterruptHandler(void (* InterruptHandler)(void))
-{
-	 DMA1_ORI_InterruptHandler = InterruptHandler;
 }
 
 void DMA1_DefaultInterruptHandler(void){

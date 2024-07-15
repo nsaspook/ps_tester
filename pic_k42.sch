@@ -20286,7 +20286,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="45.72" y="88.9"/>
 </segment>
 </net>
-<net name="SDO1" class="0">
+<net name="N$30" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RC5"/>
 <wire x1="43.18" y1="88.9" x2="43.18" y2="111.76" width="0.1524" layer="91"/>
@@ -20296,10 +20296,9 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="137.16" y1="83.82" x2="142.24" y2="83.82" width="0.1524" layer="91"/>
 <junction x="142.24" y="83.82"/>
 <junction x="43.18" y="88.9"/>
-<label x="58.42" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SCK1" class="0">
+<net name="N$31" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RC3"/>
 <wire x1="58.42" y1="88.9" x2="58.42" y2="109.22" width="0.1524" layer="91"/>
@@ -20309,7 +20308,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="134.62" y1="81.28" x2="142.24" y2="81.28" width="0.1524" layer="91"/>
 <junction x="142.24" y="81.28"/>
 <junction x="58.42" y="88.9"/>
-<label x="58.42" y="109.22" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$32" class="0">
@@ -20325,7 +20323,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="76.2" y="71.12"/>
 </segment>
 </net>
-<net name="CSB" class="0">
+<net name="N$33" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RC2"/>
 <wire x1="60.96" y1="88.9" x2="60.96" y2="104.14" width="0.1524" layer="91"/>
@@ -20335,7 +20333,6 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="129.54" y1="76.2" x2="142.24" y2="76.2" width="0.1524" layer="91"/>
 <junction x="142.24" y="76.2"/>
 <junction x="60.96" y="88.9"/>
-<label x="60.96" y="104.14" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$34" class="0">

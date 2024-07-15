@@ -13,7 +13,7 @@
   Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
+    Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
     Device            :  PIC18F57K42
     Driver Version    :  2.00
  */
@@ -81,7 +81,7 @@ PS_TYPE ps_type[] = {
 };
 
 PS_TYPE *ps_type_ptr = ps_type;
-volatile uint8_t ps_type_index = DLS;
+volatile uint8_t ps_type_index = ESS;
 
 void display_led(DISPLAY_TYPES led);
 

@@ -299,8 +299,6 @@ void wait_lcd_done(void)
 {
 	while (spi_link.LCD_DATA);
 	while (!SPI1STATUSbits.TXBE);
-	wdtdelay(20);
-	CSB_SetHigh(); /* SPI deselect display */
 }
 
 void source_dma_done(void)
