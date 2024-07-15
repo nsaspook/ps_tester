@@ -79,7 +79,7 @@
 <wire x1="108.2802" y1="-20.6502" x2="108.3056" y2="54.2544" width="0" layer="20"/>
 <wire x1="108.3056" y1="54.2544" x2="-44.196" y2="54.3814" width="0" layer="20"/>
 <wire x1="-44.196" y1="54.3814" x2="-44.2468" y2="-20.3962" width="0" layer="20"/>
-<text x="-41.9608" y="15.6972" size="1.27" layer="1" font="vector" ratio="12" rot="R90" align="center">1.9 FGB@MCHP PS CONTROLLER</text>
+<text x="-41.9608" y="15.6972" size="1.27" layer="1" font="vector" ratio="12" rot="R90" align="center">2.0 FGB@MCHP PS CONTROLLER</text>
 <hole x="-40.64" y="49.3268" drill="2.5"/>
 <hole x="101.219" y="40.9448" drill="5.08"/>
 <hole x="-41.3512" y="-18.161" drill="2.5"/>
@@ -2606,7 +2606,7 @@ design rules under a new name.</description>
 <attribute name="MANUFACTURER_PART_NUMBER" value="PIC18F57K42-E/PT" x="69.3674" y="37.1602" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="579-PIC18F57K42-E/PT" x="69.3674" y="37.1602" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="46.5074" y="42.2402" size="1.27" layer="25" align="center"/>
-<attribute name="VALUE" x="47.498" y="51.7652" size="1.27" layer="27" align="center"/>
+<attribute name="VALUE" x="33.401" y="41.6814" size="1.27" layer="27" align="center"/>
 </element>
 <element name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" package="MA06-1" package3d_urn="urn:adsk.eagle:package:8340/1" value="ICSP" x="89.6366" y="45.5676" smashed="yes" rot="R180">
 <attribute name="MF" value="" x="89.6366" y="45.5676" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2615,7 +2615,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="89.6366" y="45.5676" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="89.6366" y="45.5676" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULARITY" value="28" x="89.6366" y="45.5676" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="92.1766" y="48.4886" size="1.27" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="90.5256" y="50.1396" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" package="ASF" package3d_urn="urn:adsk.eagle:package:12096/1" value="ASF1" x="59.5884" y="43.1038" smashed="yes">
 <attribute name="MF" value="" x="59.5884" y="43.1038" size="1.778" layer="27" display="off"/>
@@ -2696,7 +2696,7 @@ design rules under a new name.</description>
 <attribute name="MANUFACTURER_PART_NUMBER" value="REF3440IDBVR" x="59.2328" y="35.1028" size="1.778" layer="27" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="" x="59.2328" y="35.1028" size="1.778" layer="27" display="off"/>
 <attribute name="NAME" x="59.436" y="38.1508" size="1.27" layer="25" rot="R180" align="center"/>
-<attribute name="VALUE" x="61.2648" y="32.004" size="1.27" layer="27" rot="R180" align="center"/>
+<attribute name="VALUE" x="62.6364" y="32.6136" size="1.27" layer="27" rot="R180" align="center"/>
 </element>
 <element name="C13" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="0.1" x="59.182" y="48.3616" smashed="yes" rot="MR0">
 <attribute name="NAME" x="60.452" y="49.6316" size="1.27" layer="26" rot="MR0"/>
@@ -2709,9 +2709,9 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="60.2996" y="26.8478" size="1.27" layer="28" rot="MR0"/>
 </element>
 <element name="C15" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="15uf" x="65.786" y="29.3116" smashed="yes">
-<attribute name="NAME" x="67.056" y="26.7716" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="67.7672" y="26.3906" size="1.27" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="C" x="65.786" y="29.3116" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="64.516" y="26.7716" size="1.27" layer="27"/>
+<attribute name="VALUE" x="64.5414" y="26.7716" size="1.27" layer="27"/>
 </element>
 <element name="C16" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C1206" package3d_urn="urn:adsk.eagle:package:23618/2" value="15uf" x="73.5584" y="44.5262" smashed="yes" rot="R180">
 <attribute name="NAME" x="74.8284" y="43.2562" size="1.27" layer="25" rot="R180"/>
@@ -2779,7 +2779,7 @@ design rules under a new name.</description>
 <element name="K1" library="relay" library_urn="urn:adsk.eagle:library:339" package="G6K-2P" package3d_urn="urn:adsk.eagle:package:24346/1" value="G6K-2P" x="28.448" y="2.4638" smashed="yes">
 <attribute name="MF" value="OMRON COMPONENTS USA" x="28.448" y="2.4638" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="G6K-2P DC3" x="28.448" y="2.4638" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="25.908" y="3.0988" size="1.27" layer="25"/>
+<attribute name="NAME" x="21.59" y="2.0574" size="1.27" layer="25"/>
 <attribute name="OC_FARNELL" value="3937276" x="28.448" y="2.4638" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="89C6482" x="28.448" y="2.4638" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="27.178" y="0.5588" size="1.27" layer="27"/>
@@ -2787,11 +2787,11 @@ design rules under a new name.</description>
 <element name="SPI" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2101" package3d_urn="urn:adsk.eagle:package:8078641/1" value="LCD" x="5.0292" y="44.3484" smashed="yes">
 <attribute name="MF" value="MOLEX" x="5.0292" y="44.3484" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="22-23-2101" x="5.0292" y="44.3484" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="7.5692" y="48.1584" size="1.016" layer="25" ratio="10"/>
+<attribute name="NAME" x="5.08" y="39.2938" size="1.016" layer="25" ratio="10"/>
 <attribute name="OC_FARNELL" value="1756828" x="5.0292" y="44.3484" size="1.778" layer="27" display="off"/>
 <attribute name="OC_NEWARK" value="94C0765" x="5.0292" y="44.3484" size="1.778" layer="27" display="off"/>
 <attribute name="POPULARITY" value="0" x="5.0292" y="44.3484" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="-7.6708" y="39.2684" size="1.016" layer="27" ratio="10"/>
+<attribute name="VALUE" x="-12.0904" y="43.815" size="1.016" layer="27" ratio="10"/>
 </element>
 <element name="X5" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2101" package3d_urn="urn:adsk.eagle:package:8078641/1" value="PORTA" x="5.3086" y="23.876" smashed="yes" rot="R180">
 <attribute name="MF" value="MOLEX" x="5.3086" y="23.876" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2800,7 +2800,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="1756828" x="5.3086" y="23.876" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="94C0765" x="5.3086" y="23.876" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULARITY" value="0" x="5.3086" y="23.876" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="18.0086" y="28.956" size="1.016" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-8.763" y="26.9748" size="1.016" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="X6" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="22-23-2101" package3d_urn="urn:adsk.eagle:package:8078641/1" value="PORTD" x="5.5626" y="13.208" smashed="yes" rot="R180">
 <attribute name="MF" value="MOLEX" x="5.5626" y="13.208" size="1.778" layer="27" rot="R180" display="off"/>
@@ -2809,7 +2809,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="1756828" x="5.5626" y="13.208" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="94C0765" x="5.5626" y="13.208" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULARITY" value="0" x="5.5626" y="13.208" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="18.2626" y="18.288" size="1.016" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-8.6868" y="16.1036" size="1.016" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="1uf" x="48.4632" y="17.8562" smashed="yes" rot="R180">
 <attribute name="NAME" x="49.657" y="16.3322" size="1.27" layer="25" rot="R180"/>
@@ -2823,7 +2823,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="1756828" x="5.3594" y="2.54" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="94C0765" x="5.3594" y="2.54" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULARITY" value="0" x="5.3594" y="2.54" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="18.0594" y="7.62" size="1.016" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="-9.0678" y="5.4864" size="1.016" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="220" x="42.0878" y="23.1902" smashed="yes" rot="R180">
 <attribute name="NAME" x="43.3578" y="21.9202" size="1.27" layer="25" rot="R180"/>
@@ -2870,7 +2870,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="49.4284" y="8.1788" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="R11" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R1206" package3d_urn="urn:adsk.eagle:package:23540/2" value="1k" x="72.517" y="33.2232" smashed="yes" rot="R180">
-<attribute name="NAME" x="73.787" y="31.9532" size="1.27" layer="25" rot="R180"/>
+<attribute name="NAME" x="74.4982" y="37.719" size="1.27" layer="25" rot="R180"/>
 <attribute name="SPICEPREFIX" value="R" x="72.517" y="33.2232" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="73.8124" y="35.8902" size="1.27" layer="27" rot="R180"/>
 </element>
@@ -2925,7 +2925,7 @@ design rules under a new name.</description>
 <attribute name="MANUFACTURER_PART_NUMBER" value="B3W-9000-Y1N" x="84.5566" y="-2.8194" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MOUSER_PART_NUMBER" value="653-B3W-9000-Y1N" x="84.5566" y="-2.8194" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=653-B3W-9000-Y1N" x="84.5566" y="-2.8194" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="86.817790625" y="-2.7761" size="1.27" layer="25" rot="R180" align="center"/>
+<attribute name="NAME" x="90.957990625" y="-2.9031" size="1.27" layer="25" rot="R180" align="center"/>
 <attribute name="RS_PART_NUMBER" value="0492777P" x="84.5566" y="-2.8194" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/0492777P" x="84.5566" y="-2.8194" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="84.352809375" y="3.8429" size="1.27" layer="27" align="center"/>
@@ -2976,7 +2976,7 @@ design rules under a new name.</description>
 <attribute name="OC_FARNELL" value="unknown" x="40.0558" y="-14.1224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="40.0558" y="-14.1224" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="POPULARITY" value="0" x="40.0558" y="-14.1224" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="VALUE" x="6.5858" y="-9.6774" size="1.27" layer="27" rot="R270"/>
+<attribute name="VALUE" x="5.9436" y="-14.166" size="1.27" layer="27"/>
 </element>
 <element name="X10" library="con-molex" library_urn="urn:adsk.eagle:library:165" package="KK-156-8" package3d_urn="urn:adsk.eagle:package:8078814/1" value="J1" x="101.0158" y="17.4752" smashed="yes" rot="R270">
 <attribute name="MF" value="MOLEX" x="101.0158" y="17.4752" size="1.778" layer="27" rot="R270" display="off"/>

@@ -81,7 +81,7 @@ PS_TYPE ps_type[] = {
 };
 
 PS_TYPE *ps_type_ptr = ps_type;
-volatile uint8_t ps_type_index = ESS;
+volatile uint8_t ps_type_index = DLS;
 
 void display_led(DISPLAY_TYPES led);
 
