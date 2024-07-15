@@ -30,8 +30,8 @@ void wdtdelay(const uint32_t delay)
  */
 void init_display(void)
 {
-	spi_link.txbuf = &ring_buf1;
-	ringBufS_init(spi_link.txbuf);
+	spi_link.tx1a = &ring_buf1;
+	ringBufS_init(spi_link.tx1a);
 
 #ifdef DEBUG_DISP2
 	DLED2 = true;
