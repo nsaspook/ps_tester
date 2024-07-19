@@ -1,0 +1,16 @@
+.OP213FSZ :1 ;OP213FSZ
+SOIC127P600X175-8N
+*STM IC
+*NGS
+*PLB 1="OUT A" 2="-IN A" 3="+IN A" 4="V-" 5="+IN B" 6="-IN B" 7="OUT B" 8="V+"
+*MXP 8
+*DFN OP213FSZ
+~!Mouser Part Number (584-OP213FSZ)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Analog-Devices/OP213FSZ?qs=WIvQP4zGanht4Vig9f9CDQ%3D%3D)
+~!Manufacturer_Name (Analog Devices)
+~!Manufacturer_Part_Number (OP213FSZ)
+~!Link Datasheet (https://datasheet.datasheetarchive.com/originals/distributors/SFDatasheet-4/sf-00085565.pdf)
+~!Height (1.75mm)
+~!3D_Model (OP213FSZ)
+OP213FSZ
+1.1!U 2.1!U 3.1!U 4.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

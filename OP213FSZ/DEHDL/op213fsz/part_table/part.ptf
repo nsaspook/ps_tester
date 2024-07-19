@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'OP213FSZ'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Analog Devices", "OP213FSZ" (!) = "", "SOIC127P600X175-8N", "Small Outline Packages", "584-OP213FSZ", "https://www.mouser.co.uk/ProductDetail/Analog-Devices/OP213FSZ?qs=WIvQP4zGanht4Vig9f9CDQ%3D%3D", "OP213FSZ", "https://datasheet.datasheetarchive.com/originals/distributors/SFDatasheet-4/sf-00085565.pdf", "1.75 mm"
+END_PART
+
+END.

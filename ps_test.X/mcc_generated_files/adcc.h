@@ -13,12 +13,12 @@
   @Description
     This header file provides APIs for driver for ADCC.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.1.5
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -88,9 +88,9 @@ typedef __uint24 uint24_t;
 
 typedef enum
 {
-    PS_V_ANA =  0x0,
+    PS_V_ANA_S =  0x0,
     PS_I_ANA =  0x1,
-    channel_ANB2 =  0xA,
+    PS_V_ANA =  0xA,
     channel_ANB3 =  0xB,
     channel_ANB4 =  0xC,
     channel_ANB5 =  0xD,

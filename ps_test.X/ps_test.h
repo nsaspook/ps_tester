@@ -35,6 +35,8 @@ extern "C" {
 
 #define ESS		0
 #define ASS		1
+#define DLS		2
+#define SMS		3
 
 
 	/*
@@ -44,8 +46,8 @@ extern "C" {
 #define I_SCALE_0		0.004
 #define	V_SCALE_1		0.810
 #define I_SCALE_1		0.004
-#define	V_SCALE_2		0.405194
-#define I_SCALE_2		0.004
+#define	V_SCALE_2		0.011145
+#define I_SCALE_2		0.7
 #define	V_SCALE_3		0.405194
 #define I_SCALE_3		0.004
 #define	V_SCALE_4		0.405194

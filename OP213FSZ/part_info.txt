@@ -1,0 +1,9 @@
+Manufacturer=Analog Devices
+PartNumber=OP213FSZ
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=8
+Version=5.1
+Released=2020-12-30 06:05:32
+Downloaded=2024-07-19 00:09:45
+3D=Y

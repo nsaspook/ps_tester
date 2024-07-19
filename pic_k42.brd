@@ -2575,7 +2575,7 @@ design rules under a new name.</description>
 <param name="TopRouterVariant" value="1"/>
 <param name="tpViaShape" value="round"/>
 <param name="PrefDir.1" value="a"/>
-<param name="PrefDir.2" value="a"/>
+<param name="PrefDir.2" value="0"/>
 <param name="PrefDir.3" value="0"/>
 <param name="PrefDir.4" value="0"/>
 <param name="PrefDir.5" value="0"/>
@@ -2588,7 +2588,7 @@ design rules under a new name.</description>
 <param name="PrefDir.12" value="0"/>
 <param name="PrefDir.13" value="0"/>
 <param name="PrefDir.14" value="0"/>
-<param name="PrefDir.15" value="a"/>
+<param name="PrefDir.15" value="0"/>
 <param name="PrefDir.16" value="a"/>
 <param name="cfVia" value="90"/>
 <param name="cfNonPref" value="5"/>
@@ -4290,7 +4290,7 @@ design rules under a new name.</description>
 <via x="51.9684" y="40.005" extent="1-16" drill="0.35"/>
 <via x="28.4226" y="45.7962" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$38">
+<signal name="RA1">
 <contactref element="X5" pad="1"/>
 <contactref element="IC1" pad="22"/>
 <contactref element="X9" pad="4"/>
@@ -4320,7 +4320,7 @@ design rules under a new name.</description>
 <via x="35.2806" y="32.9184" extent="1-16" drill="0.35"/>
 <via x="19.2786" y="21.336" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$39">
+<signal name="RA0">
 <contactref element="X5" pad="10"/>
 <contactref element="IC1" pad="21"/>
 <contactref element="X9" pad="3"/>
@@ -4638,7 +4638,7 @@ design rules under a new name.</description>
 <wire x1="16.7894" y1="2.54" x2="18.3642" y2="4.1148" width="0.1524" layer="1"/>
 <wire x1="43.5102" y1="42.291" x2="43.5394" y2="42.2602" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$54">
+<signal name="ANRB2">
 <contactref element="X7" pad="2"/>
 <contactref element="IC1" pad="10"/>
 <contactref element="X9" pad="1"/>
@@ -4904,7 +4904,7 @@ design rules under a new name.</description>
 <wire x1="80.982" y1="13.1064" x2="63.0174" y2="13.1064" width="0.1524" layer="15"/>
 <via x="57.912" y="9.144" extent="1-16" drill="0.35"/>
 </signal>
-<signal name="N$66">
+<signal name="ANRB3">
 <contactref element="X7" pad="3"/>
 <contactref element="IC1" pad="11"/>
 <contactref element="X9" pad="2"/>

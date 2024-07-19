@@ -13,12 +13,12 @@
   @Description
     This header file provides APIs for driver for .
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.11
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above
-        MPLAB 	          :  MPLAB X 5.45	
+        Compiler          :  XC8 2.36 and above
+        MPLAB 	          :  MPLAB X 6.00	
 */
 
 /*
@@ -65,25 +65,25 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
-// get/set PS_V_ANA aliases
-#define PS_V_ANA_TRIS                 TRISAbits.TRISA0
-#define PS_V_ANA_LAT                  LATAbits.LATA0
-#define PS_V_ANA_PORT                 PORTAbits.RA0
-#define PS_V_ANA_WPU                  WPUAbits.WPUA0
-#define PS_V_ANA_OD                   ODCONAbits.ODCA0
-#define PS_V_ANA_ANS                  ANSELAbits.ANSELA0
-#define PS_V_ANA_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
-#define PS_V_ANA_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
-#define PS_V_ANA_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
-#define PS_V_ANA_GetValue()           PORTAbits.RA0
-#define PS_V_ANA_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
-#define PS_V_ANA_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
-#define PS_V_ANA_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
-#define PS_V_ANA_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
-#define PS_V_ANA_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
-#define PS_V_ANA_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
-#define PS_V_ANA_SetAnalogMode()      do { ANSELAbits.ANSELA0 = 1; } while(0)
-#define PS_V_ANA_SetDigitalMode()     do { ANSELAbits.ANSELA0 = 0; } while(0)
+// get/set PS_V_ANA_S aliases
+#define PS_V_ANA_S_TRIS                 TRISAbits.TRISA0
+#define PS_V_ANA_S_LAT                  LATAbits.LATA0
+#define PS_V_ANA_S_PORT                 PORTAbits.RA0
+#define PS_V_ANA_S_WPU                  WPUAbits.WPUA0
+#define PS_V_ANA_S_OD                   ODCONAbits.ODCA0
+#define PS_V_ANA_S_ANS                  ANSELAbits.ANSELA0
+#define PS_V_ANA_S_SetHigh()            do { LATAbits.LATA0 = 1; } while(0)
+#define PS_V_ANA_S_SetLow()             do { LATAbits.LATA0 = 0; } while(0)
+#define PS_V_ANA_S_Toggle()             do { LATAbits.LATA0 = ~LATAbits.LATA0; } while(0)
+#define PS_V_ANA_S_GetValue()           PORTAbits.RA0
+#define PS_V_ANA_S_SetDigitalInput()    do { TRISAbits.TRISA0 = 1; } while(0)
+#define PS_V_ANA_S_SetDigitalOutput()   do { TRISAbits.TRISA0 = 0; } while(0)
+#define PS_V_ANA_S_SetPullup()          do { WPUAbits.WPUA0 = 1; } while(0)
+#define PS_V_ANA_S_ResetPullup()        do { WPUAbits.WPUA0 = 0; } while(0)
+#define PS_V_ANA_S_SetPushPull()        do { ODCONAbits.ODCA0 = 0; } while(0)
+#define PS_V_ANA_S_SetOpenDrain()       do { ODCONAbits.ODCA0 = 1; } while(0)
+#define PS_V_ANA_S_SetAnalogMode()      do { ANSELAbits.ANSELA0 = 1; } while(0)
+#define PS_V_ANA_S_SetDigitalMode()     do { ANSELAbits.ANSELA0 = 0; } while(0)
 
 // get/set PS_I_ANA aliases
 #define PS_I_ANA_TRIS                 TRISAbits.TRISA1
@@ -209,25 +209,25 @@
 #define MODESW_RB0_SetAnalogMode()      do { ANSELBbits.ANSELB0 = 1; } while(0)
 #define MODESW_RB0_SetDigitalMode()     do { ANSELBbits.ANSELB0 = 0; } while(0)
 
-// get/set channel_ANB2 aliases
-#define channel_ANB2_TRIS                 TRISBbits.TRISB2
-#define channel_ANB2_LAT                  LATBbits.LATB2
-#define channel_ANB2_PORT                 PORTBbits.RB2
-#define channel_ANB2_WPU                  WPUBbits.WPUB2
-#define channel_ANB2_OD                   ODCONBbits.ODCB2
-#define channel_ANB2_ANS                  ANSELBbits.ANSELB2
-#define channel_ANB2_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
-#define channel_ANB2_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
-#define channel_ANB2_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
-#define channel_ANB2_GetValue()           PORTBbits.RB2
-#define channel_ANB2_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
-#define channel_ANB2_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
-#define channel_ANB2_SetPullup()          do { WPUBbits.WPUB2 = 1; } while(0)
-#define channel_ANB2_ResetPullup()        do { WPUBbits.WPUB2 = 0; } while(0)
-#define channel_ANB2_SetPushPull()        do { ODCONBbits.ODCB2 = 0; } while(0)
-#define channel_ANB2_SetOpenDrain()       do { ODCONBbits.ODCB2 = 1; } while(0)
-#define channel_ANB2_SetAnalogMode()      do { ANSELBbits.ANSELB2 = 1; } while(0)
-#define channel_ANB2_SetDigitalMode()     do { ANSELBbits.ANSELB2 = 0; } while(0)
+// get/set PS_V_ANA aliases
+#define PS_V_ANA_TRIS                 TRISBbits.TRISB2
+#define PS_V_ANA_LAT                  LATBbits.LATB2
+#define PS_V_ANA_PORT                 PORTBbits.RB2
+#define PS_V_ANA_WPU                  WPUBbits.WPUB2
+#define PS_V_ANA_OD                   ODCONBbits.ODCB2
+#define PS_V_ANA_ANS                  ANSELBbits.ANSELB2
+#define PS_V_ANA_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
+#define PS_V_ANA_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
+#define PS_V_ANA_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
+#define PS_V_ANA_GetValue()           PORTBbits.RB2
+#define PS_V_ANA_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
+#define PS_V_ANA_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
+#define PS_V_ANA_SetPullup()          do { WPUBbits.WPUB2 = 1; } while(0)
+#define PS_V_ANA_ResetPullup()        do { WPUBbits.WPUB2 = 0; } while(0)
+#define PS_V_ANA_SetPushPull()        do { ODCONBbits.ODCB2 = 0; } while(0)
+#define PS_V_ANA_SetOpenDrain()       do { ODCONBbits.ODCB2 = 1; } while(0)
+#define PS_V_ANA_SetAnalogMode()      do { ANSELBbits.ANSELB2 = 1; } while(0)
+#define PS_V_ANA_SetDigitalMode()     do { ANSELBbits.ANSELB2 = 0; } while(0)
 
 // get/set channel_ANB3 aliases
 #define channel_ANB3_TRIS                 TRISBbits.TRISB3

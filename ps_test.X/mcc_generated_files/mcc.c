@@ -13,12 +13,12 @@
   @Description:
     This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.7
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
         Device            :  PIC18F57K42
         Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 2.31 and above or later
-        MPLAB             :  MPLAB X 5.45
+        Compiler          :  XC8 2.36 and above or later
+        MPLAB             :  MPLAB X 6.00
 */
 
 /*
@@ -74,8 +74,8 @@ void OSCILLATOR_Initialize(void)
     OSCCON3 = 0x00;
     // MFOEN disabled; LFOEN disabled; ADOEN disabled; SOSCEN disabled; EXTOEN disabled; HFOEN disabled; 
     OSCEN = 0x00;
-    // HFFRQ 16_MHz; 
-    OSCFRQ = 0x05;
+    // HFFRQ 64_MHz; 
+    OSCFRQ = 0x08;
     // TUN 0; 
     OSCTUNE = 0x00;
     // Wait for PLL to stabilize

@@ -20423,7 +20423,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="129.54" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$38" class="0">
+<net name="RA1" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RA1"/>
 <wire x1="63.5" y1="17.78" x2="63.5" y2="5.08" width="0.1524" layer="91"/>
@@ -20434,7 +20434,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <wire x1="83.82" y1="40.64" x2="83.82" y2="35.56" width="0.1524" layer="91"/>
 <junction x="83.82" y="35.56"/>
 <junction x="63.5" y="17.78"/>
-<label x="86.36" y="7.62" size="1.778" layer="95"/>
+<label x="83.82" y="5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-170.18" y1="17.78" x2="-185.42" y2="17.78" width="0.1524" layer="91"/>
@@ -20443,7 +20443,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <label x="-157.48" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$39" class="0">
+<net name="RA0" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RA0"/>
 <wire x1="60.96" y1="17.78" x2="60.96" y2="12.7" width="0.1524" layer="91"/>
@@ -20657,7 +20657,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="33.02" y="53.34"/>
 </segment>
 </net>
-<net name="N$54" class="0">
+<net name="ANRB2" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="RB2"/>
 <wire x1="33.02" y1="50.8" x2="30.48" y2="50.8" width="0.1524" layer="91"/>
@@ -20855,7 +20855,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <junction x="-116.84" y="35.56"/>
 </segment>
 </net>
-<net name="N$66" class="0">
+<net name="ANRB3" class="0">
 <segment>
 <pinref part="X7" gate="-3" pin="S"/>
 <pinref part="IC1" gate="G$1" pin="RB3"/>
@@ -21146,7 +21146,7 @@ diameter 3 mm, horizontal, grid 12.7 mm</description>
 <pinref part="X9" gate="-13" pin="S"/>
 <wire x1="-170.18" y1="-5.08" x2="-177.8" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="-170.18" y="-5.08"/>
-<label x="-177.8" y="-5.08" size="1.778" layer="95"/>
+<label x="-157.48" y="-5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
 <wire x1="-187.96" y1="-2.54" x2="-195.58" y2="-2.54" width="0.1524" layer="91"/>
