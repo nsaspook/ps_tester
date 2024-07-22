@@ -98,7 +98,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "121 mcc_generated_files/adcc.c
 [; ;mcc_generated_files/adcc.c: 121: void ADCC_StartConversion(adcc_channel_t channel)
 [c E16360 0 1 10 11 12 13 33 40 41 59 60 61 62 63 .. ]
-[n E16360 . PS_V_ANA_S PS_I_ANA PS_V_ANA channel_ANB3 channel_ANB4 channel_ANB5 DAC_ANA PWM5_ANA PWM6_ANA channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
+[n E16360 . PS_V_ANA_S PS_I_ANA_S PS_V_ANA PS_I_ANA channel_ANB4 channel_ANB5 DAC_ANA PWM5_ANA PWM6_ANA channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "31856 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h
 [; ;/opt/microchip/mplabx/v6.20/packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f57k42.h: 31856:     struct {
 [s S1410 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]

@@ -27551,7 +27551,7 @@ uint8_t DAC1_GetOutput(void);
 void DAC1_Initialize(void)
 {
 
-    DAC1CON0 = 0xA4;
+    DAC1CON0 = 0xA0;
 
     DAC1CON1 = 0x1F;
 }

@@ -372,12 +372,14 @@ void main(void)
 						i_index = 0; // reset ADC result buffer
 					}
 					DAC1_SetOutput(dac_v++);
+					PWM5_LoadDutyValue(500);
 					LED_MODE_SetHigh();
 					HVON_OUT_RA5_SetLow();
 					break;
 				case static_mode: // 1000 vdc unloaded
 					dac_v = static_ps;
 					DAC1_SetOutput(dac_v);
+					PWM5_LoadDutyValue(500);
 					LED_MODE_SetHigh();
 					HVON_OUT_RA5_SetLow();
 					break;
@@ -386,6 +388,7 @@ void main(void)
 					mode = off_mode;
 					dac_v = 0;
 					DAC1_SetOutput(dac_v);
+					PWM5_LoadDutyValue(0);
 					LED_MODE_SetLow();
 					HVON_OUT_RA5_SetHigh();
 					break;

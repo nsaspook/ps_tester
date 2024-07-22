@@ -28797,9 +28797,9 @@ typedef __uint24 uint24_t;
 typedef enum
 {
     PS_V_ANA_S = 0x0,
-    PS_I_ANA = 0x1,
+    PS_I_ANA_S = 0x1,
     PS_V_ANA = 0xA,
-    channel_ANB3 = 0xB,
+    PS_I_ANA = 0xB,
     channel_ANB4 = 0xC,
     channel_ANB5 = 0xD,
     DAC_ANA = 0x21,
@@ -29190,11 +29190,11 @@ volatile uint8_t a_index = 0, i_index = 0;
 volatile _Bool disp_tick = 0, adc_tick = 0;
 char buff1[255];
 extern t_cli_ctx cli_ctx;
-const char *build_date = "Jul 18 2024", *build_time = "11:25:30";
+const char *build_date = "Jul 22 2024", *build_time = "13:48:03";
 MODE_TYPES mode = off_mode;
 double vval = 0.0, ival = 0.0;
 double deviation, sum, sumsqr, mean, variance, stddeviation;
-uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
+uint8_t dac_v = 0, mode_sw = 0, roll_max = 31, static_ps = 31;
 PS_TYPE ps_type[] = {
  {
   .v_scale = 0.405194,
@@ -29300,8 +29300,8 @@ void fh_pr(void *a_data)
 void fh_ps(void *a_data)
 {
  puts("\r\n Steady VDC ON : Default\r\n");
- roll_max = 19;
- static_ps = 20;
+ roll_max = 31;
+ static_ps = 31;
  mode = static_mode;
  clear_stat_buffer(PS_V_ANA);
 }
@@ -29323,16 +29323,16 @@ void fh_pp(void *a_data)
 void fh_pu(void *a_data)
 {
  puts("\r\n Voltage UP \r\n");
- roll_max = 19 + 12;
- static_ps = 20 + 11;
+ roll_max = 31 + 12;
+ static_ps = 31 + 11;
  clear_stat_buffer(PS_V_ANA);
 }
 
 void fh_pd(void *a_data)
 {
  puts("\r\n Voltage DOWN \r\n");
- roll_max = 19 - 12;
- static_ps = 20 - 12;
+ roll_max = 31 - 12;
+ static_ps = 31 - 12;
  clear_stat_buffer(PS_V_ANA);
 }
 
@@ -29503,12 +29503,14 @@ void main(void)
       i_index = 0;
      }
      DAC1_SetOutput(dac_v++);
+     PWM5_LoadDutyValue(500);
      do { LATDbits.LATD1 = 1; } while(0);
      do { LATAbits.LATA5 = 0; } while(0);
      break;
     case static_mode:
      dac_v = static_ps;
      DAC1_SetOutput(dac_v);
+     PWM5_LoadDutyValue(500);
      do { LATDbits.LATD1 = 1; } while(0);
      do { LATAbits.LATA5 = 0; } while(0);
      break;
@@ -29517,6 +29519,7 @@ void main(void)
      mode = off_mode;
      dac_v = 0;
      DAC1_SetOutput(dac_v);
+     PWM5_LoadDutyValue(0);
      do { LATDbits.LATD1 = 0; } while(0);
      do { LATAbits.LATA5 = 1; } while(0);
      break;

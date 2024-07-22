@@ -28792,9 +28792,9 @@ typedef __uint24 uint24_t;
 typedef enum
 {
     PS_V_ANA_S = 0x0,
-    PS_I_ANA = 0x1,
+    PS_I_ANA_S = 0x1,
     PS_V_ANA = 0xA,
-    channel_ANB3 = 0xB,
+    PS_I_ANA = 0xB,
     channel_ANB4 = 0xC,
     channel_ANB5 = 0xD,
     DAC_ANA = 0x21,

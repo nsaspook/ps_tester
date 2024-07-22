@@ -33,7 +33,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "112 main.c
 [; ;main.c: 112:  static adcc_channel_t c_adc_chan = PS_V_ANA;
 [c E17475 0 1 10 11 12 13 33 40 41 59 60 61 62 63 .. ]
-[n E17475 . PS_V_ANA_S PS_I_ANA PS_V_ANA channel_ANB3 channel_ANB4 channel_ANB5 DAC_ANA PWM5_ANA PWM6_ANA channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
+[n E17475 . PS_V_ANA_S PS_I_ANA_S PS_V_ANA PS_I_ANA channel_ANB4 channel_ANB5 DAC_ANA PWM5_ANA PWM6_ANA channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "230 ./mcc_generated_files/adcc.h
 [; ;./mcc_generated_files/adcc.h: 230: adc_result_t ADCC_GetConversionResult(void);
 [v _ADCC_GetConversionResult `(us ~T0 @X0 0 ef ]
@@ -2544,7 +2544,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 53: char buff1[255];
 [v _buff1 `uc ~T0 @X0 -> 255 `i e ]
 "55
-[; ;main.c: 55: const char *build_date = "Jul 18 2024", *build_time = "11:25:30";
+[; ;main.c: 55: const char *build_date = "Jul 22 2024", *build_time = "13:48:03";
 [v _build_date `*Cuc ~T0 @X0 1 e ]
 [i _build_date
 :s 1C
@@ -2578,7 +2578,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _variance `d ~T0 @X0 1 e ]
 [v _stddeviation `d ~T0 @X0 1 e ]
 "59
-[; ;main.c: 59: uint8_t dac_v = 0, mode_sw = 0, roll_max = 19, static_ps = 20;
+[; ;main.c: 59: uint8_t dac_v = 0, mode_sw = 0, roll_max = 31, static_ps = 31;
 [v _dac_v `uc ~T0 @X0 1 e ]
 [i _dac_v
 -> -> 0 `i `uc
@@ -2589,11 +2589,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _roll_max `uc ~T0 @X0 1 e ]
 [i _roll_max
--> -> 19 `i `uc
+-> -> 31 `i `uc
 ]
 [v _static_ps `uc ~T0 @X0 1 e ]
 [i _static_ps
--> -> 20 `i `uc
+-> -> 31 `i `uc
 ]
 "60
 [; ;main.c: 60: PS_TYPE ps_type[] = {
@@ -2685,7 +2685,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2296 ]
 "122
 [; ;main.c: 122:   c_adc_chan = PS_I_ANA;
-[e = F17876 . `E17475 1 ]
+[e = F17876 . `E17475 3 ]
 "123
 [; ;main.c: 123:   break;
 [e $U 2294  ]
@@ -2756,7 +2756,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 2294  ]
 [e :U 2295 ]
 [e [\ -> F17876 `ui , $ -> . `E17475 2 `ui 2296
- , $ -> . `E17475 1 `ui 2297
+ , $ -> . `E17475 3 `ui 2297
  , $ -> . `E17475 11 `ui 2298
  , $ -> . `E17475 7 `ui 2299
  , $ -> . `E17475 8 `ui 2300
@@ -2854,11 +2854,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 171:  puts("\r\n Steady VDC ON : Default\r\n");
 [e ( _puts (1 :s 4C ]
 "172
-[; ;main.c: 172:  roll_max = 19;
-[e = _roll_max -> -> 19 `i `uc ]
+[; ;main.c: 172:  roll_max = 31;
+[e = _roll_max -> -> 31 `i `uc ]
 "173
-[; ;main.c: 173:  static_ps = 20;
-[e = _static_ps -> -> 20 `i `uc ]
+[; ;main.c: 173:  static_ps = 31;
+[e = _static_ps -> -> 31 `i `uc ]
 "174
 [; ;main.c: 174:  mode = static_mode;
 [e = _mode . `E17789 2 ]
@@ -2938,11 +2938,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 194:  puts("\r\n Voltage UP \r\n");
 [e ( _puts (1 :s 7C ]
 "195
-[; ;main.c: 195:  roll_max = 19 + 12;
-[e = _roll_max -> + -> 19 `i -> 12 `i `uc ]
+[; ;main.c: 195:  roll_max = 31 + 12;
+[e = _roll_max -> + -> 31 `i -> 12 `i `uc ]
 "196
-[; ;main.c: 196:  static_ps = 20 + 11;
-[e = _static_ps -> + -> 20 `i -> 11 `i `uc ]
+[; ;main.c: 196:  static_ps = 31 + 11;
+[e = _static_ps -> + -> 31 `i -> 11 `i `uc ]
 "197
 [; ;main.c: 197:  clear_stat_buffer(PS_V_ANA);
 [e ( _clear_stat_buffer (1 . `E17475 2 ]
@@ -2967,11 +2967,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 202:  puts("\r\n Voltage DOWN \r\n");
 [e ( _puts (1 :s 8C ]
 "203
-[; ;main.c: 203:  roll_max = 19 - 12;
-[e = _roll_max -> - -> 19 `i -> 12 `i `uc ]
+[; ;main.c: 203:  roll_max = 31 - 12;
+[e = _roll_max -> - -> 31 `i -> 12 `i `uc ]
 "204
-[; ;main.c: 204:  static_ps = 20 - 12;
-[e = _static_ps -> - -> 20 `i -> 12 `i `uc ]
+[; ;main.c: 204:  static_ps = 31 - 12;
+[e = _static_ps -> - -> 31 `i -> 12 `i `uc ]
 "205
 [; ;main.c: 205:  clear_stat_buffer(PS_V_ANA);
 [e ( _clear_stat_buffer (1 . `E17475 2 ]
@@ -3324,7 +3324,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 2342 ]
 "322
 [; ;main.c: 322:    if (a[a_index].ana[PS_I_ANA] < 50) {
-[e $ ! < -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 1 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> 50 `i `ui 2345  ]
+[e $ ! < -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 3 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> 50 `i `ui 2345  ]
 {
 "323
 [; ;main.c: 323:     display_led(oo10_off);
@@ -3337,7 +3337,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "325
 [; ;main.c: 325:     if (a[a_index].ana[PS_I_ANA] > 150) {
-[e $ ! > -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 1 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> 150 `i `ui 2347  ]
+[e $ ! > -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 3 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> 150 `i `ui 2347  ]
 {
 "326
 [; ;main.c: 326:      display_led(oo10_g);
@@ -3414,20 +3414,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _vval * -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 2 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `d . *U _ps_type_ptr 0 ]
 "349
 [; ;main.c: 349:     ival = (double) a[a_index].ana[PS_I_ANA] * ps_type_ptr->i_scale;
-[e = _ival * -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 1 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `d . *U _ps_type_ptr 1 ]
+[e = _ival * -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 3 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `d . *U _ps_type_ptr 1 ]
 "350
 [; ;main.c: 350:     ps_math(ps_type_ptr->v_scale, PS_V_ANA);
 [e ( _ps_math (2 , . *U _ps_type_ptr 0 . `E17475 2 ]
 "351
 [; ;main.c: 351:     printf(" PS TYPE %1u: PS Test %1u: DAC OUT %4.4umV B=%.2u, Supply ReadBack %4.4umV V=%+6.1fV %4.4umV I=%+3.1fmA : Statistics Std=%6.1fV Var=%6.1fV Mean=%6.1fV\r\n",
-[e ( _printf , , , , , , , , , , , (. :s 15C -> _ps_type_index `i -> _mode `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 11 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> ( _DAC1_GetOutput ..  `us `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 2 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui _vval -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 1 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui _ival _stddeviation _variance _mean ]
+[e ( _printf , , , , , , , , , , , (. :s 15C -> _ps_type_index `i -> _mode `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 11 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> -> ( _DAC1_GetOutput ..  `us `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 2 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui _vval -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 3 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui _ival _stddeviation _variance _mean ]
 "354
 [; ;main.c: 354:     if (!(lcd_update++ & 0x03)) {
 [e $ ! ! != & -> ++ _lcd_update -> -> 1 `i `uc `i -> 3 `i -> 0 `i 2354  ]
 {
 "355
 [; ;main.c: 355:      sprintf(buff1, "%4.4umV %4.4umV %4.4umV", a[a_index].ana[channel_DAC1], a[a_index].ana[PS_V_ANA], a[a_index].ana[PS_I_ANA]);
-[e ( _sprintf (1 , , , (. , &U _buff1 :s 16C -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 11 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 2 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 1 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui ]
+[e ( _sprintf (1 , , , (. , &U _buff1 :s 16C -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 11 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 2 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui -> *U + &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 * -> . `E17475 3 `ux -> -> # *U &U . *U + &U _a * -> _a_index `ux -> -> # *U &U _a `ui `ux 0 `ui `ux `ui ]
 "356
 [; ;main.c: 356:      eaDogM_WriteStringAtPos(1, 0, buff1);
 [e ( _eaDogM_WriteStringAtPos (3 , , -> -> 1 `i `uc -> -> 0 `i `uc &U _buff1 ]
@@ -3481,82 +3481,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 374:      DAC1_SetOutput(dac_v++);
 [e ( _DAC1_SetOutput (1 ++ _dac_v -> -> 1 `i `uc ]
 "375
-[; ;main.c: 375:      do { LATDbits.LATD1 = 1; } while(0);
+[; ;main.c: 375:      PWM5_LoadDutyValue(500);
+[e ( _PWM5_LoadDutyValue (1 -> -> 500 `i `us ]
+"376
+[; ;main.c: 376:      do { LATDbits.LATD1 = 1; } while(0);
 [e :U 2361 ]
 {
 [e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 2360 ]
-"376
-[; ;main.c: 376:      do { LATAbits.LATA5 = 0; } while(0);
+"377
+[; ;main.c: 377:      do { LATAbits.LATA5 = 0; } while(0);
 [e :U 2364 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2363 ]
-"377
-[; ;main.c: 377:      break;
-[e $U 2355  ]
 "378
-[; ;main.c: 378:     case static_mode:
-[e :U 2365 ]
+[; ;main.c: 378:      break;
+[e $U 2355  ]
 "379
-[; ;main.c: 379:      dac_v = static_ps;
-[e = _dac_v _static_ps ]
+[; ;main.c: 379:     case static_mode:
+[e :U 2365 ]
 "380
-[; ;main.c: 380:      DAC1_SetOutput(dac_v);
-[e ( _DAC1_SetOutput (1 _dac_v ]
+[; ;main.c: 380:      dac_v = static_ps;
+[e = _dac_v _static_ps ]
 "381
-[; ;main.c: 381:      do { LATDbits.LATD1 = 1; } while(0);
+[; ;main.c: 381:      DAC1_SetOutput(dac_v);
+[e ( _DAC1_SetOutput (1 _dac_v ]
+"382
+[; ;main.c: 382:      PWM5_LoadDutyValue(500);
+[e ( _PWM5_LoadDutyValue (1 -> -> 500 `i `us ]
+"383
+[; ;main.c: 383:      do { LATDbits.LATD1 = 1; } while(0);
 [e :U 2368 ]
 {
 [e = . . _LATDbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 2367 ]
-"382
-[; ;main.c: 382:      do { LATAbits.LATA5 = 0; } while(0);
+"384
+[; ;main.c: 384:      do { LATAbits.LATA5 = 0; } while(0);
 [e :U 2371 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 2370 ]
-"383
-[; ;main.c: 383:      break;
-[e $U 2355  ]
-"384
-[; ;main.c: 384:     case off_mode:
-[e :U 2372 ]
 "385
-[; ;main.c: 385:     default:
-[e :U 2373 ]
+[; ;main.c: 385:      break;
+[e $U 2355  ]
 "386
-[; ;main.c: 386:      mode = off_mode;
-[e = _mode . `E17789 0 ]
+[; ;main.c: 386:     case off_mode:
+[e :U 2372 ]
 "387
-[; ;main.c: 387:      dac_v = 0;
-[e = _dac_v -> -> 0 `i `uc ]
+[; ;main.c: 387:     default:
+[e :U 2373 ]
 "388
-[; ;main.c: 388:      DAC1_SetOutput(dac_v);
-[e ( _DAC1_SetOutput (1 _dac_v ]
+[; ;main.c: 388:      mode = off_mode;
+[e = _mode . `E17789 0 ]
 "389
-[; ;main.c: 389:      do { LATDbits.LATD1 = 0; } while(0);
+[; ;main.c: 389:      dac_v = 0;
+[e = _dac_v -> -> 0 `i `uc ]
+"390
+[; ;main.c: 390:      DAC1_SetOutput(dac_v);
+[e ( _DAC1_SetOutput (1 _dac_v ]
+"391
+[; ;main.c: 391:      PWM5_LoadDutyValue(0);
+[e ( _PWM5_LoadDutyValue (1 -> -> 0 `i `us ]
+"392
+[; ;main.c: 392:      do { LATDbits.LATD1 = 0; } while(0);
 [e :U 2376 ]
 {
 [e = . . _LATDbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 2375 ]
-"390
-[; ;main.c: 390:      do { LATAbits.LATA5 = 1; } while(0);
+"393
+[; ;main.c: 393:      do { LATAbits.LATA5 = 1; } while(0);
 [e :U 2379 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 2378 ]
-"391
-[; ;main.c: 391:      break;
+"394
+[; ;main.c: 394:      break;
 [e $U 2355  ]
-"392
-[; ;main.c: 392:     }
+"395
+[; ;main.c: 395:     }
 }
 [e $U 2355  ]
 [e :U 2356 ]
@@ -3565,73 +3574,73 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E17789 0 `ui 2372
  2373 ]
 [e :U 2355 ]
-"398
-[; ;main.c: 398:     cli_read(&cli_ctx);
+"401
+[; ;main.c: 401:     cli_read(&cli_ctx);
 [e ( _cli_read (1 &U _cli_ctx ]
-"399
-[; ;main.c: 399:     disp_tick = 0;
+"402
+[; ;main.c: 402:     disp_tick = 0;
 [e = _disp_tick -> -> 0 `i `a ]
-"400
-[; ;main.c: 400:     if (!PORTBbits.RB0) {
+"403
+[; ;main.c: 403:     if (!PORTBbits.RB0) {
 [e $ ! ! != -> . . _PORTBbits 0 0 `i -> 0 `i 2380  ]
 {
-"401
-[; ;main.c: 401:      if (++mode_sw > 4) {
+"404
+[; ;main.c: 404:      if (++mode_sw > 4) {
 [e $ ! > -> =+ _mode_sw -> -> 1 `i `uc `i -> 4 `i 2381  ]
 {
-"402
-[; ;main.c: 402:       mode++;
+"405
+[; ;main.c: 405:       mode++;
 [e ++ _mode -> -> 1 `i `E17789 ]
-"403
-[; ;main.c: 403:       mode_sw = 0;
+"406
+[; ;main.c: 406:       mode_sw = 0;
 [e = _mode_sw -> -> 0 `i `uc ]
-"404
-[; ;main.c: 404:       do { LATEbits.LATE2 = 1; } while(0);
+"407
+[; ;main.c: 407:       do { LATEbits.LATE2 = 1; } while(0);
 [e :U 2384 ]
 {
 [e = . . _LATEbits 0 2 -> -> 1 `i `uc ]
 }
 [e :U 2383 ]
-"405
-[; ;main.c: 405:      }
+"408
+[; ;main.c: 408:      }
 }
 [e :U 2381 ]
-"406
-[; ;main.c: 406:     } else {
+"409
+[; ;main.c: 409:     } else {
 }
 [e $U 2385  ]
 [e :U 2380 ]
 {
-"407
-[; ;main.c: 407:      mode_sw = 0;
+"410
+[; ;main.c: 410:      mode_sw = 0;
 [e = _mode_sw -> -> 0 `i `uc ]
-"408
-[; ;main.c: 408:      do { LATEbits.LATE2 = 0; } while(0);
+"411
+[; ;main.c: 411:      do { LATEbits.LATE2 = 0; } while(0);
 [e :U 2388 ]
 {
 [e = . . _LATEbits 0 2 -> -> 0 `i `uc ]
 }
 [e :U 2387 ]
-"409
-[; ;main.c: 409:     }
+"412
+[; ;main.c: 412:     }
 }
 [e :U 2385 ]
-"410
-[; ;main.c: 410:    }
+"413
+[; ;main.c: 413:    }
 }
 [e :U 2353 ]
-"411
-[; ;main.c: 411:   }
+"414
+[; ;main.c: 414:   }
 }
 [e :U 2340 ]
-"412
-[; ;main.c: 412:  }
+"415
+[; ;main.c: 415:  }
 }
 [e :U 2337 ]
 [e $U 2338  ]
 [e :U 2339 ]
-"413
-[; ;main.c: 413: }
+"416
+[; ;main.c: 416: }
 [e :UE 2325 ]
 }
 [p f _printf 8496130 ]
@@ -3640,8 +3649,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 14C 37 115 0 ]
 [a 16C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
 [a 17C 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 32 37 52 46 52 117 109 86 0 ]
-[a 1C 74 117 108 32 49 56 32 50 48 50 52 0 ]
-[a 2C 49 49 58 50 53 58 51 48 0 ]
+[a 1C 74 117 108 32 50 50 32 50 48 50 52 0 ]
+[a 2C 49 51 58 52 56 58 48 52 0 ]
 [a 19C 86 61 37 43 54 46 49 102 86 32 73 61 37 43 51 46 49 102 109 65 32 32 0 ]
 [a 18C 77 37 49 117 44 32 80 37 49 117 44 32 68 37 51 46 49 102 32 86 37 51 46 49 102 32 32 32 0 ]
 [a 4C 13 10 32 83 116 101 97 100 121 32 86 68 67 32 79 78 32 58 32 68 101 102 97 117 108 116 13 10 0 ]

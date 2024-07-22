@@ -6,9 +6,9 @@
 "121 /fred/ps_tester/ps_test.X/mcc_generated_files/adcc.c
 [e E16360 . `uc
 PS_V_ANA_S 0
-PS_I_ANA 1
+PS_I_ANA_S 1
 PS_V_ANA 10
-channel_ANB3 11
+PS_I_ANA 11
 channel_ANB4 12
 channel_ANB5 13
 DAC_ANA 33
@@ -137,9 +137,9 @@ static_mode 2
 "112
 [e E17475 . `uc
 PS_V_ANA_S 0
-PS_I_ANA 1
+PS_I_ANA_S 1
 PS_V_ANA 10
-channel_ANB3 11
+PS_I_ANA 11
 channel_ANB4 12
 channel_ANB5 13
 DAC_ANA 33
@@ -1572,7 +1572,7 @@ E_CMD_EMPTY 3
 "259
 [v main@i i `uc  1 a 1 3 ]
 [v main@lcd_update lcd_update `uc  1 a 1 2 ]
-"413
+"416
 } 0
 "9 /opt/microchip/xc8/v2.46/pic/sources/c99/common/nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]

@@ -57,8 +57,8 @@
 
 void DAC1_Initialize(void)
 {
-    // DAC1EN enabled; NSS VSS; PSS VREF+; OE1 enabled; OE2 disabled; 
-    DAC1CON0 = 0xA4;
+    // DAC1EN enabled; NSS VSS; PSS VDD; OE1 enabled; OE2 disabled; 
+    DAC1CON0 = 0xA0;
     // DAC1R 31; 
     DAC1CON1 = 0x1F;
 }

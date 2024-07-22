@@ -1,7 +1,7 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- /tmp/xcXMndnKp/driver_tmp_3.o
+ /tmp/xcXgFbCHm/driver_tmp_3.o
  -Odist/default/production/ps_test.X.production.hex
  -logfile=dist/default/production/ps_test.X.production.hxl
  -addressing=1
@@ -9,33 +9,35 @@
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  8h - B1h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  FDCAh - FFFEh		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  10000h - 140C1h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  140C4h - 142A5h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  142A8h - 142E9h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  142ECh - 144A5h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  144A8h - 144E5h		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  144E8h - 14C8Dh		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  200000h - 20000Fh		(/tmp/xcXMndnKp/driver_tmp_3.o)
-  300000h - 300009h		(/tmp/xcXMndnKp/driver_tmp_3.o)
+  0h - 3h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  8h - B1h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  FDCAh - FFFEh		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  10000h - 13F6Dh		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  13F70h - 140E5h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  140E8h - 142C9h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  142CCh - 1430Dh		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  14310h - 144C9h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  144CCh - 14509h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  1450Ch - 14CB1h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  200000h - 20000Fh		(/tmp/xcXgFbCHm/driver_tmp_3.o)
+  300000h - 300009h		(/tmp/xcXgFbCHm/driver_tmp_3.o)
  Unused ranges:
   4h - 7h
   B2h - FDC9h
   FFFFh - FFFFh
-  140C2h - 140C3h
-  142A6h - 142A7h
-  142EAh - 142EBh
-  144A6h - 144A7h
-  144E6h - 144E7h
-  14C8Eh - 1FFFFFh
+  13F6Eh - 13F6Fh
+  140E6h - 140E7h
+  142CAh - 142CBh
+  1430Eh - 1430Fh
+  144CAh - 144CBh
+  1450Ah - 1450Bh
+  14CB2h - 1FFFFFh
   200010h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (/tmp/xcXMndnKp/driver_tmp_3.o)
+  H1 = Input file             (/tmp/xcXgFbCHm/driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -1102,7 +1104,7 @@
 00013F30 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00013F40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00013F50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00013F60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00013F60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00013F70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00013F80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00013F90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1124,9 +1126,9 @@
 00014090 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000140A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000140B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000140C0 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000140C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000140D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000140E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000140E0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
 000140F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014100 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014110 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1154,13 +1156,13 @@
 00014270 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014280 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014290 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000142A0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+000142A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000142B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000142C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000142C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
 000142D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000142E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
+000142E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000142F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00014300 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014300 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
 00014310 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014320 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014330 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1186,13 +1188,13 @@
 00014470 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014480 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014490 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000144A0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+000144A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000144B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000144C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000144C0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
 000144D0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-000144E0 | H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1
+000144E0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000144F0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00014500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014500 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1
 00014510 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014520 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014530 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -1312,7 +1314,10 @@
 00014C50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014C60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00014C70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00014C80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- --
+00014C80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014C90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014CA0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00014CB0 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 00200000 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------

@@ -27,8 +27,8 @@ extern "C" {
 
 #define MAX_ADC_CHAN	channel_FVR_Buffer2
 #define MAX_ADC_BUFFER	32
-#define STATIC_PS	20
-#define ROLL_MAX	19
+#define STATIC_PS	31
+#define ROLL_MAX	31
 
 #define EECKSUM		0x00
 #define EEPSDATA	0x10
